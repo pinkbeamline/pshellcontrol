@@ -1,0 +1,90 @@
+14/01/19 - 10:47:22.140 - Context.<init> - Info - Process: 6650@pink-vm10
+14/01/19 - 10:47:22.142 - Context.<init> - Info - Context: unknown
+14/01/19 - 10:47:22.142 - Context.<init> - Info - Pars: /home/nilson/PShell/pshell-1.10.0-fat.jar -home=/home/nilson/PShell/home -dlaf
+14/01/19 - 10:47:22.142 - Context.<init> - Info - User: nilson
+14/01/19 - 10:47:22.142 - Context.<init> - Info - Host: pink-vm10
+14/01/19 - 10:47:22.163 - PluginManager.loadExtensionsFolder - Info - Loading extensions folder
+14/01/19 - 10:47:22.164 - DataManager.initialize - Info - Initializing DataManager
+14/01/19 - 10:47:22.173 - DataManager.setProvider - Info - Setting data provider: ch.psi.pshell.data.ProviderHDF5
+14/01/19 - 10:47:22.175 - DataManager.setLayout - Info - Setting data layout: ch.psi.pshell.data.LayoutDefault
+14/01/19 - 10:47:22.177 - DataManager.initialize - Info - Finished DataManager initialization
+14/01/19 - 10:47:22.177 - App.startup - Info - Version: 1.10-SNAPSHOT (build 1812200927-py)
+14/01/19 - 10:47:22.179 - App.startup - Info - Create workbench
+14/01/19 - 10:47:23.617 - PluginManager.loadPluginFolder - Info - Loading plugins folder
+14/01/19 - 10:47:23.622 - PluginManager.loadPlugin - Info - Load plugin: /home/nilson/PShell/home/plugins/pp2.java
+14/01/19 - 10:47:23.633 - PluginManager.loadPlugin - Info - Load plugin: /home/nilson/PShell/home/plugins/pp1.java
+14/01/19 - 10:47:23.641 - PluginManager.startPlugins - Info - Start plugins
+14/01/19 - 10:47:23.647 - PluginManager.startPlugin - Info - Started plugin: pp2.java
+14/01/19 - 10:47:23.649 - PluginManager.startPlugin - Info - Started plugin: pp1.java
+14/01/19 - 10:47:23.650 - Context.onCommand - Info - Restart (ui)
+14/01/19 - 10:47:23.662 - Context.restart - Info - Initializing context
+14/01/19 - 10:47:23.664 - Context.onUserChange - Info - User: Default [administrator] *
+14/01/19 - 10:47:23.666 - Context.restart - Info - Loading Device Pool
+14/01/19 - 10:47:23.666 - DevicePool.initialize - Info - Initializing DevicePool
+14/01/19 - 10:47:23.715 - ScriptManager.<init> - Info - Initializing ScriptManager
+14/01/19 - 10:47:24.174 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+14/01/19 - 10:47:26.203 - Context.lambda$restart$1 - Info - Executed startup script
+14/01/19 - 10:47:26.206 - Context.lambda$restart$1 - Info - Executed local startup script
+14/01/19 - 10:47:38.657 - Context.onCommand - Info - Eval: from jeputils import * (ui)
+14/01/19 - 10:48:01.816 - Context.onCommand - Info - Eval: run("wrapper") (ui)
+14/01/19 - 10:48:40.091 - Context.onCommand - Info - Eval: call_jep() (ui)
+14/01/19 - 10:49:13.336 - Context.onCommand - Info - Eval: call_jep("test_jep", "double_array", to_npa(arr)) (ui)
+14/01/19 - 10:49:23.136 - Context.onCommand - Info - Eval: arr = [4,6,8] (ui)
+14/01/19 - 10:49:25.880 - Context.onCommand - Info - Eval: call_jep("test_jep", "double_array", to_npa(arr)) (ui)
+14/01/19 - 10:49:45.472 - Context.onCommand - Info - Eval: aa = call_jep("test_jep", "double_array", to_npa(arr)) (ui)
+14/01/19 - 10:49:46.879 - Context.onCommand - Info - Eval: aa (ui)
+14/01/19 - 10:49:49.704 - Context.onCommand - Info - Eval: aa.data (ui)
+14/01/19 - 10:50:00.440 - Context.onCommand - Info - Eval: bb = aa.data (ui)
+14/01/19 - 10:50:02.319 - Context.onCommand - Info - Eval: bbb (ui)
+14/01/19 - 10:50:03.888 - Context.onCommand - Info - Eval: bb (ui)
+14/01/19 - 10:50:07.232 - Context.onCommand - Info - Eval: bb.data (ui)
+14/01/19 - 10:50:13.728 - Context.onCommand - Info - Eval: print(bb) (ui)
+14/01/19 - 10:50:27.919 - Context.onCommand - Info - Eval: arr (ui)
+14/01/19 - 10:51:28.512 - Context.onCommand - Info - Eval: run("wrapper") (ui)
+14/01/19 - 10:51:32.304 - Context.onCommand - Info - Eval:  (ui)
+14/01/19 - 10:51:37.776 - Context.onCommand - Info - Eval:  (ui)
+14/01/19 - 10:51:37.927 - Context.onCommand - Info - Eval:  (ui)
+14/01/19 - 10:51:39.063 - Context.onCommand - Info - Eval: sd (ui)
+14/01/19 - 10:51:52.144 - Context.onCommand - Info - Eval: run("wrapper") (ui)
+14/01/19 - 10:51:55.311 - Context.onCommand - Info - Eval:  (ui)
+14/01/19 - 10:51:55.472 - Context.onCommand - Info - Eval:  (ui)
+14/01/19 - 11:03:12.061 - Context.onCommand - Info - Run: testfpy.py (ui)
+14/01/19 - 11:04:41.607 - Context.onCommand - Info - Eval: from jeputils import * (ui)
+14/01/19 - 11:04:48.991 - Context.onCommand - Info - Eval: arr1 = [3, 4, 11] (ui)
+14/01/19 - 11:04:58.063 - Context.onCommand - Info - Eval: arr3 = call_jep("testf", "testfun", to_npa(arr1)) (ui)
+14/01/19 - 11:05:11.887 - Context.onCommand - Info - Eval: arr3 = call_jep("testf", "testfun", to_npa(arr1)) (ui)
+14/01/19 - 11:05:12.387 - Context.onCommand - Info - Eval:  (ui)
+14/01/19 - 11:05:12.417 - Context.onCommand - Info - Eval:  (ui)
+14/01/19 - 11:05:12.447 - Context.onCommand - Info - Eval:  (ui)
+14/01/19 - 11:05:12.477 - Context.onCommand - Info - Eval:  (ui)
+14/01/19 - 11:05:12.508 - Context.onCommand - Info - Eval:  (ui)
+14/01/19 - 11:05:12.537 - Context.onCommand - Info - Eval:  (ui)
+14/01/19 - 11:05:17.279 - Context.onCommand - Info - Eval: arr3 = call_jep() (ui)
+14/01/19 - 11:05:28.023 - Context.onCommand - Info - Eval: arr3 = call_jep("testf") (ui)
+14/01/19 - 11:06:10.871 - Context.onCommand - Info - Eval: arr3 = call_jep("testf", "testfun") (ui)
+14/01/19 - 11:06:18.159 - Context.onCommand - Info - Eval: arr3 = call_jep("testf", "testfun". arr1) (ui)
+14/01/19 - 11:06:28.495 - Context.onCommand - Info - Eval: arr3 = call_jep("testf", "testfun". [3,4,6]) (ui)
+14/01/19 - 11:06:34.959 - Context.onCommand - Info - Eval: arr3 = call_jep("testf", "testfun", [3,4,6]) (ui)
+14/01/19 - 11:09:54.191 - Context.onCommand - Info - Eval: arr3 = call_jep("testf", "testfun", to_npa([3,4,6])) (ui)
+14/01/19 - 11:10:07.920 - Context.onCommand - Info - Run: wrapper.py (ui)
+14/01/19 - 11:10:43.158 - Context.onCommand - Info - Eval: arr3 = call_jep("testf", "testfun", to_npa([3,4,6])) (ui)
+14/01/19 - 11:11:01.359 - Context.onCommand - Info - Eval: run("wrapper") (ui)
+14/01/19 - 11:11:12.543 - Context.onCommand - Info - Eval:  (ui)
+14/01/19 - 11:11:12.718 - Context.onCommand - Info - Eval:  (ui)
+14/01/19 - 11:11:35.094 - Context.onCommand - Info - Eval: ret (ui)
+14/01/19 - 11:16:40.335 - Context.onCommand - Info - Run: testfpy.py (ui)
+14/01/19 - 11:17:00.481 - Context.onCommand - Info - Eval: testf([5,7,8,9]) (ui)
+14/01/19 - 11:17:54.438 - Context.onCommand - Info - Eval: testf([5,7,8,9]) (ui)
+14/01/19 - 11:22:58.926 - Context.onCommand - Info - Eval: testf([5,7,8,9]) (ui)
+14/01/19 - 11:23:13.062 - Context.onCommand - Info - Eval: a = testf([5,7,8,9]) (ui)
+14/01/19 - 11:23:15.982 - Context.onCommand - Info - Eval: a.data (ui)
+14/01/19 - 11:23:25.694 - Context.onCommand - Info - Eval: print(a) (ui)
+14/01/19 - 11:23:45.630 - Context.onCommand - Info - Eval: a(1) (ui)
+14/01/19 - 11:23:50.510 - Context.onCommand - Info - Eval: a[1] (ui)
+14/01/19 - 11:23:54.278 - Context.onCommand - Info - Eval: a[0] (ui)
+14/01/19 - 11:24:20.940 - App.exit - Info - Aplication exit command by: MainFrame
+14/01/19 - 11:24:20.945 - Context.close - Info - Close
+14/01/19 - 11:24:20.946 - PluginManager.stopPlugins - Info - Stop plugins
+14/01/19 - 11:24:20.949 - PluginManager.stopPlugin - Info - Stopped plugin: pp2.java
+14/01/19 - 11:24:20.949 - PluginManager.stopPlugin - Info - Stopped plugin: pp1.java
+14/01/19 - 11:24:20.986 - App.end - Info - Finished

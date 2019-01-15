@@ -1,0 +1,26 @@
+14/01/19 - 17:48:51.869 - Context.<init> - Info - Process: 8177@pink-vm10
+14/01/19 - 17:48:51.871 - Context.<init> - Info - Context: unknown
+14/01/19 - 17:48:51.871 - Context.<init> - Info - Pars: /home/nilson/PShell/pshell-1.10.0-fat.jar -home=/home/nilson/PShell/home -dlaf
+14/01/19 - 17:48:51.871 - Context.<init> - Info - User: nilson
+14/01/19 - 17:48:51.872 - Context.<init> - Info - Host: pink-vm10
+14/01/19 - 17:48:51.892 - PluginManager.loadExtensionsFolder - Info - Loading extensions folder
+14/01/19 - 17:48:51.893 - DataManager.initialize - Info - Initializing DataManager
+14/01/19 - 17:48:51.902 - DataManager.setProvider - Info - Setting data provider: ch.psi.pshell.data.ProviderHDF5
+14/01/19 - 17:48:51.904 - DataManager.setLayout - Info - Setting data layout: ch.psi.pshell.data.LayoutDefault
+14/01/19 - 17:48:51.906 - DataManager.initialize - Info - Finished DataManager initialization
+14/01/19 - 17:48:51.906 - App.startup - Info - Version: 1.10-SNAPSHOT (build 1812200927-py)
+14/01/19 - 17:48:51.908 - App.startup - Info - Create workbench
+14/01/19 - 17:48:53.291 - PluginManager.loadPluginFolder - Info - Loading plugins folder
+14/01/19 - 17:48:53.296 - PluginManager.loadPlugin - Info - Load plugin: /home/nilson/PShell/home/plugins/pp3.java
+14/01/19 - 17:48:53.312 - PluginManager.startPlugins - Info - Start plugins
+14/01/19 - 17:48:53.322 - PluginManager.startPlugin - Info - Started plugin: pp3.java
+14/01/19 - 17:48:53.323 - Context.onCommand - Info - Restart (ui)
+14/01/19 - 17:48:53.336 - Context.restart - Info - Initializing context
+14/01/19 - 17:48:53.338 - Context.onUserChange - Info - User: Default [administrator] *
+14/01/19 - 17:48:53.340 - Context.restart - Info - Loading Device Pool
+14/01/19 - 17:48:53.340 - DevicePool.initialize - Info - Initializing DevicePool
+14/01/19 - 17:48:53.386 - ScriptManager.<init> - Info - Initializing ScriptManager
+14/01/19 - 17:48:53.816 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+14/01/19 - 17:48:55.710 - Context.lambda$restart$1 - Info - Executed startup script
+14/01/19 - 17:48:55.719 - Context.lambda$restart$1 - Info - Executed local startup script
+14/01/19 - 17:50:50.357 - Context.onCommand - Info - Restart (ui)

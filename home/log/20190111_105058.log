@@ -1,0 +1,42 @@
+11/01/19 - 10:50:58.656 - Context.<init> - Info - Process: 26038@pink-vm10
+11/01/19 - 10:50:58.657 - Context.<init> - Info - Context: unknown
+11/01/19 - 10:50:58.657 - Context.<init> - Info - Pars: /home/nilson/PShell/pshell-1.10.0-fat.jar -home=/home/nilson/PShell/home -dlaf
+11/01/19 - 10:50:58.658 - Context.<init> - Info - User: nilson
+11/01/19 - 10:50:58.658 - Context.<init> - Info - Host: pink-vm10
+11/01/19 - 10:50:58.670 - PluginManager.loadExtensionsFolder - Info - Loading extensions folder
+11/01/19 - 10:50:58.671 - DataManager.initialize - Info - Initializing DataManager
+11/01/19 - 10:50:58.679 - DataManager.setProvider - Info - Setting data provider: ch.psi.pshell.data.ProviderHDF5
+11/01/19 - 10:50:58.682 - DataManager.setLayout - Info - Setting data layout: ch.psi.pshell.data.LayoutDefault
+11/01/19 - 10:50:58.683 - DataManager.initialize - Info - Finished DataManager initialization
+11/01/19 - 10:50:58.684 - App.startup - Info - Version: 1.10-SNAPSHOT (build 1812200927-py)
+11/01/19 - 10:50:58.685 - App.startup - Info - Create workbench
+11/01/19 - 10:51:00.030 - Context.onCreation - Warning - Extracting script library folder
+11/01/19 - 10:51:00.101 - PluginManager.loadPluginFolder - Info - Loading plugins folder
+11/01/19 - 10:51:00.102 - PluginManager.startPlugins - Info - Start plugins
+11/01/19 - 10:51:00.103 - Context.onCommand - Info - Restart (ui)
+11/01/19 - 10:51:00.116 - Context.restart - Info - Initializing context
+11/01/19 - 10:51:00.118 - Context.onUserChange - Info - User: Default [administrator] *
+11/01/19 - 10:51:00.119 - Config.load - Info - java.io.FileNotFoundException: /home/nilson/PShell/home/config/mail.properties (No such file or directory)
+Stack trace:
+java.io.FileNotFoundException: /home/nilson/PShell/home/config/mail.properties (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at java.io.FileInputStream.<init>(FileInputStream.java:93)
+	at ch.psi.utils.Config.load(Config.java:171)
+	at ch.psi.pshell.core.NotificationManager.<init>(NotificationManager.java:45)
+	at ch.psi.pshell.core.Context.restart(Context.java:980)
+	at ch.psi.pshell.core.Context.start(Context.java:2915)
+	at ch.psi.pshell.ui.App.lambda$startup$0(App.java:857)
+	at java.lang.Thread.run(Thread.java:748)
+
+11/01/19 - 10:51:00.121 - Context.restart - Info - Loading Device Pool
+11/01/19 - 10:51:00.121 - DevicePool.initialize - Info - Initializing DevicePool
+11/01/19 - 10:51:00.167 - ScriptManager.<init> - Info - Initializing ScriptManager
+11/01/19 - 10:51:00.593 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+11/01/19 - 10:51:02.524 - Context.lambda$restart$1 - Info - Executed startup script
+11/01/19 - 10:51:02.527 - Context.lambda$restart$1 - Info - Executed local startup script
+11/01/19 - 10:51:08.137 - App.exit - Info - Aplication exit command by: MainFrame
+11/01/19 - 10:51:08.153 - Context.close - Info - Close
+11/01/19 - 10:51:08.153 - PluginManager.stopPlugins - Info - Stop plugins
+11/01/19 - 10:51:08.162 - App.end - Info - Finished

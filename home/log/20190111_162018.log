@@ -1,0 +1,38 @@
+11/01/19 - 16:20:18.823 - Context.<init> - Info - Process: 2588@pink-vm10
+11/01/19 - 16:20:18.824 - Context.<init> - Info - Context: unknown
+11/01/19 - 16:20:18.825 - Context.<init> - Info - Pars: /home/nilson/PShell/pshell-1.10.0-fat.jar -home=/home/nilson/PShell/home -dlaf
+11/01/19 - 16:20:18.825 - Context.<init> - Info - User: nilson
+11/01/19 - 16:20:18.825 - Context.<init> - Info - Host: pink-vm10
+11/01/19 - 16:20:18.846 - PluginManager.loadExtensionsFolder - Info - Loading extensions folder
+11/01/19 - 16:20:18.847 - DataManager.initialize - Info - Initializing DataManager
+11/01/19 - 16:20:18.856 - DataManager.setProvider - Info - Setting data provider: ch.psi.pshell.data.ProviderHDF5
+11/01/19 - 16:20:18.858 - DataManager.setLayout - Info - Setting data layout: ch.psi.pshell.data.LayoutDefault
+11/01/19 - 16:20:18.860 - DataManager.initialize - Info - Finished DataManager initialization
+11/01/19 - 16:20:18.860 - App.startup - Info - Version: 1.10-SNAPSHOT (build 1812200927-py)
+11/01/19 - 16:20:18.862 - App.startup - Info - Create workbench
+11/01/19 - 16:20:20.308 - PluginManager.loadPluginFolder - Info - Loading plugins folder
+11/01/19 - 16:20:20.314 - PluginManager.loadPlugin - Info - Load plugin: /home/nilson/PShell/home/plugins/pp2.java
+11/01/19 - 16:20:20.326 - PluginManager.loadPlugin - Info - Load plugin: /home/nilson/PShell/home/plugins/pp1.java
+11/01/19 - 16:20:20.335 - PluginManager.startPlugins - Info - Start plugins
+11/01/19 - 16:20:20.345 - PluginManager.startPlugin - Info - Started plugin: pp2.java
+11/01/19 - 16:20:20.381 - PluginManager.startPlugin - Info - Started plugin: pp1.java
+11/01/19 - 16:20:20.383 - Context.onCommand - Info - Restart (ui)
+11/01/19 - 16:20:20.395 - Context.restart - Info - Initializing context
+11/01/19 - 16:20:20.396 - Context.onUserChange - Info - User: Default [administrator] *
+11/01/19 - 16:20:20.398 - Context.restart - Info - Loading Device Pool
+11/01/19 - 16:20:20.399 - DevicePool.initialize - Info - Initializing DevicePool
+11/01/19 - 16:20:20.445 - ScriptManager.<init> - Info - Initializing ScriptManager
+11/01/19 - 16:20:20.870 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+11/01/19 - 16:20:22.813 - Context.lambda$restart$1 - Info - Executed startup script
+11/01/19 - 16:20:22.816 - Context.lambda$restart$1 - Info - Executed local startup script
+11/01/19 - 16:23:27.182 - Context.onCommand - Info - Run: pp1, myx=45.7 (plugin)
+11/01/19 - 16:23:38.962 - Context.onCommand - Info - Run: pp1, myx=79.0 (plugin)
+11/01/19 - 16:23:50.250 - Context.onCommand - Info - Run: pp2, args=[11, hello, 44] (plugin)
+11/01/19 - 16:24:33.623 - Context.onCommand - Info - Run: wrapper.py (ui)
+11/01/19 - 16:25:05.555 - Context.onCommand - Info - Eval: from jeputils import * (ui)
+11/01/19 - 16:25:13.673 - App.exit - Info - Aplication exit command by: MainFrame
+11/01/19 - 16:25:16.406 - Context.close - Info - Close
+11/01/19 - 16:25:16.407 - PluginManager.stopPlugins - Info - Stop plugins
+11/01/19 - 16:25:16.409 - PluginManager.stopPlugin - Info - Stopped plugin: pp2.java
+11/01/19 - 16:25:16.409 - PluginManager.stopPlugin - Info - Stopped plugin: pp1.java
+11/01/19 - 16:25:16.431 - App.end - Info - Finished

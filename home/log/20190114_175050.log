@@ -1,0 +1,14 @@
+14/01/19 - 17:50:50.525 - Context.restart - Info - Initializing context
+14/01/19 - 17:50:50.529 - DataManager.initialize - Info - Initializing DataManager
+14/01/19 - 17:50:50.530 - DataManager.initialize - Info - Finished DataManager initialization
+14/01/19 - 17:50:50.531 - Context.restart - Info - Loading Device Pool
+14/01/19 - 17:50:50.531 - DevicePool.initialize - Info - Initializing DevicePool
+14/01/19 - 17:50:50.535 - ScriptManager.<init> - Info - Initializing ScriptManager
+14/01/19 - 17:50:50.537 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+14/01/19 - 17:50:50.984 - Context.lambda$restart$1 - Info - Executed startup script
+14/01/19 - 17:50:50.987 - Context.lambda$restart$1 - Info - Executed local startup script
+14/01/19 - 17:51:24.976 - App.exit - Info - Aplication exit command by: MainFrame
+14/01/19 - 17:51:24.981 - Context.close - Info - Close
+14/01/19 - 17:51:24.984 - PluginManager.stopPlugins - Info - Stop plugins
+14/01/19 - 17:51:24.995 - PluginManager.stopPlugin - Info - Stopped plugin: pp3.java
+14/01/19 - 17:51:25.011 - App.end - Info - Finished

@@ -1,0 +1,14 @@
+14/01/19 - 17:49:02.912 - Context.<init> - Info - Process: 8212@pink-vm10
+14/01/19 - 17:49:02.913 - Context.<init> - Info - Context: unknown
+14/01/19 - 17:49:02.914 - Context.<init> - Info - Pars: /home/nilson/PShell/pshell-1.10.0-fat.jar -home=/home/nilson/PShell/home -dlaf
+14/01/19 - 17:49:02.914 - Context.<init> - Info - User: nilson
+14/01/19 - 17:49:02.914 - Context.<init> - Info - Host: pink-vm10
+14/01/19 - 17:49:02.935 - PluginManager.loadExtensionsFolder - Info - Loading extensions folder
+14/01/19 - 17:49:02.936 - DataManager.initialize - Info - Initializing DataManager
+14/01/19 - 17:49:02.944 - DataManager.setProvider - Info - Setting data provider: ch.psi.pshell.data.ProviderHDF5
+14/01/19 - 17:49:02.947 - DataManager.setLayout - Info - Setting data layout: ch.psi.pshell.data.LayoutDefault
+14/01/19 - 17:49:02.949 - DataManager.initialize - Info - Finished DataManager initialization
+14/01/19 - 17:49:02.949 - App.startup - Info - Version: 1.10-SNAPSHOT (build 1812200927-py)
+14/01/19 - 17:49:02.951 - App.startup - Info - Create workbench
+14/01/19 - 17:49:04.488 - Context.exit - Severe - Another instance of this application is running on: 8177@pink-vm10.
+Application can be started in local mode (-l option)
