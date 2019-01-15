@@ -1,2 +1,2 @@
 # pshellcontrol
-Share Pshell home folder for Pink Beamline
+Shared Pshell home folder for Pink Beamline
