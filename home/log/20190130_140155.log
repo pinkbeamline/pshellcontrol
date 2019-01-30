@@ -1,0 +1,25 @@
+30/01/19 - 14:01:55.780 - Context.<init> - Info - Process: 3877@pink-vm10
+30/01/19 - 14:01:55.781 - Context.<init> - Info - Context: unknown
+30/01/19 - 14:01:55.782 - Context.<init> - Info - Pars: /home/nilson/PShell/pshell-1.10.0-fat.jar -home=/home/nilson/PShell/pshellcontrol/home -dlaf
+30/01/19 - 14:01:55.782 - Context.<init> - Info - User: nilson
+30/01/19 - 14:01:55.782 - Context.<init> - Info - Host: pink-vm10
+30/01/19 - 14:01:55.802 - PluginManager.loadExtensionsFolder - Info - Loading extensions folder
+30/01/19 - 14:01:55.804 - DataManager.initialize - Info - Initializing DataManager
+30/01/19 - 14:01:55.813 - DataManager.setProvider - Info - Setting data provider: ch.psi.pshell.data.ProviderHDF5
+30/01/19 - 14:01:55.815 - DataManager.setLayout - Info - Setting data layout: ch.psi.pshell.data.LayoutDefault
+30/01/19 - 14:01:55.817 - DataManager.initialize - Info - Finished DataManager initialization
+30/01/19 - 14:01:55.818 - App.startup - Info - Version: 1.10-SNAPSHOT (build 1812200927-py)
+30/01/19 - 14:01:55.820 - App.startup - Info - Create workbench
+30/01/19 - 14:01:57.223 - PluginManager.loadPluginFolder - Info - Loading plugins folder
+30/01/19 - 14:01:57.228 - PluginManager.startPlugins - Info - Start plugins
+30/01/19 - 14:01:57.229 - Context.onCommand - Info - Restart (ui)
+30/01/19 - 14:01:57.241 - Context.restart - Info - Initializing context
+30/01/19 - 14:01:57.243 - Context.onUserChange - Info - User: Default [administrator] *
+30/01/19 - 14:01:57.245 - Context.restart - Info - Loading Device Pool
+30/01/19 - 14:01:57.246 - DevicePool.initialize - Info - Initializing DevicePool
+30/01/19 - 14:01:57.287 - DevicePool.initialize - Info - Finished DevicePool initialization
+30/01/19 - 14:01:57.294 - ScriptManager.<init> - Info - Initializing ScriptManager
+30/01/19 - 14:01:57.742 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+30/01/19 - 14:01:59.694 - Context.lambda$restart$1 - Info - Executed startup script
+30/01/19 - 14:01:59.723 - Context.lambda$restart$1 - Info - Executed local startup script
+30/01/19 - 14:05:34.821 - Context.onCommand - Info - Restart (ui)

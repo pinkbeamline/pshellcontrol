@@ -1,0 +1,17 @@
+30/01/19 - 14:05:35.011 - Context.restart - Info - Initializing context
+30/01/19 - 14:05:35.013 - DataManager.initialize - Info - Initializing DataManager
+30/01/19 - 14:05:35.015 - DataManager.initialize - Info - Finished DataManager initialization
+30/01/19 - 14:05:35.015 - Context.restart - Info - Loading Device Pool
+30/01/19 - 14:05:35.016 - DevicePool.initialize - Info - Initializing DevicePool
+30/01/19 - 14:05:35.017 - DevicePool.initialize - Info - Finished DevicePool initialization
+30/01/19 - 14:05:35.020 - ScriptManager.<init> - Info - Initializing ScriptManager
+30/01/19 - 14:05:35.023 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+30/01/19 - 14:05:35.479 - Context.lambda$restart$1 - Info - Executed startup script
+30/01/19 - 14:05:35.496 - Context.lambda$restart$1 - Info - Executed local startup script
+30/01/19 - 14:06:14.487 - Context.onCommand - Info - Run: /home/nilson/PShell/pshellcontrol/home/script/shared/pink_class.py (ui)
+30/01/19 - 14:06:16.644 - Context.onCommand - Info - Run: local.py (ui)
+30/01/19 - 14:06:38.892 - Context.onCommand - Info - Run: local.py (ui)
+30/01/19 - 14:07:47.309 - App.exit - Info - Aplication exit command by: MainFrame
+30/01/19 - 14:07:47.313 - Context.close - Info - Close
+30/01/19 - 14:07:47.313 - PluginManager.stopPlugins - Info - Stop plugins
+30/01/19 - 14:07:47.339 - App.end - Info - Finished

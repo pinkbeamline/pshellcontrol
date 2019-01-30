@@ -2,4 +2,6 @@
 #  Deployment specific global definitions - executed after startup.py
 ###################################################################################################
 
-print("hello")
+run("shared/pink_class.py")
+
+p=PINKCLASS()

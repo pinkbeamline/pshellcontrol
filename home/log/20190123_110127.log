@@ -1,0 +1,283 @@
+23/01/19 - 11:01:27.377 - Context.<init> - Info - Process: 24058@pink-vm10
+23/01/19 - 11:01:27.379 - Context.<init> - Info - Context: unknown
+23/01/19 - 11:01:27.379 - Context.<init> - Info - Pars: /home/nilson/PShell/pshell-1.10.0-fat.jar -home=/home/nilson/PShell/pshellcontrol/home -dlaf
+23/01/19 - 11:01:27.379 - Context.<init> - Info - User: nilson
+23/01/19 - 11:01:27.380 - Context.<init> - Info - Host: pink-vm10
+23/01/19 - 11:01:27.400 - PluginManager.loadExtensionsFolder - Info - Loading extensions folder
+23/01/19 - 11:01:27.401 - DataManager.initialize - Info - Initializing DataManager
+23/01/19 - 11:01:27.410 - DataManager.setProvider - Info - Setting data provider: ch.psi.pshell.data.ProviderHDF5
+23/01/19 - 11:01:27.412 - DataManager.setLayout - Info - Setting data layout: ch.psi.pshell.data.LayoutDefault
+23/01/19 - 11:01:27.415 - DataManager.initialize - Info - Finished DataManager initialization
+23/01/19 - 11:01:27.415 - App.startup - Info - Version: 1.10-SNAPSHOT (build 1812200927-py)
+23/01/19 - 11:01:27.417 - App.startup - Info - Create workbench
+23/01/19 - 11:01:28.729 - View.restorePreferences - Info - java.nio.file.NoSuchFileException: /home/nilson/PShell/home/script/testfpy.py
+Stack trace:
+java.nio.file.NoSuchFileException: /home/nilson/PShell/home/script/testfpy.py
+	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:86)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:102)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:107)
+	at sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:214)
+	at java.nio.file.Files.newByteChannel(Files.java:361)
+	at java.nio.file.Files.newByteChannel(Files.java:407)
+	at java.nio.file.Files.readAllBytes(Files.java:3152)
+	at ch.psi.utils.swing.TextEditor$TextDocument.load(TextEditor.java:113)
+	at ch.psi.utils.swing.Editor.load(Editor.java:135)
+	at ch.psi.pshell.swing.ScriptEditor.load(ScriptEditor.java:230)
+	at ch.psi.pshell.ui.View.newScriptEditor(View.java:1208)
+	at ch.psi.pshell.ui.View.openScript(View.java:1245)
+	at ch.psi.pshell.ui.View.openScriptOrProcessor(View.java:1344)
+	at ch.psi.pshell.ui.View.restorePreferences(View.java:1516)
+	at ch.psi.pshell.ui.View.onCreate(View.java:349)
+	at ch.psi.utils.swing.MainFrame.setVisible(MainFrame.java:159)
+	at ch.psi.pshell.ui.App.startup(App.java:848)
+	at ch.psi.pshell.ui.App.lambda$start$1(App.java:1370)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:301)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+23/01/19 - 11:01:28.766 - View.restorePreferences - Info - java.nio.file.NoSuchFileException: /home/nilson/PShell/home/script/wrapper.py
+Stack trace:
+java.nio.file.NoSuchFileException: /home/nilson/PShell/home/script/wrapper.py
+	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:86)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:102)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:107)
+	at sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:214)
+	at java.nio.file.Files.newByteChannel(Files.java:361)
+	at java.nio.file.Files.newByteChannel(Files.java:407)
+	at java.nio.file.Files.readAllBytes(Files.java:3152)
+	at ch.psi.utils.swing.TextEditor$TextDocument.load(TextEditor.java:113)
+	at ch.psi.utils.swing.Editor.load(Editor.java:135)
+	at ch.psi.pshell.swing.ScriptEditor.load(ScriptEditor.java:230)
+	at ch.psi.pshell.ui.View.newScriptEditor(View.java:1208)
+	at ch.psi.pshell.ui.View.openScript(View.java:1245)
+	at ch.psi.pshell.ui.View.openScriptOrProcessor(View.java:1344)
+	at ch.psi.pshell.ui.View.restorePreferences(View.java:1516)
+	at ch.psi.pshell.ui.View.onCreate(View.java:349)
+	at ch.psi.utils.swing.MainFrame.setVisible(MainFrame.java:159)
+	at ch.psi.pshell.ui.App.startup(App.java:848)
+	at ch.psi.pshell.ui.App.lambda$start$1(App.java:1370)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:301)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+23/01/19 - 11:01:28.796 - View.restorePreferences - Info - java.nio.file.NoSuchFileException: /home/nilson/PShell/home/script/testf.py
+Stack trace:
+java.nio.file.NoSuchFileException: /home/nilson/PShell/home/script/testf.py
+	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:86)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:102)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:107)
+	at sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:214)
+	at java.nio.file.Files.newByteChannel(Files.java:361)
+	at java.nio.file.Files.newByteChannel(Files.java:407)
+	at java.nio.file.Files.readAllBytes(Files.java:3152)
+	at ch.psi.utils.swing.TextEditor$TextDocument.load(TextEditor.java:113)
+	at ch.psi.utils.swing.Editor.load(Editor.java:135)
+	at ch.psi.pshell.swing.ScriptEditor.load(ScriptEditor.java:230)
+	at ch.psi.pshell.ui.View.newScriptEditor(View.java:1208)
+	at ch.psi.pshell.ui.View.openScript(View.java:1245)
+	at ch.psi.pshell.ui.View.openScriptOrProcessor(View.java:1344)
+	at ch.psi.pshell.ui.View.restorePreferences(View.java:1516)
+	at ch.psi.pshell.ui.View.onCreate(View.java:349)
+	at ch.psi.utils.swing.MainFrame.setVisible(MainFrame.java:159)
+	at ch.psi.pshell.ui.App.startup(App.java:848)
+	at ch.psi.pshell.ui.App.lambda$start$1(App.java:1370)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:301)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+23/01/19 - 11:01:28.825 - View.restorePreferences - Info - java.nio.file.NoSuchFileException: /home/nilson/PShell/home/script/pp2.py
+Stack trace:
+java.nio.file.NoSuchFileException: /home/nilson/PShell/home/script/pp2.py
+	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:86)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:102)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:107)
+	at sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:214)
+	at java.nio.file.Files.newByteChannel(Files.java:361)
+	at java.nio.file.Files.newByteChannel(Files.java:407)
+	at java.nio.file.Files.readAllBytes(Files.java:3152)
+	at ch.psi.utils.swing.TextEditor$TextDocument.load(TextEditor.java:113)
+	at ch.psi.utils.swing.Editor.load(Editor.java:135)
+	at ch.psi.pshell.swing.ScriptEditor.load(ScriptEditor.java:230)
+	at ch.psi.pshell.ui.View.newScriptEditor(View.java:1208)
+	at ch.psi.pshell.ui.View.openScript(View.java:1245)
+	at ch.psi.pshell.ui.View.openScriptOrProcessor(View.java:1344)
+	at ch.psi.pshell.ui.View.restorePreferences(View.java:1516)
+	at ch.psi.pshell.ui.View.onCreate(View.java:349)
+	at ch.psi.utils.swing.MainFrame.setVisible(MainFrame.java:159)
+	at ch.psi.pshell.ui.App.startup(App.java:848)
+	at ch.psi.pshell.ui.App.lambda$start$1(App.java:1370)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:301)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+23/01/19 - 11:01:28.852 - View.restorePreferences - Info - java.nio.file.NoSuchFileException: /home/nilson/PShell/home/script/local.py
+Stack trace:
+java.nio.file.NoSuchFileException: /home/nilson/PShell/home/script/local.py
+	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:86)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:102)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:107)
+	at sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:214)
+	at java.nio.file.Files.newByteChannel(Files.java:361)
+	at java.nio.file.Files.newByteChannel(Files.java:407)
+	at java.nio.file.Files.readAllBytes(Files.java:3152)
+	at ch.psi.utils.swing.TextEditor$TextDocument.load(TextEditor.java:113)
+	at ch.psi.utils.swing.Editor.load(Editor.java:135)
+	at ch.psi.pshell.swing.ScriptEditor.load(ScriptEditor.java:230)
+	at ch.psi.pshell.ui.View.newScriptEditor(View.java:1208)
+	at ch.psi.pshell.ui.View.openScript(View.java:1245)
+	at ch.psi.pshell.ui.View.openScriptOrProcessor(View.java:1344)
+	at ch.psi.pshell.ui.View.restorePreferences(View.java:1516)
+	at ch.psi.pshell.ui.View.onCreate(View.java:349)
+	at ch.psi.utils.swing.MainFrame.setVisible(MainFrame.java:159)
+	at ch.psi.pshell.ui.App.startup(App.java:848)
+	at ch.psi.pshell.ui.App.lambda$start$1(App.java:1370)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:301)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+23/01/19 - 11:01:28.879 - View.restorePreferences - Info - java.nio.file.NoSuchFileException: /home/nilson/PShell/home/script/pp1.py
+Stack trace:
+java.nio.file.NoSuchFileException: /home/nilson/PShell/home/script/pp1.py
+	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:86)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:102)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:107)
+	at sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:214)
+	at java.nio.file.Files.newByteChannel(Files.java:361)
+	at java.nio.file.Files.newByteChannel(Files.java:407)
+	at java.nio.file.Files.readAllBytes(Files.java:3152)
+	at ch.psi.utils.swing.TextEditor$TextDocument.load(TextEditor.java:113)
+	at ch.psi.utils.swing.Editor.load(Editor.java:135)
+	at ch.psi.pshell.swing.ScriptEditor.load(ScriptEditor.java:230)
+	at ch.psi.pshell.ui.View.newScriptEditor(View.java:1208)
+	at ch.psi.pshell.ui.View.openScript(View.java:1245)
+	at ch.psi.pshell.ui.View.openScriptOrProcessor(View.java:1344)
+	at ch.psi.pshell.ui.View.restorePreferences(View.java:1516)
+	at ch.psi.pshell.ui.View.onCreate(View.java:349)
+	at ch.psi.utils.swing.MainFrame.setVisible(MainFrame.java:159)
+	at ch.psi.pshell.ui.App.startup(App.java:848)
+	at ch.psi.pshell.ui.App.lambda$start$1(App.java:1370)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:301)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+23/01/19 - 11:01:28.903 - View.restorePreferences - Info - java.nio.file.NoSuchFileException: /home/nilson/PShell/home/script/test_jep.py
+Stack trace:
+java.nio.file.NoSuchFileException: /home/nilson/PShell/home/script/test_jep.py
+	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:86)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:102)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:107)
+	at sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:214)
+	at java.nio.file.Files.newByteChannel(Files.java:361)
+	at java.nio.file.Files.newByteChannel(Files.java:407)
+	at java.nio.file.Files.readAllBytes(Files.java:3152)
+	at ch.psi.utils.swing.TextEditor$TextDocument.load(TextEditor.java:113)
+	at ch.psi.utils.swing.Editor.load(Editor.java:135)
+	at ch.psi.pshell.swing.ScriptEditor.load(ScriptEditor.java:230)
+	at ch.psi.pshell.ui.View.newScriptEditor(View.java:1208)
+	at ch.psi.pshell.ui.View.openScript(View.java:1245)
+	at ch.psi.pshell.ui.View.openScriptOrProcessor(View.java:1344)
+	at ch.psi.pshell.ui.View.restorePreferences(View.java:1516)
+	at ch.psi.pshell.ui.View.onCreate(View.java:349)
+	at ch.psi.utils.swing.MainFrame.setVisible(MainFrame.java:159)
+	at ch.psi.pshell.ui.App.startup(App.java:848)
+	at ch.psi.pshell.ui.App.lambda$start$1(App.java:1370)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:301)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+23/01/19 - 11:01:28.935 - PluginManager.loadPluginFolder - Info - Loading plugins folder
+23/01/19 - 11:01:28.941 - PluginManager.loadPlugin - Info - Load plugin: /home/nilson/PShell/pshellcontrol/home/plugins/pp3.java
+23/01/19 - 11:01:28.942 - PluginManager.loadJavaFile - Info - Compiling class file: /home/nilson/PShell/pshellcontrol/home/plugins/pp3.java
+23/01/19 - 11:01:29.493 - PluginManager.startPlugins - Info - Start plugins
+23/01/19 - 11:01:29.522 - PluginManager.startPlugin - Info - Started plugin: pp3.java
+23/01/19 - 11:01:29.523 - Context.onCommand - Info - Restart (ui)
+23/01/19 - 11:01:29.535 - Context.restart - Info - Initializing context
+23/01/19 - 11:01:29.537 - Context.onUserChange - Info - User: Default [administrator] *
+23/01/19 - 11:01:29.539 - Context.restart - Info - Loading Device Pool
+23/01/19 - 11:01:29.539 - DevicePool.initialize - Info - Initializing DevicePool
+23/01/19 - 11:01:29.585 - ScriptManager.<init> - Info - Initializing ScriptManager
+23/01/19 - 11:01:30.119 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+23/01/19 - 11:01:32.042 - Context.lambda$restart$1 - Info - Executed startup script
+23/01/19 - 11:01:32.070 - Context.lambda$restart$1 - Info - Executed local startup script
+23/01/19 - 11:08:40.455 - App.exit - Info - Aplication exit command by: MainFrame
+23/01/19 - 11:08:40.466 - Context.close - Info - Close
+23/01/19 - 11:08:40.467 - PluginManager.stopPlugins - Info - Stop plugins
+23/01/19 - 11:08:40.468 - PluginManager.stopPlugin - Info - Stopped plugin: pp3.java
+23/01/19 - 11:08:40.488 - App.end - Info - Finished
