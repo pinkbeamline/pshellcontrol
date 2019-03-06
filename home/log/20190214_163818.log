@@ -1,0 +1,24 @@
+14/02/19 - 16:38:18.805 - Context.restart - Info - Initializing context
+14/02/19 - 16:38:18.807 - DataManager.initialize - Info - Initializing DataManager
+14/02/19 - 16:38:18.808 - DataManager.initialize - Info - Finished DataManager initialization
+14/02/19 - 16:38:18.809 - Context.restart - Info - Loading Device Pool
+14/02/19 - 16:38:18.809 - DevicePool.initialize - Info - Initializing DevicePool
+14/02/19 - 16:38:18.810 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_RBV
+14/02/19 - 16:38:18.834 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Set
+14/02/19 - 16:38:18.845 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Exec
+14/02/19 - 16:38:18.856 - DevicePool.initializeDevices - Info - Initializing: Diodes_Sum_Intensity
+14/02/19 - 16:38:18.867 - DevicePool.initializeDevices - Info - Initializing: Filter1
+14/02/19 - 16:38:18.879 - DevicePool.initializeDevices - Info - Initializing: Filter1_RBV
+14/02/19 - 16:38:18.890 - DevicePool.initializeDevices - Info - Initializing: Filter2
+14/02/19 - 16:38:18.902 - DevicePool.initializeDevices - Info - Initializing: Filter2_RBV
+14/02/19 - 16:38:18.913 - DevicePool.initializeDevices - Info - Initializing: BPM2_Vert_Profile
+14/02/19 - 16:38:18.925 - DevicePool.initializeDevices - Info - Initializing: BPM2_Profile_Size
+14/02/19 - 16:38:18.982 - DevicePool.initialize - Info - Finished DevicePool initialization
+14/02/19 - 16:38:18.987 - ScriptManager.<init> - Info - Initializing ScriptManager
+14/02/19 - 16:38:18.994 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+14/02/19 - 16:38:19.362 - Context.lambda$restart$1 - Info - Executed startup script
+14/02/19 - 16:38:19.474 - Context.lambda$restart$1 - Info - Executed local startup script
+14/02/19 - 16:38:21.919 - App.exit - Info - Aplication exit command by: MainFrame
+14/02/19 - 16:38:25.662 - Context.close - Info - Close
+14/02/19 - 16:38:26.670 - PluginManager.stopPlugins - Info - Stop plugins
+14/02/19 - 16:38:26.682 - App.end - Info - Finished

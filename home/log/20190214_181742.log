@@ -1,0 +1,22 @@
+14/02/19 - 18:17:42.315 - Context.restart - Info - Initializing context
+14/02/19 - 18:17:42.317 - DataManager.initialize - Info - Initializing DataManager
+14/02/19 - 18:17:42.319 - DataManager.initialize - Info - Finished DataManager initialization
+14/02/19 - 18:17:42.320 - Context.restart - Info - Loading Device Pool
+14/02/19 - 18:17:42.320 - DevicePool.initialize - Info - Initializing DevicePool
+14/02/19 - 18:17:42.322 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_RBV
+14/02/19 - 18:17:42.340 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Set
+14/02/19 - 18:17:42.353 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Exec
+14/02/19 - 18:17:42.364 - DevicePool.initializeDevices - Info - Initializing: Diodes_Sum_Intensity
+14/02/19 - 18:17:42.376 - DevicePool.initializeDevices - Info - Initializing: Filter1
+14/02/19 - 18:17:42.390 - DevicePool.initializeDevices - Info - Initializing: Filter1_RBV
+14/02/19 - 18:17:42.402 - DevicePool.initializeDevices - Info - Initializing: Filter2
+14/02/19 - 18:17:42.415 - DevicePool.initializeDevices - Info - Initializing: Filter2_RBV
+14/02/19 - 18:17:42.427 - DevicePool.initializeDevices - Info - Initializing: BPM2_Vert_Profile
+14/02/19 - 18:17:42.442 - DevicePool.initializeDevices - Info - Initializing: BPM2_Profile_Size
+14/02/19 - 18:17:42.506 - DevicePool.initialize - Info - Finished DevicePool initialization
+14/02/19 - 18:17:42.511 - ScriptManager.<init> - Info - Initializing ScriptManager
+14/02/19 - 18:17:42.520 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+14/02/19 - 18:17:42.914 - Context.lambda$restart$1 - Info - Executed startup script
+14/02/19 - 18:17:42.996 - Context.lambda$restart$1 - Info - Executed local startup script
+14/02/19 - 18:17:46.577 - Context.onCommand - Info - Eval: bpm.BPM3_Vertical_Profile() (ui)
+14/02/19 - 18:18:59.235 - Context.onCommand - Info - Restart (ui)

@@ -1,0 +1,62 @@
+15/02/19 - 13:14:20.788 - Context.restart - Info - Initializing context
+15/02/19 - 13:14:20.790 - DataManager.initialize - Info - Initializing DataManager
+15/02/19 - 13:14:20.791 - DataManager.initialize - Info - Finished DataManager initialization
+15/02/19 - 13:14:20.792 - Context.restart - Info - Loading Device Pool
+15/02/19 - 13:14:20.792 - DevicePool.initialize - Info - Initializing DevicePool
+15/02/19 - 13:14:20.793 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_RBV
+15/02/19 - 13:14:20.828 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Set
+15/02/19 - 13:14:20.840 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Exec
+15/02/19 - 13:14:20.852 - DevicePool.initializeDevices - Info - Initializing: Diodes_Sum_Intensity
+15/02/19 - 13:14:20.863 - DevicePool.initializeDevices - Info - Initializing: Filter1
+15/02/19 - 13:14:20.875 - DevicePool.initializeDevices - Info - Initializing: Filter1_RBV
+15/02/19 - 13:14:20.886 - DevicePool.initializeDevices - Info - Initializing: Filter2
+15/02/19 - 13:14:20.897 - DevicePool.initializeDevices - Info - Initializing: Filter2_RBV
+15/02/19 - 13:14:20.908 - DevicePool.initializeDevices - Info - Initializing: BPM2_Vert_Profile
+15/02/19 - 13:14:20.919 - DevicePool.initializeDevices - Info - Initializing: BPM2_Profile_Size
+15/02/19 - 13:14:20.979 - DevicePool.initialize - Info - Finished DevicePool initialization
+15/02/19 - 13:14:20.983 - ScriptManager.<init> - Info - Initializing ScriptManager
+15/02/19 - 13:14:20.988 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+15/02/19 - 13:14:21.283 - Context.lambda$restart$1 - Info - Executed startup script
+15/02/19 - 13:14:21.362 - Context.lambda$restart$1 - Info - Executed local startup script
+15/02/19 - 13:14:26.751 - Context.onCommand - Info - Eval: bpm.BPM2_Vertical_Profile() (ui)
+15/02/19 - 13:29:25.748 - Context.onCommand - Info - Eval: run("Undulator_scan.py") (ui)
+15/02/19 - 13:29:57.074 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/Undulator_scan.py (ui)
+15/02/19 - 13:52:25.373 - Context.onCommand - Info - Eval: bpm.BPM3_Vertical_Profile() (ui)
+15/02/19 - 13:54:17.678 - Context.onCommand - Info - Eval: bpm.BPM3_Vertical_Profile() (ui)
+15/02/19 - 13:59:08.198 - Context.onCommand - Info - Eval: bpm.BPM3_Vertical_Profile() (ui)
+15/02/19 - 13:59:51.670 - Context.onCommand - Info - Eval: bpm.BPM3_Vertical_Profile() (ui)
+15/02/19 - 14:01:18.920 - Context.onCommand - Info - Eval: bpm.BPM3_Vertical_Profile() (ui)
+15/02/19 - 14:08:18.255 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/Undulator_scan.py (ui)
+15/02/19 - 14:11:02.808 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/Undulator_scan.py (ui)
+15/02/19 - 14:20:15.470 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/Undulator_scan.py (ui)
+15/02/19 - 14:21:50.878 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/Undulator_scan.py (ui)
+15/02/19 - 14:34:38.599 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/Undulator_scan.py (ui)
+15/02/19 - 14:55:44.777 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/Undulator_scan.py (ui)
+15/02/19 - 15:02:45.227 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/Undulator_scan.py (ui)
+15/02/19 - 15:07:07.675 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/Undulator_scan.py (ui)
+15/02/19 - 15:13:17.373 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/Undulator_scan.py (ui)
+15/02/19 - 15:21:12.047 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/Undulator_scan.py (ui)
+15/02/19 - 15:21:37.370 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/Undulator_scan.py (ui)
+15/02/19 - 15:22:02.390 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/Undulator_scan.py (ui)
+15/02/19 - 15:26:57.716 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/Undulator_scan.py (ui)
+15/02/19 - 15:29:45.279 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/Undulator_scan.py (ui)
+15/02/19 - 15:41:18.613 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/Undulator_scan.py (ui)
+15/02/19 - 15:44:21.523 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/Undulator_scan.py (ui)
+15/02/19 - 15:48:52.290 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/Undulator_scan.py (ui)
+15/02/19 - 16:00:11.547 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/Undulator_scan.py (ui)
+15/02/19 - 16:18:50.050 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/Undulator_scan.py (ui)
+15/02/19 - 16:21:38.863 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/Undulator_scan.py (ui)
+15/02/19 - 16:25:06.080 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/Undulator_scan.py (ui)
+16/02/19 - 18:05:03.974 - Context.onCommand - Info - Eval: bpm.BPM2_Vertical_Profile() (ui)
+16/02/19 - 18:06:04.503 - Context.onCommand - Info - Eval: bpm.BPM3_Vertical_Profile() (ui)
+16/02/19 - 18:07:26.569 - Context.onCommand - Info - Eval: bpm.BPM3_Vertical_Profile() (ui)
+16/02/19 - 18:08:16.434 - Context.onCommand - Info - Eval: bpm.BPM3_Vertical_Profile() (ui)
+16/02/19 - 18:09:05.251 - Context.onCommand - Info - Eval: bpm.BPM3_Vertical_Profile() (ui)
+16/02/19 - 18:10:18.445 - Context.onCommand - Info - Eval: bpm.BPM3_Vertical_Profile() (ui)
+16/02/19 - 18:10:34.790 - Context.onCommand - Info - Eval: bpm.BPM3_Vertical_Profile() (ui)
+16/02/19 - 18:13:25.890 - Context.onCommand - Info - Eval: bpm.BPM3_Vertical_Profile() (ui)
+16/02/19 - 18:17:35.823 - Context.onCommand - Info - Eval: bpm.BPM3_Vertical_Profile() (ui)
+16/02/19 - 18:19:30.104 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/Undulator_scan.py (ui)
+16/02/19 - 18:21:58.854 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/Undulator_scan.py (ui)
+16/02/19 - 18:26:42.780 - Context.onCommand - Info - Eval: lscan(Filter1, Diodes_Sum_Intensity, 0, 32000, 200.0, 1)  (ui)
+25/02/19 - 13:53:39.025 - Context.onCommand - Info - Restart (ui)

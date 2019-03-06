@@ -1,0 +1,59 @@
+27/02/19 - 15:35:13.096 - Context.restart - Info - Initializing context
+27/02/19 - 15:35:13.098 - DataManager.initialize - Info - Initializing DataManager
+27/02/19 - 15:35:13.099 - DataManager.initialize - Info - Finished DataManager initialization
+27/02/19 - 15:35:13.100 - Context.restart - Info - Loading Device Pool
+27/02/19 - 15:35:13.100 - DevicePool.initialize - Info - Initializing DevicePool
+27/02/19 - 15:35:13.103 - Config.load - Info - java.io.FileNotFoundException: /home/epics/PShell/pshellcontrol/home/devices/Filter1.properties (No such file or directory)
+Stack trace:
+java.io.FileNotFoundException: /home/epics/PShell/pshellcontrol/home/devices/Filter1.properties (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at java.io.FileInputStream.<init>(FileInputStream.java:93)
+	at ch.psi.utils.Config.load(Config.java:171)
+	at ch.psi.pshell.device.GenericDeviceBase.<init>(GenericDeviceBase.java:63)
+	at ch.psi.pshell.device.DeviceBase.<init>(DeviceBase.java:46)
+	at ch.psi.pshell.device.RegisterBase.<init>(RegisterBase.java:24)
+	at ch.psi.pshell.device.ProcessVariableBase.<init>(ProcessVariableBase.java:11)
+	at ch.psi.pshell.device.ControlledVariableBase.<init>(ControlledVariableBase.java:13)
+	at ch.psi.pshell.device.PositionerBase.<init>(PositionerBase.java:15)
+	at ch.psi.pshell.device.MotorBase.<init>(MotorBase.java:15)
+	at ch.psi.pshell.epics.Motor.<init>(Motor.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at ch.psi.pshell.core.DevicePool.load(DevicePool.java:223)
+	at ch.psi.pshell.core.DevicePool.initialize(DevicePool.java:42)
+	at ch.psi.pshell.core.Context.restart(Context.java:985)
+	at ch.psi.pshell.core.Context.restart(Context.java:2952)
+	at ch.psi.pshell.ui.Task$Restart.doInBackground(Task.java:368)
+	at ch.psi.pshell.ui.Task$Restart.doInBackground(Task.java:358)
+	at javax.swing.SwingWorker$1.call(SwingWorker.java:295)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at javax.swing.SwingWorker.run(SwingWorker.java:334)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+27/02/19 - 15:35:13.106 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_RBV
+27/02/19 - 15:35:13.120 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Set
+27/02/19 - 15:35:13.131 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Exec
+27/02/19 - 15:35:13.142 - DevicePool.initializeDevices - Info - Initializing: Diodes_Sum_Intensity
+27/02/19 - 15:35:13.154 - DevicePool.initializeDevices - Info - Initializing: Diode_1
+27/02/19 - 15:35:13.165 - DevicePool.initializeDevices - Info - Initializing: Diode_2
+27/02/19 - 15:35:13.176 - DevicePool.initializeDevices - Info - Initializing: Diode_3
+27/02/19 - 15:35:13.187 - DevicePool.initializeDevices - Info - Initializing: Diode_4
+27/02/19 - 15:35:13.198 - DevicePool.initializeDevices - Info - Initializing: Filter1
+27/02/19 - 15:35:13.377 - DevicePool.initializeDevices - Info - Initializing: Filter1_RBV
+27/02/19 - 15:35:13.377 - DevicePool.initializeDevices - Info - Initializing: Filter2
+27/02/19 - 15:35:13.469 - DevicePool.initializeDevices - Info - Initializing: Filter2_RBV
+27/02/19 - 15:35:13.469 - DevicePool.initializeDevices - Info - Initializing: BPM2_Vert_Profile
+27/02/19 - 15:35:13.482 - DevicePool.initializeDevices - Info - Initializing: BPM2_Profile_Size
+27/02/19 - 15:35:13.494 - DevicePool.initializeDevices - Info - Initializing: Filter2_SIG
+27/02/19 - 15:35:13.579 - DevicePool.initialize - Info - Finished DevicePool initialization
+27/02/19 - 15:35:13.581 - ScriptManager.<init> - Info - Initializing ScriptManager
+27/02/19 - 15:35:13.585 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+27/02/19 - 15:35:13.854 - Context.lambda$restart$1 - Info - Executed startup script
+27/02/19 - 15:35:13.968 - Context.lambda$restart$1 - Info - Executed local startup script
+27/02/19 - 15:56:03.847 - Context.onCommand - Info - Restart (ui)

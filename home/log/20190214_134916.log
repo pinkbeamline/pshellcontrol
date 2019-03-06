@@ -1,0 +1,26 @@
+14/02/19 - 13:49:16.355 - Context.restart - Info - Initializing context
+14/02/19 - 13:49:16.356 - DataManager.initialize - Info - Initializing DataManager
+14/02/19 - 13:49:16.358 - DataManager.initialize - Info - Finished DataManager initialization
+14/02/19 - 13:49:16.359 - Context.restart - Info - Loading Device Pool
+14/02/19 - 13:49:16.359 - DevicePool.initialize - Info - Initializing DevicePool
+14/02/19 - 13:49:16.362 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_RBV
+14/02/19 - 13:49:16.379 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Set
+14/02/19 - 13:49:16.391 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Exec
+14/02/19 - 13:49:16.402 - DevicePool.initializeDevices - Info - Initializing: Diodes_Sum_Intensity
+14/02/19 - 13:49:16.414 - DevicePool.initializeDevices - Info - Initializing: Filter1
+14/02/19 - 13:49:16.428 - DevicePool.initializeDevices - Info - Initializing: Filter1_RBV
+14/02/19 - 13:49:16.439 - DevicePool.initializeDevices - Info - Initializing: Filter2
+14/02/19 - 13:49:16.452 - DevicePool.initializeDevices - Info - Initializing: Filter2_RBV
+14/02/19 - 13:49:16.517 - DevicePool.initialize - Info - Finished DevicePool initialization
+14/02/19 - 13:49:16.525 - ScriptManager.<init> - Info - Initializing ScriptManager
+14/02/19 - 13:49:16.533 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+14/02/19 - 13:49:16.946 - Context.lambda$restart$1 - Info - Executed startup script
+14/02/19 - 13:49:16.965 - Context.lambda$restart$1 - Info - Executed local startup script
+14/02/19 - 13:58:23.334 - Context.onCommand - Info - Eval: lscan(Filter1, Diodes_Sum_Intensity, 0, 32000, 500.0, 1)  (ui)
+14/02/19 - 14:06:32.249 - Context.onCommand - Info - Eval: lscan(Filter1, Diodes_Sum_Intensity, 0, 32000, 500.0, 1)  (ui)
+14/02/19 - 14:15:13.989 - Context.onCommand - Info - Eval: lscan(Filter1, Diodes_Sum_Intensity, -18000, 18000, 200.0, 1)  (ui)
+14/02/19 - 14:18:41.016 - Context.onCommand - Info - Eval: lscan(Filter1, Diodes_Sum_Intensity, -18000, 18000, 200.0, 1)  (ui)
+14/02/19 - 15:17:49.882 - Context.onCommand - Info - Eval: a=[4,5] (ui)
+14/02/19 - 15:17:51.721 - Context.onCommand - Info - Eval: a (ui)
+14/02/19 - 16:08:56.039 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/vertical_profile.py (ui)
+14/02/19 - 16:11:05.114 - Context.onCommand - Info - Restart (ui)

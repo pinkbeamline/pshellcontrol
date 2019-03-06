@@ -1,0 +1,121 @@
+30/01/19 - 15:07:48.147 - Context.restart - Info - Initializing context
+30/01/19 - 15:07:48.149 - DataManager.initialize - Info - Initializing DataManager
+30/01/19 - 15:07:48.153 - DataManager.initialize - Info - Finished DataManager initialization
+30/01/19 - 15:07:48.153 - Context.restart - Info - Loading Device Pool
+30/01/19 - 15:07:48.154 - DevicePool.initialize - Info - Initializing DevicePool
+30/01/19 - 15:07:48.159 - Config.updateFields - Warning - Config value for 'colormapLogarithmic' was invalid: null [/home/epics/PShell/pshellcontrol/home/devices/GE_Raw_Imaging.properties]
+30/01/19 - 15:07:48.161 - DevicePool.initializeDevices - Info - Initializing: IZero_Profile
+30/01/19 - 15:07:48.204 - DevicePool.initializeDevices - Info - Initializing: IZero
+30/01/19 - 15:07:48.220 - DevicePool.initializeDevices - Info - Initializing: TFY_Profile
+30/01/19 - 15:07:48.222 - DevicePool.initializeDevices - Info - Initializing: TFY
+30/01/19 - 15:07:48.234 - DevicePool.initializeDevices - Info - Initializing: GE_AreaDet
+30/01/19 - 15:07:48.439 - DevicePool.initializeDevices - Info - Initializing: GE_FrameID
+30/01/19 - 15:07:48.441 - DevicePool.initializeDevices - Info - Initializing: GE_Raw_Imaging
+30/01/19 - 15:07:48.442 - DevicePool.initializeDevices - Info - Initializing: GE_Raw_Array
+30/01/19 - 15:07:48.470 - GE_Raw_Array channel.doSetMonitored - Severe - java.lang.IllegalArgumentException: Size of the monitor exceeds maxArrayBytes (270000 * 8 > 16384)
+Stack trace:
+java.lang.IllegalArgumentException: Size of the monitor exceeds maxArrayBytes (270000 * 8 > 16384)
+	at gov.aps.jca.Channel.checkMonitorSize(Channel.java:681)
+	at com.cosylab.epics.caj.CAJChannel.addMonitor(CAJChannel.java:1042)
+	at ch.psi.jcae.impl.DefaultChannel.attachMonitor(DefaultChannel.java:499)
+	at ch.psi.jcae.impl.DefaultChannel.setMonitored(DefaultChannel.java:454)
+	at ch.psi.pshell.epics.EpicsRegister.doSetMonitored(EpicsRegister.java:134)
+	at ch.psi.pshell.device.GenericDeviceBase.setMonitored(GenericDeviceBase.java:248)
+	at ch.psi.pshell.device.DeviceBase.doSetMonitored(DeviceBase.java:659)
+	at ch.psi.pshell.device.GenericDeviceBase.setMonitored(GenericDeviceBase.java:248)
+	at ch.psi.pshell.core.DevicePool.applyDeviceAttributes(DevicePool.java:529)
+	at ch.psi.pshell.core.DevicePool.applyDeviceAttributes(DevicePool.java:520)
+	at ch.psi.pshell.core.DevicePool.initialize(DevicePool.java:44)
+	at ch.psi.pshell.core.Context.restart(Context.java:985)
+	at ch.psi.pshell.core.Context.restart(Context.java:2952)
+	at ch.psi.pshell.ui.Task$Restart.doInBackground(Task.java:368)
+	at ch.psi.pshell.ui.Task$Restart.doInBackground(Task.java:358)
+	at javax.swing.SwingWorker$1.call(SwingWorker.java:295)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at javax.swing.SwingWorker.run(SwingWorker.java:334)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+30/01/19 - 15:07:48.473 - DevicePool.initialize - Info - Finished DevicePool initialization
+30/01/19 - 15:07:48.475 - ScriptManager.<init> - Info - Initializing ScriptManager
+30/01/19 - 15:07:48.482 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+30/01/19 - 15:07:48.947 - Context.lambda$restart$1 - Info - Executed startup script
+30/01/19 - 15:07:48.971 - Context.lambda$restart$1 - Info - Executed local startup script
+30/01/19 - 15:09:00.357 - GE_AreaDet data channel.doSetMonitored - Severe - java.lang.IllegalArgumentException: Size of the monitor exceeds maxArrayBytes (270000 * 2 > 16384)
+Stack trace:
+java.lang.IllegalArgumentException: Size of the monitor exceeds maxArrayBytes (270000 * 2 > 16384)
+	at gov.aps.jca.Channel.checkMonitorSize(Channel.java:681)
+	at com.cosylab.epics.caj.CAJChannel.addMonitor(CAJChannel.java:1042)
+	at ch.psi.jcae.impl.DefaultChannel.attachMonitor(DefaultChannel.java:499)
+	at ch.psi.jcae.impl.DefaultChannel.setMonitored(DefaultChannel.java:454)
+	at ch.psi.pshell.epics.EpicsRegister.doSetMonitored(EpicsRegister.java:134)
+	at ch.psi.pshell.device.GenericDeviceBase.setMonitored(GenericDeviceBase.java:248)
+	at ch.psi.pshell.device.DeviceBase.doSetMonitored(DeviceBase.java:659)
+	at ch.psi.pshell.device.GenericDeviceBase.setMonitored(GenericDeviceBase.java:248)
+	at ch.psi.pshell.imaging.DeviceSource.setupMonitor(DeviceSource.java:91)
+	at ch.psi.pshell.imaging.DeviceSource.onListenersChanged(DeviceSource.java:75)
+	at ch.psi.utils.ObservableBase.addListener(ObservableBase.java:19)
+	at ch.psi.pshell.imaging.SourceBase.addListener(SourceBase.java:213)
+	at ch.psi.pshell.imaging.SourceBase.addListener(SourceBase.java:29)
+	at ch.psi.pshell.imaging.Renderer.onShow(Renderer.java:2035)
+	at ch.psi.utils.swing.MonitoredPanel.lambda$new$0(MonitoredPanel.java:27)
+	at java.awt.Component.processHierarchyEvent(Component.java:6706)
+	at java.awt.Component.processEvent(Component.java:6325)
+	at java.awt.Container.processEvent(Container.java:2239)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2297)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.Component.createHierarchyEvents(Component.java:5555)
+	at java.awt.Container.createHierarchyEvents(Container.java:1448)
+	at java.awt.Container.createHierarchyEvents(Container.java:1444)
+	at java.awt.Container.createHierarchyEvents(Container.java:1444)
+	at java.awt.Container.createHierarchyEvents(Container.java:1444)
+	at java.awt.Container.createHierarchyEvents(Container.java:1444)
+	at java.awt.Dialog.conditionalShow(Dialog.java:953)
+	at java.awt.Dialog.show(Dialog.java:1037)
+	at java.awt.Component.show(Component.java:1671)
+	at java.awt.Component.setVisible(Component.java:1623)
+	at java.awt.Window.setVisible(Window.java:1014)
+	at java.awt.Dialog.setVisible(Dialog.java:1005)
+	at ch.psi.utils.swing.SwingUtils.showDialog(SwingUtils.java:706)
+	at ch.psi.pshell.ui.DevicePanelManager.newRenderer(DevicePanelManager.java:103)
+	at ch.psi.pshell.ui.DevicePanelManager.showPanel(DevicePanelManager.java:76)
+	at ch.psi.pshell.ui.DevicePanelManager.showPanel(DevicePanelManager.java:52)
+	at ch.psi.pshell.ui.View.showPanel(View.java:1640)
+	at ch.psi.pshell.swing.DevicePoolPanel.onDoubleClick(DevicePoolPanel.java:453)
+	at ch.psi.pshell.swing.DevicePoolPanel$1.mouseClicked(DevicePoolPanel.java:188)
+	at java.awt.AWTEventMulticaster.mouseClicked(AWTEventMulticaster.java:270)
+	at java.awt.Component.processMouseEvent(Component.java:6542)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6304)
+	at java.awt.Container.processEvent(Container.java:2239)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2297)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4544)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
+	at java.awt.Container.dispatchEventImpl(Container.java:2283)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
+	at java.awt.EventQueue$4.run(EventQueue.java:733)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+30/01/19 - 15:09:23.750 - Context.onCommand - Info - Restart (ui)

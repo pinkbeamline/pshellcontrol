@@ -1,0 +1,32 @@
+13/02/19 - 18:31:37.150 - Context.restart - Info - Initializing context
+13/02/19 - 18:31:37.151 - DataManager.initialize - Info - Initializing DataManager
+13/02/19 - 18:31:37.153 - DataManager.initialize - Info - Finished DataManager initialization
+13/02/19 - 18:31:37.153 - Context.restart - Info - Loading Device Pool
+13/02/19 - 18:31:37.153 - DevicePool.initialize - Info - Initializing DevicePool
+13/02/19 - 18:31:37.156 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_RBV
+13/02/19 - 18:31:37.173 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Set
+13/02/19 - 18:31:37.184 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Exec
+13/02/19 - 18:31:37.196 - DevicePool.initializeDevices - Info - Initializing: Diodes_Sum_Intensity
+13/02/19 - 18:31:37.247 - DevicePool.initialize - Info - Finished DevicePool initialization
+13/02/19 - 18:31:37.248 - ScriptManager.<init> - Info - Initializing ScriptManager
+13/02/19 - 18:31:37.251 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+13/02/19 - 18:31:37.615 - Context.lambda$restart$1 - Info - Executed startup script
+13/02/19 - 18:31:37.632 - Context.lambda$restart$1 - Info - Executed local startup script
+14/02/19 - 11:17:03.617 - Context.onCommand - Info - Eval: run("Undulator_scan-py") (ui)
+14/02/19 - 11:17:11.570 - Context.onCommand - Info - Eval: run("Undulator_scan.py") (ui)
+14/02/19 - 11:22:24.201 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/Undulator_scan.py (ui)
+14/02/19 - 11:23:01.037 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/Undulator_scan.py (ui)
+14/02/19 - 11:23:28.482 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/Undulator_scan.py (ui)
+14/02/19 - 11:30:07.833 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/Undulator_scan.py (ui)
+14/02/19 - 11:34:33.935 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/Undulator_scan.py (ui)
+14/02/19 - 11:37:04.246 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/Undulator_scan.py (ui)
+14/02/19 - 11:39:24.833 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/Undulator_scan.py (ui)
+14/02/19 - 11:56:45.778 - Context.onCommand - Info - Debug: /home/epics/Pinkdata/Control/PShell/shared/Undulator_scan.py (ui)
+14/02/19 - 11:58:33.627 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/Undulator_scan.py (ui)
+14/02/19 - 12:02:16.045 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/Undulator_scan.py (ui)
+14/02/19 - 12:02:54.082 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/Undulator_scan.py (ui)
+14/02/19 - 12:29:47.802 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/Undulator_scan.py (ui)
+14/02/19 - 12:33:04.900 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/Undulator_scan.py (ui)
+14/02/19 - 12:37:13.107 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/Undulator_scan.py (ui)
+14/02/19 - 12:40:18.378 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/Undulator_scan.py (ui)
+14/02/19 - 13:49:15.033 - Context.onCommand - Info - Restart (ui)

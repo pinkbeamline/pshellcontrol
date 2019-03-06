@@ -1,0 +1,57 @@
+06/03/19 - 10:00:17.927 - Context.restart - Info - Initializing context
+06/03/19 - 10:00:17.928 - DataManager.initialize - Info - Initializing DataManager
+06/03/19 - 10:00:17.930 - DataManager.initialize - Info - Finished DataManager initialization
+06/03/19 - 10:00:17.931 - Context.restart - Info - Loading Device Pool
+06/03/19 - 10:00:17.932 - DevicePool.initialize - Info - Initializing DevicePool
+06/03/19 - 10:00:17.937 - DevicePool.initializeDevices - Info - Initializing: IZero_Profile
+06/03/19 - 10:00:17.974 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_RBV
+06/03/19 - 10:00:17.985 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Set
+06/03/19 - 10:00:17.996 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Status
+06/03/19 - 10:00:18.018 - DevicePool.initializeDevices - Info - Initializing: IZero
+06/03/19 - 10:00:18.029 - DevicePool.initializeDevices - Info - Initializing: TFY_Profile
+06/03/19 - 10:00:18.066 - DevicePool.initializeDevices - Info - Initializing: TFY
+06/03/19 - 10:00:18.078 - DevicePool.initializeDevices - Info - Initializing: GE_AreaDet
+06/03/19 - 10:00:18.261 - DevicePool.initializeDevices - Info - Initializing: GE_FrameID
+06/03/19 - 10:00:18.262 - DevicePool.initializeDevices - Info - Initializing: GE_Raw_Imaging
+06/03/19 - 10:00:18.262 - DevicePool.initializeDevices - Info - Initializing: GE_Raw_Array
+06/03/19 - 10:00:18.263 - DevicePool.initializeDevices - Info - Initializing: GE_BG_Array
+06/03/19 - 10:00:18.298 - DevicePool.initializeDevices - Info - Initializing: GE_BG_SizeY
+06/03/19 - 10:00:18.299 - DevicePool.initializeDevices - Info - Initializing: GE_BG_SizeX
+06/03/19 - 10:00:18.300 - DevicePool.initializeDevices - Info - Initializing: GE_ROI_Array
+06/03/19 - 10:00:18.333 - DevicePool.initializeDevices - Info - Initializing: GE_ROI_SizeY
+06/03/19 - 10:00:18.344 - DevicePool.initializeDevices - Info - Initializing: GE_ROI_SizeX
+06/03/19 - 10:00:18.356 - DevicePool.initializeDevices - Info - Initializing: GE_ROI_Line
+06/03/19 - 10:00:18.368 - DevicePool.initializeDevices - Info - Initializing: GE_Spectrum
+06/03/19 - 10:00:18.404 - DevicePool.initializeDevices - Info - Initializing: GE_Spectrum_Sum
+06/03/19 - 10:00:18.439 - DevicePool.initializeDevices - Info - Initializing: GE_Spectrum_Conv
+06/03/19 - 10:00:18.451 - DevicePool.initializeDevices - Info - Initializing: GE_Sensor_Temp
+06/03/19 - 10:00:18.462 - DevicePool.initializeDevices - Info - Initializing: Scan_Progress
+06/03/19 - 10:00:18.474 - DevicePool.initializeDevices - Info - Initializing: Press_Diag_PV
+06/03/19 - 10:00:18.487 - DevicePool.initializeDevices - Info - Initializing: Press_Diag_HV
+06/03/19 - 10:00:18.499 - DevicePool.initializeDevices - Info - Initializing: Press_Spec_PV
+06/03/19 - 10:00:18.510 - DevicePool.initializeDevices - Info - Initializing: Press_Spec_HV
+06/03/19 - 10:00:18.522 - DevicePool.initializeDevices - Info - Initializing: Press_Sample_Ch
+06/03/19 - 10:00:18.533 - DevicePool.initializeDevices - Info - Initializing: Diodes_Sum_Intensity
+06/03/19 - 10:00:18.534 - DevicePool.initializeDevices - Info - Initializing: VH_Diode
+06/03/19 - 10:00:18.534 - DevicePool.initializeDevices - Info - Initializing: Sample_Horiz
+06/03/19 - 10:00:18.625 - DevicePool.initializeDevices - Info - Initializing: Sample_Vert
+06/03/19 - 10:00:18.715 - DevicePool.initializeDevices - Info - Initializing: Sample_Vert_Enc
+06/03/19 - 10:00:18.715 - DevicePool.initializeDevices - Info - Initializing: Sample_Horiz_Enc
+06/03/19 - 10:00:18.716 - DevicePool.initializeDevices - Info - Initializing: Diode_1
+06/03/19 - 10:00:18.727 - DevicePool.initializeDevices - Info - Initializing: Diode_2
+06/03/19 - 10:00:18.739 - DevicePool.initializeDevices - Info - Initializing: Diode_3
+06/03/19 - 10:00:18.750 - DevicePool.initializeDevices - Info - Initializing: Diode_4
+06/03/19 - 10:00:18.761 - DevicePool.initializeDevices - Info - Initializing: Filter1
+06/03/19 - 10:00:18.852 - DevicePool.initializeDevices - Info - Initializing: Filter2
+06/03/19 - 10:00:18.941 - DevicePool.initializeDevices - Info - Initializing: BPM2_Vert_Profile
+06/03/19 - 10:00:18.952 - DevicePool.initializeDevices - Info - Initializing: BPM2_Profile_Size
+06/03/19 - 10:00:19.197 - DevicePool.initialize - Info - Finished DevicePool initialization
+06/03/19 - 10:00:19.198 - ScriptManager.<init> - Info - Initializing ScriptManager
+06/03/19 - 10:00:19.200 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+06/03/19 - 10:00:19.439 - Context.lambda$restart$1 - Info - Executed startup script
+06/03/19 - 10:00:19.569 - DevicePool.addDevice - Info - Adding device: GE_BG_Image
+06/03/19 - 10:00:19.569 - DevicePool.addDevice - Info - Adding device: GE_ROI_Image
+06/03/19 - 10:00:19.569 - DevicePool.addDevice - Info - Adding device: GE_Raw_Image
+06/03/19 - 10:00:19.569 - Context.lambda$restart$1 - Info - Executed local startup script
+06/03/19 - 10:00:39.019 - Context.onCommand - Info - Eval: pink.ge_spot(exposure=1, images=3) (ui)
+06/03/19 - 10:02:38.670 - Context.onCommand - Info - Restart (ui)

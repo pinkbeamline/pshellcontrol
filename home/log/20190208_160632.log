@@ -1,0 +1,18 @@
+08/02/19 - 16:06:32.975 - Context.restart - Info - Initializing context
+08/02/19 - 16:06:32.981 - DataManager.initialize - Info - Initializing DataManager
+08/02/19 - 16:06:32.983 - DataManager.initialize - Info - Finished DataManager initialization
+08/02/19 - 16:06:32.984 - Context.restart - Info - Loading Device Pool
+08/02/19 - 16:06:32.985 - DevicePool.initialize - Info - Initializing DevicePool
+08/02/19 - 16:06:32.995 - DevicePool.initializeDevices - Info - Initializing: TFY
+08/02/19 - 16:06:33.019 - DevicePool.initializeDevices - Info - Initializing: Diodes_Sum_Intensity
+08/02/19 - 16:06:33.034 - DevicePool.initializeDevices - Info - Initializing: Sample_Horiz
+08/02/19 - 16:06:33.127 - DevicePool.initializeDevices - Info - Initializing: Sample_Vert
+08/02/19 - 16:06:33.228 - DevicePool.initializeDevices - Info - Initializing: Sample_Vert_Enc
+08/02/19 - 16:06:33.230 - DevicePool.initializeDevices - Info - Initializing: Sample_Horiz_Enc
+08/02/19 - 16:06:33.234 - DevicePool.initializeDevices - Info - Initializing: Sample_Vert_direct
+08/02/19 - 16:06:33.280 - DevicePool.initialize - Info - Finished DevicePool initialization
+08/02/19 - 16:06:33.285 - ScriptManager.<init> - Info - Initializing ScriptManager
+08/02/19 - 16:06:33.293 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+08/02/19 - 16:06:33.805 - Context.lambda$restart$1 - Info - Executed startup script
+08/02/19 - 16:06:33.827 - Context.lambda$restart$1 - Info - Executed local startup script
+08/02/19 - 16:07:26.473 - Context.onCommand - Info - Restart (ui)

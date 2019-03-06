@@ -1,0 +1,63 @@
+15/02/19 - 10:31:22.934 - Context.restart - Info - Initializing context
+15/02/19 - 10:31:22.936 - DataManager.initialize - Info - Initializing DataManager
+15/02/19 - 10:31:22.938 - DataManager.initialize - Info - Finished DataManager initialization
+15/02/19 - 10:31:22.938 - Context.restart - Info - Loading Device Pool
+15/02/19 - 10:31:22.938 - DevicePool.initialize - Info - Initializing DevicePool
+15/02/19 - 10:31:22.940 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_RBV
+15/02/19 - 10:31:22.958 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Set
+15/02/19 - 10:31:22.970 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Exec
+15/02/19 - 10:31:22.983 - DevicePool.initializeDevices - Info - Initializing: Diodes_Sum_Intensity
+15/02/19 - 10:31:22.995 - DevicePool.initializeDevices - Info - Initializing: Filter1
+15/02/19 - 10:31:23.007 - DevicePool.initializeDevices - Info - Initializing: Filter1_RBV
+15/02/19 - 10:31:23.020 - DevicePool.initializeDevices - Info - Initializing: Filter2
+15/02/19 - 10:31:23.032 - DevicePool.initializeDevices - Info - Initializing: Filter2_RBV
+15/02/19 - 10:31:23.045 - DevicePool.initializeDevices - Info - Initializing: BPM2_Vert_Profile
+15/02/19 - 10:31:23.059 - DevicePool.initializeDevices - Info - Initializing: BPM2_Profile_Size
+15/02/19 - 10:31:23.113 - DevicePool.initialize - Info - Finished DevicePool initialization
+15/02/19 - 10:31:23.117 - ScriptManager.<init> - Info - Initializing ScriptManager
+15/02/19 - 10:31:23.125 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+15/02/19 - 10:31:23.431 - Context.lambda$restart$1 - Info - Executed startup script
+15/02/19 - 10:31:23.448 - Context.lambda$restart$1 - Severe - javax.script.ScriptException: SyntaxError: no viable alternative at input ':' in /home/epics/PShell/pshellcontrol/home/script/shared/bpm_class.py at line number 29 at column number 22
+Stack trace:
+javax.script.ScriptException: SyntaxError: no viable alternative at input ':' in /home/epics/PShell/pshellcontrol/home/script/shared/bpm_class.py at line number 29 at column number 22
+	at org.python.jsr223.PyScriptEngine.scriptException(PyScriptEngine.java:213)
+	at org.python.jsr223.PyScriptEngine.eval(PyScriptEngine.java:59)
+	at org.python.jsr223.PyScriptEngine.eval(PyScriptEngine.java:64)
+	at javax.script.AbstractScriptEngine.eval(AbstractScriptEngine.java:249)
+	at ch.psi.pshell.scripting.Interpreter.evalFile(Interpreter.java:137)
+	at ch.psi.pshell.scripting.ScriptManager.evalFile(ScriptManager.java:191)
+	at ch.psi.pshell.core.Context.lambda$restart$1(Context.java:1049)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: Traceback (most recent call last):
+  File "<script>", line 6, in <module>
+  File "<script>", line 1641, in run
+  File "/home/epics/PShell/pshellcontrol/home/script/shared/bpm_class.py", line 29
+    xvec = range(0:N)
+                 ^
+SyntaxError: no viable alternative at input ':'
+
+	at org.python.core.PyException.doRaise(PyException.java:233)
+	at org.python.core.Py.makeException(Py.java:1565)
+	at org.python.core.Py.makeException(Py.java:1569)
+	at org.python.core.Py.makeException(Py.java:1573)
+	at org.python.pycode._pyx113.run$134(<script>:1642)
+	at org.python.pycode._pyx113.call_function(<script>)
+	at org.python.core.PyTableCode.call(PyTableCode.java:171)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:308)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:132)
+	at org.python.core.PyFunction.__call__(PyFunction.java:413)
+	at org.python.pycode._pyx114.f$0(<script>:9)
+	at org.python.pycode._pyx114.call_function(<script>)
+	at org.python.core.PyTableCode.call(PyTableCode.java:171)
+	at org.python.core.PyCode.call(PyCode.java:18)
+	at org.python.core.Py.runCode(Py.java:1614)
+	at org.python.core.__builtin__.eval(__builtin__.java:497)
+	at org.python.core.__builtin__.eval(__builtin__.java:501)
+	at org.python.util.PythonInterpreter.eval(PythonInterpreter.java:259)
+	at org.python.jsr223.PyScriptEngine.eval(PyScriptEngine.java:57)
+	... 9 more
+
+15/02/19 - 10:31:34.809 - Context.onCommand - Info - Restart (ui)

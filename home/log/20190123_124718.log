@@ -1,0 +1,14 @@
+23/01/19 - 12:47:18.828 - Context.<init> - Info - Process: 28523@pink-shuttle02
+23/01/19 - 12:47:18.829 - Context.<init> - Info - Context: unknown
+23/01/19 - 12:47:18.830 - Context.<init> - Info - Pars: /home/epics/PShell/pshell-1.10.0-fat.jar -home=/home/epics/PShell/pshellcontrol/home -dlaf
+23/01/19 - 12:47:18.830 - Context.<init> - Info - User: epics
+23/01/19 - 12:47:18.831 - Context.<init> - Info - Host: pink-shuttle02
+23/01/19 - 12:47:18.851 - PluginManager.loadExtensionsFolder - Info - Loading extensions folder
+23/01/19 - 12:47:18.852 - DataManager.initialize - Info - Initializing DataManager
+23/01/19 - 12:47:18.861 - DataManager.setProvider - Info - Setting data provider: ch.psi.pshell.data.ProviderHDF5
+23/01/19 - 12:47:18.863 - DataManager.setLayout - Info - Setting data layout: ch.psi.pshell.data.LayoutDefault
+23/01/19 - 12:47:18.867 - DataManager.initialize - Info - Finished DataManager initialization
+23/01/19 - 12:47:18.868 - App.startup - Info - Version: 1.10-SNAPSHOT (build 1812200927-py)
+23/01/19 - 12:47:18.870 - App.startup - Info - Create workbench
+23/01/19 - 12:47:20.731 - Context.exit - Severe - Another instance of this application is running on: 31006@pink-shuttle02.
+Application can be started in local mode (-l option)

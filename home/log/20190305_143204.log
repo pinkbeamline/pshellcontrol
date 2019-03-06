@@ -1,0 +1,58 @@
+05/03/19 - 14:32:05.164 - Context.restart - Info - Initializing context
+05/03/19 - 14:32:05.165 - DataManager.initialize - Info - Initializing DataManager
+05/03/19 - 14:32:05.167 - DataManager.initialize - Info - Finished DataManager initialization
+05/03/19 - 14:32:05.167 - Context.restart - Info - Loading Device Pool
+05/03/19 - 14:32:05.167 - DevicePool.initialize - Info - Initializing DevicePool
+05/03/19 - 14:32:05.172 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Set
+05/03/19 - 14:32:05.189 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Status
+05/03/19 - 14:32:05.212 - DevicePool.initializeDevices - Info - Initializing: TFY
+05/03/19 - 14:32:05.225 - DevicePool.initializeDevices - Info - Initializing: Diodes_Sum_Intensity
+05/03/19 - 14:32:05.238 - DevicePool.initializeDevices - Info - Initializing: Sample_Vert
+05/03/19 - 14:32:05.332 - DevicePool.initializeDevices - Info - Initializing: Diode_1
+05/03/19 - 14:32:05.345 - DevicePool.initializeDevices - Info - Initializing: Diode_2
+05/03/19 - 14:32:05.356 - DevicePool.initializeDevices - Info - Initializing: Diode_3
+05/03/19 - 14:32:05.368 - DevicePool.initializeDevices - Info - Initializing: Diode_4
+05/03/19 - 14:32:05.381 - DevicePool.initializeDevices - Info - Initializing: Filter1
+05/03/19 - 14:32:05.473 - DevicePool.initializeDevices - Info - Initializing: Filter2
+05/03/19 - 14:32:05.563 - DevicePool.initializeDevices - Info - Initializing: BPM2_Vert_Profile
+05/03/19 - 14:32:05.575 - DevicePool.initializeDevices - Info - Initializing: BPM2_Profile_Size
+05/03/19 - 14:32:05.587 - DevicePool.initializeDevices - Info - Initializing: Filter2_SIG
+05/03/19 - 14:32:15.588 - Filter2_SIG.initialize - Warning - ch.psi.pshell.device.DeviceBase$DeviceException: Error creating channel: PINK:AUX1:Filter2_sig_RBV [Filter2_SIG]
+Stack trace:
+ch.psi.pshell.device.DeviceBase$DeviceException: Error creating channel: PINK:AUX1:Filter2_sig_RBV [Filter2_SIG]
+	at ch.psi.pshell.epics.EpicsRegister.doInitialize(EpicsRegister.java:252)
+	at ch.psi.pshell.device.GenericDeviceBase.initialize(GenericDeviceBase.java:188)
+	at ch.psi.pshell.core.DevicePool.initializeDevices(DevicePool.java:509)
+	at ch.psi.pshell.core.DevicePool.initialize(DevicePool.java:43)
+	at ch.psi.pshell.core.Context.restart(Context.java:985)
+	at ch.psi.pshell.core.Context.restart(Context.java:2952)
+	at ch.psi.pshell.ui.Task$Restart.doInBackground(Task.java:368)
+	at ch.psi.pshell.ui.Task$Restart.doInBackground(Task.java:358)
+	at javax.swing.SwingWorker$1.call(SwingWorker.java:295)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at javax.swing.SwingWorker.run(SwingWorker.java:334)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: ch.psi.jcae.ChannelException: Unable to create channel PINK:AUX1:Filter2_sig_RBV
+	at ch.psi.jcae.impl.DefaultChannelService.createChannel(DefaultChannelService.java:158)
+	at ch.psi.pshell.epics.Epics.newChannel(Epics.java:79)
+	at ch.psi.pshell.epics.Epics.newChannel(Epics.java:88)
+	at ch.psi.pshell.epics.Epics.newChannel(Epics.java:92)
+	at ch.psi.pshell.epics.EpicsRegister.doInitialize(EpicsRegister.java:224)
+	... 13 more
+Caused by: gov.aps.jca.CAException: Unable to connect to channel PINK:AUX1:Filter2_sig_RBV
+	at ch.psi.jcae.impl.JCAChannelFactory.createChannel(JCAChannelFactory.java:100)
+	at ch.psi.jcae.impl.DefaultChannelService.createChannel(DefaultChannelService.java:148)
+	... 17 more
+Caused by: gov.aps.jca.CAException: Timout [10000] occured while creating channel PINK:AUX1:Filter2_sig_RBV
+	at ch.psi.jcae.impl.JCAChannelFactory.createChannel(JCAChannelFactory.java:87)
+	... 18 more
+
+05/03/19 - 14:32:15.591 - DevicePool.initializeDevices - Severe - Error initializing: Filter2_SIG
+05/03/19 - 14:32:15.632 - DevicePool.initialize - Info - Finished DevicePool initialization
+05/03/19 - 14:32:15.635 - ScriptManager.<init> - Info - Initializing ScriptManager
+05/03/19 - 14:32:15.641 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+05/03/19 - 14:32:15.896 - Context.lambda$restart$1 - Info - Executed startup script
+05/03/19 - 14:32:16.017 - Context.lambda$restart$1 - Info - Executed local startup script
+05/03/19 - 14:32:19.053 - Context.onCommand - Info - Restart (ui)

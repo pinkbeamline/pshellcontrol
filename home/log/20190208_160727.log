@@ -1,0 +1,20 @@
+08/02/19 - 16:07:27.776 - Context.restart - Info - Initializing context
+08/02/19 - 16:07:27.781 - DataManager.initialize - Info - Initializing DataManager
+08/02/19 - 16:07:27.785 - DataManager.initialize - Info - Finished DataManager initialization
+08/02/19 - 16:07:27.786 - Context.restart - Info - Loading Device Pool
+08/02/19 - 16:07:27.786 - DevicePool.initialize - Info - Initializing DevicePool
+08/02/19 - 16:07:27.788 - Config.updateFields - Warning - Config value for 'sign_bit' was invalid: null [/home/epics/PShell/pshellcontrol/home/devices/Scatter.properties]
+08/02/19 - 16:07:27.791 - DevicePool.initializeDevices - Info - Initializing: TFY
+08/02/19 - 16:07:27.814 - DevicePool.initializeDevices - Info - Initializing: Scatter
+08/02/19 - 16:07:27.905 - DevicePool.initializeDevices - Info - Initializing: Diodes_Sum_Intensity
+08/02/19 - 16:07:27.917 - DevicePool.initializeDevices - Info - Initializing: Sample_Horiz
+08/02/19 - 16:07:28.029 - DevicePool.initializeDevices - Info - Initializing: Sample_Vert
+08/02/19 - 16:07:28.127 - DevicePool.initializeDevices - Info - Initializing: Sample_Vert_Enc
+08/02/19 - 16:07:28.128 - DevicePool.initializeDevices - Info - Initializing: Sample_Horiz_Enc
+08/02/19 - 16:07:28.129 - DevicePool.initializeDevices - Info - Initializing: Sample_Vert_direct
+08/02/19 - 16:07:28.198 - DevicePool.initialize - Info - Finished DevicePool initialization
+08/02/19 - 16:07:28.202 - ScriptManager.<init> - Info - Initializing ScriptManager
+08/02/19 - 16:07:28.210 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+08/02/19 - 16:07:28.711 - Context.lambda$restart$1 - Info - Executed startup script
+08/02/19 - 16:07:28.738 - Context.lambda$restart$1 - Info - Executed local startup script
+08/02/19 - 16:09:04.714 - Context.onCommand - Info - Restart (ui)

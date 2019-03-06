@@ -1,0 +1,548 @@
+07/02/19 - 17:20:33.828 - Context.<init> - Info - Process: 3935@pink-shuttle02
+07/02/19 - 17:20:33.829 - Context.<init> - Info - Context: unknown
+07/02/19 - 17:20:33.830 - Context.<init> - Info - Pars: /home/epics/PShell/pshell-1.10.0-fat.jar -home=/home/epics/PShell/pshellcontrol/home -dlaf
+07/02/19 - 17:20:33.830 - Context.<init> - Info - User: epics
+07/02/19 - 17:20:33.831 - Context.<init> - Info - Host: pink-shuttle02
+07/02/19 - 17:20:33.852 - PluginManager.loadExtensionsFolder - Info - Loading extensions folder
+07/02/19 - 17:20:33.853 - DataManager.initialize - Info - Initializing DataManager
+07/02/19 - 17:20:33.862 - DataManager.setProvider - Info - Setting data provider: ch.psi.pshell.data.ProviderHDF5
+07/02/19 - 17:20:33.865 - DataManager.setLayout - Info - Setting data layout: ch.psi.pshell.data.LayoutDefault
+07/02/19 - 17:20:33.867 - DataManager.initialize - Info - Finished DataManager initialization
+07/02/19 - 17:20:33.868 - App.startup - Info - Version: 1.10-SNAPSHOT (build 1812200927-py)
+07/02/19 - 17:20:33.870 - App.startup - Info - Create workbench
+07/02/19 - 17:20:34.951 - PluginManager.loadPluginFolder - Info - Loading plugins folder
+07/02/19 - 17:20:34.958 - PluginManager.startPlugins - Info - Start plugins
+07/02/19 - 17:20:34.960 - Context.onCommand - Info - Restart (ui)
+07/02/19 - 17:20:34.978 - Context.restart - Info - Initializing context
+07/02/19 - 17:20:34.982 - Context.onUserChange - Info - User: Default [administrator] *
+07/02/19 - 17:20:34.985 - Context.restart - Info - Loading Device Pool
+07/02/19 - 17:20:34.988 - DevicePool.initialize - Info - Initializing DevicePool
+07/02/19 - 17:20:34.995 - JcaeProperties.loadProperties - Warning - java.lang.NumberFormatException: For input string: ""
+Stack trace:
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Long.parseLong(Long.java:601)
+	at java.lang.Long.parseLong(Long.java:631)
+	at ch.psi.jcae.impl.JcaeProperties.loadProperties(JcaeProperties.java:199)
+	at ch.psi.jcae.impl.JcaeProperties.loadProperties(JcaeProperties.java:127)
+	at ch.psi.jcae.impl.JcaeProperties.loadProperties(JcaeProperties.java:111)
+	at ch.psi.jcae.impl.JcaeProperties.<init>(JcaeProperties.java:89)
+	at ch.psi.jcae.impl.JcaeProperties.<clinit>(JcaeProperties.java:31)
+	at ch.psi.jcae.impl.JCAChannelFactory.<init>(JCAChannelFactory.java:24)
+	at ch.psi.jcae.impl.DefaultChannelService.<init>(DefaultChannelService.java:91)
+	at ch.psi.jcae.impl.DefaultChannelService.<init>(DefaultChannelService.java:78)
+	at ch.psi.pshell.epics.Epics.create(Epics.java:38)
+	at ch.psi.pshell.core.DevicePool.load(DevicePool.java:192)
+	at ch.psi.pshell.core.DevicePool.initialize(DevicePool.java:42)
+	at ch.psi.pshell.core.Context.restart(Context.java:985)
+	at ch.psi.pshell.core.Context.start(Context.java:2915)
+	at ch.psi.pshell.ui.App.lambda$startup$0(App.java:857)
+	at java.lang.Thread.run(Thread.java:748)
+
+07/02/19 - 17:20:34.996 - JcaeProperties.loadProperties - Warning - java.lang.NumberFormatException: For input string: ""
+Stack trace:
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:592)
+	at java.lang.Integer.parseInt(Integer.java:615)
+	at ch.psi.jcae.impl.JcaeProperties.loadProperties(JcaeProperties.java:210)
+	at ch.psi.jcae.impl.JcaeProperties.loadProperties(JcaeProperties.java:127)
+	at ch.psi.jcae.impl.JcaeProperties.loadProperties(JcaeProperties.java:111)
+	at ch.psi.jcae.impl.JcaeProperties.<init>(JcaeProperties.java:89)
+	at ch.psi.jcae.impl.JcaeProperties.<clinit>(JcaeProperties.java:31)
+	at ch.psi.jcae.impl.JCAChannelFactory.<init>(JCAChannelFactory.java:24)
+	at ch.psi.jcae.impl.DefaultChannelService.<init>(DefaultChannelService.java:91)
+	at ch.psi.jcae.impl.DefaultChannelService.<init>(DefaultChannelService.java:78)
+	at ch.psi.pshell.epics.Epics.create(Epics.java:38)
+	at ch.psi.pshell.core.DevicePool.load(DevicePool.java:192)
+	at ch.psi.pshell.core.DevicePool.initialize(DevicePool.java:42)
+	at ch.psi.pshell.core.Context.restart(Context.java:985)
+	at ch.psi.pshell.core.Context.start(Context.java:2915)
+	at ch.psi.pshell.ui.App.lambda$startup$0(App.java:857)
+	at java.lang.Thread.run(Thread.java:748)
+
+07/02/19 - 17:20:34.997 - JcaeProperties.loadProperties - Warning - java.lang.NumberFormatException: For input string: ""
+Stack trace:
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Long.parseLong(Long.java:601)
+	at java.lang.Long.parseLong(Long.java:631)
+	at ch.psi.jcae.impl.JcaeProperties.loadProperties(JcaeProperties.java:227)
+	at ch.psi.jcae.impl.JcaeProperties.loadProperties(JcaeProperties.java:127)
+	at ch.psi.jcae.impl.JcaeProperties.loadProperties(JcaeProperties.java:111)
+	at ch.psi.jcae.impl.JcaeProperties.<init>(JcaeProperties.java:89)
+	at ch.psi.jcae.impl.JcaeProperties.<clinit>(JcaeProperties.java:31)
+	at ch.psi.jcae.impl.JCAChannelFactory.<init>(JCAChannelFactory.java:24)
+	at ch.psi.jcae.impl.DefaultChannelService.<init>(DefaultChannelService.java:91)
+	at ch.psi.jcae.impl.DefaultChannelService.<init>(DefaultChannelService.java:78)
+	at ch.psi.pshell.epics.Epics.create(Epics.java:38)
+	at ch.psi.pshell.core.DevicePool.load(DevicePool.java:192)
+	at ch.psi.pshell.core.DevicePool.initialize(DevicePool.java:42)
+	at ch.psi.pshell.core.Context.restart(Context.java:985)
+	at ch.psi.pshell.core.Context.start(Context.java:2915)
+	at ch.psi.pshell.ui.App.lambda$startup$0(App.java:857)
+	at java.lang.Thread.run(Thread.java:748)
+
+07/02/19 - 17:20:34.998 - JcaeProperties.loadProperties - Warning - java.lang.NumberFormatException: For input string: ""
+Stack trace:
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:592)
+	at java.lang.Integer.parseInt(Integer.java:615)
+	at ch.psi.jcae.impl.JcaeProperties.loadProperties(JcaeProperties.java:266)
+	at ch.psi.jcae.impl.JcaeProperties.loadProperties(JcaeProperties.java:127)
+	at ch.psi.jcae.impl.JcaeProperties.loadProperties(JcaeProperties.java:111)
+	at ch.psi.jcae.impl.JcaeProperties.<init>(JcaeProperties.java:89)
+	at ch.psi.jcae.impl.JcaeProperties.<clinit>(JcaeProperties.java:31)
+	at ch.psi.jcae.impl.JCAChannelFactory.<init>(JCAChannelFactory.java:24)
+	at ch.psi.jcae.impl.DefaultChannelService.<init>(DefaultChannelService.java:91)
+	at ch.psi.jcae.impl.DefaultChannelService.<init>(DefaultChannelService.java:78)
+	at ch.psi.pshell.epics.Epics.create(Epics.java:38)
+	at ch.psi.pshell.core.DevicePool.load(DevicePool.java:192)
+	at ch.psi.pshell.core.DevicePool.initialize(DevicePool.java:42)
+	at ch.psi.pshell.core.Context.restart(Context.java:985)
+	at ch.psi.pshell.core.Context.start(Context.java:2915)
+	at ch.psi.pshell.ui.App.lambda$startup$0(App.java:857)
+	at java.lang.Thread.run(Thread.java:748)
+
+07/02/19 - 17:20:35.121 - DevicePool.initializeDevices - Info - Initializing: IZero_Profile
+07/02/19 - 17:20:35.320 - DevicePool.initializeDevices - Info - Initializing: IZero
+07/02/19 - 17:20:35.336 - DevicePool.initializeDevices - Info - Initializing: TFY_Profile
+07/02/19 - 17:20:35.341 - DevicePool.initializeDevices - Info - Initializing: TFY
+07/02/19 - 17:20:35.352 - DevicePool.initializeDevices - Info - Initializing: GE_AreaDet
+07/02/19 - 17:20:45.354 - GE_AreaDet img counter.initialize - Warning - ch.psi.pshell.device.DeviceBase$DeviceException: Error creating channel: PINK:GEYES:cam1:ArrayCounter_RBV [GE_AreaDet img counter]
+Stack trace:
+ch.psi.pshell.device.DeviceBase$DeviceException: Error creating channel: PINK:GEYES:cam1:ArrayCounter_RBV [GE_AreaDet img counter]
+	at ch.psi.pshell.epics.EpicsRegister.doInitialize(EpicsRegister.java:252)
+	at ch.psi.pshell.device.GenericDeviceBase.initialize(GenericDeviceBase.java:188)
+	at ch.psi.pshell.device.DeviceBase.doInitialize(DeviceBase.java:648)
+	at ch.psi.pshell.device.CameraBase.doInitialize(CameraBase.java:25)
+	at ch.psi.pshell.epics.AreaDetector.doInitialize(AreaDetector.java:139)
+	at ch.psi.pshell.device.GenericDeviceBase.initialize(GenericDeviceBase.java:188)
+	at ch.psi.pshell.core.DevicePool.initializeDevices(DevicePool.java:509)
+	at ch.psi.pshell.core.DevicePool.initialize(DevicePool.java:43)
+	at ch.psi.pshell.core.Context.restart(Context.java:985)
+	at ch.psi.pshell.core.Context.start(Context.java:2915)
+	at ch.psi.pshell.ui.App.lambda$startup$0(App.java:857)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: ch.psi.jcae.ChannelException: Unable to create channel PINK:GEYES:cam1:ArrayCounter_RBV
+	at ch.psi.jcae.impl.DefaultChannelService.createChannel(DefaultChannelService.java:158)
+	at ch.psi.pshell.epics.Epics.newChannel(Epics.java:79)
+	at ch.psi.pshell.epics.Epics.newChannel(Epics.java:88)
+	at ch.psi.pshell.epics.Epics.newChannel(Epics.java:92)
+	at ch.psi.pshell.epics.EpicsRegister.doInitialize(EpicsRegister.java:224)
+	... 11 more
+Caused by: gov.aps.jca.CAException: Unable to connect to channel PINK:GEYES:cam1:ArrayCounter_RBV
+	at ch.psi.jcae.impl.JCAChannelFactory.createChannel(JCAChannelFactory.java:100)
+	at ch.psi.jcae.impl.DefaultChannelService.createChannel(DefaultChannelService.java:148)
+	... 15 more
+Caused by: gov.aps.jca.CAException: Timout [10000] occured while creating channel PINK:GEYES:cam1:ArrayCounter_RBV
+	at ch.psi.jcae.impl.JCAChannelFactory.createChannel(JCAChannelFactory.java:87)
+	... 16 more
+
+07/02/19 - 17:20:45.355 - GE_AreaDet.initialize - Warning - ch.psi.pshell.device.DeviceBase$DeviceException: Error creating channel: PINK:GEYES:cam1:ArrayCounter_RBV [GE_AreaDet img counter]
+Stack trace:
+ch.psi.pshell.device.DeviceBase$DeviceException: Error creating channel: PINK:GEYES:cam1:ArrayCounter_RBV [GE_AreaDet img counter]
+	at ch.psi.pshell.epics.EpicsRegister.doInitialize(EpicsRegister.java:252)
+	at ch.psi.pshell.device.GenericDeviceBase.initialize(GenericDeviceBase.java:188)
+	at ch.psi.pshell.device.DeviceBase.doInitialize(DeviceBase.java:648)
+	at ch.psi.pshell.device.CameraBase.doInitialize(CameraBase.java:25)
+	at ch.psi.pshell.epics.AreaDetector.doInitialize(AreaDetector.java:139)
+	at ch.psi.pshell.device.GenericDeviceBase.initialize(GenericDeviceBase.java:188)
+	at ch.psi.pshell.core.DevicePool.initializeDevices(DevicePool.java:509)
+	at ch.psi.pshell.core.DevicePool.initialize(DevicePool.java:43)
+	at ch.psi.pshell.core.Context.restart(Context.java:985)
+	at ch.psi.pshell.core.Context.start(Context.java:2915)
+	at ch.psi.pshell.ui.App.lambda$startup$0(App.java:857)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: ch.psi.jcae.ChannelException: Unable to create channel PINK:GEYES:cam1:ArrayCounter_RBV
+	at ch.psi.jcae.impl.DefaultChannelService.createChannel(DefaultChannelService.java:158)
+	at ch.psi.pshell.epics.Epics.newChannel(Epics.java:79)
+	at ch.psi.pshell.epics.Epics.newChannel(Epics.java:88)
+	at ch.psi.pshell.epics.Epics.newChannel(Epics.java:92)
+	at ch.psi.pshell.epics.EpicsRegister.doInitialize(EpicsRegister.java:224)
+	... 11 more
+Caused by: gov.aps.jca.CAException: Unable to connect to channel PINK:GEYES:cam1:ArrayCounter_RBV
+	at ch.psi.jcae.impl.JCAChannelFactory.createChannel(JCAChannelFactory.java:100)
+	at ch.psi.jcae.impl.DefaultChannelService.createChannel(DefaultChannelService.java:148)
+	... 15 more
+Caused by: gov.aps.jca.CAException: Timout [10000] occured while creating channel PINK:GEYES:cam1:ArrayCounter_RBV
+	at ch.psi.jcae.impl.JCAChannelFactory.createChannel(JCAChannelFactory.java:87)
+	... 16 more
+
+07/02/19 - 17:20:45.359 - DevicePool.initializeDevices - Severe - Error initializing: GE_AreaDet
+07/02/19 - 17:20:45.359 - DevicePool.initializeDevices - Info - Initializing: GE_FrameID
+07/02/19 - 17:20:55.360 - GE_FrameID.initialize - Warning - ch.psi.pshell.device.DeviceBase$DeviceException: Error creating channel: PINK:GEYES:cam1:ArrayCounter_RBV [GE_FrameID]
+Stack trace:
+ch.psi.pshell.device.DeviceBase$DeviceException: Error creating channel: PINK:GEYES:cam1:ArrayCounter_RBV [GE_FrameID]
+	at ch.psi.pshell.epics.EpicsRegister.doInitialize(EpicsRegister.java:252)
+	at ch.psi.pshell.device.GenericDeviceBase.initialize(GenericDeviceBase.java:188)
+	at ch.psi.pshell.core.DevicePool.initializeDevices(DevicePool.java:509)
+	at ch.psi.pshell.core.DevicePool.initialize(DevicePool.java:43)
+	at ch.psi.pshell.core.Context.restart(Context.java:985)
+	at ch.psi.pshell.core.Context.start(Context.java:2915)
+	at ch.psi.pshell.ui.App.lambda$startup$0(App.java:857)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: ch.psi.jcae.ChannelException: Unable to create channel PINK:GEYES:cam1:ArrayCounter_RBV
+	at ch.psi.jcae.impl.DefaultChannelService.createChannel(DefaultChannelService.java:158)
+	at ch.psi.pshell.epics.Epics.newChannel(Epics.java:79)
+	at ch.psi.pshell.epics.Epics.newChannel(Epics.java:88)
+	at ch.psi.pshell.epics.Epics.newChannel(Epics.java:92)
+	at ch.psi.pshell.epics.EpicsRegister.doInitialize(EpicsRegister.java:224)
+	... 7 more
+Caused by: gov.aps.jca.CAException: Unable to connect to channel PINK:GEYES:cam1:ArrayCounter_RBV
+	at ch.psi.jcae.impl.JCAChannelFactory.createChannel(JCAChannelFactory.java:100)
+	at ch.psi.jcae.impl.DefaultChannelService.createChannel(DefaultChannelService.java:148)
+	... 11 more
+Caused by: gov.aps.jca.CAException: Timout [10000] occured while creating channel PINK:GEYES:cam1:ArrayCounter_RBV
+	at ch.psi.jcae.impl.JCAChannelFactory.createChannel(JCAChannelFactory.java:87)
+	... 12 more
+
+07/02/19 - 17:20:55.362 - DevicePool.initializeDevices - Severe - Error initializing: GE_FrameID
+07/02/19 - 17:20:55.362 - DevicePool.initializeDevices - Info - Initializing: GE_Raw_Imaging
+07/02/19 - 17:20:55.363 - DevicePool.initializeDevices - Info - Initializing: GE_Raw_Array
+07/02/19 - 17:21:15.365 - GE_Raw_Array.initialize - Warning - java.io.IOException: ch.psi.jcae.ChannelException: Unable to create channel PINK:GEYES:image1:ArrayData
+Stack trace:
+java.io.IOException: ch.psi.jcae.ChannelException: Unable to create channel PINK:GEYES:image1:ArrayData
+	at ch.psi.pshell.epics.GenericArray.resolveType(GenericArray.java:88)
+	at ch.psi.pshell.epics.GenericArray.doInitialize(GenericArray.java:121)
+	at ch.psi.pshell.device.GenericDeviceBase.initialize(GenericDeviceBase.java:188)
+	at ch.psi.pshell.core.DevicePool.initializeDevices(DevicePool.java:509)
+	at ch.psi.pshell.core.DevicePool.initialize(DevicePool.java:43)
+	at ch.psi.pshell.core.Context.restart(Context.java:985)
+	at ch.psi.pshell.core.Context.start(Context.java:2915)
+	at ch.psi.pshell.ui.App.lambda$startup$0(App.java:857)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: ch.psi.jcae.ChannelException: Unable to create channel PINK:GEYES:image1:ArrayData
+	at ch.psi.jcae.impl.DefaultChannelService.createChannel(DefaultChannelService.java:158)
+	at ch.psi.pshell.epics.Epics.newChannel(Epics.java:79)
+	at ch.psi.pshell.epics.Epics.newChannel(Epics.java:88)
+	at ch.psi.pshell.epics.Epics.get(Epics.java:114)
+	at ch.psi.pshell.epics.GenericArray.resolveType(GenericArray.java:83)
+	... 8 more
+Caused by: gov.aps.jca.CAException: Unable to connect to channel PINK:GEYES:image1:ArrayData
+	at ch.psi.jcae.impl.JCAChannelFactory.createChannel(JCAChannelFactory.java:100)
+	at ch.psi.jcae.impl.DefaultChannelService.createChannel(DefaultChannelService.java:148)
+	... 12 more
+Caused by: gov.aps.jca.CAException: Timout [10000] occured while creating channel PINK:GEYES:image1:ArrayData
+	at ch.psi.jcae.impl.JCAChannelFactory.createChannel(JCAChannelFactory.java:87)
+	... 13 more
+
+07/02/19 - 17:21:15.368 - DevicePool.initializeDevices - Severe - Error initializing: GE_Raw_Array
+07/02/19 - 17:21:15.371 - DevicePool.initializeDevices - Info - Initializing: GE_BG_Array
+07/02/19 - 17:21:35.376 - GE_BG_Array.initialize - Warning - java.io.IOException: ch.psi.jcae.ChannelException: Unable to create channel PINK:GEYES:bgimage
+Stack trace:
+java.io.IOException: ch.psi.jcae.ChannelException: Unable to create channel PINK:GEYES:bgimage
+	at ch.psi.pshell.epics.GenericArray.resolveType(GenericArray.java:88)
+	at ch.psi.pshell.epics.GenericArray.doInitialize(GenericArray.java:121)
+	at ch.psi.pshell.device.GenericDeviceBase.initialize(GenericDeviceBase.java:188)
+	at ch.psi.pshell.core.DevicePool.initializeDevices(DevicePool.java:509)
+	at ch.psi.pshell.core.DevicePool.initialize(DevicePool.java:43)
+	at ch.psi.pshell.core.Context.restart(Context.java:985)
+	at ch.psi.pshell.core.Context.start(Context.java:2915)
+	at ch.psi.pshell.ui.App.lambda$startup$0(App.java:857)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: ch.psi.jcae.ChannelException: Unable to create channel PINK:GEYES:bgimage
+	at ch.psi.jcae.impl.DefaultChannelService.createChannel(DefaultChannelService.java:158)
+	at ch.psi.pshell.epics.Epics.newChannel(Epics.java:79)
+	at ch.psi.pshell.epics.Epics.newChannel(Epics.java:88)
+	at ch.psi.pshell.epics.Epics.get(Epics.java:114)
+	at ch.psi.pshell.epics.GenericArray.resolveType(GenericArray.java:83)
+	... 8 more
+Caused by: gov.aps.jca.CAException: Unable to connect to channel PINK:GEYES:bgimage
+	at ch.psi.jcae.impl.JCAChannelFactory.createChannel(JCAChannelFactory.java:100)
+	at ch.psi.jcae.impl.DefaultChannelService.createChannel(DefaultChannelService.java:148)
+	... 12 more
+Caused by: gov.aps.jca.CAException: Timout [10000] occured while creating channel PINK:GEYES:bgimage
+	at ch.psi.jcae.impl.JCAChannelFactory.createChannel(JCAChannelFactory.java:87)
+	... 13 more
+
+07/02/19 - 17:21:35.379 - DevicePool.initializeDevices - Severe - Error initializing: GE_BG_Array
+07/02/19 - 17:21:35.381 - DevicePool.initializeDevices - Info - Initializing: GE_BG_SizeY
+07/02/19 - 17:21:45.393 - GE_BG_SizeY.initialize - Warning - ch.psi.pshell.device.DeviceBase$DeviceException: Error creating channel: PINK:GEYES:image1:ArraySize1_RBV [GE_BG_SizeY]
+Stack trace:
+ch.psi.pshell.device.DeviceBase$DeviceException: Error creating channel: PINK:GEYES:image1:ArraySize1_RBV [GE_BG_SizeY]
+	at ch.psi.pshell.epics.EpicsRegister.doInitialize(EpicsRegister.java:252)
+	at ch.psi.pshell.device.GenericDeviceBase.initialize(GenericDeviceBase.java:188)
+	at ch.psi.pshell.core.DevicePool.initializeDevices(DevicePool.java:509)
+	at ch.psi.pshell.core.DevicePool.initialize(DevicePool.java:43)
+	at ch.psi.pshell.core.Context.restart(Context.java:985)
+	at ch.psi.pshell.core.Context.start(Context.java:2915)
+	at ch.psi.pshell.ui.App.lambda$startup$0(App.java:857)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: ch.psi.jcae.ChannelException: Unable to create channel PINK:GEYES:image1:ArraySize1_RBV
+	at ch.psi.jcae.impl.DefaultChannelService.createChannel(DefaultChannelService.java:158)
+	at ch.psi.pshell.epics.Epics.newChannel(Epics.java:79)
+	at ch.psi.pshell.epics.Epics.newChannel(Epics.java:88)
+	at ch.psi.pshell.epics.Epics.newChannel(Epics.java:92)
+	at ch.psi.pshell.epics.EpicsRegister.doInitialize(EpicsRegister.java:224)
+	... 7 more
+Caused by: gov.aps.jca.CAException: Unable to connect to channel PINK:GEYES:image1:ArraySize1_RBV
+	at ch.psi.jcae.impl.JCAChannelFactory.createChannel(JCAChannelFactory.java:100)
+	at ch.psi.jcae.impl.DefaultChannelService.createChannel(DefaultChannelService.java:148)
+	... 11 more
+Caused by: gov.aps.jca.CAException: Timout [10000] occured while creating channel PINK:GEYES:image1:ArraySize1_RBV
+	at ch.psi.jcae.impl.JCAChannelFactory.createChannel(JCAChannelFactory.java:87)
+	... 12 more
+
+07/02/19 - 17:21:45.399 - DevicePool.initializeDevices - Severe - Error initializing: GE_BG_SizeY
+07/02/19 - 17:21:45.402 - DevicePool.initializeDevices - Info - Initializing: GE_BG_SizeX
+07/02/19 - 17:21:55.405 - GE_BG_SizeX.initialize - Warning - ch.psi.pshell.device.DeviceBase$DeviceException: Error creating channel: PINK:GEYES:image1:ArraySize0_RBV [GE_BG_SizeX]
+Stack trace:
+ch.psi.pshell.device.DeviceBase$DeviceException: Error creating channel: PINK:GEYES:image1:ArraySize0_RBV [GE_BG_SizeX]
+	at ch.psi.pshell.epics.EpicsRegister.doInitialize(EpicsRegister.java:252)
+	at ch.psi.pshell.device.GenericDeviceBase.initialize(GenericDeviceBase.java:188)
+	at ch.psi.pshell.core.DevicePool.initializeDevices(DevicePool.java:509)
+	at ch.psi.pshell.core.DevicePool.initialize(DevicePool.java:43)
+	at ch.psi.pshell.core.Context.restart(Context.java:985)
+	at ch.psi.pshell.core.Context.start(Context.java:2915)
+	at ch.psi.pshell.ui.App.lambda$startup$0(App.java:857)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: ch.psi.jcae.ChannelException: Unable to create channel PINK:GEYES:image1:ArraySize0_RBV
+	at ch.psi.jcae.impl.DefaultChannelService.createChannel(DefaultChannelService.java:158)
+	at ch.psi.pshell.epics.Epics.newChannel(Epics.java:79)
+	at ch.psi.pshell.epics.Epics.newChannel(Epics.java:88)
+	at ch.psi.pshell.epics.Epics.newChannel(Epics.java:92)
+	at ch.psi.pshell.epics.EpicsRegister.doInitialize(EpicsRegister.java:224)
+	... 7 more
+Caused by: gov.aps.jca.CAException: Unable to connect to channel PINK:GEYES:image1:ArraySize0_RBV
+	at ch.psi.jcae.impl.JCAChannelFactory.createChannel(JCAChannelFactory.java:100)
+	at ch.psi.jcae.impl.DefaultChannelService.createChannel(DefaultChannelService.java:148)
+	... 11 more
+Caused by: gov.aps.jca.CAException: Timout [10000] occured while creating channel PINK:GEYES:image1:ArraySize0_RBV
+	at ch.psi.jcae.impl.JCAChannelFactory.createChannel(JCAChannelFactory.java:87)
+	... 12 more
+
+07/02/19 - 17:21:55.407 - DevicePool.initializeDevices - Severe - Error initializing: GE_BG_SizeX
+07/02/19 - 17:21:55.408 - DevicePool.initializeDevices - Info - Initializing: GE_ROI_Array
+07/02/19 - 17:22:15.410 - GE_ROI_Array.initialize - Warning - java.io.IOException: ch.psi.jcae.ChannelException: Unable to create channel PINK:GEYES:image3:ArrayData
+Stack trace:
+java.io.IOException: ch.psi.jcae.ChannelException: Unable to create channel PINK:GEYES:image3:ArrayData
+	at ch.psi.pshell.epics.GenericArray.resolveType(GenericArray.java:88)
+	at ch.psi.pshell.epics.GenericArray.doInitialize(GenericArray.java:121)
+	at ch.psi.pshell.device.GenericDeviceBase.initialize(GenericDeviceBase.java:188)
+	at ch.psi.pshell.core.DevicePool.initializeDevices(DevicePool.java:509)
+	at ch.psi.pshell.core.DevicePool.initialize(DevicePool.java:43)
+	at ch.psi.pshell.core.Context.restart(Context.java:985)
+	at ch.psi.pshell.core.Context.start(Context.java:2915)
+	at ch.psi.pshell.ui.App.lambda$startup$0(App.java:857)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: ch.psi.jcae.ChannelException: Unable to create channel PINK:GEYES:image3:ArrayData
+	at ch.psi.jcae.impl.DefaultChannelService.createChannel(DefaultChannelService.java:158)
+	at ch.psi.pshell.epics.Epics.newChannel(Epics.java:79)
+	at ch.psi.pshell.epics.Epics.newChannel(Epics.java:88)
+	at ch.psi.pshell.epics.Epics.get(Epics.java:114)
+	at ch.psi.pshell.epics.GenericArray.resolveType(GenericArray.java:83)
+	... 8 more
+Caused by: gov.aps.jca.CAException: Unable to connect to channel PINK:GEYES:image3:ArrayData
+	at ch.psi.jcae.impl.JCAChannelFactory.createChannel(JCAChannelFactory.java:100)
+	at ch.psi.jcae.impl.DefaultChannelService.createChannel(DefaultChannelService.java:148)
+	... 12 more
+Caused by: gov.aps.jca.CAException: Timout [10000] occured while creating channel PINK:GEYES:image3:ArrayData
+	at ch.psi.jcae.impl.JCAChannelFactory.createChannel(JCAChannelFactory.java:87)
+	... 13 more
+
+07/02/19 - 17:22:15.417 - DevicePool.initializeDevices - Severe - Error initializing: GE_ROI_Array
+07/02/19 - 17:22:15.419 - DevicePool.initializeDevices - Info - Initializing: GE_ROI_SizeY
+07/02/19 - 17:22:25.422 - GE_ROI_SizeY.initialize - Warning - ch.psi.pshell.device.DeviceBase$DeviceException: Error creating channel: PINK:GEYES:ROI1:SizeY_RBV [GE_ROI_SizeY]
+Stack trace:
+ch.psi.pshell.device.DeviceBase$DeviceException: Error creating channel: PINK:GEYES:ROI1:SizeY_RBV [GE_ROI_SizeY]
+	at ch.psi.pshell.epics.EpicsRegister.doInitialize(EpicsRegister.java:252)
+	at ch.psi.pshell.device.GenericDeviceBase.initialize(GenericDeviceBase.java:188)
+	at ch.psi.pshell.core.DevicePool.initializeDevices(DevicePool.java:509)
+	at ch.psi.pshell.core.DevicePool.initialize(DevicePool.java:43)
+	at ch.psi.pshell.core.Context.restart(Context.java:985)
+	at ch.psi.pshell.core.Context.start(Context.java:2915)
+	at ch.psi.pshell.ui.App.lambda$startup$0(App.java:857)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: ch.psi.jcae.ChannelException: Unable to create channel PINK:GEYES:ROI1:SizeY_RBV
+	at ch.psi.jcae.impl.DefaultChannelService.createChannel(DefaultChannelService.java:158)
+	at ch.psi.pshell.epics.Epics.newChannel(Epics.java:79)
+	at ch.psi.pshell.epics.Epics.newChannel(Epics.java:88)
+	at ch.psi.pshell.epics.Epics.newChannel(Epics.java:92)
+	at ch.psi.pshell.epics.EpicsRegister.doInitialize(EpicsRegister.java:224)
+	... 7 more
+Caused by: gov.aps.jca.CAException: Unable to connect to channel PINK:GEYES:ROI1:SizeY_RBV
+	at ch.psi.jcae.impl.JCAChannelFactory.createChannel(JCAChannelFactory.java:100)
+	at ch.psi.jcae.impl.DefaultChannelService.createChannel(DefaultChannelService.java:148)
+	... 11 more
+Caused by: gov.aps.jca.CAException: Timout [10000] occured while creating channel PINK:GEYES:ROI1:SizeY_RBV
+	at ch.psi.jcae.impl.JCAChannelFactory.createChannel(JCAChannelFactory.java:87)
+	... 12 more
+
+07/02/19 - 17:22:25.423 - DevicePool.initializeDevices - Severe - Error initializing: GE_ROI_SizeY
+07/02/19 - 17:22:25.424 - DevicePool.initializeDevices - Info - Initializing: GE_ROI_SizeX
+07/02/19 - 17:22:35.426 - GE_ROI_SizeX.initialize - Warning - ch.psi.pshell.device.DeviceBase$DeviceException: Error creating channel: PINK:GEYES:ROI1:SizeX_RBV [GE_ROI_SizeX]
+Stack trace:
+ch.psi.pshell.device.DeviceBase$DeviceException: Error creating channel: PINK:GEYES:ROI1:SizeX_RBV [GE_ROI_SizeX]
+	at ch.psi.pshell.epics.EpicsRegister.doInitialize(EpicsRegister.java:252)
+	at ch.psi.pshell.device.GenericDeviceBase.initialize(GenericDeviceBase.java:188)
+	at ch.psi.pshell.core.DevicePool.initializeDevices(DevicePool.java:509)
+	at ch.psi.pshell.core.DevicePool.initialize(DevicePool.java:43)
+	at ch.psi.pshell.core.Context.restart(Context.java:985)
+	at ch.psi.pshell.core.Context.start(Context.java:2915)
+	at ch.psi.pshell.ui.App.lambda$startup$0(App.java:857)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: ch.psi.jcae.ChannelException: Unable to create channel PINK:GEYES:ROI1:SizeX_RBV
+	at ch.psi.jcae.impl.DefaultChannelService.createChannel(DefaultChannelService.java:158)
+	at ch.psi.pshell.epics.Epics.newChannel(Epics.java:79)
+	at ch.psi.pshell.epics.Epics.newChannel(Epics.java:88)
+	at ch.psi.pshell.epics.Epics.newChannel(Epics.java:92)
+	at ch.psi.pshell.epics.EpicsRegister.doInitialize(EpicsRegister.java:224)
+	... 7 more
+Caused by: gov.aps.jca.CAException: Unable to connect to channel PINK:GEYES:ROI1:SizeX_RBV
+	at ch.psi.jcae.impl.JCAChannelFactory.createChannel(JCAChannelFactory.java:100)
+	at ch.psi.jcae.impl.DefaultChannelService.createChannel(DefaultChannelService.java:148)
+	... 11 more
+Caused by: gov.aps.jca.CAException: Timout [10000] occured while creating channel PINK:GEYES:ROI1:SizeX_RBV
+	at ch.psi.jcae.impl.JCAChannelFactory.createChannel(JCAChannelFactory.java:87)
+	... 12 more
+
+07/02/19 - 17:22:35.429 - DevicePool.initializeDevices - Severe - Error initializing: GE_ROI_SizeX
+07/02/19 - 17:22:35.431 - DevicePool.initializeDevices - Info - Initializing: GE_ROI_Line
+07/02/19 - 17:22:45.438 - GE_ROI_Line.initialize - Warning - ch.psi.pshell.device.DeviceBase$DeviceException: Error creating channel: PINK:GEYES:ROI1:MinY_RBV [GE_ROI_Line]
+Stack trace:
+ch.psi.pshell.device.DeviceBase$DeviceException: Error creating channel: PINK:GEYES:ROI1:MinY_RBV [GE_ROI_Line]
+	at ch.psi.pshell.epics.EpicsRegister.doInitialize(EpicsRegister.java:252)
+	at ch.psi.pshell.device.GenericDeviceBase.initialize(GenericDeviceBase.java:188)
+	at ch.psi.pshell.core.DevicePool.initializeDevices(DevicePool.java:509)
+	at ch.psi.pshell.core.DevicePool.initialize(DevicePool.java:43)
+	at ch.psi.pshell.core.Context.restart(Context.java:985)
+	at ch.psi.pshell.core.Context.start(Context.java:2915)
+	at ch.psi.pshell.ui.App.lambda$startup$0(App.java:857)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: ch.psi.jcae.ChannelException: Unable to create channel PINK:GEYES:ROI1:MinY_RBV
+	at ch.psi.jcae.impl.DefaultChannelService.createChannel(DefaultChannelService.java:158)
+	at ch.psi.pshell.epics.Epics.newChannel(Epics.java:79)
+	at ch.psi.pshell.epics.Epics.newChannel(Epics.java:88)
+	at ch.psi.pshell.epics.Epics.newChannel(Epics.java:92)
+	at ch.psi.pshell.epics.EpicsRegister.doInitialize(EpicsRegister.java:224)
+	... 7 more
+Caused by: gov.aps.jca.CAException: Unable to connect to channel PINK:GEYES:ROI1:MinY_RBV
+	at ch.psi.jcae.impl.JCAChannelFactory.createChannel(JCAChannelFactory.java:100)
+	at ch.psi.jcae.impl.DefaultChannelService.createChannel(DefaultChannelService.java:148)
+	... 11 more
+Caused by: gov.aps.jca.CAException: Timout [10000] occured while creating channel PINK:GEYES:ROI1:MinY_RBV
+	at ch.psi.jcae.impl.JCAChannelFactory.createChannel(JCAChannelFactory.java:87)
+	... 12 more
+
+07/02/19 - 17:22:45.441 - DevicePool.initializeDevices - Severe - Error initializing: GE_ROI_Line
+07/02/19 - 17:22:45.442 - DevicePool.initializeDevices - Info - Initializing: GE_Spectrum
+07/02/19 - 17:23:05.444 - GE_Spectrum.initialize - Warning - java.io.IOException: ch.psi.jcae.ChannelException: Unable to create channel PINK:GEYES:spectrum_RBV
+Stack trace:
+java.io.IOException: ch.psi.jcae.ChannelException: Unable to create channel PINK:GEYES:spectrum_RBV
+	at ch.psi.pshell.epics.GenericArray.resolveType(GenericArray.java:88)
+	at ch.psi.pshell.epics.GenericArray.doInitialize(GenericArray.java:121)
+	at ch.psi.pshell.device.GenericDeviceBase.initialize(GenericDeviceBase.java:188)
+	at ch.psi.pshell.core.DevicePool.initializeDevices(DevicePool.java:509)
+	at ch.psi.pshell.core.DevicePool.initialize(DevicePool.java:43)
+	at ch.psi.pshell.core.Context.restart(Context.java:985)
+	at ch.psi.pshell.core.Context.start(Context.java:2915)
+	at ch.psi.pshell.ui.App.lambda$startup$0(App.java:857)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: ch.psi.jcae.ChannelException: Unable to create channel PINK:GEYES:spectrum_RBV
+	at ch.psi.jcae.impl.DefaultChannelService.createChannel(DefaultChannelService.java:158)
+	at ch.psi.pshell.epics.Epics.newChannel(Epics.java:79)
+	at ch.psi.pshell.epics.Epics.newChannel(Epics.java:88)
+	at ch.psi.pshell.epics.Epics.get(Epics.java:114)
+	at ch.psi.pshell.epics.GenericArray.resolveType(GenericArray.java:83)
+	... 8 more
+Caused by: gov.aps.jca.CAException: Unable to connect to channel PINK:GEYES:spectrum_RBV
+	at ch.psi.jcae.impl.JCAChannelFactory.createChannel(JCAChannelFactory.java:100)
+	at ch.psi.jcae.impl.DefaultChannelService.createChannel(DefaultChannelService.java:148)
+	... 12 more
+Caused by: gov.aps.jca.CAException: Timout [10000] occured while creating channel PINK:GEYES:spectrum_RBV
+	at ch.psi.jcae.impl.JCAChannelFactory.createChannel(JCAChannelFactory.java:87)
+	... 13 more
+
+07/02/19 - 17:23:05.446 - DevicePool.initializeDevices - Severe - Error initializing: GE_Spectrum
+07/02/19 - 17:23:05.447 - DevicePool.initializeDevices - Info - Initializing: GE_Spectrum_Sum
+07/02/19 - 17:23:25.449 - GE_Spectrum_Sum.initialize - Warning - java.io.IOException: ch.psi.jcae.ChannelException: Unable to create channel PINK:GEYES:specsum_RBV
+Stack trace:
+java.io.IOException: ch.psi.jcae.ChannelException: Unable to create channel PINK:GEYES:specsum_RBV
+	at ch.psi.pshell.epics.GenericArray.resolveType(GenericArray.java:88)
+	at ch.psi.pshell.epics.GenericArray.doInitialize(GenericArray.java:121)
+	at ch.psi.pshell.device.GenericDeviceBase.initialize(GenericDeviceBase.java:188)
+	at ch.psi.pshell.core.DevicePool.initializeDevices(DevicePool.java:509)
+	at ch.psi.pshell.core.DevicePool.initialize(DevicePool.java:43)
+	at ch.psi.pshell.core.Context.restart(Context.java:985)
+	at ch.psi.pshell.core.Context.start(Context.java:2915)
+	at ch.psi.pshell.ui.App.lambda$startup$0(App.java:857)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: ch.psi.jcae.ChannelException: Unable to create channel PINK:GEYES:specsum_RBV
+	at ch.psi.jcae.impl.DefaultChannelService.createChannel(DefaultChannelService.java:158)
+	at ch.psi.pshell.epics.Epics.newChannel(Epics.java:79)
+	at ch.psi.pshell.epics.Epics.newChannel(Epics.java:88)
+	at ch.psi.pshell.epics.Epics.get(Epics.java:114)
+	at ch.psi.pshell.epics.GenericArray.resolveType(GenericArray.java:83)
+	... 8 more
+Caused by: gov.aps.jca.CAException: Unable to connect to channel PINK:GEYES:specsum_RBV
+	at ch.psi.jcae.impl.JCAChannelFactory.createChannel(JCAChannelFactory.java:100)
+	at ch.psi.jcae.impl.DefaultChannelService.createChannel(DefaultChannelService.java:148)
+	... 12 more
+Caused by: gov.aps.jca.CAException: Timout [10000] occured while creating channel PINK:GEYES:specsum_RBV
+	at ch.psi.jcae.impl.JCAChannelFactory.createChannel(JCAChannelFactory.java:87)
+	... 13 more
+
+07/02/19 - 17:23:25.451 - DevicePool.initializeDevices - Severe - Error initializing: GE_Spectrum_Sum
+07/02/19 - 17:23:25.452 - DevicePool.initializeDevices - Info - Initializing: GE_Spectrum_Conv
+07/02/19 - 17:23:35.455 - GE_Spectrum_Conv.initialize - Warning - ch.psi.pshell.device.DeviceBase$DeviceException: Error creating channel: PINK:GEYES:spectrum_convertion [GE_Spectrum_Conv]
+Stack trace:
+ch.psi.pshell.device.DeviceBase$DeviceException: Error creating channel: PINK:GEYES:spectrum_convertion [GE_Spectrum_Conv]
+	at ch.psi.pshell.epics.EpicsRegister.doInitialize(EpicsRegister.java:252)
+	at ch.psi.pshell.device.GenericDeviceBase.initialize(GenericDeviceBase.java:188)
+	at ch.psi.pshell.core.DevicePool.initializeDevices(DevicePool.java:509)
+	at ch.psi.pshell.core.DevicePool.initialize(DevicePool.java:43)
+	at ch.psi.pshell.core.Context.restart(Context.java:985)
+	at ch.psi.pshell.core.Context.start(Context.java:2915)
+	at ch.psi.pshell.ui.App.lambda$startup$0(App.java:857)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: ch.psi.jcae.ChannelException: Unable to create channel PINK:GEYES:spectrum_convertion
+	at ch.psi.jcae.impl.DefaultChannelService.createChannel(DefaultChannelService.java:158)
+	at ch.psi.pshell.epics.Epics.newChannel(Epics.java:79)
+	at ch.psi.pshell.epics.Epics.newChannel(Epics.java:88)
+	at ch.psi.pshell.epics.Epics.newChannel(Epics.java:92)
+	at ch.psi.pshell.epics.EpicsRegister.doInitialize(EpicsRegister.java:224)
+	... 7 more
+Caused by: gov.aps.jca.CAException: Unable to connect to channel PINK:GEYES:spectrum_convertion
+	at ch.psi.jcae.impl.JCAChannelFactory.createChannel(JCAChannelFactory.java:100)
+	at ch.psi.jcae.impl.DefaultChannelService.createChannel(DefaultChannelService.java:148)
+	... 11 more
+Caused by: gov.aps.jca.CAException: Timout [10000] occured while creating channel PINK:GEYES:spectrum_convertion
+	at ch.psi.jcae.impl.JCAChannelFactory.createChannel(JCAChannelFactory.java:87)
+	... 12 more
+
+07/02/19 - 17:23:35.456 - DevicePool.initializeDevices - Severe - Error initializing: GE_Spectrum_Conv
+07/02/19 - 17:23:35.457 - DevicePool.initializeDevices - Info - Initializing: GE_Sensor_Temp
+07/02/19 - 17:23:43.876 - App.exit - Info - Aplication exit command by: MainFrame
+07/02/19 - 17:23:43.909 - Context.close - Info - Close
+07/02/19 - 17:23:45.459 - GE_Sensor_Temp.initialize - Warning - ch.psi.pshell.device.DeviceBase$DeviceException: Error creating channel: PINK:GEYES:cam1:TemperatureActual [GE_Sensor_Temp]
+Stack trace:
+ch.psi.pshell.device.DeviceBase$DeviceException: Error creating channel: PINK:GEYES:cam1:TemperatureActual [GE_Sensor_Temp]
+	at ch.psi.pshell.epics.EpicsRegister.doInitialize(EpicsRegister.java:252)
+	at ch.psi.pshell.device.GenericDeviceBase.initialize(GenericDeviceBase.java:188)
+	at ch.psi.pshell.core.DevicePool.initializeDevices(DevicePool.java:509)
+	at ch.psi.pshell.core.DevicePool.initialize(DevicePool.java:43)
+	at ch.psi.pshell.core.Context.restart(Context.java:985)
+	at ch.psi.pshell.core.Context.start(Context.java:2915)
+	at ch.psi.pshell.ui.App.lambda$startup$0(App.java:857)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: ch.psi.jcae.ChannelException: Unable to create channel PINK:GEYES:cam1:TemperatureActual
+	at ch.psi.jcae.impl.DefaultChannelService.createChannel(DefaultChannelService.java:158)
+	at ch.psi.pshell.epics.Epics.newChannel(Epics.java:79)
+	at ch.psi.pshell.epics.Epics.newChannel(Epics.java:88)
+	at ch.psi.pshell.epics.Epics.newChannel(Epics.java:92)
+	at ch.psi.pshell.epics.EpicsRegister.doInitialize(EpicsRegister.java:224)
+	... 7 more
+Caused by: gov.aps.jca.CAException: Unable to connect to channel PINK:GEYES:cam1:TemperatureActual
+	at ch.psi.jcae.impl.JCAChannelFactory.createChannel(JCAChannelFactory.java:100)
+	at ch.psi.jcae.impl.DefaultChannelService.createChannel(DefaultChannelService.java:148)
+	... 11 more
+Caused by: gov.aps.jca.CAException: Timout [10000] occured while creating channel PINK:GEYES:cam1:TemperatureActual
+	at ch.psi.jcae.impl.JCAChannelFactory.createChannel(JCAChannelFactory.java:87)
+	... 12 more
+
+07/02/19 - 17:23:45.460 - DevicePool.initializeDevices - Severe - Error initializing: GE_Sensor_Temp
+07/02/19 - 17:23:45.460 - DevicePool.initializeDevices - Info - Initializing: Scan_Progress
+07/02/19 - 17:23:46.463 - PluginManager.stopPlugins - Info - Stop plugins
+07/02/19 - 17:23:46.504 - App.end - Info - Finished

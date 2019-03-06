@@ -1,0 +1,58 @@
+01/03/19 - 17:12:54.887 - Context.restart - Info - Initializing context
+01/03/19 - 17:12:54.888 - DataManager.initialize - Info - Initializing DataManager
+01/03/19 - 17:12:54.889 - DataManager.initialize - Info - Finished DataManager initialization
+01/03/19 - 17:12:54.890 - Context.restart - Info - Loading Device Pool
+01/03/19 - 17:12:54.890 - DevicePool.initialize - Info - Initializing DevicePool
+01/03/19 - 17:12:54.894 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_RBV
+01/03/19 - 17:12:54.912 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Set
+01/03/19 - 17:12:54.923 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Status
+01/03/19 - 17:12:54.945 - DevicePool.initializeDevices - Info - Initializing: TFY
+01/03/19 - 17:12:54.963 - DevicePool.initializeDevices - Info - Initializing: Diodes_Sum_Intensity
+01/03/19 - 17:12:54.980 - DevicePool.initializeDevices - Info - Initializing: Sample_Vert
+01/03/19 - 17:12:55.071 - DevicePool.initializeDevices - Info - Initializing: Diode_1
+01/03/19 - 17:12:55.082 - DevicePool.initializeDevices - Info - Initializing: Diode_2
+01/03/19 - 17:12:55.095 - DevicePool.initializeDevices - Info - Initializing: Diode_3
+01/03/19 - 17:12:55.107 - DevicePool.initializeDevices - Info - Initializing: Diode_4
+01/03/19 - 17:12:55.120 - DevicePool.initializeDevices - Info - Initializing: Filter1
+01/03/19 - 17:12:55.222 - DevicePool.initializeDevices - Info - Initializing: Filter2
+01/03/19 - 17:12:55.312 - DevicePool.initializeDevices - Info - Initializing: BPM2_Vert_Profile
+01/03/19 - 17:12:55.324 - DevicePool.initializeDevices - Info - Initializing: BPM2_Profile_Size
+01/03/19 - 17:12:55.334 - DevicePool.initializeDevices - Info - Initializing: Filter2_SIG
+01/03/19 - 17:12:55.385 - DevicePool.initialize - Info - Finished DevicePool initialization
+01/03/19 - 17:12:55.386 - ScriptManager.<init> - Info - Initializing ScriptManager
+01/03/19 - 17:12:55.388 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+01/03/19 - 17:12:55.691 - Context.lambda$restart$1 - Info - Executed startup script
+01/03/19 - 17:12:55.806 - Context.lambda$restart$1 - Info - Executed local startup script
+01/03/19 - 17:13:00.609 - Context.onCommand - Info - Eval: gap.Scan_with_Exponential_Background(11, 12.5, 0.05, wait=1) (ui)
+01/03/19 - 17:13:38.666 - Context.onCommand - Info - Eval: :abort (ui)
+01/03/19 - 17:13:38.667 - Context.onCommand - Info - Abort (ui)
+01/03/19 - 17:13:38.667 - ScanBase.abort - Info - Aborting: LineScan gap_exp-1
+01/03/19 - 17:13:38.667 - ScriptManager.abort - Info - Aborting
+01/03/19 - 17:13:43.770 - Context.onCommand - Info - Eval: gap.Scan_with_Exponential_Background(11, 12.5, 0.05, wait=1) (ui)
+01/03/19 - 17:17:20.535 - Context.onCommand - Info - Eval: bpm.BPM3_Vertical_Profile() (ui)
+01/03/19 - 17:19:01.841 - Context.onCommand - Info - Eval: bpm.BPM3_Vertical_Profile() (ui)
+01/03/19 - 17:19:36.986 - Context.onCommand - Info - Eval: bpm.BPM2_Vertical_Profile() (ui)
+01/03/19 - 17:22:23.261 - Context.onCommand - Info - Eval: pink.Save_Beamline_Snapshot() (ui)
+04/03/19 - 15:55:57.192 - Context.onCommand - Info - Eval: U17_Gap_RBV.read() (ui)
+04/03/19 - 15:56:10.488 - Context.onCommand - Info - Eval: U17_Gap_RBV.take) (ui)
+04/03/19 - 15:56:15.448 - Context.onCommand - Info - Eval: U17_Gap_RBV.take() (ui)
+04/03/19 - 15:56:16.705 - Context.onCommand - Info - Eval:  (ui)
+04/03/19 - 15:56:17.953 - Context.onCommand - Info - Eval:  (ui)
+04/03/19 - 15:56:19.601 - Context.onCommand - Info - Eval: U17_Gap_RBV.take() (ui)
+04/03/19 - 16:00:09.086 - Context.onCommand - Info - Eval: caget("U17IT6R:BaseCmdHmLock") (ui)
+04/03/19 - 16:06:34.527 - Context.onCommand - Info - Eval: U17_Gap_RBV.read() (ui)
+04/03/19 - 16:08:46.478 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/gap_class.py (ui)
+04/03/19 - 16:08:50.083 - Context.onCommand - Info - Run: local.py (ui)
+04/03/19 - 16:09:30.547 - Context.onCommand - Info - Eval: gap.Scan_without_fitting(22, 21.9, 2, wait=0) (ui)
+04/03/19 - 16:09:59.168 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/gap_class.py (ui)
+04/03/19 - 16:10:01.556 - Context.onCommand - Info - Run: local.py (ui)
+04/03/19 - 16:10:16.756 - Context.onCommand - Info - Eval: gap.Scan_without_fitting(22, 21.9, 2, wait=0) (ui)
+04/03/19 - 16:11:56.954 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/gap_class.py (ui)
+04/03/19 - 16:11:59.335 - Context.onCommand - Info - Run: local.py (ui)
+04/03/19 - 16:12:04.710 - Context.onCommand - Info - Eval: gap.Scan_without_fitting(22, 21.9, 2, wait=0) (ui)
+04/03/19 - 16:12:20.234 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/gap_class.py (ui)
+04/03/19 - 16:12:22.872 - Context.onCommand - Info - Run: local.py (ui)
+04/03/19 - 16:12:27.671 - Context.onCommand - Info - Eval: gap.Scan_without_fitting(22, 21.9, 2, wait=0) (ui)
+04/03/19 - 16:12:34.559 - Context.onCommand - Info - Eval: clear (ui)
+04/03/19 - 16:12:36.103 - Context.onCommand - Info - Eval: clc (ui)
+04/03/19 - 16:12:44.247 - Context.onCommand - Info - Restart (ui)

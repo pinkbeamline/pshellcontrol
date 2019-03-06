@@ -1,0 +1,31 @@
+05/03/19 - 14:33:48.279 - Context.restart - Info - Initializing context
+05/03/19 - 14:33:48.281 - DataManager.initialize - Info - Initializing DataManager
+05/03/19 - 14:33:48.282 - DataManager.initialize - Info - Finished DataManager initialization
+05/03/19 - 14:33:48.283 - Context.restart - Info - Loading Device Pool
+05/03/19 - 14:33:48.283 - DevicePool.initialize - Info - Initializing DevicePool
+05/03/19 - 14:33:48.286 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Set
+05/03/19 - 14:33:48.303 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Status
+05/03/19 - 14:33:48.324 - DevicePool.initializeDevices - Info - Initializing: TFY
+05/03/19 - 14:33:48.336 - DevicePool.initializeDevices - Info - Initializing: Diodes_Sum_Intensity
+05/03/19 - 14:33:48.347 - DevicePool.initializeDevices - Info - Initializing: Sample_Vert
+05/03/19 - 14:33:48.438 - DevicePool.initializeDevices - Info - Initializing: Diode_1
+05/03/19 - 14:33:48.451 - DevicePool.initializeDevices - Info - Initializing: Diode_2
+05/03/19 - 14:33:48.462 - DevicePool.initializeDevices - Info - Initializing: Diode_3
+05/03/19 - 14:33:48.473 - DevicePool.initializeDevices - Info - Initializing: Diode_4
+05/03/19 - 14:33:48.485 - DevicePool.initializeDevices - Info - Initializing: Filter1
+05/03/19 - 14:33:48.577 - DevicePool.initializeDevices - Info - Initializing: Filter2
+05/03/19 - 14:33:48.670 - DevicePool.initializeDevices - Info - Initializing: BPM2_Vert_Profile
+05/03/19 - 14:33:48.682 - DevicePool.initializeDevices - Info - Initializing: BPM2_Profile_Size
+05/03/19 - 14:33:48.731 - DevicePool.initialize - Info - Finished DevicePool initialization
+05/03/19 - 14:33:48.733 - ScriptManager.<init> - Info - Initializing ScriptManager
+05/03/19 - 14:33:48.738 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+05/03/19 - 14:33:49.047 - Context.lambda$restart$1 - Info - Executed startup script
+05/03/19 - 14:33:49.169 - Context.lambda$restart$1 - Info - Executed local startup script
+05/03/19 - 14:33:56.799 - Context.onCommand - Info - Eval: add_device(ch.psi.pshell.epics.ChannelDouble("U17GAP","U17IT6R:BasePmGap.A")) (ui)
+05/03/19 - 14:33:56.806 - DevicePool.addDevice - Info - Adding device: U17GAP
+05/03/19 - 14:34:05.239 - Context.onCommand - Info - Eval: U17GAP.setMonitored(True) (ui)
+05/03/19 - 14:34:38.744 - Context.onCommand - Info - Eval: help(remove_device) (ui)
+05/03/19 - 14:34:57.561 - Context.onCommand - Info - Eval: remove(U17GAP) (ui)
+05/03/19 - 14:35:10.209 - Context.onCommand - Info - Eval: remove_device(U17GAP) (ui)
+05/03/19 - 14:35:10.213 - DevicePool.removeDevice - Warning - Removing device: U17GAP
+05/03/19 - 14:35:41.850 - Context.onCommand - Info - Restart (ui)

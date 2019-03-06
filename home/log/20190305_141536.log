@@ -1,0 +1,134 @@
+05/03/19 - 14:15:36.787 - Context.restart - Info - Initializing context
+05/03/19 - 14:15:36.788 - DataManager.initialize - Info - Initializing DataManager
+05/03/19 - 14:15:36.789 - DataManager.initialize - Info - Finished DataManager initialization
+05/03/19 - 14:15:36.790 - Context.restart - Info - Loading Device Pool
+05/03/19 - 14:15:36.791 - DevicePool.initialize - Info - Initializing DevicePool
+05/03/19 - 14:15:36.794 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Set
+05/03/19 - 14:15:36.816 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Status
+05/03/19 - 14:15:36.838 - DevicePool.initializeDevices - Info - Initializing: TFY
+05/03/19 - 14:15:36.849 - DevicePool.initializeDevices - Info - Initializing: Diodes_Sum_Intensity
+05/03/19 - 14:15:36.861 - DevicePool.initializeDevices - Info - Initializing: Sample_Vert
+05/03/19 - 14:15:36.948 - DevicePool.initializeDevices - Info - Initializing: Diode_1
+05/03/19 - 14:15:36.959 - DevicePool.initializeDevices - Info - Initializing: Diode_2
+05/03/19 - 14:15:36.970 - DevicePool.initializeDevices - Info - Initializing: Diode_3
+05/03/19 - 14:15:36.981 - DevicePool.initializeDevices - Info - Initializing: Diode_4
+05/03/19 - 14:15:36.992 - DevicePool.initializeDevices - Info - Initializing: Filter1
+05/03/19 - 14:15:37.077 - DevicePool.initializeDevices - Info - Initializing: Filter2
+05/03/19 - 14:15:37.163 - DevicePool.initializeDevices - Info - Initializing: BPM2_Vert_Profile
+05/03/19 - 14:15:37.174 - DevicePool.initializeDevices - Info - Initializing: BPM2_Profile_Size
+05/03/19 - 14:15:37.185 - DevicePool.initializeDevices - Info - Initializing: Filter2_SIG
+05/03/19 - 14:15:47.186 - Filter2_SIG.initialize - Warning - ch.psi.pshell.device.DeviceBase$DeviceException: Error creating channel: PINK:AUX1:Filter2_sig_RBV [Filter2_SIG]
+Stack trace:
+ch.psi.pshell.device.DeviceBase$DeviceException: Error creating channel: PINK:AUX1:Filter2_sig_RBV [Filter2_SIG]
+	at ch.psi.pshell.epics.EpicsRegister.doInitialize(EpicsRegister.java:252)
+	at ch.psi.pshell.device.GenericDeviceBase.initialize(GenericDeviceBase.java:188)
+	at ch.psi.pshell.core.DevicePool.initializeDevices(DevicePool.java:509)
+	at ch.psi.pshell.core.DevicePool.initialize(DevicePool.java:43)
+	at ch.psi.pshell.core.Context.restart(Context.java:985)
+	at ch.psi.pshell.core.Context.restart(Context.java:2952)
+	at ch.psi.pshell.ui.Task$Restart.doInBackground(Task.java:368)
+	at ch.psi.pshell.ui.Task$Restart.doInBackground(Task.java:358)
+	at javax.swing.SwingWorker$1.call(SwingWorker.java:295)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at javax.swing.SwingWorker.run(SwingWorker.java:334)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: ch.psi.jcae.ChannelException: Unable to create channel PINK:AUX1:Filter2_sig_RBV
+	at ch.psi.jcae.impl.DefaultChannelService.createChannel(DefaultChannelService.java:158)
+	at ch.psi.pshell.epics.Epics.newChannel(Epics.java:79)
+	at ch.psi.pshell.epics.Epics.newChannel(Epics.java:88)
+	at ch.psi.pshell.epics.Epics.newChannel(Epics.java:92)
+	at ch.psi.pshell.epics.EpicsRegister.doInitialize(EpicsRegister.java:224)
+	... 13 more
+Caused by: gov.aps.jca.CAException: Unable to connect to channel PINK:AUX1:Filter2_sig_RBV
+	at ch.psi.jcae.impl.JCAChannelFactory.createChannel(JCAChannelFactory.java:100)
+	at ch.psi.jcae.impl.DefaultChannelService.createChannel(DefaultChannelService.java:148)
+	... 17 more
+Caused by: gov.aps.jca.CAException: Timout [10000] occured while creating channel PINK:AUX1:Filter2_sig_RBV
+	at ch.psi.jcae.impl.JCAChannelFactory.createChannel(JCAChannelFactory.java:87)
+	... 18 more
+
+05/03/19 - 14:15:47.187 - DevicePool.initializeDevices - Severe - Error initializing: Filter2_SIG
+05/03/19 - 14:15:47.223 - DevicePool.initialize - Info - Finished DevicePool initialization
+05/03/19 - 14:15:47.225 - ScriptManager.<init> - Info - Initializing ScriptManager
+05/03/19 - 14:15:47.230 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+05/03/19 - 14:15:47.496 - Context.lambda$restart$1 - Info - Executed startup script
+05/03/19 - 14:15:47.624 - Context.lambda$restart$1 - Info - Executed local startup script
+05/03/19 - 14:20:30.957 - Context.onCommand - Info - Eval: help(add_device) (ui)
+05/03/19 - 14:22:41.224 - Context.onCommand - Info - Eval: U17_Gap_Set.getAccessType() (ui)
+05/03/19 - 14:22:50.504 - Context.onCommand - Info - Eval: U17_Gap_Set.getChannelName() (ui)
+05/03/19 - 14:23:17.545 - Context.onCommand - Info - Eval: U17_Gap_Set.getComponents() (ui)
+05/03/19 - 14:23:33.321 - Context.onCommand - Info - Eval: U17_Gap_Set.getConfig() (ui)
+05/03/19 - 14:23:39.489 - Context.onCommand - Info - Eval: aa=U17_Gap_Set.getConfig() (ui)
+05/03/19 - 14:23:43.745 - Context.onCommand - Info - Eval: aa (ui)
+05/03/19 - 14:23:55.841 - Context.onCommand - Info - Eval: aa=U17_Gap_Set.getElementType() (ui)
+05/03/19 - 14:23:58.705 - Context.onCommand - Info - Eval: aa (ui)
+05/03/19 - 14:24:09.546 - Context.onCommand - Info - Eval: U17_Gap_Set.getElementType() (ui)
+05/03/19 - 14:24:19.330 - Context.onCommand - Info - Eval: U17_Gap_Set.getName() (ui)
+05/03/19 - 14:24:27.105 - Context.onCommand - Info - Eval: U17_Gap_Set.getParent() (ui)
+05/03/19 - 14:24:43.706 - Context.onCommand - Info - Eval: aa=U17_Gap_Set.getParent() (ui)
+05/03/19 - 14:24:46.835 - Context.onCommand - Info - Eval: aa (ui)
+05/03/19 - 14:25:47.908 - Context.onCommand - Info - Eval: U17_Gap_Set.initialize() (ui)
+05/03/19 - 14:28:44.401 - Context.onCommand - Info - Eval: add_device(ch.psi.pshell.epics.ChannelDouble("U17IT6R:BasePmGap.A"), True) (ui)
+05/03/19 - 14:29:29.673 - Context.onCommand - Info - Eval: add_device(ch.psi.pshell.epics.ChannelDouble("U17IT6R:BasePmGap.A", "Read"), True) (ui)
+05/03/19 - 14:29:29.679 - DevicePool.addDevice - Info - Adding device: U17IT6R:BasePmGap.A
+05/03/19 - 14:29:39.681 - ch.psi.U17IT6R:BasePmGap.A.initialize - Warning - ch.psi.pshell.device.DeviceBase$DeviceException: Error creating channel: Read [U17IT6R:BasePmGap.A]
+Stack trace:
+ch.psi.pshell.device.DeviceBase$DeviceException: Error creating channel: Read [U17IT6R:BasePmGap.A]
+	at ch.psi.pshell.epics.EpicsRegister.doInitialize(EpicsRegister.java:252)
+	at ch.psi.pshell.device.GenericDeviceBase.initialize(GenericDeviceBase.java:188)
+	at ch.psi.pshell.core.DevicePool.addDevice(DevicePool.java:560)
+	at ch.psi.pshell.core.DevicePool.addDevice(DevicePool.java:544)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:188)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:206)
+	at org.python.core.PyObject.__call__(PyObject.java:497)
+	at org.python.core.PyObject.__call__(PyObject.java:501)
+	at org.python.core.PyMethod.__call__(PyMethod.java:141)
+	at org.python.pycode._pyx614.add_device$149(<script>:1834)
+	at org.python.pycode._pyx614.call_function(<script>)
+	at org.python.core.PyTableCode.call(PyTableCode.java:171)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:154)
+	at org.python.core.PyFunction.__call__(PyFunction.java:423)
+	at org.python.pycode._pyx637.f$0(<script>:1)
+	at org.python.pycode._pyx637.call_function(<script>)
+	at org.python.core.PyTableCode.call(PyTableCode.java:171)
+	at org.python.core.PyCode.call(PyCode.java:18)
+	at org.python.core.Py.runCode(Py.java:1614)
+	at org.python.core.__builtin__.eval(__builtin__.java:497)
+	at org.python.core.__builtin__.eval(__builtin__.java:501)
+	at org.python.util.PythonInterpreter.eval(PythonInterpreter.java:259)
+	at org.python.jsr223.PyScriptEngine.eval(PyScriptEngine.java:57)
+	at org.python.jsr223.PyScriptEngine.access$300(PyScriptEngine.java:20)
+	at org.python.jsr223.PyScriptEngine$PyCompiledScript.eval(PyScriptEngine.java:250)
+	at javax.script.CompiledScript.eval(CompiledScript.java:92)
+	at ch.psi.pshell.scripting.Interpreter.interpret(Interpreter.java:115)
+	at ch.psi.pshell.scripting.Interpreter.interpret(Interpreter.java:64)
+	at ch.psi.pshell.scripting.ScriptManager.eval(ScriptManager.java:344)
+	at ch.psi.pshell.core.Context.lambda$evalLine$2(Context.java:1237)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: ch.psi.jcae.ChannelException: Unable to create channel Read
+	at ch.psi.jcae.impl.DefaultChannelService.createChannel(DefaultChannelService.java:158)
+	at ch.psi.pshell.epics.Epics.newChannel(Epics.java:79)
+	at ch.psi.pshell.epics.Epics.newChannel(Epics.java:88)
+	at ch.psi.pshell.epics.Epics.newChannel(Epics.java:92)
+	at ch.psi.pshell.epics.EpicsRegister.doInitialize(EpicsRegister.java:224)
+	... 37 more
+Caused by: gov.aps.jca.CAException: Unable to connect to channel Read
+	at ch.psi.jcae.impl.JCAChannelFactory.createChannel(JCAChannelFactory.java:100)
+	at ch.psi.jcae.impl.DefaultChannelService.createChannel(DefaultChannelService.java:148)
+	... 41 more
+Caused by: gov.aps.jca.CAException: Timout [10000] occured while creating channel Read
+	at ch.psi.jcae.impl.JCAChannelFactory.createChannel(JCAChannelFactory.java:87)
+	... 42 more
+
+05/03/19 - 14:29:39.684 - DevicePool.addDevice - Warning - Error initializing device: Error creating channel: Read [U17IT6R:BasePmGap.A]
+05/03/19 - 14:29:59.210 - Context.onCommand - Info - Eval: help() (ui)
+05/03/19 - 14:30:17.529 - Context.onCommand - Info - Restart (ui)

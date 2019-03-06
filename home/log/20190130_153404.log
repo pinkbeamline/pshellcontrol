@@ -1,0 +1,39 @@
+30/01/19 - 15:34:05.319 - Context.restart - Info - Initializing context
+30/01/19 - 15:34:05.321 - DataManager.initialize - Info - Initializing DataManager
+30/01/19 - 15:34:05.324 - DataManager.initialize - Info - Finished DataManager initialization
+30/01/19 - 15:34:05.325 - Context.restart - Info - Loading Device Pool
+30/01/19 - 15:34:05.325 - DevicePool.initialize - Info - Initializing DevicePool
+30/01/19 - 15:34:05.333 - DevicePool.initializeDevices - Info - Initializing: IZero_Profile
+30/01/19 - 15:34:05.447 - DevicePool.initializeDevices - Info - Initializing: IZero
+30/01/19 - 15:34:05.473 - DevicePool.initializeDevices - Info - Initializing: TFY_Profile
+30/01/19 - 15:34:05.480 - DevicePool.initializeDevices - Info - Initializing: TFY
+30/01/19 - 15:34:05.505 - DevicePool.initializeDevices - Info - Initializing: GE_AreaDet
+30/01/19 - 15:34:05.993 - DevicePool.initializeDevices - Info - Initializing: GE_FrameID
+30/01/19 - 15:34:05.994 - DevicePool.initializeDevices - Info - Initializing: GE_Raw_Imaging
+30/01/19 - 15:34:05.995 - DevicePool.initializeDevices - Info - Initializing: GE_Raw_Array
+30/01/19 - 15:34:06.004 - DevicePool.initializeDevices - Info - Initializing: GE_BG_Array
+30/01/19 - 15:34:06.087 - DevicePool.initializeDevices - Info - Initializing: GE_BG_SizeY
+30/01/19 - 15:34:06.088 - DevicePool.initializeDevices - Info - Initializing: GE_BG_SizeX
+30/01/19 - 15:34:06.089 - DevicePool.initializeDevices - Info - Initializing: GE_ROI_Array
+30/01/19 - 15:34:06.172 - DevicePool.initializeDevices - Info - Initializing: GE_ROI_SizeY
+30/01/19 - 15:34:06.199 - DevicePool.initializeDevices - Info - Initializing: GE_ROI_SizeX
+30/01/19 - 15:34:06.225 - DevicePool.initializeDevices - Info - Initializing: GE_ROI_Line
+30/01/19 - 15:34:06.252 - DevicePool.initializeDevices - Info - Initializing: GE_Spectrum
+30/01/19 - 15:34:06.336 - DevicePool.initializeDevices - Info - Initializing: GE_Spectrum_Sum
+30/01/19 - 15:34:06.417 - DevicePool.initializeDevices - Info - Initializing: GE_Spectrum_Conv
+30/01/19 - 15:34:06.444 - DevicePool.initializeDevices - Info - Initializing: GE_Sensor_Temp
+30/01/19 - 15:34:06.471 - DevicePool.initializeDevices - Info - Initializing: Scan_Progress
+30/01/19 - 15:34:31.183 - DevicePool.initialize - Info - Finished DevicePool initialization
+30/01/19 - 15:34:31.186 - ScriptManager.<init> - Info - Initializing ScriptManager
+30/01/19 - 15:34:31.192 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+30/01/19 - 15:34:31.629 - Context.lambda$restart$1 - Info - Executed startup script
+30/01/19 - 15:34:31.659 - Context.lambda$restart$1 - Info - Executed local startup script
+30/01/19 - 15:35:21.403 - Context.onCommand - Info - Eval: Scan_Progress.write(10) (ui)
+30/01/19 - 15:35:35.841 - Context.onCommand - Info - Eval: Scan_Progress.write(0) (ui)
+30/01/19 - 15:35:43.977 - Context.onCommand - Info - Eval: Scan_Progress.write(-1) (ui)
+30/01/19 - 15:35:51.433 - Context.onCommand - Info - Eval: Scan_Progress.write(-10) (ui)
+30/01/19 - 15:35:55.305 - Context.onCommand - Info - Eval: Scan_Progress.write(0) (ui)
+30/01/19 - 16:41:23.176 - App.exit - Info - Aplication exit command by: MainFrame
+30/01/19 - 16:41:23.185 - Context.close - Info - Close
+30/01/19 - 16:41:24.192 - PluginManager.stopPlugins - Info - Stop plugins
+30/01/19 - 16:41:24.207 - App.end - Info - Finished

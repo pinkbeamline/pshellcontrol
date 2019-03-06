@@ -1,0 +1,69 @@
+25/02/19 - 14:12:31.545 - Context.restart - Info - Initializing context
+25/02/19 - 14:12:31.546 - DataManager.initialize - Info - Initializing DataManager
+25/02/19 - 14:12:31.548 - DataManager.initialize - Info - Finished DataManager initialization
+25/02/19 - 14:12:31.549 - Context.restart - Info - Loading Device Pool
+25/02/19 - 14:12:31.549 - DevicePool.initialize - Info - Initializing DevicePool
+25/02/19 - 14:12:31.552 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_RBV
+25/02/19 - 14:12:31.577 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Set
+25/02/19 - 14:12:31.589 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Exec
+25/02/19 - 14:12:31.601 - DevicePool.initializeDevices - Info - Initializing: Diodes_Sum_Intensity
+25/02/19 - 14:12:31.613 - DevicePool.initializeDevices - Info - Initializing: Filter1
+25/02/19 - 14:12:31.624 - DevicePool.initializeDevices - Info - Initializing: Filter1_RBV
+25/02/19 - 14:12:31.636 - DevicePool.initializeDevices - Info - Initializing: Filter2
+25/02/19 - 14:12:31.726 - DevicePool.initializeDevices - Info - Initializing: Filter2_RBV
+25/02/19 - 14:12:31.726 - DevicePool.initializeDevices - Info - Initializing: BPM2_Vert_Profile
+25/02/19 - 14:12:31.737 - DevicePool.initializeDevices - Info - Initializing: BPM2_Profile_Size
+25/02/19 - 14:12:31.749 - DevicePool.initializeDevices - Info - Initializing: Filter2_SIG
+25/02/19 - 14:12:31.795 - DevicePool.initialize - Info - Finished DevicePool initialization
+25/02/19 - 14:12:31.797 - ScriptManager.<init> - Info - Initializing ScriptManager
+25/02/19 - 14:12:31.799 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+25/02/19 - 14:12:32.084 - Context.lambda$restart$1 - Info - Executed startup script
+25/02/19 - 14:12:32.186 - Context.lambda$restart$1 - Info - Executed local startup script
+25/02/19 - 15:26:28.457 - Context.onCommand - Info - Run: fun1.py (ui)
+25/02/19 - 15:27:01.651 - Context.onCommand - Info - Run: test1.py (ui)
+25/02/19 - 15:27:12.731 - Context.onCommand - Info - Run: fun1.py (ui)
+25/02/19 - 15:28:15.853 - Context.onCommand - Info - Run: test1.py (ui)
+25/02/19 - 15:34:11.677 - Context.onCommand - Info - Run: fun1.py (ui)
+25/02/19 - 15:34:37.277 - Context.onCommand - Info - Run: fun1.py (ui)
+25/02/19 - 15:34:52.453 - Context.onCommand - Info - Run: test1.py (ui)
+25/02/19 - 15:48:50.245 - Context.onCommand - Info - Eval: aa (ui)
+25/02/19 - 15:48:55.222 - Context.onCommand - Info - Eval: aa.data (ui)
+25/02/19 - 15:48:57.534 - Context.onCommand - Info - Eval: aa.data() (ui)
+25/02/19 - 15:49:45.066 - Context.onCommand - Info - Run: test1.py (ui)
+25/02/19 - 15:54:07.261 - Context.onCommand - Info - Eval: a = 1e-9 (ui)
+25/02/19 - 15:54:42.441 - Context.onCommand - Info - Run: test1.py (ui)
+25/02/19 - 15:55:14.047 - Context.onCommand - Info - Eval: a = [1, 2, 3] (ui)
+25/02/19 - 15:55:19.983 - Context.onCommand - Info - Eval: b = a/2 (ui)
+25/02/19 - 15:55:24.831 - Context.onCommand - Info - Eval: b = a*2 (ui)
+25/02/19 - 15:55:28.807 - Context.onCommand - Info - Eval: b (ui)
+25/02/19 - 15:56:04.888 - Context.onCommand - Info - Eval: b = [1]*len(a) (ui)
+25/02/19 - 15:56:06.151 - Context.onCommand - Info - Eval: b (ui)
+25/02/19 - 15:56:25.745 - Context.onCommand - Info - Eval: c= b*a (ui)
+25/02/19 - 15:56:43.057 - Context.onCommand - Info - Eval: c=a/b (ui)
+25/02/19 - 15:56:50.473 - Context.onCommand - Info - Eval: a (ui)
+25/02/19 - 15:56:50.937 - Context.onCommand - Info - Eval: b (ui)
+25/02/19 - 15:57:06.842 - Context.onCommand - Info - Eval: b=a/2 (ui)
+25/02/19 - 16:00:15.928 - Context.onCommand - Info - Run: test1.py (ui)
+25/02/19 - 16:03:52.261 - Context.onCommand - Info - Run: fun1.py (ui)
+25/02/19 - 16:05:36.231 - Context.onCommand - Info - Run: test1.py (ui)
+25/02/19 - 16:26:47.516 - Context.onCommand - Info - Run: test1.py (ui)
+25/02/19 - 16:34:10.759 - Context.onCommand - Info - Run: fun1.py (ui)
+25/02/19 - 16:34:14.005 - Context.onCommand - Info - Run: test1.py (ui)
+25/02/19 - 16:34:37.274 - Context.onCommand - Info - Run: test1.py (ui)
+25/02/19 - 16:38:06.852 - Context.onCommand - Info - Run: fun1.py (ui)
+25/02/19 - 16:38:08.811 - Context.onCommand - Info - Run: test1.py (ui)
+25/02/19 - 16:41:17.720 - Context.onCommand - Info - Run: fun1.py (ui)
+25/02/19 - 16:41:21.231 - Context.onCommand - Info - Run: test1.py (ui)
+25/02/19 - 16:43:38.852 - Context.onCommand - Info - Run: test1.py (ui)
+25/02/19 - 16:44:10.836 - Context.onCommand - Info - Run: test1.py (ui)
+25/02/19 - 16:47:27.224 - Context.onCommand - Info - Run: fun1.py (ui)
+25/02/19 - 16:47:30.161 - Context.onCommand - Info - Run: test1.py (ui)
+25/02/19 - 16:48:33.250 - Context.onCommand - Info - Run: fun1.py (ui)
+25/02/19 - 16:48:35.965 - Context.onCommand - Info - Run: test1.py (ui)
+25/02/19 - 16:48:52.354 - Context.onCommand - Info - Run: fun1.py (ui)
+25/02/19 - 16:48:54.929 - Context.onCommand - Info - Run: test1.py (ui)
+25/02/19 - 16:52:23.501 - Context.onCommand - Info - Eval: blade.Diagnostic_Chamber_Blade_Scan(start=0, end=12000, steps=100, interval=0.0) (ui)
+25/02/19 - 16:53:40.351 - Context.onCommand - Info - Eval: blade.Diagnostic_Chamber_Blade_Scan(start=12000, end=0, steps=100, interval=0.0) (ui)
+25/02/19 - 17:07:45.438 - Context.onCommand - Info - Run: /home/epics/PShell/pshellcontrol/home/script/shared/pink_extra.py (ui)
+25/02/19 - 17:09:26.885 - Context.onCommand - Info - Eval: help(fit_gaussian_exp_bkg) (ui)
+25/02/19 - 17:10:46.399 - Context.onCommand - Info - Restart (ui)

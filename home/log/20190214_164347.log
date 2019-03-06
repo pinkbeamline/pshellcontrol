@@ -1,0 +1,36 @@
+14/02/19 - 16:43:47.425 - Context.restart - Info - Initializing context
+14/02/19 - 16:43:47.427 - DataManager.initialize - Info - Initializing DataManager
+14/02/19 - 16:43:47.430 - DataManager.initialize - Info - Finished DataManager initialization
+14/02/19 - 16:43:47.431 - Context.restart - Info - Loading Device Pool
+14/02/19 - 16:43:47.431 - DevicePool.initialize - Info - Initializing DevicePool
+14/02/19 - 16:43:47.440 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_RBV
+14/02/19 - 16:43:47.466 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Set
+14/02/19 - 16:43:47.479 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Exec
+14/02/19 - 16:43:47.493 - DevicePool.initializeDevices - Info - Initializing: Diodes_Sum_Intensity
+14/02/19 - 16:43:47.509 - DevicePool.initializeDevices - Info - Initializing: Filter1
+14/02/19 - 16:43:47.532 - DevicePool.initializeDevices - Info - Initializing: Filter1_RBV
+14/02/19 - 16:43:47.550 - DevicePool.initializeDevices - Info - Initializing: Filter2
+14/02/19 - 16:43:47.565 - DevicePool.initializeDevices - Info - Initializing: Filter2_RBV
+14/02/19 - 16:43:47.579 - DevicePool.initializeDevices - Info - Initializing: BPM2_Vert_Profile
+14/02/19 - 16:43:47.594 - DevicePool.initializeDevices - Info - Initializing: BPM2_Profile_Size
+14/02/19 - 16:43:47.653 - DevicePool.initialize - Info - Finished DevicePool initialization
+14/02/19 - 16:43:47.665 - ScriptManager.<init> - Info - Initializing ScriptManager
+14/02/19 - 16:43:47.671 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+14/02/19 - 16:43:48.196 - Context.lambda$restart$1 - Info - Executed startup script
+14/02/19 - 16:43:48.293 - Context.lambda$restart$1 - Info - Executed local startup script
+14/02/19 - 16:43:55.841 - Context.onCommand - Info - Eval: bpm.BPM3_Vertical_Profile() (ui)
+14/02/19 - 16:44:59.098 - Context.onCommand - Info - Eval: xvec = range(10) (ui)
+14/02/19 - 16:45:01.650 - Context.onCommand - Info - Eval: xvec (ui)
+14/02/19 - 16:45:09.131 - Context.onCommand - Info - Eval: xvec = range(10)+100 (ui)
+14/02/19 - 16:45:16.130 - Context.onCommand - Info - Eval: xvec = range(10)+[100] (ui)
+14/02/19 - 16:45:19.219 - Context.onCommand - Info - Eval: xvec (ui)
+14/02/19 - 16:45:59.738 - Context.onCommand - Info - Eval: xvec = range(100,100+50) (ui)
+14/02/19 - 16:46:01.436 - Context.onCommand - Info - Eval: xvec (ui)
+14/02/19 - 16:46:21.559 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/vertical_profile.py (ui)
+14/02/19 - 16:48:05.965 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/vertical_profile.py (ui)
+14/02/19 - 16:49:01.145 - Context.onCommand - Info - Eval: bpm.BPM3_Vertical_Profile() (ui)
+14/02/19 - 17:17:47.407 - Context.onCommand - Info - Eval: clear (ui)
+14/02/19 - 17:17:49.360 - Context.onCommand - Info - Eval: cls (ui)
+14/02/19 - 17:17:50.310 - Context.onCommand - Info - Eval: clc (ui)
+14/02/19 - 17:17:52.551 - Context.onCommand - Info - Eval:  (ui)
+14/02/19 - 17:18:01.592 - Context.onCommand - Info - Restart (ui)

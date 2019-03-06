@@ -1,0 +1,32 @@
+18/01/19 - 16:39:24.098 - Context.<init> - Info - Process: 31006@pink-shuttle02
+18/01/19 - 16:39:24.100 - Context.<init> - Info - Context: unknown
+18/01/19 - 16:39:24.100 - Context.<init> - Info - Pars: /home/epics/PShell/pshell-1.10.0-fat.jar -home=/home/epics/PShell/pshellcontrol/home -dlaf
+18/01/19 - 16:39:24.101 - Context.<init> - Info - User: epics
+18/01/19 - 16:39:24.101 - Context.<init> - Info - Host: pink-shuttle02
+18/01/19 - 16:39:24.122 - PluginManager.loadExtensionsFolder - Info - Loading extensions folder
+18/01/19 - 16:39:24.124 - DataManager.initialize - Info - Initializing DataManager
+18/01/19 - 16:39:24.132 - DataManager.setProvider - Info - Setting data provider: ch.psi.pshell.data.ProviderHDF5
+18/01/19 - 16:39:24.135 - DataManager.setLayout - Info - Setting data layout: ch.psi.pshell.data.LayoutDefault
+18/01/19 - 16:39:24.136 - DataManager.initialize - Info - Finished DataManager initialization
+18/01/19 - 16:39:24.137 - App.startup - Info - Version: 1.10-SNAPSHOT (build 1812200927-py)
+18/01/19 - 16:39:24.139 - App.startup - Info - Create workbench
+18/01/19 - 16:39:25.273 - PluginManager.loadPluginFolder - Info - Loading plugins folder
+18/01/19 - 16:39:25.283 - PluginManager.startPlugins - Info - Start plugins
+18/01/19 - 16:39:25.289 - Context.onCommand - Info - Restart (ui)
+18/01/19 - 16:39:25.335 - Context.restart - Info - Initializing context
+18/01/19 - 16:39:25.338 - Context.onUserChange - Info - User: Default [administrator] *
+18/01/19 - 16:39:25.343 - Context.restart - Info - Loading Device Pool
+18/01/19 - 16:39:25.343 - DevicePool.initialize - Info - Initializing DevicePool
+18/01/19 - 16:39:25.453 - ScriptManager.<init> - Info - Initializing ScriptManager
+18/01/19 - 16:39:26.019 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+18/01/19 - 16:39:28.828 - Context.lambda$restart$1 - Info - Executed startup script
+18/01/19 - 16:39:28.832 - Context.lambda$restart$1 - Info - Executed local startup script
+21/01/19 - 11:00:19.588 - PluginManager.loadPlugin - Info - Load plugin: /home/epics/PShell/pshellcontrol/home/plugins/pp1.java
+21/01/19 - 11:00:19.589 - PluginManager.loadJavaFile - Info - Compiling class file: /home/epics/PShell/pshellcontrol/home/plugins/pp1.java
+21/01/19 - 11:00:20.370 - PluginManager.startPlugin - Info - Started plugin: pp1.java
+21/01/19 - 11:01:12.857 - PluginManager.stopPlugin - Info - Stopped plugin: pp1.java
+21/01/19 - 11:01:14.144 - PluginManager.unloadPlugin - Info - Unload plugin: pp1.java
+23/01/19 - 12:55:26.119 - App.exit - Info - Aplication exit command by: MainFrame
+23/01/19 - 12:55:26.131 - Context.close - Info - Close
+23/01/19 - 12:55:26.133 - PluginManager.stopPlugins - Info - Stop plugins
+23/01/19 - 12:55:26.155 - App.end - Info - Finished

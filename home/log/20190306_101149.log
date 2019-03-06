@@ -1,0 +1,83 @@
+06/03/19 - 10:11:50.099 - Context.restart - Info - Initializing context
+06/03/19 - 10:11:50.100 - DataManager.initialize - Info - Initializing DataManager
+06/03/19 - 10:11:50.101 - DataManager.initialize - Info - Finished DataManager initialization
+06/03/19 - 10:11:50.102 - Context.restart - Info - Loading Device Pool
+06/03/19 - 10:11:50.102 - DevicePool.initialize - Info - Initializing DevicePool
+06/03/19 - 10:11:50.106 - DevicePoolPanel.update - Info - java.lang.ArrayIndexOutOfBoundsException: 7 >= 7
+Stack trace:
+java.lang.ArrayIndexOutOfBoundsException: 7 >= 7
+	at java.util.Vector.elementAt(Vector.java:477)
+	at javax.swing.table.DefaultTableModel.setValueAt(DefaultTableModel.java:664)
+	at ch.psi.pshell.swing.DevicePoolPanel.update(DevicePoolPanel.java:416)
+	at ch.psi.pshell.ui.View.updateStatusPanels(View.java:1033)
+	at ch.psi.pshell.ui.View.onTimer(View.java:1007)
+	at ch.psi.utils.swing.MainFrame.lambda$new$1(MainFrame.java:106)
+	at javax.swing.Timer.fireActionPerformed(Timer.java:313)
+	at javax.swing.Timer$DoPostEvent.run(Timer.java:245)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:311)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+06/03/19 - 10:11:50.114 - DevicePool.initializeDevices - Info - Initializing: IZero_Profile
+06/03/19 - 10:11:50.152 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_RBV
+06/03/19 - 10:11:50.165 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Set
+06/03/19 - 10:11:50.176 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Status
+06/03/19 - 10:11:50.197 - DevicePool.initializeDevices - Info - Initializing: IZero
+06/03/19 - 10:11:50.212 - DevicePool.initializeDevices - Info - Initializing: TFY_Profile
+06/03/19 - 10:11:50.259 - DevicePool.initializeDevices - Info - Initializing: TFY
+06/03/19 - 10:11:50.271 - DevicePool.initializeDevices - Info - Initializing: GE_AreaDet
+06/03/19 - 10:11:50.418 - DevicePool.initializeDevices - Info - Initializing: GE_FrameID
+06/03/19 - 10:11:50.419 - DevicePool.initializeDevices - Info - Initializing: GE_Raw_Imaging
+06/03/19 - 10:11:50.420 - DevicePool.initializeDevices - Info - Initializing: GE_Raw_Array
+06/03/19 - 10:11:50.421 - DevicePool.initializeDevices - Info - Initializing: GE_BG_Array
+06/03/19 - 10:11:50.456 - DevicePool.initializeDevices - Info - Initializing: GE_BG_SizeY
+06/03/19 - 10:11:50.456 - DevicePool.initializeDevices - Info - Initializing: GE_BG_SizeX
+06/03/19 - 10:11:50.457 - DevicePool.initializeDevices - Info - Initializing: GE_ROI_Array
+06/03/19 - 10:11:50.492 - DevicePool.initializeDevices - Info - Initializing: GE_ROI_SizeY
+06/03/19 - 10:11:50.504 - DevicePool.initializeDevices - Info - Initializing: GE_ROI_SizeX
+06/03/19 - 10:11:50.516 - DevicePool.initializeDevices - Info - Initializing: GE_ROI_Line
+06/03/19 - 10:11:50.528 - DevicePool.initializeDevices - Info - Initializing: GE_Spectrum
+06/03/19 - 10:11:50.562 - DevicePool.initializeDevices - Info - Initializing: GE_Spectrum_Sum
+06/03/19 - 10:11:50.596 - DevicePool.initializeDevices - Info - Initializing: GE_Spectrum_Conv
+06/03/19 - 10:11:50.608 - DevicePool.initializeDevices - Info - Initializing: GE_Sensor_Temp
+06/03/19 - 10:11:50.620 - DevicePool.initializeDevices - Info - Initializing: Scan_Progress
+06/03/19 - 10:11:50.631 - DevicePool.initializeDevices - Info - Initializing: Press_Diag_PV
+06/03/19 - 10:11:50.643 - DevicePool.initializeDevices - Info - Initializing: Press_Diag_HV
+06/03/19 - 10:11:50.654 - DevicePool.initializeDevices - Info - Initializing: Press_Spec_PV
+06/03/19 - 10:11:50.666 - DevicePool.initializeDevices - Info - Initializing: Press_Spec_HV
+06/03/19 - 10:11:50.678 - DevicePool.initializeDevices - Info - Initializing: Press_Sample_Ch
+06/03/19 - 10:11:50.690 - DevicePool.initializeDevices - Info - Initializing: Diodes_Sum_Intensity
+06/03/19 - 10:11:50.691 - DevicePool.initializeDevices - Info - Initializing: VH_Diode
+06/03/19 - 10:11:50.691 - DevicePool.initializeDevices - Info - Initializing: Sample_Horiz
+06/03/19 - 10:11:50.782 - DevicePool.initializeDevices - Info - Initializing: Sample_Vert
+06/03/19 - 10:11:50.873 - DevicePool.initializeDevices - Info - Initializing: Sample_Vert_Enc
+06/03/19 - 10:11:50.873 - DevicePool.initializeDevices - Info - Initializing: Sample_Horiz_Enc
+06/03/19 - 10:11:50.874 - DevicePool.initializeDevices - Info - Initializing: Diode_1
+06/03/19 - 10:11:50.885 - DevicePool.initializeDevices - Info - Initializing: Diode_2
+06/03/19 - 10:11:50.897 - DevicePool.initializeDevices - Info - Initializing: Diode_3
+06/03/19 - 10:11:50.908 - DevicePool.initializeDevices - Info - Initializing: Diode_4
+06/03/19 - 10:11:50.920 - DevicePool.initializeDevices - Info - Initializing: Filter1
+06/03/19 - 10:11:51.007 - DevicePool.initializeDevices - Info - Initializing: Filter2
+06/03/19 - 10:11:51.095 - DevicePool.initializeDevices - Info - Initializing: BPM2_Vert_Profile
+06/03/19 - 10:11:51.106 - DevicePool.initializeDevices - Info - Initializing: BPM2_Profile_Size
+06/03/19 - 10:11:51.403 - DevicePool.initialize - Info - Finished DevicePool initialization
+06/03/19 - 10:11:51.405 - ScriptManager.<init> - Info - Initializing ScriptManager
+06/03/19 - 10:11:51.408 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+06/03/19 - 10:11:51.665 - Context.lambda$restart$1 - Info - Executed startup script
+06/03/19 - 10:11:51.799 - DevicePool.addDevice - Info - Adding device: GE_BG_Image
+06/03/19 - 10:11:51.799 - DevicePool.addDevice - Info - Adding device: GE_ROI_Image
+06/03/19 - 10:11:51.799 - DevicePool.addDevice - Info - Adding device: GE_Raw_Image
+06/03/19 - 10:11:52.804 - Context.lambda$restart$1 - Info - Executed local startup script
+06/03/19 - 10:11:56.755 - Context.onCommand - Info - Eval: pink.ge_spot(exposure=2, images=10) (ui)
+06/03/19 - 10:13:57.853 - Context.onCommand - Info - Restart (ui)

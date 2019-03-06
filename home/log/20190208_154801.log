@@ -1,0 +1,23 @@
+08/02/19 - 15:48:02.233 - Context.restart - Info - Initializing context
+08/02/19 - 15:48:02.236 - DataManager.initialize - Info - Initializing DataManager
+08/02/19 - 15:48:02.238 - DataManager.initialize - Info - Finished DataManager initialization
+08/02/19 - 15:48:02.239 - Context.restart - Info - Loading Device Pool
+08/02/19 - 15:48:02.240 - DevicePool.initialize - Info - Initializing DevicePool
+08/02/19 - 15:48:02.246 - DevicePool.initializeDevices - Info - Initializing: TFY
+08/02/19 - 15:48:02.267 - DevicePool.initializeDevices - Info - Initializing: Diodes_Sum_Intensity
+08/02/19 - 15:48:02.279 - DevicePool.initializeDevices - Info - Initializing: Sample_Horiz
+08/02/19 - 15:48:02.369 - DevicePool.initializeDevices - Info - Initializing: Sample_Vert
+08/02/19 - 15:48:02.459 - DevicePool.initializeDevices - Info - Initializing: Sample_Vert_Enc
+08/02/19 - 15:48:02.460 - DevicePool.initializeDevices - Info - Initializing: Sample_Horiz_Enc
+08/02/19 - 15:48:02.479 - DevicePool.initialize - Info - Finished DevicePool initialization
+08/02/19 - 15:48:02.480 - ScriptManager.<init> - Info - Initializing ScriptManager
+08/02/19 - 15:48:02.481 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+08/02/19 - 15:48:03.163 - Context.lambda$restart$1 - Info - Executed startup script
+08/02/19 - 15:48:03.191 - Context.lambda$restart$1 - Info - Executed local startup script
+08/02/19 - 15:56:19.173 - Context.onCommand - Info - Eval: lscan(Sample_Vert, TFY, 3000, 1000, -200, 1)                      (ui)
+08/02/19 - 15:57:29.356 - Context.onCommand - Info - Eval: :abort (ui)
+08/02/19 - 15:57:29.358 - Context.onCommand - Info - Abort (ui)
+08/02/19 - 15:57:32.323 - Context.onCommand - Info - Eval:  (ui)
+08/02/19 - 15:57:32.450 - Context.onCommand - Info - Eval:  (ui)
+08/02/19 - 15:59:28.861 - Context.onCommand - Info - Eval: lscan(Sample_Vert, TFY, 3000, 1000, -200, 1)                      (ui)
+08/02/19 - 16:01:22.793 - Context.onCommand - Info - Restart (ui)

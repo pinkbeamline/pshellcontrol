@@ -1,0 +1,88 @@
+06/03/19 - 09:27:24.228 - Context.restart - Info - Initializing context
+06/03/19 - 09:27:24.230 - DataManager.initialize - Info - Initializing DataManager
+06/03/19 - 09:27:24.231 - DataManager.initialize - Info - Finished DataManager initialization
+06/03/19 - 09:27:24.232 - Context.restart - Info - Loading Device Pool
+06/03/19 - 09:27:24.232 - DevicePool.initialize - Info - Initializing DevicePool
+06/03/19 - 09:27:24.236 - DevicePool.initializeDevices - Info - Initializing: IZero_Profile
+06/03/19 - 09:27:24.276 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_RBV
+06/03/19 - 09:27:24.291 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Set
+06/03/19 - 09:27:24.304 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Status
+06/03/19 - 09:27:24.327 - DevicePool.initializeDevices - Info - Initializing: IZero
+06/03/19 - 09:27:24.338 - DevicePool.initializeDevices - Info - Initializing: TFY_Profile
+06/03/19 - 09:27:24.378 - DevicePool.initializeDevices - Info - Initializing: TFY
+06/03/19 - 09:27:24.389 - DevicePool.initializeDevices - Info - Initializing: GE_AreaDet
+06/03/19 - 09:27:24.573 - DevicePool.initializeDevices - Info - Initializing: GE_FrameID
+06/03/19 - 09:27:24.573 - DevicePool.initializeDevices - Info - Initializing: GE_Raw_Imaging
+06/03/19 - 09:27:24.574 - DevicePool.initializeDevices - Info - Initializing: GE_Raw_Array
+06/03/19 - 09:27:24.574 - DevicePool.initializeDevices - Info - Initializing: GE_BG_Array
+06/03/19 - 09:27:24.609 - DevicePool.initializeDevices - Info - Initializing: GE_BG_SizeY
+06/03/19 - 09:27:24.609 - DevicePool.initializeDevices - Info - Initializing: GE_BG_SizeX
+06/03/19 - 09:27:24.609 - DevicePool.initializeDevices - Info - Initializing: GE_ROI_Array
+06/03/19 - 09:27:24.641 - DevicePool.initializeDevices - Info - Initializing: GE_ROI_SizeY
+06/03/19 - 09:27:24.651 - DevicePool.initializeDevices - Info - Initializing: GE_ROI_SizeX
+06/03/19 - 09:27:24.662 - DevicePool.initializeDevices - Info - Initializing: GE_ROI_Line
+06/03/19 - 09:27:24.673 - DevicePool.initializeDevices - Info - Initializing: GE_Spectrum
+06/03/19 - 09:27:24.708 - DevicePool.initializeDevices - Info - Initializing: GE_Spectrum_Sum
+06/03/19 - 09:27:24.742 - DevicePool.initializeDevices - Info - Initializing: GE_Spectrum_Conv
+06/03/19 - 09:27:24.754 - DevicePool.initializeDevices - Info - Initializing: GE_Sensor_Temp
+06/03/19 - 09:27:24.766 - DevicePool.initializeDevices - Info - Initializing: Scan_Progress
+06/03/19 - 09:27:24.777 - DevicePool.initializeDevices - Info - Initializing: Press_Diag_PV
+06/03/19 - 09:27:24.789 - DevicePool.initializeDevices - Info - Initializing: Press_Diag_HV
+06/03/19 - 09:27:24.801 - DevicePool.initializeDevices - Info - Initializing: Press_Spec_PV
+06/03/19 - 09:27:24.813 - DevicePool.initializeDevices - Info - Initializing: Press_Spec_HV
+06/03/19 - 09:27:24.825 - DevicePool.initializeDevices - Info - Initializing: Press_Sample_Ch
+06/03/19 - 09:27:24.837 - DevicePool.initializeDevices - Info - Initializing: Diodes_Sum_Intensity
+06/03/19 - 09:27:24.838 - DevicePool.initializeDevices - Info - Initializing: VH_Diode
+06/03/19 - 09:27:24.839 - DevicePool.initializeDevices - Info - Initializing: Sample_Horiz
+06/03/19 - 09:27:24.929 - DevicePool.initializeDevices - Info - Initializing: Sample_Vert
+06/03/19 - 09:27:25.019 - DevicePool.initializeDevices - Info - Initializing: Sample_Vert_Enc
+06/03/19 - 09:27:25.019 - DevicePool.initializeDevices - Info - Initializing: Sample_Horiz_Enc
+06/03/19 - 09:27:25.020 - DevicePool.initializeDevices - Info - Initializing: Diode_1
+06/03/19 - 09:27:25.032 - DevicePool.initializeDevices - Info - Initializing: Diode_2
+06/03/19 - 09:27:25.043 - DevicePool.initializeDevices - Info - Initializing: Diode_3
+06/03/19 - 09:27:25.055 - DevicePool.initializeDevices - Info - Initializing: Diode_4
+06/03/19 - 09:27:25.067 - DevicePool.initializeDevices - Info - Initializing: Filter1
+06/03/19 - 09:27:25.160 - DevicePool.initializeDevices - Info - Initializing: Filter2
+06/03/19 - 09:27:25.248 - DevicePool.initializeDevices - Info - Initializing: BPM2_Vert_Profile
+06/03/19 - 09:27:25.267 - DevicePool.initializeDevices - Info - Initializing: BPM2_Profile_Size
+06/03/19 - 09:27:25.526 - DevicePool.initialize - Info - Finished DevicePool initialization
+06/03/19 - 09:27:25.528 - ScriptManager.<init> - Info - Initializing ScriptManager
+06/03/19 - 09:27:25.530 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+06/03/19 - 09:27:25.784 - Context.lambda$restart$1 - Info - Executed startup script
+06/03/19 - 09:27:25.787 - Context.lambda$restart$1 - Severe - javax.script.ScriptException: SyntaxError: from __future__ imports must occur at the beginning of the file in <script> at line number 20 at column number 0
+Stack trace:
+javax.script.ScriptException: SyntaxError: from __future__ imports must occur at the beginning of the file in <script> at line number 20 at column number 0
+	at org.python.jsr223.PyScriptEngine.scriptException(PyScriptEngine.java:213)
+	at org.python.jsr223.PyScriptEngine.compileScript(PyScriptEngine.java:107)
+	at org.python.jsr223.PyScriptEngine.eval(PyScriptEngine.java:64)
+	at javax.script.AbstractScriptEngine.eval(AbstractScriptEngine.java:249)
+	at ch.psi.pshell.scripting.Interpreter.evalFile(Interpreter.java:137)
+	at ch.psi.pshell.scripting.ScriptManager.evalFile(ScriptManager.java:191)
+	at ch.psi.pshell.core.Context.lambda$restart$1(Context.java:1049)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by:   File "<script>", line 20
+SyntaxError: from __future__ imports must occur at the beginning of the file
+
+	at org.python.core.ParserFacade.fixParseError(ParserFacade.java:95)
+	at org.python.compiler.ScopesCompiler.parse(ScopesCompiler.java:93)
+	at org.python.compiler.Module._module_init(Module.java:711)
+	at org.python.compiler.Module.compile(Module.java:931)
+	at org.python.compiler.Module.compile(Module.java:701)
+	at org.python.compiler.LegacyCompiler$LazyLegacyBundle.ostream(LegacyCompiler.java:59)
+	at org.python.compiler.LegacyCompiler$LazyLegacyBundle.loadCode(LegacyCompiler.java:43)
+	at org.python.core.CompilerFacade.compile(CompilerFacade.java:33)
+	at org.python.core.Py.compile_flags(Py.java:2171)
+	at org.python.core.Py.compile_flags(Py.java:2176)
+	at org.python.util.PythonInterpreter.compile(PythonInterpreter.java:322)
+	at org.python.util.PythonInterpreter.compile(PythonInterpreter.java:312)
+	at org.python.jsr223.PyScriptEngine.compileScript(PyScriptEngine.java:101)
+	... 9 more
+
+06/03/19 - 09:29:33.611 - Context.onCommand - Info - Run: local.py (ui)
+06/03/19 - 09:29:33.782 - DevicePool.addDevice - Info - Adding device: GE_BG_Image
+06/03/19 - 09:29:33.784 - DevicePool.addDevice - Info - Adding device: GE_ROI_Image
+06/03/19 - 09:29:33.785 - DevicePool.addDevice - Info - Adding device: GE_Raw_Image
+06/03/19 - 09:29:36.033 - Context.onCommand - Info - Restart (ui)

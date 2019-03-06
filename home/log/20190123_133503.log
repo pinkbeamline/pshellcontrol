@@ -1,0 +1,45 @@
+23/01/19 - 13:35:03.179 - Context.<init> - Info - Process: 29757@pink-shuttle02
+23/01/19 - 13:35:03.181 - Context.<init> - Info - Context: unknown
+23/01/19 - 13:35:03.181 - Context.<init> - Info - Pars: /home/epics/PShell/pshell-1.10.0-fat.jar -home=/home/epics/PShell/pshellcontrol/home -dlaf
+23/01/19 - 13:35:03.182 - Context.<init> - Info - User: epics
+23/01/19 - 13:35:03.182 - Context.<init> - Info - Host: pink-shuttle02
+23/01/19 - 13:35:03.204 - PluginManager.loadExtensionsFolder - Info - Loading extensions folder
+23/01/19 - 13:35:03.205 - DataManager.initialize - Info - Initializing DataManager
+23/01/19 - 13:35:03.214 - DataManager.setProvider - Info - Setting data provider: ch.psi.pshell.data.ProviderHDF5
+23/01/19 - 13:35:03.217 - DataManager.setLayout - Info - Setting data layout: ch.psi.pshell.data.LayoutDefault
+23/01/19 - 13:35:03.221 - DataManager.initialize - Info - Finished DataManager initialization
+23/01/19 - 13:35:03.221 - App.startup - Info - Version: 1.10-SNAPSHOT (build 1812200927-py)
+23/01/19 - 13:35:03.223 - App.startup - Info - Create workbench
+23/01/19 - 13:35:04.060 - PluginManager.loadPluginFolder - Info - Loading plugins folder
+23/01/19 - 13:35:04.074 - PluginManager.startPlugins - Info - Start plugins
+23/01/19 - 13:35:04.075 - Context.onCommand - Info - Restart (ui)
+23/01/19 - 13:35:04.095 - Context.restart - Info - Initializing context
+23/01/19 - 13:35:04.101 - Context.onUserChange - Info - User: Default [administrator] *
+23/01/19 - 13:35:04.111 - Context.restart - Info - Loading Device Pool
+23/01/19 - 13:35:04.113 - DevicePool.initialize - Info - Initializing DevicePool
+23/01/19 - 13:35:04.242 - ScriptManager.<init> - Info - Initializing ScriptManager
+23/01/19 - 13:35:04.871 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+23/01/19 - 13:35:07.620 - Context.lambda$restart$1 - Info - Executed startup script
+23/01/19 - 13:35:07.625 - Context.lambda$restart$1 - Info - Executed local startup script
+23/01/19 - 13:35:32.675 - Context.onCommand - Info - Run: /tmp/Tutorial_SimulatedDevices.py (ui)
+23/01/19 - 13:35:32.861 - DevicePool.addDevice - Info - Adding device: m1
+23/01/19 - 13:35:32.864 - DevicePool.addDevice - Info - Adding device: m2
+23/01/19 - 13:35:32.865 - DevicePool.addDevice - Info - Adding device: reg1
+23/01/19 - 13:35:32.866 - DevicePool.addDevice - Info - Adding device: ao1
+23/01/19 - 13:35:32.868 - DevicePool.addDevice - Info - Adding device: ao2
+23/01/19 - 13:35:32.870 - DevicePool.addDevice - Info - Adding device: ai1
+23/01/19 - 13:35:32.872 - DevicePool.addDevice - Info - Adding device: ai2
+23/01/19 - 13:35:32.873 - DevicePool.addDevice - Info - Adding device: ai3
+23/01/19 - 13:35:32.875 - DevicePool.addDevice - Info - Adding device: wf1
+23/01/19 - 13:35:32.876 - DevicePool.addDevice - Info - Adding device: im1
+23/01/19 - 13:35:32.879 - DevicePool.addDevice - Info - Adding device: p1
+23/01/19 - 13:35:32.880 - DevicePool.addDevice - Info - Adding device: mg1
+23/01/19 - 13:35:32.885 - DevicePool.addDevice - Info - Adding device: dp1
+23/01/19 - 13:35:32.898 - DevicePool.addDevice - Info - Adding device: src1
+23/01/19 - 13:35:32.900 - DevicePool.addDevice - Info - Adding device: src2
+23/01/19 - 13:36:00.494 - Context.onCommand - Info - Eval: r1 = lscan(ao1, (ai1,ai2,wf1), 0, 40, 100, 0.01)    (ui)
+23/01/19 - 13:40:43.781 - Context.onCommand - Info - Run: /home/epics/PShell/pshellcontrol/home/script/shared/test1.py (ui)
+23/01/19 - 13:41:20.195 - App.exit - Info - Aplication exit command by: MainFrame
+23/01/19 - 13:41:20.214 - Context.close - Info - Close
+23/01/19 - 13:41:20.220 - PluginManager.stopPlugins - Info - Stop plugins
+23/01/19 - 13:41:20.250 - App.end - Info - Finished

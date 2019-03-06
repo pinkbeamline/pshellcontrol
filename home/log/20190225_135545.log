@@ -1,0 +1,55 @@
+25/02/19 - 13:55:46.067 - Context.restart - Info - Initializing context
+25/02/19 - 13:55:46.068 - DataManager.initialize - Info - Initializing DataManager
+25/02/19 - 13:55:46.069 - DataManager.initialize - Info - Finished DataManager initialization
+25/02/19 - 13:55:46.070 - Context.restart - Info - Loading Device Pool
+25/02/19 - 13:55:46.070 - DevicePool.initialize - Info - Initializing DevicePool
+25/02/19 - 13:55:46.076 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_RBV
+25/02/19 - 13:55:46.094 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Set
+25/02/19 - 13:55:46.106 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Exec
+25/02/19 - 13:55:46.118 - DevicePool.initializeDevices - Info - Initializing: Diodes_Sum_Intensity
+25/02/19 - 13:55:46.131 - DevicePool.initializeDevices - Info - Initializing: Filter1
+25/02/19 - 13:55:46.142 - DevicePool.initializeDevices - Info - Initializing: Filter1_RBV
+25/02/19 - 13:55:46.154 - DevicePool.initializeDevices - Info - Initializing: Filter2
+25/02/19 - 13:55:46.165 - DevicePool.initializeDevices - Info - Initializing: Filter2_RBV
+25/02/19 - 13:55:46.175 - DevicePool.initializeDevices - Info - Initializing: BPM2_Vert_Profile
+25/02/19 - 13:55:46.187 - DevicePool.initializeDevices - Info - Initializing: BPM2_Profile_Size
+25/02/19 - 13:55:46.199 - DevicePool.initializeDevices - Info - Initializing: Filter2_SIG
+25/02/19 - 13:55:56.200 - Filter2_SIG.initialize - Warning - ch.psi.pshell.device.DeviceBase$DeviceException: Error creating channel: Filter2_SIG [Filter2_SIG]
+Stack trace:
+ch.psi.pshell.device.DeviceBase$DeviceException: Error creating channel: Filter2_SIG [Filter2_SIG]
+	at ch.psi.pshell.epics.EpicsRegister.doInitialize(EpicsRegister.java:252)
+	at ch.psi.pshell.device.GenericDeviceBase.initialize(GenericDeviceBase.java:188)
+	at ch.psi.pshell.core.DevicePool.initializeDevices(DevicePool.java:509)
+	at ch.psi.pshell.core.DevicePool.initialize(DevicePool.java:43)
+	at ch.psi.pshell.core.Context.restart(Context.java:985)
+	at ch.psi.pshell.core.Context.restart(Context.java:2952)
+	at ch.psi.pshell.ui.Task$Restart.doInBackground(Task.java:368)
+	at ch.psi.pshell.ui.Task$Restart.doInBackground(Task.java:358)
+	at javax.swing.SwingWorker$1.call(SwingWorker.java:295)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at javax.swing.SwingWorker.run(SwingWorker.java:334)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: ch.psi.jcae.ChannelException: Unable to create channel Filter2_SIG
+	at ch.psi.jcae.impl.DefaultChannelService.createChannel(DefaultChannelService.java:158)
+	at ch.psi.pshell.epics.Epics.newChannel(Epics.java:79)
+	at ch.psi.pshell.epics.Epics.newChannel(Epics.java:88)
+	at ch.psi.pshell.epics.Epics.newChannel(Epics.java:92)
+	at ch.psi.pshell.epics.EpicsRegister.doInitialize(EpicsRegister.java:224)
+	... 13 more
+Caused by: gov.aps.jca.CAException: Unable to connect to channel Filter2_SIG
+	at ch.psi.jcae.impl.JCAChannelFactory.createChannel(JCAChannelFactory.java:100)
+	at ch.psi.jcae.impl.DefaultChannelService.createChannel(DefaultChannelService.java:148)
+	... 17 more
+Caused by: gov.aps.jca.CAException: Timout [10000] occured while creating channel Filter2_SIG
+	at ch.psi.jcae.impl.JCAChannelFactory.createChannel(JCAChannelFactory.java:87)
+	... 18 more
+
+25/02/19 - 13:55:56.201 - DevicePool.initializeDevices - Severe - Error initializing: Filter2_SIG
+25/02/19 - 13:55:56.229 - DevicePool.initialize - Info - Finished DevicePool initialization
+25/02/19 - 13:55:56.233 - ScriptManager.<init> - Info - Initializing ScriptManager
+25/02/19 - 13:55:56.235 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+25/02/19 - 13:55:56.703 - Context.lambda$restart$1 - Info - Executed startup script
+25/02/19 - 13:55:56.822 - Context.lambda$restart$1 - Info - Executed local startup script
+25/02/19 - 13:56:16.839 - Context.onCommand - Info - Restart (ui)

@@ -1,0 +1,52 @@
+01/03/19 - 11:26:55.340 - Context.restart - Info - Initializing context
+01/03/19 - 11:26:55.342 - DataManager.initialize - Info - Initializing DataManager
+01/03/19 - 11:26:55.343 - DataManager.initialize - Info - Finished DataManager initialization
+01/03/19 - 11:26:55.344 - Context.restart - Info - Loading Device Pool
+01/03/19 - 11:26:55.344 - DevicePool.initialize - Info - Initializing DevicePool
+01/03/19 - 11:26:55.348 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_RBV
+01/03/19 - 11:26:55.363 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Set
+01/03/19 - 11:26:55.375 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Status
+01/03/19 - 11:26:55.396 - DevicePool.initializeDevices - Info - Initializing: TFY
+01/03/19 - 11:26:55.407 - DevicePool.initializeDevices - Info - Initializing: Diodes_Sum_Intensity
+01/03/19 - 11:26:55.419 - DevicePool.initializeDevices - Info - Initializing: Sample_Vert
+01/03/19 - 11:26:55.517 - DevicePool.initializeDevices - Info - Initializing: Diode_1
+01/03/19 - 11:26:55.529 - DevicePool.initializeDevices - Info - Initializing: Diode_2
+01/03/19 - 11:26:55.541 - DevicePool.initializeDevices - Info - Initializing: Diode_3
+01/03/19 - 11:26:55.553 - DevicePool.initializeDevices - Info - Initializing: Diode_4
+01/03/19 - 11:26:55.565 - DevicePool.initializeDevices - Info - Initializing: Filter1
+01/03/19 - 11:26:55.649 - DevicePool.initializeDevices - Info - Initializing: Filter2
+01/03/19 - 11:26:55.737 - DevicePool.initializeDevices - Info - Initializing: BPM2_Vert_Profile
+01/03/19 - 11:26:55.749 - DevicePool.initializeDevices - Info - Initializing: BPM2_Profile_Size
+01/03/19 - 11:26:55.760 - DevicePool.initializeDevices - Info - Initializing: Filter2_SIG
+01/03/19 - 11:26:55.818 - DevicePool.initialize - Info - Finished DevicePool initialization
+01/03/19 - 11:26:55.821 - ScriptManager.<init> - Info - Initializing ScriptManager
+01/03/19 - 11:26:55.831 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+01/03/19 - 11:26:56.090 - Context.lambda$restart$1 - Info - Executed startup script
+01/03/19 - 11:26:56.206 - Context.lambda$restart$1 - Info - Executed local startup script
+01/03/19 - 11:28:25.187 - Context.onCommand - Info - Eval: gap.Scan_with_Exponential_Background(10.8, 12.8, 0.05, wait=1) (ui)
+01/03/19 - 11:42:48.150 - Context.onCommand - Info - Eval: help(lscan) (ui)
+01/03/19 - 11:44:23.616 - Context.onCommand - Info - Eval: lscan(Filter1, Diodes_Sum_Intensity, -2000, 31000, 200.0, latency = 1, relative = False, passes = 1) (ui)
+01/03/19 - 15:01:27.028 - Context.onCommand - Info - Eval: pink.Save_Beamline_Snapshot() (ui)
+01/03/19 - 15:43:08.925 - Context.onCommand - Info - Eval: lscan(Filter1, Diodes_Sum_Intensity, -2000, 31000, 200.0, latency = 1, relative = False, passes = 1) (ui)
+01/03/19 - 15:43:36.926 - Context.onCommand - Info - Eval: :abort (ui)
+01/03/19 - 15:43:36.927 - Context.onCommand - Info - Abort (ui)
+01/03/19 - 15:43:36.927 - ScanBase.abort - Info - Aborting: LineScan console-1
+01/03/19 - 15:43:36.928 - ScriptManager.abort - Info - Aborting
+01/03/19 - 15:49:06.341 - Context.onCommand - Info - Eval: lscan(Filter1, Diodes_Sum_Intensity, -2000, 31000, 200.0, latency = 1, relative = False, passes = 1) (ui)
+01/03/19 - 15:52:17.042 - Context.onCommand - Info - Eval: lscan(Filter1, Diodes_Sum_Intensity, -2000, 31000, 200.0, latency = 1, relative = False, passes = 1) (ui)
+01/03/19 - 15:53:01.307 - Context.onCommand - Info - Eval: :abort (ui)
+01/03/19 - 15:53:01.308 - Context.onCommand - Info - Abort (ui)
+01/03/19 - 15:53:01.308 - ScanBase.abort - Info - Aborting: LineScan console-1
+01/03/19 - 15:53:01.309 - ScriptManager.abort - Info - Aborting
+01/03/19 - 15:53:25.531 - Context.onCommand - Info - Eval: lscan(Filter1, Diodes_Sum_Intensity, -2000, 31000, 200.0, latency = 1, relative = False, passes = 1) (ui)
+01/03/19 - 15:57:42.009 - Context.onCommand - Info - Eval: lscan(Filter1, Diodes_Sum_Intensity, -2000, 31000, 200.0, latency = 1, relative = False, passes = 1) (ui)
+01/03/19 - 16:02:34.944 - Context.onCommand - Info - Eval: lscan(Filter2, Diodes_Sum_Intensity, -2000, 31000, 200.0, latency = 1, relative = False, passes = 1) (ui)
+01/03/19 - 16:04:43.051 - Context.onCommand - Info - Eval: lscan(Filter2, Diodes_Sum_Intensity, -2000, 31000, 200.0, latency = 1, relative = False, passes = 1) (ui)
+01/03/19 - 16:05:11.141 - Context.onCommand - Info - Save Device Config: Filter2 (ui)
+01/03/19 - 16:05:14.572 - Context.onCommand - Info - Eval: lscan(Filter2, Diodes_Sum_Intensity, -2000, 31000, 200.0, latency = 1, relative = False, passes = 1) (ui)
+01/03/19 - 16:34:39.299 - Context.onCommand - Info - Eval: gap.Scan_with_Exponential_Background(11, 12.5, 0.05, wait=1) (ui)
+01/03/19 - 16:35:13.269 - Context.onCommand - Info - Eval: :abort (ui)
+01/03/19 - 16:35:13.269 - Context.onCommand - Info - Abort (ui)
+01/03/19 - 16:35:13.270 - ScanBase.abort - Info - Aborting: LineScan gap_exp-1
+01/03/19 - 16:35:13.270 - ScriptManager.abort - Info - Aborting
+01/03/19 - 16:35:16.909 - Context.onCommand - Info - Restart (ui)

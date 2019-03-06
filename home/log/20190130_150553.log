@@ -1,0 +1,15 @@
+30/01/19 - 15:05:54.085 - Context.restart - Info - Initializing context
+30/01/19 - 15:05:54.089 - DataManager.initialize - Info - Initializing DataManager
+30/01/19 - 15:05:54.092 - DataManager.initialize - Info - Finished DataManager initialization
+30/01/19 - 15:05:54.093 - Context.restart - Info - Loading Device Pool
+30/01/19 - 15:05:54.093 - DevicePool.initialize - Info - Initializing DevicePool
+30/01/19 - 15:05:54.095 - DevicePool.initializeDevices - Info - Initializing: IZero_Profile
+30/01/19 - 15:05:54.138 - DevicePool.initializeDevices - Info - Initializing: IZero
+30/01/19 - 15:05:54.151 - DevicePool.initializeDevices - Info - Initializing: TFY_Profile
+30/01/19 - 15:05:54.153 - DevicePool.initializeDevices - Info - Initializing: TFY
+30/01/19 - 15:05:54.176 - DevicePool.initialize - Info - Finished DevicePool initialization
+30/01/19 - 15:05:54.182 - ScriptManager.<init> - Info - Initializing ScriptManager
+30/01/19 - 15:05:54.185 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+30/01/19 - 15:05:54.568 - Context.lambda$restart$1 - Info - Executed startup script
+30/01/19 - 15:05:54.587 - Context.lambda$restart$1 - Info - Executed local startup script
+30/01/19 - 15:07:46.851 - Context.onCommand - Info - Restart (ui)

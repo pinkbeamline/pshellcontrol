@@ -1,0 +1,26 @@
+01/03/19 - 11:26:39.500 - Context.restart - Info - Initializing context
+01/03/19 - 11:26:39.501 - DataManager.initialize - Info - Initializing DataManager
+01/03/19 - 11:26:39.503 - DataManager.initialize - Info - Finished DataManager initialization
+01/03/19 - 11:26:39.504 - Context.restart - Info - Loading Device Pool
+01/03/19 - 11:26:39.504 - DevicePool.initialize - Info - Initializing DevicePool
+01/03/19 - 11:26:39.511 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_RBV
+01/03/19 - 11:26:39.530 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Set
+01/03/19 - 11:26:39.541 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Status
+01/03/19 - 11:26:39.562 - DevicePool.initializeDevices - Info - Initializing: TFY
+01/03/19 - 11:26:39.574 - DevicePool.initializeDevices - Info - Initializing: Diodes_Sum_Intensity
+01/03/19 - 11:26:39.585 - DevicePool.initializeDevices - Info - Initializing: Sample_Vert
+01/03/19 - 11:26:39.675 - DevicePool.initializeDevices - Info - Initializing: Diode_1
+01/03/19 - 11:26:39.686 - DevicePool.initializeDevices - Info - Initializing: Diode_2
+01/03/19 - 11:26:39.698 - DevicePool.initializeDevices - Info - Initializing: Diode_3
+01/03/19 - 11:26:39.710 - DevicePool.initializeDevices - Info - Initializing: Diode_4
+01/03/19 - 11:26:39.723 - DevicePool.initializeDevices - Info - Initializing: Filter1
+01/03/19 - 11:26:39.814 - DevicePool.initializeDevices - Info - Initializing: Filter2
+01/03/19 - 11:26:39.905 - DevicePool.initializeDevices - Info - Initializing: BPM2_Vert_Profile
+01/03/19 - 11:26:39.930 - DevicePool.initializeDevices - Info - Initializing: BPM2_Profile_Size
+01/03/19 - 11:26:39.952 - DevicePool.initializeDevices - Info - Initializing: Filter2_SIG
+01/03/19 - 11:26:40.018 - DevicePool.initialize - Info - Finished DevicePool initialization
+01/03/19 - 11:26:40.020 - ScriptManager.<init> - Info - Initializing ScriptManager
+01/03/19 - 11:26:40.024 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+01/03/19 - 11:26:40.303 - Context.lambda$restart$1 - Info - Executed startup script
+01/03/19 - 11:26:40.422 - Context.lambda$restart$1 - Info - Executed local startup script
+01/03/19 - 11:26:54.041 - Context.onCommand - Info - Restart (ui)

@@ -1,0 +1,11 @@
+30/01/19 - 14:50:22.289 - Context.restart - Info - Initializing context
+30/01/19 - 14:50:22.292 - DataManager.initialize - Info - Initializing DataManager
+30/01/19 - 14:50:22.296 - DataManager.initialize - Info - Finished DataManager initialization
+30/01/19 - 14:50:22.297 - Context.restart - Info - Loading Device Pool
+30/01/19 - 14:50:22.298 - DevicePool.initialize - Info - Initializing DevicePool
+30/01/19 - 14:50:22.306 - DevicePool.initialize - Info - Finished DevicePool initialization
+30/01/19 - 14:50:22.310 - ScriptManager.<init> - Info - Initializing ScriptManager
+30/01/19 - 14:50:22.315 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+30/01/19 - 14:50:22.950 - Context.lambda$restart$1 - Info - Executed startup script
+30/01/19 - 14:50:22.988 - Context.lambda$restart$1 - Info - Executed local startup script
+30/01/19 - 14:54:10.098 - Context.onCommand - Info - Restart (ui)

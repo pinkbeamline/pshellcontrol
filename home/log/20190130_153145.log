@@ -1,0 +1,26 @@
+30/01/19 - 15:31:46.514 - Context.restart - Info - Initializing context
+30/01/19 - 15:31:46.516 - DataManager.initialize - Info - Initializing DataManager
+30/01/19 - 15:31:46.519 - DataManager.initialize - Info - Finished DataManager initialization
+30/01/19 - 15:31:46.520 - Context.restart - Info - Loading Device Pool
+30/01/19 - 15:31:46.520 - DevicePool.initialize - Info - Initializing DevicePool
+30/01/19 - 15:31:46.525 - DevicePool.initializeDevices - Info - Initializing: IZero_Profile
+30/01/19 - 15:31:46.668 - DevicePool.initializeDevices - Info - Initializing: IZero
+30/01/19 - 15:31:46.696 - DevicePool.initializeDevices - Info - Initializing: TFY_Profile
+30/01/19 - 15:31:46.707 - DevicePool.initializeDevices - Info - Initializing: TFY
+30/01/19 - 15:31:46.735 - DevicePool.initializeDevices - Info - Initializing: GE_AreaDet
+30/01/19 - 15:31:47.232 - DevicePool.initializeDevices - Info - Initializing: GE_FrameID
+30/01/19 - 15:31:47.233 - DevicePool.initializeDevices - Info - Initializing: GE_Raw_Imaging
+30/01/19 - 15:31:47.234 - DevicePool.initializeDevices - Info - Initializing: GE_Raw_Array
+30/01/19 - 15:31:47.241 - DevicePool.initializeDevices - Info - Initializing: GE_BG_Array
+30/01/19 - 15:31:47.326 - DevicePool.initializeDevices - Info - Initializing: GE_BG_SizeY
+30/01/19 - 15:31:47.328 - DevicePool.initializeDevices - Info - Initializing: GE_BG_SizeX
+30/01/19 - 15:31:47.329 - DevicePool.initializeDevices - Info - Initializing: GE_ROI_Array
+30/01/19 - 15:31:47.412 - DevicePool.initializeDevices - Info - Initializing: GE_ROI_SizeY
+30/01/19 - 15:31:47.438 - DevicePool.initializeDevices - Info - Initializing: GE_ROI_SizeX
+30/01/19 - 15:31:47.464 - DevicePool.initializeDevices - Info - Initializing: GE_ROI_Line
+30/01/19 - 15:31:56.431 - DevicePool.initialize - Info - Finished DevicePool initialization
+30/01/19 - 15:31:56.434 - ScriptManager.<init> - Info - Initializing ScriptManager
+30/01/19 - 15:31:56.439 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+30/01/19 - 15:31:56.828 - Context.lambda$restart$1 - Info - Executed startup script
+30/01/19 - 15:31:56.850 - Context.lambda$restart$1 - Info - Executed local startup script
+30/01/19 - 15:33:33.966 - Context.onCommand - Info - Restart (ui)

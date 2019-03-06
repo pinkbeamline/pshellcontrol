@@ -1,0 +1,24 @@
+15/02/19 - 10:37:49.389 - Context.restart - Info - Initializing context
+15/02/19 - 10:37:49.390 - DataManager.initialize - Info - Initializing DataManager
+15/02/19 - 10:37:49.392 - DataManager.initialize - Info - Finished DataManager initialization
+15/02/19 - 10:37:49.392 - Context.restart - Info - Loading Device Pool
+15/02/19 - 10:37:49.392 - DevicePool.initialize - Info - Initializing DevicePool
+15/02/19 - 10:37:49.394 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_RBV
+15/02/19 - 10:37:49.412 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Set
+15/02/19 - 10:37:49.424 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Exec
+15/02/19 - 10:37:49.436 - DevicePool.initializeDevices - Info - Initializing: Diodes_Sum_Intensity
+15/02/19 - 10:37:49.448 - DevicePool.initializeDevices - Info - Initializing: Filter1
+15/02/19 - 10:37:49.460 - DevicePool.initializeDevices - Info - Initializing: Filter1_RBV
+15/02/19 - 10:37:49.471 - DevicePool.initializeDevices - Info - Initializing: Filter2
+15/02/19 - 10:37:49.482 - DevicePool.initializeDevices - Info - Initializing: Filter2_RBV
+15/02/19 - 10:37:49.493 - DevicePool.initializeDevices - Info - Initializing: BPM2_Vert_Profile
+15/02/19 - 10:37:49.506 - DevicePool.initializeDevices - Info - Initializing: BPM2_Profile_Size
+15/02/19 - 10:37:49.565 - DevicePool.initialize - Info - Finished DevicePool initialization
+15/02/19 - 10:37:49.568 - ScriptManager.<init> - Info - Initializing ScriptManager
+15/02/19 - 10:37:49.573 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+15/02/19 - 10:37:49.943 - Context.lambda$restart$1 - Info - Executed startup script
+15/02/19 - 10:37:50.029 - Context.lambda$restart$1 - Info - Executed local startup script
+15/02/19 - 10:37:52.983 - Context.onCommand - Info - Eval: bpm.BPM1_Vertical_Profile() (ui)
+15/02/19 - 10:39:42.858 - Context.onCommand - Info - Eval: help(it_gaussian_linear) (ui)
+15/02/19 - 10:39:47.250 - Context.onCommand - Info - Eval: help(fit_gaussian_linear) (ui)
+15/02/19 - 10:55:03.535 - Context.onCommand - Info - Restart (ui)

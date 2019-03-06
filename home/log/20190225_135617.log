@@ -1,0 +1,23 @@
+25/02/19 - 13:56:18.124 - Context.restart - Info - Initializing context
+25/02/19 - 13:56:18.126 - DataManager.initialize - Info - Initializing DataManager
+25/02/19 - 13:56:18.128 - DataManager.initialize - Info - Finished DataManager initialization
+25/02/19 - 13:56:18.128 - Context.restart - Info - Loading Device Pool
+25/02/19 - 13:56:18.128 - DevicePool.initialize - Info - Initializing DevicePool
+25/02/19 - 13:56:18.130 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_RBV
+25/02/19 - 13:56:18.145 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Set
+25/02/19 - 13:56:18.156 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Exec
+25/02/19 - 13:56:18.168 - DevicePool.initializeDevices - Info - Initializing: Diodes_Sum_Intensity
+25/02/19 - 13:56:18.179 - DevicePool.initializeDevices - Info - Initializing: Filter1
+25/02/19 - 13:56:18.190 - DevicePool.initializeDevices - Info - Initializing: Filter1_RBV
+25/02/19 - 13:56:18.201 - DevicePool.initializeDevices - Info - Initializing: Filter2
+25/02/19 - 13:56:18.213 - DevicePool.initializeDevices - Info - Initializing: Filter2_RBV
+25/02/19 - 13:56:18.224 - DevicePool.initializeDevices - Info - Initializing: BPM2_Vert_Profile
+25/02/19 - 13:56:18.235 - DevicePool.initializeDevices - Info - Initializing: BPM2_Profile_Size
+25/02/19 - 13:56:18.247 - DevicePool.initializeDevices - Info - Initializing: Filter2_SIG
+25/02/19 - 13:56:18.290 - DevicePool.initialize - Info - Finished DevicePool initialization
+25/02/19 - 13:56:18.291 - ScriptManager.<init> - Info - Initializing ScriptManager
+25/02/19 - 13:56:18.294 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+25/02/19 - 13:56:18.669 - Context.lambda$restart$1 - Info - Executed startup script
+25/02/19 - 13:56:18.782 - Context.lambda$restart$1 - Info - Executed local startup script
+25/02/19 - 13:56:25.325 - Context.onCommand - Info - Eval: blade.Diagnostic_Chamber_Blade_Scan(start=0, end=12000, steps=100, interval=0.0) (ui)
+25/02/19 - 14:10:16.728 - Context.onCommand - Info - Restart (ui)

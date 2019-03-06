@@ -1,0 +1,22 @@
+14/02/19 - 16:12:19.956 - Context.restart - Info - Initializing context
+14/02/19 - 16:12:19.959 - DataManager.initialize - Info - Initializing DataManager
+14/02/19 - 16:12:19.962 - DataManager.initialize - Info - Finished DataManager initialization
+14/02/19 - 16:12:19.963 - Context.restart - Info - Loading Device Pool
+14/02/19 - 16:12:19.963 - DevicePool.initialize - Info - Initializing DevicePool
+14/02/19 - 16:12:19.965 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_RBV
+14/02/19 - 16:12:19.985 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Set
+14/02/19 - 16:12:19.997 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Exec
+14/02/19 - 16:12:20.009 - DevicePool.initializeDevices - Info - Initializing: Diodes_Sum_Intensity
+14/02/19 - 16:12:20.021 - DevicePool.initializeDevices - Info - Initializing: Filter1
+14/02/19 - 16:12:20.033 - DevicePool.initializeDevices - Info - Initializing: Filter1_RBV
+14/02/19 - 16:12:20.044 - DevicePool.initializeDevices - Info - Initializing: Filter2
+14/02/19 - 16:12:20.055 - DevicePool.initializeDevices - Info - Initializing: Filter2_RBV
+14/02/19 - 16:12:20.066 - DevicePool.initializeDevices - Info - Initializing: BPM2_Vert_Profile
+14/02/19 - 16:12:20.080 - DevicePool.initializeDevices - Info - Initializing: BPM2_Profile_Size
+14/02/19 - 16:12:20.152 - DevicePool.initialize - Info - Finished DevicePool initialization
+14/02/19 - 16:12:20.156 - ScriptManager.<init> - Info - Initializing ScriptManager
+14/02/19 - 16:12:20.166 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+14/02/19 - 16:12:20.550 - Context.lambda$restart$1 - Info - Executed startup script
+14/02/19 - 16:12:20.574 - Context.lambda$restart$1 - Info - Executed local startup script
+14/02/19 - 16:12:40.197 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/vertical_profile.py (ui)
+14/02/19 - 16:14:03.807 - Context.onCommand - Info - Restart (ui)

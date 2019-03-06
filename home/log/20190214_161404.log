@@ -1,0 +1,34 @@
+14/02/19 - 16:14:05.109 - Context.restart - Info - Initializing context
+14/02/19 - 16:14:05.111 - DataManager.initialize - Info - Initializing DataManager
+14/02/19 - 16:14:05.113 - DataManager.initialize - Info - Finished DataManager initialization
+14/02/19 - 16:14:05.113 - Context.restart - Info - Loading Device Pool
+14/02/19 - 16:14:05.113 - DevicePool.initialize - Info - Initializing DevicePool
+14/02/19 - 16:14:05.115 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_RBV
+14/02/19 - 16:14:05.134 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Set
+14/02/19 - 16:14:05.146 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Exec
+14/02/19 - 16:14:05.157 - DevicePool.initializeDevices - Info - Initializing: Diodes_Sum_Intensity
+14/02/19 - 16:14:05.175 - DevicePool.initializeDevices - Info - Initializing: Filter1
+14/02/19 - 16:14:05.187 - DevicePool.initializeDevices - Info - Initializing: Filter1_RBV
+14/02/19 - 16:14:05.198 - DevicePool.initializeDevices - Info - Initializing: Filter2
+14/02/19 - 16:14:05.209 - DevicePool.initializeDevices - Info - Initializing: Filter2_RBV
+14/02/19 - 16:14:05.220 - DevicePool.initializeDevices - Info - Initializing: BPM2_Vert_Profile
+14/02/19 - 16:14:05.246 - DevicePool.initializeDevices - Info - Initializing: BPM2_Profile_Size
+14/02/19 - 16:14:05.359 - DevicePool.initialize - Info - Finished DevicePool initialization
+14/02/19 - 16:14:05.361 - ScriptManager.<init> - Info - Initializing ScriptManager
+14/02/19 - 16:14:05.368 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+14/02/19 - 16:14:05.858 - Context.lambda$restart$1 - Info - Executed startup script
+14/02/19 - 16:14:05.874 - Context.lambda$restart$1 - Info - Executed local startup script
+14/02/19 - 16:14:15.924 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/vertical_profile.py (ui)
+14/02/19 - 16:14:32.060 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/vertical_profile.py (ui)
+14/02/19 - 16:14:46.730 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/vertical_profile.py (ui)
+14/02/19 - 16:20:36.768 - Context.onCommand - Info - Eval: a = caget(PINK:PG02:Stats1:ProfileAverageY_RBV) (ui)
+14/02/19 - 16:20:49.529 - Context.onCommand - Info - Eval: a = caget("PINK:PG02:Stats1:ProfileAverageY_RBV") (ui)
+14/02/19 - 16:20:50.977 - Context.onCommand - Info - Eval: a (ui)
+14/02/19 - 16:20:55.049 - Context.onCommand - Info - Eval: a[0] (ui)
+14/02/19 - 16:23:55.018 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/vertical_profile.py (ui)
+14/02/19 - 16:24:08.160 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/vertical_profile.py (ui)
+14/02/19 - 16:24:28.139 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/vertical_profile.py (ui)
+14/02/19 - 16:28:51.992 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/vertical_profile.py (ui)
+14/02/19 - 16:31:40.221 - Context.onCommand - Info - Run: /home/epics/PShell/pshellcontrol/home/script/shared/bpm_class.py (ui)
+14/02/19 - 16:31:59.660 - Context.onCommand - Info - Eval: bpm=BPMCLASS() (ui)
+14/02/19 - 16:32:32.217 - Context.onCommand - Info - Restart (ui)

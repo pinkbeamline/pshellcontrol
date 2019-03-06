@@ -1,0 +1,27 @@
+25/02/19 - 17:10:47.795 - Context.restart - Info - Initializing context
+25/02/19 - 17:10:47.798 - DataManager.initialize - Info - Initializing DataManager
+25/02/19 - 17:10:47.799 - DataManager.initialize - Info - Finished DataManager initialization
+25/02/19 - 17:10:47.800 - Context.restart - Info - Loading Device Pool
+25/02/19 - 17:10:47.800 - DevicePool.initialize - Info - Initializing DevicePool
+25/02/19 - 17:10:47.804 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_RBV
+25/02/19 - 17:10:47.827 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Set
+25/02/19 - 17:10:47.838 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Exec
+25/02/19 - 17:10:47.850 - DevicePool.initializeDevices - Info - Initializing: Diodes_Sum_Intensity
+25/02/19 - 17:10:47.861 - DevicePool.initializeDevices - Info - Initializing: Filter1
+25/02/19 - 17:10:47.873 - DevicePool.initializeDevices - Info - Initializing: Filter1_RBV
+25/02/19 - 17:10:47.884 - DevicePool.initializeDevices - Info - Initializing: Filter2
+25/02/19 - 17:10:47.978 - DevicePool.initializeDevices - Info - Initializing: Filter2_RBV
+25/02/19 - 17:10:47.979 - DevicePool.initializeDevices - Info - Initializing: BPM2_Vert_Profile
+25/02/19 - 17:10:47.993 - DevicePool.initializeDevices - Info - Initializing: BPM2_Profile_Size
+25/02/19 - 17:10:48.006 - DevicePool.initializeDevices - Info - Initializing: Filter2_SIG
+25/02/19 - 17:10:48.047 - DevicePool.initialize - Info - Finished DevicePool initialization
+25/02/19 - 17:10:48.050 - ScriptManager.<init> - Info - Initializing ScriptManager
+25/02/19 - 17:10:48.057 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+25/02/19 - 17:10:48.439 - Context.lambda$restart$1 - Info - Executed startup script
+25/02/19 - 17:10:48.551 - Context.lambda$restart$1 - Info - Executed local startup script
+25/02/19 - 17:10:53.435 - Context.onCommand - Info - Run: test1.py (ui)
+25/02/19 - 17:11:29.136 - Context.onCommand - Info - Run: test1.py (ui)
+25/02/19 - 17:13:46.771 - Context.onCommand - Info - Run: test1.py (ui)
+25/02/19 - 17:14:28.757 - Context.onCommand - Info - Run: test1.py (ui)
+25/02/19 - 17:33:19.150 - Context.onCommand - Info - Eval: help(optimize_least_squares) (ui)
+27/02/19 - 15:26:07.574 - Context.onCommand - Info - Restart (ui)

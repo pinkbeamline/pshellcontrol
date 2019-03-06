@@ -1,0 +1,137 @@
+01/02/19 - 11:14:19.883 - Context.<init> - Info - Process: 7077@pink-shuttle02
+01/02/19 - 11:14:19.885 - Context.<init> - Info - Context: unknown
+01/02/19 - 11:14:19.885 - Context.<init> - Info - Pars: /home/epics/PShell/pshell-1.10.0-fat.jar -home=/home/epics/PShell/pshellcontrol/home -dlaf
+01/02/19 - 11:14:19.886 - Context.<init> - Info - User: epics
+01/02/19 - 11:14:19.886 - Context.<init> - Info - Host: pink-shuttle02
+01/02/19 - 11:14:19.916 - PluginManager.loadExtensionsFolder - Info - Loading extensions folder
+01/02/19 - 11:14:19.918 - DataManager.initialize - Info - Initializing DataManager
+01/02/19 - 11:14:19.931 - DataManager.setProvider - Info - Setting data provider: ch.psi.pshell.data.ProviderHDF5
+01/02/19 - 11:14:19.933 - DataManager.setLayout - Info - Setting data layout: ch.psi.pshell.data.LayoutDefault
+01/02/19 - 11:14:19.936 - DataManager.initialize - Info - Finished DataManager initialization
+01/02/19 - 11:14:19.936 - App.startup - Info - Version: 1.10-SNAPSHOT (build 1812200927-py)
+01/02/19 - 11:14:19.938 - App.startup - Info - Create workbench
+01/02/19 - 11:14:20.813 - PluginManager.loadPluginFolder - Info - Loading plugins folder
+01/02/19 - 11:14:20.821 - PluginManager.startPlugins - Info - Start plugins
+01/02/19 - 11:14:20.822 - Context.onCommand - Info - Restart (ui)
+01/02/19 - 11:14:20.883 - Context.restart - Info - Initializing context
+01/02/19 - 11:14:20.893 - Context.onUserChange - Info - User: Default [administrator] *
+01/02/19 - 11:14:20.896 - Context.restart - Info - Loading Device Pool
+01/02/19 - 11:14:20.897 - DevicePool.initialize - Info - Initializing DevicePool
+01/02/19 - 11:14:20.913 - JcaeProperties.loadProperties - Warning - java.lang.NumberFormatException: For input string: ""
+Stack trace:
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Long.parseLong(Long.java:601)
+	at java.lang.Long.parseLong(Long.java:631)
+	at ch.psi.jcae.impl.JcaeProperties.loadProperties(JcaeProperties.java:199)
+	at ch.psi.jcae.impl.JcaeProperties.loadProperties(JcaeProperties.java:127)
+	at ch.psi.jcae.impl.JcaeProperties.loadProperties(JcaeProperties.java:111)
+	at ch.psi.jcae.impl.JcaeProperties.<init>(JcaeProperties.java:89)
+	at ch.psi.jcae.impl.JcaeProperties.<clinit>(JcaeProperties.java:31)
+	at ch.psi.jcae.impl.JCAChannelFactory.<init>(JCAChannelFactory.java:24)
+	at ch.psi.jcae.impl.DefaultChannelService.<init>(DefaultChannelService.java:91)
+	at ch.psi.jcae.impl.DefaultChannelService.<init>(DefaultChannelService.java:78)
+	at ch.psi.pshell.epics.Epics.create(Epics.java:38)
+	at ch.psi.pshell.core.DevicePool.load(DevicePool.java:192)
+	at ch.psi.pshell.core.DevicePool.initialize(DevicePool.java:42)
+	at ch.psi.pshell.core.Context.restart(Context.java:985)
+	at ch.psi.pshell.core.Context.start(Context.java:2915)
+	at ch.psi.pshell.ui.App.lambda$startup$0(App.java:857)
+	at java.lang.Thread.run(Thread.java:748)
+
+01/02/19 - 11:14:20.915 - JcaeProperties.loadProperties - Warning - java.lang.NumberFormatException: For input string: ""
+Stack trace:
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:592)
+	at java.lang.Integer.parseInt(Integer.java:615)
+	at ch.psi.jcae.impl.JcaeProperties.loadProperties(JcaeProperties.java:210)
+	at ch.psi.jcae.impl.JcaeProperties.loadProperties(JcaeProperties.java:127)
+	at ch.psi.jcae.impl.JcaeProperties.loadProperties(JcaeProperties.java:111)
+	at ch.psi.jcae.impl.JcaeProperties.<init>(JcaeProperties.java:89)
+	at ch.psi.jcae.impl.JcaeProperties.<clinit>(JcaeProperties.java:31)
+	at ch.psi.jcae.impl.JCAChannelFactory.<init>(JCAChannelFactory.java:24)
+	at ch.psi.jcae.impl.DefaultChannelService.<init>(DefaultChannelService.java:91)
+	at ch.psi.jcae.impl.DefaultChannelService.<init>(DefaultChannelService.java:78)
+	at ch.psi.pshell.epics.Epics.create(Epics.java:38)
+	at ch.psi.pshell.core.DevicePool.load(DevicePool.java:192)
+	at ch.psi.pshell.core.DevicePool.initialize(DevicePool.java:42)
+	at ch.psi.pshell.core.Context.restart(Context.java:985)
+	at ch.psi.pshell.core.Context.start(Context.java:2915)
+	at ch.psi.pshell.ui.App.lambda$startup$0(App.java:857)
+	at java.lang.Thread.run(Thread.java:748)
+
+01/02/19 - 11:14:20.916 - JcaeProperties.loadProperties - Warning - java.lang.NumberFormatException: For input string: ""
+Stack trace:
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Long.parseLong(Long.java:601)
+	at java.lang.Long.parseLong(Long.java:631)
+	at ch.psi.jcae.impl.JcaeProperties.loadProperties(JcaeProperties.java:227)
+	at ch.psi.jcae.impl.JcaeProperties.loadProperties(JcaeProperties.java:127)
+	at ch.psi.jcae.impl.JcaeProperties.loadProperties(JcaeProperties.java:111)
+	at ch.psi.jcae.impl.JcaeProperties.<init>(JcaeProperties.java:89)
+	at ch.psi.jcae.impl.JcaeProperties.<clinit>(JcaeProperties.java:31)
+	at ch.psi.jcae.impl.JCAChannelFactory.<init>(JCAChannelFactory.java:24)
+	at ch.psi.jcae.impl.DefaultChannelService.<init>(DefaultChannelService.java:91)
+	at ch.psi.jcae.impl.DefaultChannelService.<init>(DefaultChannelService.java:78)
+	at ch.psi.pshell.epics.Epics.create(Epics.java:38)
+	at ch.psi.pshell.core.DevicePool.load(DevicePool.java:192)
+	at ch.psi.pshell.core.DevicePool.initialize(DevicePool.java:42)
+	at ch.psi.pshell.core.Context.restart(Context.java:985)
+	at ch.psi.pshell.core.Context.start(Context.java:2915)
+	at ch.psi.pshell.ui.App.lambda$startup$0(App.java:857)
+	at java.lang.Thread.run(Thread.java:748)
+
+01/02/19 - 11:14:20.926 - JcaeProperties.loadProperties - Warning - java.lang.NumberFormatException: For input string: ""
+Stack trace:
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:592)
+	at java.lang.Integer.parseInt(Integer.java:615)
+	at ch.psi.jcae.impl.JcaeProperties.loadProperties(JcaeProperties.java:266)
+	at ch.psi.jcae.impl.JcaeProperties.loadProperties(JcaeProperties.java:127)
+	at ch.psi.jcae.impl.JcaeProperties.loadProperties(JcaeProperties.java:111)
+	at ch.psi.jcae.impl.JcaeProperties.<init>(JcaeProperties.java:89)
+	at ch.psi.jcae.impl.JcaeProperties.<clinit>(JcaeProperties.java:31)
+	at ch.psi.jcae.impl.JCAChannelFactory.<init>(JCAChannelFactory.java:24)
+	at ch.psi.jcae.impl.DefaultChannelService.<init>(DefaultChannelService.java:91)
+	at ch.psi.jcae.impl.DefaultChannelService.<init>(DefaultChannelService.java:78)
+	at ch.psi.pshell.epics.Epics.create(Epics.java:38)
+	at ch.psi.pshell.core.DevicePool.load(DevicePool.java:192)
+	at ch.psi.pshell.core.DevicePool.initialize(DevicePool.java:42)
+	at ch.psi.pshell.core.Context.restart(Context.java:985)
+	at ch.psi.pshell.core.Context.start(Context.java:2915)
+	at ch.psi.pshell.ui.App.lambda$startup$0(App.java:857)
+	at java.lang.Thread.run(Thread.java:748)
+
+01/02/19 - 11:14:21.094 - DevicePool.initializeDevices - Info - Initializing: IZero_Profile
+01/02/19 - 11:14:21.287 - DevicePool.initializeDevices - Info - Initializing: IZero
+01/02/19 - 11:14:21.299 - DevicePool.initializeDevices - Info - Initializing: TFY_Profile
+01/02/19 - 11:14:21.301 - DevicePool.initializeDevices - Info - Initializing: TFY
+01/02/19 - 11:14:21.314 - DevicePool.initializeDevices - Info - Initializing: GE_AreaDet
+01/02/19 - 11:14:21.463 - DevicePool.initializeDevices - Info - Initializing: GE_FrameID
+01/02/19 - 11:14:21.464 - DevicePool.initializeDevices - Info - Initializing: GE_Raw_Imaging
+01/02/19 - 11:14:21.464 - DevicePool.initializeDevices - Info - Initializing: GE_Raw_Array
+01/02/19 - 11:14:21.466 - DevicePool.initializeDevices - Info - Initializing: GE_BG_Array
+01/02/19 - 11:14:21.501 - DevicePool.initializeDevices - Info - Initializing: GE_BG_SizeY
+01/02/19 - 11:14:21.502 - DevicePool.initializeDevices - Info - Initializing: GE_BG_SizeX
+01/02/19 - 11:14:21.503 - DevicePool.initializeDevices - Info - Initializing: GE_ROI_Array
+01/02/19 - 11:14:21.537 - DevicePool.initializeDevices - Info - Initializing: GE_ROI_SizeY
+01/02/19 - 11:14:21.551 - DevicePool.initializeDevices - Info - Initializing: GE_ROI_SizeX
+01/02/19 - 11:14:21.563 - DevicePool.initializeDevices - Info - Initializing: GE_ROI_Line
+01/02/19 - 11:14:21.578 - DevicePool.initializeDevices - Info - Initializing: GE_Spectrum
+01/02/19 - 11:14:21.617 - DevicePool.initializeDevices - Info - Initializing: GE_Spectrum_Sum
+01/02/19 - 11:14:21.659 - DevicePool.initializeDevices - Info - Initializing: GE_Spectrum_Conv
+01/02/19 - 11:14:21.673 - DevicePool.initializeDevices - Info - Initializing: GE_Sensor_Temp
+01/02/19 - 11:14:21.689 - DevicePool.initializeDevices - Info - Initializing: Scan_Progress
+01/02/19 - 11:14:21.930 - DevicePool.initialize - Info - Finished DevicePool initialization
+01/02/19 - 11:14:21.937 - ScriptManager.<init> - Info - Initializing ScriptManager
+01/02/19 - 11:14:22.478 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+01/02/19 - 11:14:25.529 - Context.lambda$restart$1 - Info - Executed startup script
+01/02/19 - 11:14:25.571 - Context.lambda$restart$1 - Info - Executed local startup script
+01/02/19 - 11:21:34.541 - DefaultChannel.monitorChanged - Warning - Monitor fired but CAStatus is {0} - Channl: {1}
+01/02/19 - 11:23:45.768 - App.exit - Info - Aplication exit command by: MainFrame
+01/02/19 - 11:23:45.785 - Context.close - Info - Close
+01/02/19 - 11:23:46.801 - PluginManager.stopPlugins - Info - Stop plugins
+01/02/19 - 11:23:46.828 - App.end - Info - Finished

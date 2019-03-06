@@ -1,0 +1,25 @@
+27/02/19 - 16:20:01.459 - Context.restart - Info - Initializing context
+27/02/19 - 16:20:01.460 - DataManager.initialize - Info - Initializing DataManager
+27/02/19 - 16:20:01.461 - DataManager.initialize - Info - Finished DataManager initialization
+27/02/19 - 16:20:01.462 - Context.restart - Info - Loading Device Pool
+27/02/19 - 16:20:01.462 - DevicePool.initialize - Info - Initializing DevicePool
+27/02/19 - 16:20:01.467 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_RBV
+27/02/19 - 16:20:01.485 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Set
+27/02/19 - 16:20:01.496 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Exec
+27/02/19 - 16:20:01.508 - DevicePool.initializeDevices - Info - Initializing: Diodes_Sum_Intensity
+27/02/19 - 16:20:01.519 - DevicePool.initializeDevices - Info - Initializing: Diode_1
+27/02/19 - 16:20:01.531 - DevicePool.initializeDevices - Info - Initializing: Diode_2
+27/02/19 - 16:20:01.542 - DevicePool.initializeDevices - Info - Initializing: Diode_3
+27/02/19 - 16:20:01.553 - DevicePool.initializeDevices - Info - Initializing: Diode_4
+27/02/19 - 16:20:01.564 - DevicePool.initializeDevices - Info - Initializing: Filter1
+27/02/19 - 16:20:01.655 - DevicePool.initializeDevices - Info - Initializing: Filter2
+27/02/19 - 16:20:01.747 - DevicePool.initializeDevices - Info - Initializing: BPM2_Vert_Profile
+27/02/19 - 16:20:01.761 - DevicePool.initializeDevices - Info - Initializing: BPM2_Profile_Size
+27/02/19 - 16:20:01.772 - DevicePool.initializeDevices - Info - Initializing: Filter2_SIG
+27/02/19 - 16:20:01.855 - DevicePool.initialize - Info - Finished DevicePool initialization
+27/02/19 - 16:20:01.858 - ScriptManager.<init> - Info - Initializing ScriptManager
+27/02/19 - 16:20:01.863 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+27/02/19 - 16:20:02.109 - Context.lambda$restart$1 - Info - Executed startup script
+27/02/19 - 16:20:02.202 - Context.lambda$restart$1 - Info - Executed local startup script
+27/02/19 - 16:20:11.288 - Context.onCommand - Info - Eval: blade.Diagnostic_Chamber_Blade_Scan(start=0, end=12000, steps=50, interval=0) (ui)
+27/02/19 - 16:22:29.067 - Context.onCommand - Info - Restart (ui)

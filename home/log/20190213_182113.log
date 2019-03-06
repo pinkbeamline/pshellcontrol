@@ -1,0 +1,25 @@
+13/02/19 - 18:21:13.519 - Context.restart - Info - Initializing context
+13/02/19 - 18:21:13.522 - DataManager.initialize - Info - Initializing DataManager
+13/02/19 - 18:21:13.523 - DataManager.initialize - Info - Finished DataManager initialization
+13/02/19 - 18:21:13.524 - Context.restart - Info - Loading Device Pool
+13/02/19 - 18:21:13.524 - DevicePool.initialize - Info - Initializing DevicePool
+13/02/19 - 18:21:13.533 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_RBV
+13/02/19 - 18:21:13.553 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Set
+13/02/19 - 18:21:13.564 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Exec
+13/02/19 - 18:21:13.575 - DevicePool.initializeDevices - Info - Initializing: Diodes_Sum_Intensity
+13/02/19 - 18:21:13.621 - DevicePool.initialize - Info - Finished DevicePool initialization
+13/02/19 - 18:21:13.622 - ScriptManager.<init> - Info - Initializing ScriptManager
+13/02/19 - 18:21:13.624 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+13/02/19 - 18:21:14.160 - Context.lambda$restart$1 - Info - Executed startup script
+13/02/19 - 18:21:14.178 - Context.lambda$restart$1 - Info - Executed local startup script
+13/02/19 - 18:21:43.684 - Context.onCommand - Info - Eval: Diodes_Sum_Intensity.take() (ui)
+13/02/19 - 18:21:46.429 - Context.onCommand - Info - Eval: Diodes_Sum_Intensity.take() (ui)
+13/02/19 - 18:21:52.885 - Context.onCommand - Info - Eval: Diodes_Sum_Intensity.read() (ui)
+13/02/19 - 18:21:55.252 - Context.onCommand - Info - Eval: Diodes_Sum_Intensity.take() (ui)
+13/02/19 - 18:21:56.172 - Context.onCommand - Info - Eval: Diodes_Sum_Intensity.take() (ui)
+13/02/19 - 18:21:56.746 - Context.onCommand - Info - Eval: Diodes_Sum_Intensity.take() (ui)
+13/02/19 - 18:21:57.086 - Context.onCommand - Info - Eval: Diodes_Sum_Intensity.take() (ui)
+13/02/19 - 18:21:57.377 - Context.onCommand - Info - Eval: Diodes_Sum_Intensity.take() (ui)
+13/02/19 - 18:21:57.680 - Context.onCommand - Info - Eval: Diodes_Sum_Intensity.take() (ui)
+13/02/19 - 18:21:57.933 - Context.onCommand - Info - Eval: Diodes_Sum_Intensity.take() (ui)
+13/02/19 - 18:22:05.524 - Context.onCommand - Info - Restart (ui)

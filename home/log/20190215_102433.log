@@ -1,0 +1,27 @@
+15/02/19 - 10:24:34.310 - Context.restart - Info - Initializing context
+15/02/19 - 10:24:34.311 - DataManager.initialize - Info - Initializing DataManager
+15/02/19 - 10:24:34.314 - DataManager.initialize - Info - Finished DataManager initialization
+15/02/19 - 10:24:34.315 - Context.restart - Info - Loading Device Pool
+15/02/19 - 10:24:34.315 - DevicePool.initialize - Info - Initializing DevicePool
+15/02/19 - 10:24:34.321 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_RBV
+15/02/19 - 10:24:34.350 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Set
+15/02/19 - 10:24:34.362 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Exec
+15/02/19 - 10:24:34.373 - DevicePool.initializeDevices - Info - Initializing: Diodes_Sum_Intensity
+15/02/19 - 10:24:34.385 - DevicePool.initializeDevices - Info - Initializing: Filter1
+15/02/19 - 10:24:34.397 - DevicePool.initializeDevices - Info - Initializing: Filter1_RBV
+15/02/19 - 10:24:34.408 - DevicePool.initializeDevices - Info - Initializing: Filter2
+15/02/19 - 10:24:34.418 - DevicePool.initializeDevices - Info - Initializing: Filter2_RBV
+15/02/19 - 10:24:34.430 - DevicePool.initializeDevices - Info - Initializing: BPM2_Vert_Profile
+15/02/19 - 10:24:34.442 - DevicePool.initializeDevices - Info - Initializing: BPM2_Profile_Size
+15/02/19 - 10:24:34.499 - DevicePool.initialize - Info - Finished DevicePool initialization
+15/02/19 - 10:24:34.503 - ScriptManager.<init> - Info - Initializing ScriptManager
+15/02/19 - 10:24:34.509 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+15/02/19 - 10:24:34.941 - Context.lambda$restart$1 - Info - Executed startup script
+15/02/19 - 10:24:35.030 - Context.lambda$restart$1 - Info - Executed local startup script
+15/02/19 - 10:24:54.677 - Context.onCommand - Info - Eval: bpm.BPM1_Vertical_Profile() (ui)
+15/02/19 - 10:28:45.059 - Context.onCommand - Info - Eval: a=range(522:522+326) (ui)
+15/02/19 - 10:28:46.098 - Context.onCommand - Info - Eval: a (ui)
+15/02/19 - 10:28:57.051 - Context.onCommand - Info - Eval: a=range(522,522+326) (ui)
+15/02/19 - 10:28:58.923 - Context.onCommand - Info - Eval: a (ui)
+15/02/19 - 10:29:06.347 - Context.onCommand - Info - Eval: len(a) (ui)
+15/02/19 - 10:29:44.629 - Context.onCommand - Info - Restart (ui)

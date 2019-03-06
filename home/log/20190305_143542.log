@@ -1,0 +1,58 @@
+05/03/19 - 14:35:43.197 - Context.restart - Info - Initializing context
+05/03/19 - 14:35:43.198 - DataManager.initialize - Info - Initializing DataManager
+05/03/19 - 14:35:43.200 - DataManager.initialize - Info - Finished DataManager initialization
+05/03/19 - 14:35:43.200 - Context.restart - Info - Loading Device Pool
+05/03/19 - 14:35:43.200 - DevicePool.initialize - Info - Initializing DevicePool
+05/03/19 - 14:35:43.203 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_RBV
+05/03/19 - 14:35:43.219 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Set
+05/03/19 - 14:35:43.233 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Status
+05/03/19 - 14:35:43.254 - DevicePool.initializeDevices - Info - Initializing: TFY
+05/03/19 - 14:35:43.265 - DevicePool.initializeDevices - Info - Initializing: Diodes_Sum_Intensity
+05/03/19 - 14:35:43.276 - DevicePool.initializeDevices - Info - Initializing: Sample_Vert
+05/03/19 - 14:35:43.369 - DevicePool.initializeDevices - Info - Initializing: Diode_1
+05/03/19 - 14:35:43.381 - DevicePool.initializeDevices - Info - Initializing: Diode_2
+05/03/19 - 14:35:43.394 - DevicePool.initializeDevices - Info - Initializing: Diode_3
+05/03/19 - 14:35:43.407 - DevicePool.initializeDevices - Info - Initializing: Diode_4
+05/03/19 - 14:35:43.419 - DevicePool.initializeDevices - Info - Initializing: Filter1
+05/03/19 - 14:35:43.509 - DevicePool.initializeDevices - Info - Initializing: Filter2
+05/03/19 - 14:35:43.601 - DevicePool.initializeDevices - Info - Initializing: BPM2_Vert_Profile
+05/03/19 - 14:35:43.614 - DevicePool.initializeDevices - Info - Initializing: BPM2_Profile_Size
+05/03/19 - 14:35:43.671 - DevicePool.initialize - Info - Finished DevicePool initialization
+05/03/19 - 14:35:43.674 - ScriptManager.<init> - Info - Initializing ScriptManager
+05/03/19 - 14:35:43.680 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+05/03/19 - 14:35:43.950 - Context.lambda$restart$1 - Info - Executed startup script
+05/03/19 - 14:35:44.062 - Context.lambda$restart$1 - Info - Executed local startup script
+05/03/19 - 15:20:50.303 - Context.onCommand - Info - Eval: help() (ui)
+05/03/19 - 15:21:14.984 - Context.onCommand - Info - Eval: help(get_device) (ui)
+05/03/19 - 15:21:39.657 - Context.onCommand - Info - Eval: a = get_device(TFY) (ui)
+05/03/19 - 15:21:45.889 - Context.onCommand - Info - Eval: a = get_device("TFY") (ui)
+05/03/19 - 15:21:47.473 - Context.onCommand - Info - Eval: a (ui)
+05/03/19 - 15:22:01.361 - Context.onCommand - Info - Eval: a.getCache() (ui)
+05/03/19 - 15:22:08.570 - Context.onCommand - Info - Eval: a = get_device("TFYd") (ui)
+05/03/19 - 15:22:10.385 - Context.onCommand - Info - Eval: a (ui)
+05/03/19 - 15:22:14.690 - Context.onCommand - Info - Eval: a (ui)
+05/03/19 - 15:22:18.177 - Context.onCommand - Info - Eval: a==None (ui)
+05/03/19 - 15:22:21.385 - Context.onCommand - Info - Eval: a==Non (ui)
+05/03/19 - 15:22:23.969 - Context.onCommand - Info - Eval: a==None (ui)
+05/03/19 - 15:22:29.866 - Context.onCommand - Info - Eval: a = get_device("TFY") (ui)
+05/03/19 - 15:22:31.633 - Context.onCommand - Info - Eval: a==None (ui)
+05/03/19 - 15:35:08.243 - Context.onCommand - Info - Eval:  (ui)
+05/03/19 - 15:35:08.387 - Context.onCommand - Info - Eval:  (ui)
+05/03/19 - 15:35:08.522 - Context.onCommand - Info - Eval:  (ui)
+05/03/19 - 15:35:12.429 - Context.onCommand - Info - Run: test2.py (ui)
+05/03/19 - 15:35:12.439 - DevicePool.addDevice - Info - Adding device: mydev
+05/03/19 - 15:35:59.822 - Context.onCommand - Info - Run: test2.py (ui)
+05/03/19 - 15:39:02.744 - Context.onCommand - Info - Run: test2.py (ui)
+05/03/19 - 15:39:39.378 - Context.onCommand - Info - Eval: remove_device(mydev)remove_device(mydev) (ui)
+05/03/19 - 15:39:50.721 - Context.onCommand - Info - Eval: remove_device(mydev) (ui)
+05/03/19 - 15:39:50.722 - DevicePool.removeDevice - Warning - Removing device: mydev
+05/03/19 - 15:40:05.379 - Context.onCommand - Info - Run: test2.py (ui)
+05/03/19 - 15:40:05.386 - DevicePool.addDevice - Info - Adding device: mydev
+05/03/19 - 15:40:08.403 - DevicePool.removeDevice - Warning - Removing device: mydev
+05/03/19 - 15:40:22.450 - Context.onCommand - Info - Run: test2.py (ui)
+05/03/19 - 15:40:22.454 - DevicePool.addDevice - Info - Adding device: mydev
+05/03/19 - 15:40:25.468 - DevicePool.removeDevice - Warning - Removing device: mydev
+05/03/19 - 15:40:47.940 - Context.onCommand - Info - Run: test2.py (ui)
+05/03/19 - 15:40:47.950 - DevicePool.addDevice - Info - Adding device: mydev
+05/03/19 - 15:40:50.967 - DevicePool.removeDevice - Warning - Removing device: mydev
+05/03/19 - 15:41:22.980 - Context.onCommand - Info - Restart (ui)

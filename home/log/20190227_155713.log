@@ -1,0 +1,38 @@
+27/02/19 - 15:57:13.705 - Context.restart - Info - Initializing context
+27/02/19 - 15:57:13.709 - DataManager.initialize - Info - Initializing DataManager
+27/02/19 - 15:57:13.710 - DataManager.initialize - Info - Finished DataManager initialization
+27/02/19 - 15:57:13.711 - Context.restart - Info - Loading Device Pool
+27/02/19 - 15:57:13.711 - DevicePool.initialize - Info - Initializing DevicePool
+27/02/19 - 15:57:13.717 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_RBV
+27/02/19 - 15:57:13.738 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Set
+27/02/19 - 15:57:13.750 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Exec
+27/02/19 - 15:57:13.761 - DevicePool.initializeDevices - Info - Initializing: Diodes_Sum_Intensity
+27/02/19 - 15:57:13.772 - DevicePool.initializeDevices - Info - Initializing: Diode_1
+27/02/19 - 15:57:13.784 - DevicePool.initializeDevices - Info - Initializing: Diode_2
+27/02/19 - 15:57:13.795 - DevicePool.initializeDevices - Info - Initializing: Diode_3
+27/02/19 - 15:57:13.806 - DevicePool.initializeDevices - Info - Initializing: Diode_4
+27/02/19 - 15:57:13.817 - DevicePool.initializeDevices - Info - Initializing: Filter1
+27/02/19 - 15:57:13.911 - DevicePool.initializeDevices - Info - Initializing: Filter2
+27/02/19 - 15:57:14.003 - DevicePool.initializeDevices - Info - Initializing: BPM2_Vert_Profile
+27/02/19 - 15:57:14.016 - DevicePool.initializeDevices - Info - Initializing: BPM2_Profile_Size
+27/02/19 - 15:57:14.029 - DevicePool.initializeDevices - Info - Initializing: Filter2_SIG
+27/02/19 - 15:57:14.105 - DevicePool.initialize - Info - Finished DevicePool initialization
+27/02/19 - 15:57:14.109 - ScriptManager.<init> - Info - Initializing ScriptManager
+27/02/19 - 15:57:14.121 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+27/02/19 - 15:57:14.380 - Context.lambda$restart$1 - Info - Executed startup script
+27/02/19 - 15:57:14.481 - Context.lambda$restart$1 - Info - Executed local startup script
+27/02/19 - 15:57:37.097 - Context.onCommand - Info - Eval: blade.Diagnostic_Chamber_Blade_Scan(start=0, end=12000, steps=100, interval=0.0) (ui)
+27/02/19 - 16:02:15.054 - Context.onCommand - Info - Eval: a = 1.239842347823845e-11 (ui)
+27/02/19 - 16:02:25.087 - Context.onCommand - Info - Eval: b = str(a) (ui)
+27/02/19 - 16:02:27.295 - Context.onCommand - Info - Eval: b (ui)
+27/02/19 - 16:02:47.624 - Context.onCommand - Info - Eval: b = str(a, ".3f") (ui)
+27/02/19 - 16:07:11.598 - Context.onCommand - Info - Eval: print('{:.2e}'.format(a)) (ui)
+27/02/19 - 16:07:17.494 - Context.onCommand - Info - Eval: print('{:.4e}'.format(a)) (ui)
+27/02/19 - 16:07:40.070 - Context.onCommand - Info - Eval: b = '{:.4e}'.format(a) (ui)
+27/02/19 - 16:07:41.245 - Context.onCommand - Info - Eval: b (ui)
+27/02/19 - 16:07:47.695 - Context.onCommand - Info - Eval: b.type() (ui)
+27/02/19 - 16:08:03.607 - Context.onCommand - Info - Eval: b.length() (ui)
+27/02/19 - 16:08:10.863 - Context.onCommand - Info - Eval: b.chars() (ui)
+27/02/19 - 16:08:26.351 - Context.onCommand - Info - Eval: b.getBytes() (ui)
+27/02/19 - 16:10:03.797 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/blade_class.py (ui)
+27/02/19 - 16:10:05.178 - Context.onCommand - Info - Restart (ui)

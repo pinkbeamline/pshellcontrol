@@ -1,0 +1,60 @@
+05/03/19 - 14:31:41.546 - Context.restart - Info - Initializing context
+05/03/19 - 14:31:41.547 - DataManager.initialize - Info - Initializing DataManager
+05/03/19 - 14:31:41.549 - DataManager.initialize - Info - Finished DataManager initialization
+05/03/19 - 14:31:41.549 - Context.restart - Info - Loading Device Pool
+05/03/19 - 14:31:41.549 - DevicePool.initialize - Info - Initializing DevicePool
+05/03/19 - 14:31:41.551 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Set
+05/03/19 - 14:31:41.570 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Status
+05/03/19 - 14:31:41.592 - DevicePool.initializeDevices - Info - Initializing: TFY
+05/03/19 - 14:31:41.605 - DevicePool.initializeDevices - Info - Initializing: Diodes_Sum_Intensity
+05/03/19 - 14:31:41.618 - DevicePool.initializeDevices - Info - Initializing: Sample_Vert
+05/03/19 - 14:31:41.714 - DevicePool.initializeDevices - Info - Initializing: Diode_1
+05/03/19 - 14:31:41.726 - DevicePool.initializeDevices - Info - Initializing: Diode_2
+05/03/19 - 14:31:41.738 - DevicePool.initializeDevices - Info - Initializing: Diode_3
+05/03/19 - 14:31:41.758 - DevicePool.initializeDevices - Info - Initializing: Diode_4
+05/03/19 - 14:31:41.777 - DevicePool.initializeDevices - Info - Initializing: Filter1
+05/03/19 - 14:31:41.871 - DevicePool.initializeDevices - Info - Initializing: Filter2
+05/03/19 - 14:31:41.962 - DevicePool.initializeDevices - Info - Initializing: BPM2_Vert_Profile
+05/03/19 - 14:31:41.974 - DevicePool.initializeDevices - Info - Initializing: BPM2_Profile_Size
+05/03/19 - 14:31:41.985 - DevicePool.initializeDevices - Info - Initializing: Filter2_SIG
+05/03/19 - 14:31:51.986 - Filter2_SIG.initialize - Warning - ch.psi.pshell.device.DeviceBase$DeviceException: Error creating channel: PINK:AUX1:Filter2_sig_RBV [Filter2_SIG]
+Stack trace:
+ch.psi.pshell.device.DeviceBase$DeviceException: Error creating channel: PINK:AUX1:Filter2_sig_RBV [Filter2_SIG]
+	at ch.psi.pshell.epics.EpicsRegister.doInitialize(EpicsRegister.java:252)
+	at ch.psi.pshell.device.GenericDeviceBase.initialize(GenericDeviceBase.java:188)
+	at ch.psi.pshell.core.DevicePool.initializeDevices(DevicePool.java:509)
+	at ch.psi.pshell.core.DevicePool.initialize(DevicePool.java:43)
+	at ch.psi.pshell.core.Context.restart(Context.java:985)
+	at ch.psi.pshell.core.Context.restart(Context.java:2952)
+	at ch.psi.pshell.ui.Task$Restart.doInBackground(Task.java:368)
+	at ch.psi.pshell.ui.Task$Restart.doInBackground(Task.java:358)
+	at javax.swing.SwingWorker$1.call(SwingWorker.java:295)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at javax.swing.SwingWorker.run(SwingWorker.java:334)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: ch.psi.jcae.ChannelException: Unable to create channel PINK:AUX1:Filter2_sig_RBV
+	at ch.psi.jcae.impl.DefaultChannelService.createChannel(DefaultChannelService.java:158)
+	at ch.psi.pshell.epics.Epics.newChannel(Epics.java:79)
+	at ch.psi.pshell.epics.Epics.newChannel(Epics.java:88)
+	at ch.psi.pshell.epics.Epics.newChannel(Epics.java:92)
+	at ch.psi.pshell.epics.EpicsRegister.doInitialize(EpicsRegister.java:224)
+	... 13 more
+Caused by: gov.aps.jca.CAException: Unable to connect to channel PINK:AUX1:Filter2_sig_RBV
+	at ch.psi.jcae.impl.JCAChannelFactory.createChannel(JCAChannelFactory.java:100)
+	at ch.psi.jcae.impl.DefaultChannelService.createChannel(DefaultChannelService.java:148)
+	... 17 more
+Caused by: gov.aps.jca.CAException: Timout [10000] occured while creating channel PINK:AUX1:Filter2_sig_RBV
+	at ch.psi.jcae.impl.JCAChannelFactory.createChannel(JCAChannelFactory.java:87)
+	... 18 more
+
+05/03/19 - 14:31:51.987 - DevicePool.initializeDevices - Severe - Error initializing: Filter2_SIG
+05/03/19 - 14:31:52.029 - DevicePool.initialize - Info - Finished DevicePool initialization
+05/03/19 - 14:31:52.031 - ScriptManager.<init> - Info - Initializing ScriptManager
+05/03/19 - 14:31:52.037 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+05/03/19 - 14:31:52.289 - Context.lambda$restart$1 - Info - Executed startup script
+05/03/19 - 14:31:52.407 - Context.lambda$restart$1 - Info - Executed local startup script
+05/03/19 - 14:31:57.588 - Context.onCommand - Info - Eval: add_device(ch.psi.pshell.epics.ChannelDouble("U17GAP","U17IT6R:BasePmGap.A"), True) (ui)
+05/03/19 - 14:31:57.595 - DevicePool.addDevice - Info - Adding device: U17GAP
+05/03/19 - 14:32:03.773 - Context.onCommand - Info - Restart (ui)

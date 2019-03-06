@@ -1,0 +1,28 @@
+27/02/19 - 16:34:55.615 - Context.restart - Info - Initializing context
+27/02/19 - 16:34:55.617 - DataManager.initialize - Info - Initializing DataManager
+27/02/19 - 16:34:55.618 - DataManager.initialize - Info - Finished DataManager initialization
+27/02/19 - 16:34:55.619 - Context.restart - Info - Loading Device Pool
+27/02/19 - 16:34:55.619 - DevicePool.initialize - Info - Initializing DevicePool
+27/02/19 - 16:34:55.622 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_RBV
+27/02/19 - 16:34:55.637 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Set
+27/02/19 - 16:34:55.649 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Exec
+27/02/19 - 16:34:55.661 - DevicePool.initializeDevices - Info - Initializing: TFY
+27/02/19 - 16:34:55.674 - DevicePool.initializeDevices - Info - Initializing: Diodes_Sum_Intensity
+27/02/19 - 16:34:55.687 - DevicePool.initializeDevices - Info - Initializing: Sample_Vert
+27/02/19 - 16:34:55.782 - DevicePool.initializeDevices - Info - Initializing: Diode_1
+27/02/19 - 16:34:55.794 - DevicePool.initializeDevices - Info - Initializing: Diode_2
+27/02/19 - 16:34:55.807 - DevicePool.initializeDevices - Info - Initializing: Diode_3
+27/02/19 - 16:34:55.819 - DevicePool.initializeDevices - Info - Initializing: Diode_4
+27/02/19 - 16:34:55.830 - DevicePool.initializeDevices - Info - Initializing: Filter1
+27/02/19 - 16:34:55.923 - DevicePool.initializeDevices - Info - Initializing: Filter2
+27/02/19 - 16:34:56.014 - DevicePool.initializeDevices - Info - Initializing: BPM2_Vert_Profile
+27/02/19 - 16:34:56.027 - DevicePool.initializeDevices - Info - Initializing: BPM2_Profile_Size
+27/02/19 - 16:34:56.039 - DevicePool.initializeDevices - Info - Initializing: Filter2_SIG
+27/02/19 - 16:34:56.115 - DevicePool.initialize - Info - Finished DevicePool initialization
+27/02/19 - 16:34:56.118 - ScriptManager.<init> - Info - Initializing ScriptManager
+27/02/19 - 16:34:56.123 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+27/02/19 - 16:34:56.381 - Context.lambda$restart$1 - Info - Executed startup script
+27/02/19 - 16:34:56.477 - Context.lambda$restart$1 - Info - Executed local startup script
+27/02/19 - 16:35:02.388 - Context.onCommand - Info - Eval: blade.Sample_Env_Blade_Scan(start=0, end=12000, steps=100, interval=0.0) (ui)
+27/02/19 - 16:40:17.559 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/blade_class.py (ui)
+27/02/19 - 16:40:18.571 - Context.onCommand - Info - Restart (ui)

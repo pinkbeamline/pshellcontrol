@@ -1,0 +1,26 @@
+05/03/19 - 16:51:48.654 - Context.restart - Info - Initializing context
+05/03/19 - 16:51:48.655 - DataManager.initialize - Info - Initializing DataManager
+05/03/19 - 16:51:48.657 - DataManager.initialize - Info - Finished DataManager initialization
+05/03/19 - 16:51:48.659 - Context.restart - Info - Loading Device Pool
+05/03/19 - 16:51:48.659 - DevicePool.initialize - Info - Initializing DevicePool
+05/03/19 - 16:51:48.662 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_RBV
+05/03/19 - 16:51:48.679 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Set
+05/03/19 - 16:51:48.691 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Status
+05/03/19 - 16:51:48.711 - DevicePool.initializeDevices - Info - Initializing: TFY
+05/03/19 - 16:51:48.724 - DevicePool.initializeDevices - Info - Initializing: Diodes_Sum_Intensity
+05/03/19 - 16:51:48.737 - DevicePool.initializeDevices - Info - Initializing: Sample_Vert
+05/03/19 - 16:51:48.832 - DevicePool.initializeDevices - Info - Initializing: Diode_1
+05/03/19 - 16:51:48.853 - DevicePool.initializeDevices - Info - Initializing: Diode_2
+05/03/19 - 16:51:48.865 - DevicePool.initializeDevices - Info - Initializing: Diode_3
+05/03/19 - 16:51:48.877 - DevicePool.initializeDevices - Info - Initializing: Diode_4
+05/03/19 - 16:51:48.889 - DevicePool.initializeDevices - Info - Initializing: Filter1
+05/03/19 - 16:51:48.979 - DevicePool.initializeDevices - Info - Initializing: Filter2
+05/03/19 - 16:51:49.070 - DevicePool.initializeDevices - Info - Initializing: BPM2_Vert_Profile
+05/03/19 - 16:51:49.083 - DevicePool.initializeDevices - Info - Initializing: BPM2_Profile_Size
+05/03/19 - 16:51:49.173 - DevicePool.initialize - Info - Finished DevicePool initialization
+05/03/19 - 16:51:49.179 - ScriptManager.<init> - Info - Initializing ScriptManager
+05/03/19 - 16:51:49.184 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+05/03/19 - 16:51:49.466 - Context.lambda$restart$1 - Info - Executed startup script
+05/03/19 - 16:51:49.589 - Context.lambda$restart$1 - Info - Executed local startup script
+05/03/19 - 16:51:52.630 - Context.onCommand - Info - Eval: gap.Scan_with_Exponential_Background(11, 12.5, 0.1, wait=1) (ui)
+05/03/19 - 18:45:48.509 - Context.onCommand - Info - Restart (ui)

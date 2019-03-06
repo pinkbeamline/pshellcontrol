@@ -1,0 +1,22 @@
+30/01/19 - 15:15:48.796 - Context.restart - Info - Initializing context
+30/01/19 - 15:15:48.798 - DataManager.initialize - Info - Initializing DataManager
+30/01/19 - 15:15:48.801 - DataManager.initialize - Info - Finished DataManager initialization
+30/01/19 - 15:15:48.802 - Context.restart - Info - Loading Device Pool
+30/01/19 - 15:15:48.802 - DevicePool.initialize - Info - Initializing DevicePool
+30/01/19 - 15:15:48.807 - DevicePool.initializeDevices - Info - Initializing: IZero_Profile
+30/01/19 - 15:15:48.850 - DevicePool.initializeDevices - Info - Initializing: IZero
+30/01/19 - 15:15:48.862 - DevicePool.initializeDevices - Info - Initializing: TFY_Profile
+30/01/19 - 15:15:48.864 - DevicePool.initializeDevices - Info - Initializing: TFY
+30/01/19 - 15:15:48.876 - DevicePool.initializeDevices - Info - Initializing: GE_AreaDet
+30/01/19 - 15:15:49.058 - DevicePool.initializeDevices - Info - Initializing: GE_FrameID
+30/01/19 - 15:15:49.060 - DevicePool.initializeDevices - Info - Initializing: GE_Raw_Imaging
+30/01/19 - 15:15:49.062 - DevicePool.initializeDevices - Info - Initializing: GE_Raw_Array
+30/01/19 - 15:15:49.066 - DevicePool.initializeDevices - Info - Initializing: GE_BG_Array
+30/01/19 - 15:15:49.108 - DevicePool.initializeDevices - Info - Initializing: GE_BG_SizeY
+30/01/19 - 15:15:49.110 - DevicePool.initializeDevices - Info - Initializing: GE_BG_SizeX
+30/01/19 - 15:15:50.427 - DevicePool.initialize - Info - Finished DevicePool initialization
+30/01/19 - 15:15:50.429 - ScriptManager.<init> - Info - Initializing ScriptManager
+30/01/19 - 15:15:50.434 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+30/01/19 - 15:15:50.971 - Context.lambda$restart$1 - Info - Executed startup script
+30/01/19 - 15:15:51.000 - Context.lambda$restart$1 - Info - Executed local startup script
+30/01/19 - 15:31:44.772 - Context.onCommand - Info - Restart (ui)

@@ -1,0 +1,46 @@
+30/01/19 - 15:12:42.058 - Context.restart - Info - Initializing context
+30/01/19 - 15:12:42.060 - DataManager.initialize - Info - Initializing DataManager
+30/01/19 - 15:12:42.063 - DataManager.initialize - Info - Finished DataManager initialization
+30/01/19 - 15:12:42.063 - Context.restart - Info - Loading Device Pool
+30/01/19 - 15:12:42.063 - DevicePool.initialize - Info - Initializing DevicePool
+30/01/19 - 15:12:42.066 - DevicePool.initializeDevices - Info - Initializing: IZero_Profile
+30/01/19 - 15:12:42.111 - DevicePool.initializeDevices - Info - Initializing: IZero
+30/01/19 - 15:12:42.122 - DevicePool.initializeDevices - Info - Initializing: TFY_Profile
+30/01/19 - 15:12:42.123 - DevicePool.initializeDevices - Info - Initializing: TFY
+30/01/19 - 15:12:42.135 - DevicePool.initializeDevices - Info - Initializing: GE_AreaDet
+30/01/19 - 15:12:42.302 - DevicePool.initializeDevices - Info - Initializing: GE_FrameID
+30/01/19 - 15:12:42.304 - DevicePool.initializeDevices - Info - Initializing: GE_Raw_Array
+30/01/19 - 15:12:42.337 - GE_Raw_Array channel.doSetMonitored - Severe - java.lang.IllegalArgumentException: Size of the monitor exceeds maxArrayBytes (270000 * 8 > 16384)
+Stack trace:
+java.lang.IllegalArgumentException: Size of the monitor exceeds maxArrayBytes (270000 * 8 > 16384)
+	at gov.aps.jca.Channel.checkMonitorSize(Channel.java:681)
+	at com.cosylab.epics.caj.CAJChannel.addMonitor(CAJChannel.java:1042)
+	at ch.psi.jcae.impl.DefaultChannel.attachMonitor(DefaultChannel.java:499)
+	at ch.psi.jcae.impl.DefaultChannel.setMonitored(DefaultChannel.java:454)
+	at ch.psi.pshell.epics.EpicsRegister.doSetMonitored(EpicsRegister.java:134)
+	at ch.psi.pshell.device.GenericDeviceBase.setMonitored(GenericDeviceBase.java:248)
+	at ch.psi.pshell.device.DeviceBase.doSetMonitored(DeviceBase.java:659)
+	at ch.psi.pshell.device.GenericDeviceBase.setMonitored(GenericDeviceBase.java:248)
+	at ch.psi.pshell.core.DevicePool.applyDeviceAttributes(DevicePool.java:529)
+	at ch.psi.pshell.core.DevicePool.applyDeviceAttributes(DevicePool.java:520)
+	at ch.psi.pshell.core.DevicePool.initialize(DevicePool.java:44)
+	at ch.psi.pshell.core.Context.restart(Context.java:985)
+	at ch.psi.pshell.core.Context.restart(Context.java:2952)
+	at ch.psi.pshell.ui.Task$Restart.doInBackground(Task.java:368)
+	at ch.psi.pshell.ui.Task$Restart.doInBackground(Task.java:358)
+	at javax.swing.SwingWorker$1.call(SwingWorker.java:295)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at javax.swing.SwingWorker.run(SwingWorker.java:334)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+30/01/19 - 15:12:42.340 - DevicePool.initialize - Info - Finished DevicePool initialization
+30/01/19 - 15:12:42.343 - ScriptManager.<init> - Info - Initializing ScriptManager
+30/01/19 - 15:12:42.356 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+30/01/19 - 15:12:42.779 - Context.lambda$restart$1 - Info - Executed startup script
+30/01/19 - 15:12:42.796 - Context.lambda$restart$1 - Info - Executed local startup script
+30/01/19 - 15:12:53.344 - App.exit - Info - Aplication exit command by: MainFrame
+30/01/19 - 15:12:53.351 - Context.close - Info - Close
+30/01/19 - 15:12:54.361 - PluginManager.stopPlugins - Info - Stop plugins
+30/01/19 - 15:12:54.375 - App.end - Info - Finished

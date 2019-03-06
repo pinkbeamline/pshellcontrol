@@ -1,0 +1,27 @@
+23/01/19 - 13:02:42.093 - Context.<init> - Info - Process: 29312@pink-shuttle02
+23/01/19 - 13:02:42.095 - Context.<init> - Info - Context: unknown
+23/01/19 - 13:02:42.095 - Context.<init> - Info - Pars: /home/epics/PShell/pshell-1.10.0-fat.jar -home=/home/epics/PShell/pshellcontrol/home -dlaf
+23/01/19 - 13:02:42.096 - Context.<init> - Info - User: epics
+23/01/19 - 13:02:42.096 - Context.<init> - Info - Host: pink-shuttle02
+23/01/19 - 13:02:42.117 - PluginManager.loadExtensionsFolder - Info - Loading extensions folder
+23/01/19 - 13:02:42.118 - DataManager.initialize - Info - Initializing DataManager
+23/01/19 - 13:02:42.127 - DataManager.setProvider - Info - Setting data provider: ch.psi.pshell.data.ProviderHDF5
+23/01/19 - 13:02:42.130 - DataManager.setLayout - Info - Setting data layout: ch.psi.pshell.data.LayoutDefault
+23/01/19 - 13:02:42.133 - DataManager.initialize - Info - Finished DataManager initialization
+23/01/19 - 13:02:42.134 - App.startup - Info - Version: 1.10-SNAPSHOT (build 1812200927-py)
+23/01/19 - 13:02:42.136 - App.startup - Info - Create workbench
+23/01/19 - 13:02:42.967 - PluginManager.loadPluginFolder - Info - Loading plugins folder
+23/01/19 - 13:02:42.979 - PluginManager.startPlugins - Info - Start plugins
+23/01/19 - 13:02:42.980 - Context.onCommand - Info - Restart (ui)
+23/01/19 - 13:02:43.006 - Context.restart - Info - Initializing context
+23/01/19 - 13:02:43.011 - Context.onUserChange - Info - User: Default [administrator] *
+23/01/19 - 13:02:43.015 - Context.restart - Info - Loading Device Pool
+23/01/19 - 13:02:43.015 - DevicePool.initialize - Info - Initializing DevicePool
+23/01/19 - 13:02:43.155 - ScriptManager.<init> - Info - Initializing ScriptManager
+23/01/19 - 13:02:43.788 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+23/01/19 - 13:02:46.721 - Context.lambda$restart$1 - Info - Executed startup script
+23/01/19 - 13:02:46.726 - Context.lambda$restart$1 - Info - Executed local startup script
+23/01/19 - 13:03:53.097 - App.exit - Info - Aplication exit command by: MainFrame
+23/01/19 - 13:03:53.120 - Context.close - Info - Close
+23/01/19 - 13:03:53.122 - PluginManager.stopPlugins - Info - Stop plugins
+23/01/19 - 13:03:53.153 - App.end - Info - Finished

@@ -1,0 +1,38 @@
+08/02/19 - 16:09:05.946 - Context.restart - Info - Initializing context
+08/02/19 - 16:09:05.948 - DataManager.initialize - Info - Initializing DataManager
+08/02/19 - 16:09:05.949 - DataManager.initialize - Info - Finished DataManager initialization
+08/02/19 - 16:09:05.950 - Context.restart - Info - Loading Device Pool
+08/02/19 - 16:09:05.950 - DevicePool.initialize - Info - Initializing DevicePool
+08/02/19 - 16:09:05.959 - DevicePool.initializeDevices - Info - Initializing: TFY
+08/02/19 - 16:09:05.973 - DevicePool.initializeDevices - Info - Initializing: Scatter
+08/02/19 - 16:09:06.076 - DevicePool.initializeDevices - Info - Initializing: Diodes_Sum_Intensity
+08/02/19 - 16:09:06.088 - DevicePool.initializeDevices - Info - Initializing: Sample_Horiz
+08/02/19 - 16:09:06.186 - DevicePool.initializeDevices - Info - Initializing: Sample_Vert
+08/02/19 - 16:09:06.281 - DevicePool.initializeDevices - Info - Initializing: Sample_Vert_Enc
+08/02/19 - 16:09:06.282 - DevicePool.initializeDevices - Info - Initializing: Sample_Horiz_Enc
+08/02/19 - 16:09:06.283 - DevicePool.initializeDevices - Info - Initializing: Sample_Vert_direct
+08/02/19 - 16:09:06.284 - DevicePool.initializeDevices - Info - Initializing: Scatter_Direct
+08/02/19 - 16:09:06.348 - DevicePool.initialize - Info - Finished DevicePool initialization
+08/02/19 - 16:09:06.351 - ScriptManager.<init> - Info - Initializing ScriptManager
+08/02/19 - 16:09:06.354 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+08/02/19 - 16:09:06.724 - Context.lambda$restart$1 - Info - Executed startup script
+08/02/19 - 16:09:06.756 - Context.lambda$restart$1 - Info - Executed local startup script
+08/02/19 - 16:13:49.081 - Context.onCommand - Info - Eval: lscan(Scatter_Direct, Diodes_Sum_Intensity, 6000, 6500, 50.0, 1)              (ui)
+08/02/19 - 16:14:36.785 - Context.onCommand - Info - Eval: lscan(Scatter_Direct, Diodes_Sum_Intensity, 5800, 6700, 20.0, 1)              (ui)
+08/02/19 - 16:15:51.412 - Context.onCommand - Info - Eval: lscan(Scatter_Direct, Diodes_Sum_Intensity, 6000, 7000, 10.0, 1)              (ui)
+08/02/19 - 16:16:46.981 - Context.onCommand - Info - Eval: :abort (ui)
+08/02/19 - 16:16:46.981 - Context.onCommand - Info - Abort (ui)
+08/02/19 - 16:16:46.981 - ScanBase.abort - Info - Aborting: LineScan console-1
+08/02/19 - 16:16:46.981 - ScriptManager.abort - Info - Aborting
+08/02/19 - 16:16:52.549 - Context.onCommand - Info - Eval: lscan(Scatter_Direct, Diodes_Sum_Intensity, 6000, 7000, 10.0, 1)              (ui)
+08/02/19 - 16:21:14.139 - Context.onCommand - Info - Eval: lscan(Scatter_Direct, Diodes_Sum_Intensity, 6400, 6700, 5.0, 1)              (ui)
+08/02/19 - 16:24:21.208 - Context.onCommand - Info - Eval: lscan(Scatter_Direct, Diodes_Sum_Intensity, 5800, 6700, 20.0, 1)  (ui)
+08/02/19 - 16:26:14.218 - Context.onCommand - Info - Eval: lscan(Scatter_Direct, Diodes_Sum_Intensity, 6200, 6900, 10.0, 1)  (ui)
+10/02/19 - 17:27:57.226 - Context.onCommand - Info - Eval: lscan(Scatter_Direct, Diodes_Sum_Intensity, 0, 4000, 1000, 1)  (ui)
+10/02/19 - 17:28:38.586 - Context.onCommand - Info - Eval: :abort (ui)
+10/02/19 - 17:28:38.587 - Context.onCommand - Info - Abort (ui)
+10/02/19 - 17:28:38.587 - ScanBase.abort - Info - Aborting: LineScan console-1
+10/02/19 - 17:28:38.587 - ScriptManager.abort - Info - Aborting
+10/02/19 - 17:28:48.483 - Context.onCommand - Info - Eval: lscan(Scatter_Direct, Diodes_Sum_Intensity, 0, 4000, 4, 1)  (ui)
+10/02/19 - 17:29:14.420 - Context.onCommand - Info - Eval: lscan(Scatter_Direct, Diodes_Sum_Intensity, 0, 32000, 500.0, 1)  (ui)
+13/02/19 - 18:14:20.569 - Context.onCommand - Info - Restart (ui)

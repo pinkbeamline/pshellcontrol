@@ -1,0 +1,23 @@
+14/02/19 - 18:40:55.186 - Context.restart - Info - Initializing context
+14/02/19 - 18:40:55.188 - DataManager.initialize - Info - Initializing DataManager
+14/02/19 - 18:40:55.190 - DataManager.initialize - Info - Finished DataManager initialization
+14/02/19 - 18:40:55.191 - Context.restart - Info - Loading Device Pool
+14/02/19 - 18:40:55.191 - DevicePool.initialize - Info - Initializing DevicePool
+14/02/19 - 18:40:55.193 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_RBV
+14/02/19 - 18:40:55.214 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Set
+14/02/19 - 18:40:55.226 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Exec
+14/02/19 - 18:40:55.237 - DevicePool.initializeDevices - Info - Initializing: Diodes_Sum_Intensity
+14/02/19 - 18:40:55.250 - DevicePool.initializeDevices - Info - Initializing: Filter1
+14/02/19 - 18:40:55.262 - DevicePool.initializeDevices - Info - Initializing: Filter1_RBV
+14/02/19 - 18:40:55.273 - DevicePool.initializeDevices - Info - Initializing: Filter2
+14/02/19 - 18:40:55.284 - DevicePool.initializeDevices - Info - Initializing: Filter2_RBV
+14/02/19 - 18:40:55.296 - DevicePool.initializeDevices - Info - Initializing: BPM2_Vert_Profile
+14/02/19 - 18:40:55.308 - DevicePool.initializeDevices - Info - Initializing: BPM2_Profile_Size
+14/02/19 - 18:40:55.366 - DevicePool.initialize - Info - Finished DevicePool initialization
+14/02/19 - 18:40:55.369 - ScriptManager.<init> - Info - Initializing ScriptManager
+14/02/19 - 18:40:55.384 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+14/02/19 - 18:40:55.720 - Context.lambda$restart$1 - Info - Executed startup script
+14/02/19 - 18:40:55.824 - Context.lambda$restart$1 - Info - Executed local startup script
+14/02/19 - 18:41:10.891 - Context.onCommand - Info - Eval: bpm.BPM1_Vertical_Profile() (ui)
+15/02/19 - 10:00:38.901 - Context.onCommand - Info - Eval: pink.jf_spot_test(10, 20, 2, 4) (ui)
+15/02/19 - 10:24:32.949 - Context.onCommand - Info - Restart (ui)

@@ -1,0 +1,34 @@
+01/03/19 - 16:49:36.840 - Context.restart - Info - Initializing context
+01/03/19 - 16:49:36.843 - DataManager.initialize - Info - Initializing DataManager
+01/03/19 - 16:49:36.844 - DataManager.initialize - Info - Finished DataManager initialization
+01/03/19 - 16:49:36.844 - Context.restart - Info - Loading Device Pool
+01/03/19 - 16:49:36.845 - DevicePool.initialize - Info - Initializing DevicePool
+01/03/19 - 16:49:36.849 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_RBV
+01/03/19 - 16:49:36.864 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Set
+01/03/19 - 16:49:36.876 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Status
+01/03/19 - 16:49:36.897 - DevicePool.initializeDevices - Info - Initializing: TFY
+01/03/19 - 16:49:36.909 - DevicePool.initializeDevices - Info - Initializing: Diodes_Sum_Intensity
+01/03/19 - 16:49:36.920 - DevicePool.initializeDevices - Info - Initializing: Sample_Vert
+01/03/19 - 16:49:37.011 - DevicePool.initializeDevices - Info - Initializing: Diode_1
+01/03/19 - 16:49:37.028 - DevicePool.initializeDevices - Info - Initializing: Diode_2
+01/03/19 - 16:49:37.045 - DevicePool.initializeDevices - Info - Initializing: Diode_3
+01/03/19 - 16:49:37.061 - DevicePool.initializeDevices - Info - Initializing: Diode_4
+01/03/19 - 16:49:37.077 - DevicePool.initializeDevices - Info - Initializing: Filter1
+01/03/19 - 16:49:37.169 - DevicePool.initializeDevices - Info - Initializing: Filter2
+01/03/19 - 16:49:37.263 - DevicePool.initializeDevices - Info - Initializing: BPM2_Vert_Profile
+01/03/19 - 16:49:37.276 - DevicePool.initializeDevices - Info - Initializing: BPM2_Profile_Size
+01/03/19 - 16:49:37.288 - DevicePool.initializeDevices - Info - Initializing: Filter2_SIG
+01/03/19 - 16:49:37.343 - DevicePool.initialize - Info - Finished DevicePool initialization
+01/03/19 - 16:49:37.345 - ScriptManager.<init> - Info - Initializing ScriptManager
+01/03/19 - 16:49:37.351 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+01/03/19 - 16:49:37.615 - Context.lambda$restart$1 - Info - Executed startup script
+01/03/19 - 16:49:37.752 - Context.lambda$restart$1 - Info - Executed local startup script
+01/03/19 - 16:49:41.121 - Context.onCommand - Info - Eval: gap.Scan_with_Exponential_Background(11, 12.5, 0.05, wait=1) (ui)
+01/03/19 - 17:03:27.107 - Context.onCommand - Info - Eval: bpm.BPM3_Vertical_Profile() (ui)
+01/03/19 - 17:07:32.921 - Context.onCommand - Info - Eval: bpm.BPM3_Vertical_Profile() (ui)
+01/03/19 - 17:12:13.759 - Context.onCommand - Info - Eval: gap.Scan_with_Exponential_Background(11, 12.5, 0.05, wait=1) (ui)
+01/03/19 - 17:12:50.449 - Context.onCommand - Info - Eval: :abort (ui)
+01/03/19 - 17:12:50.450 - Context.onCommand - Info - Abort (ui)
+01/03/19 - 17:12:50.450 - ScanBase.abort - Info - Aborting: LineScan gap_exp-1
+01/03/19 - 17:12:50.450 - ScriptManager.abort - Info - Aborting
+01/03/19 - 17:12:53.497 - Context.onCommand - Info - Restart (ui)

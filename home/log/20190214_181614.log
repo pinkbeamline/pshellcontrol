@@ -1,0 +1,65 @@
+14/02/19 - 18:16:15.220 - Context.restart - Info - Initializing context
+14/02/19 - 18:16:15.222 - DataManager.initialize - Info - Initializing DataManager
+14/02/19 - 18:16:15.223 - DataManager.initialize - Info - Finished DataManager initialization
+14/02/19 - 18:16:15.224 - Context.restart - Info - Loading Device Pool
+14/02/19 - 18:16:15.224 - DevicePool.initialize - Info - Initializing DevicePool
+14/02/19 - 18:16:15.230 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_RBV
+14/02/19 - 18:16:15.255 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Set
+14/02/19 - 18:16:15.266 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Exec
+14/02/19 - 18:16:15.278 - DevicePool.initializeDevices - Info - Initializing: Diodes_Sum_Intensity
+14/02/19 - 18:16:15.290 - DevicePool.initializeDevices - Info - Initializing: Filter1
+14/02/19 - 18:16:15.302 - DevicePool.initializeDevices - Info - Initializing: Filter1_RBV
+14/02/19 - 18:16:15.312 - DevicePool.initializeDevices - Info - Initializing: Filter2
+14/02/19 - 18:16:15.324 - DevicePool.initializeDevices - Info - Initializing: Filter2_RBV
+14/02/19 - 18:16:15.335 - DevicePool.initializeDevices - Info - Initializing: BPM2_Vert_Profile
+14/02/19 - 18:16:15.346 - DevicePool.initializeDevices - Info - Initializing: BPM2_Profile_Size
+14/02/19 - 18:16:15.395 - DevicePool.initialize - Info - Finished DevicePool initialization
+14/02/19 - 18:16:15.401 - ScriptManager.<init> - Info - Initializing ScriptManager
+14/02/19 - 18:16:15.403 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+14/02/19 - 18:16:15.861 - Context.lambda$restart$1 - Info - Executed startup script
+14/02/19 - 18:16:15.891 - Context.lambda$restart$1 - Severe - javax.script.ScriptException: SyntaxError: no viable alternative at input 'print' in /home/epics/PShell/pshellcontrol/home/script/shared/bpm_class.py at line number 16 at column number 8
+Stack trace:
+javax.script.ScriptException: SyntaxError: no viable alternative at input 'print' in /home/epics/PShell/pshellcontrol/home/script/shared/bpm_class.py at line number 16 at column number 8
+	at org.python.jsr223.PyScriptEngine.scriptException(PyScriptEngine.java:213)
+	at org.python.jsr223.PyScriptEngine.eval(PyScriptEngine.java:59)
+	at org.python.jsr223.PyScriptEngine.eval(PyScriptEngine.java:64)
+	at javax.script.AbstractScriptEngine.eval(AbstractScriptEngine.java:249)
+	at ch.psi.pshell.scripting.Interpreter.evalFile(Interpreter.java:137)
+	at ch.psi.pshell.scripting.ScriptManager.evalFile(ScriptManager.java:191)
+	at ch.psi.pshell.core.Context.lambda$restart$1(Context.java:1049)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: Traceback (most recent call last):
+  File "<script>", line 6, in <module>
+  File "<script>", line 1641, in run
+  File "/home/epics/PShell/pshellcontrol/home/script/shared/bpm_class.py", line 16
+    print("Inclination: " + str(a) + "\tBackground: " + str(b))
+    ^
+SyntaxError: no viable alternative at input 'print'
+
+	at org.python.core.PyException.doRaise(PyException.java:233)
+	at org.python.core.Py.makeException(Py.java:1565)
+	at org.python.core.Py.makeException(Py.java:1569)
+	at org.python.core.Py.makeException(Py.java:1573)
+	at org.python.pycode._pyx50.run$134(<script>:1642)
+	at org.python.pycode._pyx50.call_function(<script>)
+	at org.python.core.PyTableCode.call(PyTableCode.java:171)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:308)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:132)
+	at org.python.core.PyFunction.__call__(PyFunction.java:413)
+	at org.python.pycode._pyx51.f$0(<script>:9)
+	at org.python.pycode._pyx51.call_function(<script>)
+	at org.python.core.PyTableCode.call(PyTableCode.java:171)
+	at org.python.core.PyCode.call(PyCode.java:18)
+	at org.python.core.Py.runCode(Py.java:1614)
+	at org.python.core.__builtin__.eval(__builtin__.java:497)
+	at org.python.core.__builtin__.eval(__builtin__.java:501)
+	at org.python.util.PythonInterpreter.eval(PythonInterpreter.java:259)
+	at org.python.jsr223.PyScriptEngine.eval(PyScriptEngine.java:57)
+	... 9 more
+
+14/02/19 - 18:16:30.734 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/bpm_class.py (ui)
+14/02/19 - 18:16:53.013 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/bpm_class.py (ui)
+14/02/19 - 18:16:57.428 - Context.onCommand - Info - Restart (ui)

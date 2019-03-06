@@ -1,0 +1,29 @@
+05/03/19 - 15:41:23.993 - Context.restart - Info - Initializing context
+05/03/19 - 15:41:24.012 - DataManager.initialize - Info - Initializing DataManager
+05/03/19 - 15:41:24.014 - DataManager.initialize - Info - Finished DataManager initialization
+05/03/19 - 15:41:24.015 - Context.restart - Info - Loading Device Pool
+05/03/19 - 15:41:24.015 - DevicePool.initialize - Info - Initializing DevicePool
+05/03/19 - 15:41:24.022 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Set
+05/03/19 - 15:41:24.044 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Status
+05/03/19 - 15:41:24.066 - DevicePool.initializeDevices - Info - Initializing: TFY
+05/03/19 - 15:41:24.077 - DevicePool.initializeDevices - Info - Initializing: Diodes_Sum_Intensity
+05/03/19 - 15:41:24.089 - DevicePool.initializeDevices - Info - Initializing: Sample_Vert
+05/03/19 - 15:41:24.180 - DevicePool.initializeDevices - Info - Initializing: Diode_1
+05/03/19 - 15:41:24.197 - DevicePool.initializeDevices - Info - Initializing: Diode_2
+05/03/19 - 15:41:24.212 - DevicePool.initializeDevices - Info - Initializing: Diode_3
+05/03/19 - 15:41:24.224 - DevicePool.initializeDevices - Info - Initializing: Diode_4
+05/03/19 - 15:41:24.236 - DevicePool.initializeDevices - Info - Initializing: Filter1
+05/03/19 - 15:41:24.323 - DevicePool.initializeDevices - Info - Initializing: Filter2
+05/03/19 - 15:41:24.411 - DevicePool.initializeDevices - Info - Initializing: BPM2_Vert_Profile
+05/03/19 - 15:41:24.423 - DevicePool.initializeDevices - Info - Initializing: BPM2_Profile_Size
+05/03/19 - 15:41:24.455 - DevicePool.initialize - Info - Finished DevicePool initialization
+05/03/19 - 15:41:24.457 - ScriptManager.<init> - Info - Initializing ScriptManager
+05/03/19 - 15:41:24.458 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+05/03/19 - 15:41:24.712 - Context.lambda$restart$1 - Info - Executed startup script
+05/03/19 - 15:41:24.830 - Context.lambda$restart$1 - Info - Executed local startup script
+05/03/19 - 16:43:23.346 - Context.onCommand - Info - Eval: bpm.BPM3_Vertical_Profile() (ui)
+05/03/19 - 16:47:23.504 - Context.onCommand - Info - Eval: pink.Save_Beamline_Snapshot() (ui)
+05/03/19 - 16:50:40.173 - Context.onCommand - Info - Eval: pink.Save_Beamline_Snapshot() (ui)
+05/03/19 - 16:50:44.637 - Context.onCommand - Info - Eval: bpm.BPM3_Vertical_Profile() (ui)
+05/03/19 - 16:51:37.374 - Context.onCommand - Info - Eval: gap.Scan_with_Exponential_Background(11, 12.5, 0.1, wait=1) (ui)
+05/03/19 - 16:51:47.229 - Context.onCommand - Info - Restart (ui)
