@@ -1,0 +1,120 @@
+06/03/19 - 10:56:10.014 - Context.restart - Info - Initializing context
+06/03/19 - 10:56:10.015 - DataManager.initialize - Info - Initializing DataManager
+06/03/19 - 10:56:10.017 - DataManager.initialize - Info - Finished DataManager initialization
+06/03/19 - 10:56:10.017 - Context.restart - Info - Loading Device Pool
+06/03/19 - 10:56:10.017 - DevicePool.initialize - Info - Initializing DevicePool
+06/03/19 - 10:56:10.021 - Config.load - Info - java.io.FileNotFoundException: /home/epics/PShell/pshellcontrol/home/devices/SEC_el_x.properties (No such file or directory)
+Stack trace:
+java.io.FileNotFoundException: /home/epics/PShell/pshellcontrol/home/devices/SEC_el_x.properties (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at java.io.FileInputStream.<init>(FileInputStream.java:93)
+	at ch.psi.utils.Config.load(Config.java:171)
+	at ch.psi.pshell.device.GenericDeviceBase.<init>(GenericDeviceBase.java:63)
+	at ch.psi.pshell.device.DeviceBase.<init>(DeviceBase.java:46)
+	at ch.psi.pshell.device.RegisterBase.<init>(RegisterBase.java:24)
+	at ch.psi.pshell.device.ProcessVariableBase.<init>(ProcessVariableBase.java:11)
+	at ch.psi.pshell.device.ControlledVariableBase.<init>(ControlledVariableBase.java:13)
+	at ch.psi.pshell.device.PositionerBase.<init>(PositionerBase.java:15)
+	at ch.psi.pshell.device.MotorBase.<init>(MotorBase.java:15)
+	at ch.psi.pshell.epics.Motor.<init>(Motor.java:47)
+	at sun.reflect.GeneratedConstructorAccessor72.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at ch.psi.pshell.core.DevicePool.load(DevicePool.java:223)
+	at ch.psi.pshell.core.DevicePool.initialize(DevicePool.java:42)
+	at ch.psi.pshell.core.Context.restart(Context.java:985)
+	at ch.psi.pshell.core.Context.restart(Context.java:2952)
+	at ch.psi.pshell.ui.Task$Restart.doInBackground(Task.java:368)
+	at ch.psi.pshell.ui.Task$Restart.doInBackground(Task.java:358)
+	at javax.swing.SwingWorker$1.call(SwingWorker.java:295)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at javax.swing.SwingWorker.run(SwingWorker.java:334)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+06/03/19 - 10:56:10.022 - Config.load - Info - java.io.FileNotFoundException: /home/epics/PShell/pshellcontrol/home/devices/SEC_el_y.properties (No such file or directory)
+Stack trace:
+java.io.FileNotFoundException: /home/epics/PShell/pshellcontrol/home/devices/SEC_el_y.properties (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at java.io.FileInputStream.<init>(FileInputStream.java:93)
+	at ch.psi.utils.Config.load(Config.java:171)
+	at ch.psi.pshell.device.GenericDeviceBase.<init>(GenericDeviceBase.java:63)
+	at ch.psi.pshell.device.DeviceBase.<init>(DeviceBase.java:46)
+	at ch.psi.pshell.device.RegisterBase.<init>(RegisterBase.java:24)
+	at ch.psi.pshell.device.ProcessVariableBase.<init>(ProcessVariableBase.java:11)
+	at ch.psi.pshell.device.ControlledVariableBase.<init>(ControlledVariableBase.java:13)
+	at ch.psi.pshell.device.PositionerBase.<init>(PositionerBase.java:15)
+	at ch.psi.pshell.device.MotorBase.<init>(MotorBase.java:15)
+	at ch.psi.pshell.epics.Motor.<init>(Motor.java:47)
+	at sun.reflect.GeneratedConstructorAccessor72.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at ch.psi.pshell.core.DevicePool.load(DevicePool.java:223)
+	at ch.psi.pshell.core.DevicePool.initialize(DevicePool.java:42)
+	at ch.psi.pshell.core.Context.restart(Context.java:985)
+	at ch.psi.pshell.core.Context.restart(Context.java:2952)
+	at ch.psi.pshell.ui.Task$Restart.doInBackground(Task.java:368)
+	at ch.psi.pshell.ui.Task$Restart.doInBackground(Task.java:358)
+	at javax.swing.SwingWorker$1.call(SwingWorker.java:295)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at javax.swing.SwingWorker.run(SwingWorker.java:334)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+06/03/19 - 10:56:10.023 - DevicePool.initializeDevices - Info - Initializing: IZero_Profile
+06/03/19 - 10:56:10.060 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_RBV
+06/03/19 - 10:56:10.072 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Set
+06/03/19 - 10:56:10.086 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Status
+06/03/19 - 10:56:10.108 - DevicePool.initializeDevices - Info - Initializing: IZero
+06/03/19 - 10:56:10.126 - DevicePool.initializeDevices - Info - Initializing: TFY_Profile
+06/03/19 - 10:56:10.176 - DevicePool.initializeDevices - Info - Initializing: TFY
+06/03/19 - 10:56:10.188 - DevicePool.initializeDevices - Info - Initializing: GE_AreaDet
+06/03/19 - 10:56:10.351 - DevicePool.initializeDevices - Info - Initializing: GE_FrameID
+06/03/19 - 10:56:10.352 - DevicePool.initializeDevices - Info - Initializing: GE_Raw_Imaging
+06/03/19 - 10:56:10.353 - DevicePool.initializeDevices - Info - Initializing: GE_Raw_Array
+06/03/19 - 10:56:10.354 - DevicePool.initializeDevices - Info - Initializing: GE_BG_Array
+06/03/19 - 10:56:10.388 - DevicePool.initializeDevices - Info - Initializing: GE_BG_SizeY
+06/03/19 - 10:56:10.388 - DevicePool.initializeDevices - Info - Initializing: GE_BG_SizeX
+06/03/19 - 10:56:10.389 - DevicePool.initializeDevices - Info - Initializing: GE_ROI_Array
+06/03/19 - 10:56:10.423 - DevicePool.initializeDevices - Info - Initializing: GE_ROI_SizeY
+06/03/19 - 10:56:10.435 - DevicePool.initializeDevices - Info - Initializing: GE_ROI_SizeX
+06/03/19 - 10:56:10.445 - DevicePool.initializeDevices - Info - Initializing: GE_ROI_Line
+06/03/19 - 10:56:10.457 - DevicePool.initializeDevices - Info - Initializing: GE_Spectrum
+06/03/19 - 10:56:10.492 - DevicePool.initializeDevices - Info - Initializing: GE_Spectrum_Sum
+06/03/19 - 10:56:10.527 - DevicePool.initializeDevices - Info - Initializing: GE_Spectrum_Conv
+06/03/19 - 10:56:10.539 - DevicePool.initializeDevices - Info - Initializing: GE_Sensor_Temp
+06/03/19 - 10:56:10.550 - DevicePool.initializeDevices - Info - Initializing: Scan_Progress
+06/03/19 - 10:56:10.561 - DevicePool.initializeDevices - Info - Initializing: Press_Diag_PV
+06/03/19 - 10:56:10.574 - DevicePool.initializeDevices - Info - Initializing: Press_Diag_HV
+06/03/19 - 10:56:10.586 - DevicePool.initializeDevices - Info - Initializing: Press_Spec_PV
+06/03/19 - 10:56:10.597 - DevicePool.initializeDevices - Info - Initializing: Press_Spec_HV
+06/03/19 - 10:56:10.609 - DevicePool.initializeDevices - Info - Initializing: Press_Sample_Ch
+06/03/19 - 10:56:10.621 - DevicePool.initializeDevices - Info - Initializing: Diodes_Sum_Intensity
+06/03/19 - 10:56:10.622 - DevicePool.initializeDevices - Info - Initializing: VH_Diode
+06/03/19 - 10:56:10.622 - DevicePool.initializeDevices - Info - Initializing: SEC_el_x
+06/03/19 - 10:56:10.796 - DevicePool.initializeDevices - Info - Initializing: SEC_el_y
+06/03/19 - 10:56:10.966 - DevicePool.initializeDevices - Info - Initializing: SEC_el_y_Enc
+06/03/19 - 10:56:10.967 - DevicePool.initializeDevices - Info - Initializing: SEC_el_x_Enc
+06/03/19 - 10:56:10.967 - DevicePool.initializeDevices - Info - Initializing: Diode_1
+06/03/19 - 10:56:10.986 - DevicePool.initializeDevices - Info - Initializing: Diode_2
+06/03/19 - 10:56:11.000 - DevicePool.initializeDevices - Info - Initializing: Diode_3
+06/03/19 - 10:56:11.012 - DevicePool.initializeDevices - Info - Initializing: Diode_4
+06/03/19 - 10:56:11.023 - DevicePool.initializeDevices - Info - Initializing: Filter1
+06/03/19 - 10:56:11.114 - DevicePool.initializeDevices - Info - Initializing: Filter2
+06/03/19 - 10:56:11.203 - DevicePool.initializeDevices - Info - Initializing: BPM2_Vert_Profile
+06/03/19 - 10:56:11.222 - DevicePool.initializeDevices - Info - Initializing: BPM2_Profile_Size
+06/03/19 - 10:56:11.477 - DevicePool.initialize - Info - Finished DevicePool initialization
+06/03/19 - 10:56:11.478 - ScriptManager.<init> - Info - Initializing ScriptManager
+06/03/19 - 10:56:11.482 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+06/03/19 - 10:56:11.750 - Context.lambda$restart$1 - Info - Executed startup script
+06/03/19 - 10:56:11.879 - DevicePool.addDevice - Info - Adding device: GE_BG_Image
+06/03/19 - 10:56:11.880 - DevicePool.addDevice - Info - Adding device: GE_ROI_Image
+06/03/19 - 10:56:11.880 - DevicePool.addDevice - Info - Adding device: GE_Raw_Image
+06/03/19 - 10:56:12.886 - Context.lambda$restart$1 - Info - Executed local startup script
+06/03/19 - 10:58:41.403 - Context.onCommand - Info - Restart (ui)

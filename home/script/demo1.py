@@ -1,3 +1,8 @@
-while(1):
-    run("demo.py")
-    sleep(5)
+SEC_el_y.move(-6000.0)
+print("ok")
+SEC_el_y.move(6000.0)
+print("ok")
+SEC_el_y.move(-6000.0)
+print("ok")
+SEC_el_y.move(6000.0)
+print("ok")

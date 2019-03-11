@@ -53,3 +53,4 @@
 06/03/19 - 10:17:43.286 - DevicePool.addDevice - Info - Adding device: GE_ROI_Image
 06/03/19 - 10:17:43.286 - DevicePool.addDevice - Info - Adding device: GE_Raw_Image
 06/03/19 - 10:17:44.292 - Context.lambda$restart$1 - Info - Executed local startup script
+06/03/19 - 10:52:31.722 - Context.onCommand - Info - Restart (ui)

@@ -1,0 +1,97 @@
+07/03/19 - 11:45:12.170 - Context.restart - Info - Initializing context
+07/03/19 - 11:45:12.171 - DataManager.initialize - Info - Initializing DataManager
+07/03/19 - 11:45:12.172 - DataManager.initialize - Info - Finished DataManager initialization
+07/03/19 - 11:45:12.172 - Context.restart - Info - Loading Device Pool
+07/03/19 - 11:45:12.172 - DevicePool.initialize - Info - Initializing DevicePool
+07/03/19 - 11:45:12.177 - DevicePool.initializeDevices - Info - Initializing: IZero_Profile
+07/03/19 - 11:45:12.216 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_RBV
+07/03/19 - 11:45:12.230 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Set
+07/03/19 - 11:45:12.242 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Status
+07/03/19 - 11:45:12.265 - DevicePool.initializeDevices - Info - Initializing: IZero
+07/03/19 - 11:45:12.277 - DevicePool.initializeDevices - Info - Initializing: TFY_Profile
+07/03/19 - 11:45:12.314 - DevicePool.initializeDevices - Info - Initializing: TFY
+07/03/19 - 11:45:12.326 - DevicePool.initializeDevices - Info - Initializing: GE_AreaDet
+07/03/19 - 11:45:12.462 - DevicePool.initializeDevices - Info - Initializing: GE_FrameID
+07/03/19 - 11:45:12.462 - DevicePool.initializeDevices - Info - Initializing: GE_Raw_Imaging
+07/03/19 - 11:45:12.462 - DevicePool.initializeDevices - Info - Initializing: GE_Raw_Array
+07/03/19 - 11:45:12.463 - DevicePool.initializeDevices - Info - Initializing: GE_BG_Array
+07/03/19 - 11:45:12.498 - DevicePool.initializeDevices - Info - Initializing: GE_BG_SizeY
+07/03/19 - 11:45:12.499 - DevicePool.initializeDevices - Info - Initializing: GE_BG_SizeX
+07/03/19 - 11:45:12.499 - DevicePool.initializeDevices - Info - Initializing: GE_ROI_Array
+07/03/19 - 11:45:12.533 - DevicePool.initializeDevices - Info - Initializing: GE_ROI_SizeY
+07/03/19 - 11:45:12.545 - DevicePool.initializeDevices - Info - Initializing: GE_ROI_SizeX
+07/03/19 - 11:45:12.557 - DevicePool.initializeDevices - Info - Initializing: GE_ROI_Line
+07/03/19 - 11:45:12.568 - DevicePool.initializeDevices - Info - Initializing: GE_Spectrum
+07/03/19 - 11:45:12.603 - DevicePool.initializeDevices - Info - Initializing: GE_Spectrum_Sum
+07/03/19 - 11:45:12.637 - DevicePool.initializeDevices - Info - Initializing: GE_Spectrum_Conv
+07/03/19 - 11:45:12.649 - DevicePool.initializeDevices - Info - Initializing: GE_Sensor_Temp
+07/03/19 - 11:45:12.660 - DevicePool.initializeDevices - Info - Initializing: Scan_Progress
+07/03/19 - 11:45:12.671 - DevicePool.initializeDevices - Info - Initializing: Press_Diag_PV
+07/03/19 - 11:45:12.683 - DevicePool.initializeDevices - Info - Initializing: Press_Diag_HV
+07/03/19 - 11:45:12.695 - DevicePool.initializeDevices - Info - Initializing: Press_Spec_PV
+07/03/19 - 11:45:12.707 - DevicePool.initializeDevices - Info - Initializing: Press_Spec_HV
+07/03/19 - 11:45:12.719 - DevicePool.initializeDevices - Info - Initializing: Press_Sample_Ch
+07/03/19 - 11:45:12.730 - DevicePool.initializeDevices - Info - Initializing: Diodes_Sum_Intensity
+07/03/19 - 11:45:12.731 - DevicePool.initializeDevices - Info - Initializing: VH_Diode
+07/03/19 - 11:45:12.731 - DevicePool.initializeDevices - Info - Initializing: SEC_el_x
+07/03/19 - 11:45:12.821 - DevicePool.initializeDevices - Info - Initializing: SEC_el_y
+07/03/19 - 11:45:12.913 - DevicePool.initializeDevices - Info - Initializing: SEC_el_y_Enc
+07/03/19 - 11:45:12.914 - DevicePool.initializeDevices - Info - Initializing: SEC_el_x_Enc
+07/03/19 - 11:45:12.914 - DevicePool.initializeDevices - Info - Initializing: Diode_1
+07/03/19 - 11:45:12.926 - DevicePool.initializeDevices - Info - Initializing: Diode_2
+07/03/19 - 11:45:12.937 - DevicePool.initializeDevices - Info - Initializing: Diode_3
+07/03/19 - 11:45:12.949 - DevicePool.initializeDevices - Info - Initializing: Diode_4
+07/03/19 - 11:45:12.960 - DevicePool.initializeDevices - Info - Initializing: Filter1
+07/03/19 - 11:45:13.048 - DevicePool.initializeDevices - Info - Initializing: Filter2
+07/03/19 - 11:45:13.134 - DevicePool.initializeDevices - Info - Initializing: BPM2_Vert_Profile
+07/03/19 - 11:45:13.145 - DevicePool.initializeDevices - Info - Initializing: BPM2_Profile_Size
+07/03/19 - 11:45:13.157 - DevicePool.initializeDevices - Info - Initializing: ring_current
+07/03/19 - 11:45:13.170 - DevicePool.initializeDevices - Info - Initializing: GE_Trigger_PV
+07/03/19 - 11:45:13.422 - DevicePool.initialize - Info - Finished DevicePool initialization
+07/03/19 - 11:45:13.425 - ScriptManager.<init> - Info - Initializing ScriptManager
+07/03/19 - 11:45:13.431 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+07/03/19 - 11:45:13.761 - Context.lambda$restart$1 - Info - Executed startup script
+07/03/19 - 11:45:13.853 - Context.lambda$restart$1 - Severe - javax.script.ScriptException: SyntaxError: no viable alternative at input 'for' in /home/epics/PShell/pshellcontrol/home/script/shared/blade_class.py at line number 37 at column number 24
+Stack trace:
+javax.script.ScriptException: SyntaxError: no viable alternative at input 'for' in /home/epics/PShell/pshellcontrol/home/script/shared/blade_class.py at line number 37 at column number 24
+	at org.python.jsr223.PyScriptEngine.scriptException(PyScriptEngine.java:213)
+	at org.python.jsr223.PyScriptEngine.eval(PyScriptEngine.java:59)
+	at org.python.jsr223.PyScriptEngine.eval(PyScriptEngine.java:64)
+	at javax.script.AbstractScriptEngine.eval(AbstractScriptEngine.java:249)
+	at ch.psi.pshell.scripting.Interpreter.evalFile(Interpreter.java:137)
+	at ch.psi.pshell.scripting.ScriptManager.evalFile(ScriptManager.java:191)
+	at ch.psi.pshell.core.Context.lambda$restart$1(Context.java:1049)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: Traceback (most recent call last):
+  File "<script>", line 7, in <module>
+  File "<script>", line 1641, in run
+  File "/home/epics/PShell/pshellcontrol/home/script/shared/blade_class.py", line 37
+    dt = [-i in for i in dt]
+               ^
+SyntaxError: no viable alternative at input 'for'
+
+	at org.python.core.PyException.doRaise(PyException.java:233)
+	at org.python.core.Py.makeException(Py.java:1565)
+	at org.python.core.Py.makeException(Py.java:1569)
+	at org.python.core.Py.makeException(Py.java:1573)
+	at org.python.pycode._pyx1123.run$134(<script>:1642)
+	at org.python.pycode._pyx1123.call_function(<script>)
+	at org.python.core.PyTableCode.call(PyTableCode.java:171)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:308)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:132)
+	at org.python.core.PyFunction.__call__(PyFunction.java:413)
+	at org.python.pycode._pyx1124.f$0(<script>:16)
+	at org.python.pycode._pyx1124.call_function(<script>)
+	at org.python.core.PyTableCode.call(PyTableCode.java:171)
+	at org.python.core.PyCode.call(PyCode.java:18)
+	at org.python.core.Py.runCode(Py.java:1614)
+	at org.python.core.__builtin__.eval(__builtin__.java:497)
+	at org.python.core.__builtin__.eval(__builtin__.java:501)
+	at org.python.util.PythonInterpreter.eval(PythonInterpreter.java:259)
+	at org.python.jsr223.PyScriptEngine.eval(PyScriptEngine.java:57)
+	... 9 more
+
+07/03/19 - 11:55:22.519 - Context.onCommand - Info - Restart (ui)

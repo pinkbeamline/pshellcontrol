@@ -1,0 +1,69 @@
+06/03/19 - 18:19:30.879 - Context.restart - Info - Initializing context
+06/03/19 - 18:19:30.881 - DataManager.initialize - Info - Initializing DataManager
+06/03/19 - 18:19:30.883 - DataManager.initialize - Info - Finished DataManager initialization
+06/03/19 - 18:19:30.883 - Context.restart - Info - Loading Device Pool
+06/03/19 - 18:19:30.883 - DevicePool.initialize - Info - Initializing DevicePool
+06/03/19 - 18:19:30.891 - DevicePool.initializeDevices - Info - Initializing: IZero_Profile
+06/03/19 - 18:19:30.932 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_RBV
+06/03/19 - 18:19:30.945 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Set
+06/03/19 - 18:19:30.956 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Status
+06/03/19 - 18:19:30.977 - DevicePool.initializeDevices - Info - Initializing: IZero
+06/03/19 - 18:19:30.996 - DevicePool.initializeDevices - Info - Initializing: TFY_Profile
+06/03/19 - 18:19:31.061 - DevicePool.initializeDevices - Info - Initializing: TFY
+06/03/19 - 18:19:31.072 - DevicePool.initializeDevices - Info - Initializing: GE_AreaDet
+06/03/19 - 18:19:31.227 - DevicePool.initializeDevices - Info - Initializing: GE_FrameID
+06/03/19 - 18:19:31.228 - DevicePool.initializeDevices - Info - Initializing: GE_Raw_Imaging
+06/03/19 - 18:19:31.228 - DevicePool.initializeDevices - Info - Initializing: GE_Raw_Array
+06/03/19 - 18:19:31.230 - DevicePool.initializeDevices - Info - Initializing: GE_BG_Array
+06/03/19 - 18:19:31.265 - DevicePool.initializeDevices - Info - Initializing: GE_BG_SizeY
+06/03/19 - 18:19:31.265 - DevicePool.initializeDevices - Info - Initializing: GE_BG_SizeX
+06/03/19 - 18:19:31.266 - DevicePool.initializeDevices - Info - Initializing: GE_ROI_Array
+06/03/19 - 18:19:31.304 - DevicePool.initializeDevices - Info - Initializing: GE_ROI_SizeY
+06/03/19 - 18:19:31.315 - DevicePool.initializeDevices - Info - Initializing: GE_ROI_SizeX
+06/03/19 - 18:19:31.326 - DevicePool.initializeDevices - Info - Initializing: GE_ROI_Line
+06/03/19 - 18:19:31.337 - DevicePool.initializeDevices - Info - Initializing: GE_Spectrum
+06/03/19 - 18:19:31.370 - DevicePool.initializeDevices - Info - Initializing: GE_Spectrum_Sum
+06/03/19 - 18:19:31.416 - DevicePool.initializeDevices - Info - Initializing: GE_Spectrum_Conv
+06/03/19 - 18:19:31.430 - DevicePool.initializeDevices - Info - Initializing: GE_Sensor_Temp
+06/03/19 - 18:19:31.442 - DevicePool.initializeDevices - Info - Initializing: Scan_Progress
+06/03/19 - 18:19:31.453 - DevicePool.initializeDevices - Info - Initializing: Press_Diag_PV
+06/03/19 - 18:19:31.465 - DevicePool.initializeDevices - Info - Initializing: Press_Diag_HV
+06/03/19 - 18:19:31.476 - DevicePool.initializeDevices - Info - Initializing: Press_Spec_PV
+06/03/19 - 18:19:31.487 - DevicePool.initializeDevices - Info - Initializing: Press_Spec_HV
+06/03/19 - 18:19:31.498 - DevicePool.initializeDevices - Info - Initializing: Press_Sample_Ch
+06/03/19 - 18:19:31.510 - DevicePool.initializeDevices - Info - Initializing: Diodes_Sum_Intensity
+06/03/19 - 18:19:31.510 - DevicePool.initializeDevices - Info - Initializing: VH_Diode
+06/03/19 - 18:19:31.510 - DevicePool.initializeDevices - Info - Initializing: SEC_el_x
+06/03/19 - 18:19:31.600 - DevicePool.initializeDevices - Info - Initializing: SEC_el_y
+06/03/19 - 18:19:31.690 - DevicePool.initializeDevices - Info - Initializing: SEC_el_y_Enc
+06/03/19 - 18:19:31.691 - DevicePool.initializeDevices - Info - Initializing: SEC_el_x_Enc
+06/03/19 - 18:19:31.691 - DevicePool.initializeDevices - Info - Initializing: Diode_1
+06/03/19 - 18:19:31.703 - DevicePool.initializeDevices - Info - Initializing: Diode_2
+06/03/19 - 18:19:31.715 - DevicePool.initializeDevices - Info - Initializing: Diode_3
+06/03/19 - 18:19:31.727 - DevicePool.initializeDevices - Info - Initializing: Diode_4
+06/03/19 - 18:19:31.738 - DevicePool.initializeDevices - Info - Initializing: Filter1
+06/03/19 - 18:19:31.829 - DevicePool.initializeDevices - Info - Initializing: Filter2
+06/03/19 - 18:19:31.922 - DevicePool.initializeDevices - Info - Initializing: BPM2_Vert_Profile
+06/03/19 - 18:19:31.934 - DevicePool.initializeDevices - Info - Initializing: BPM2_Profile_Size
+06/03/19 - 18:19:31.945 - DevicePool.initializeDevices - Info - Initializing: ring_current
+06/03/19 - 18:19:32.249 - DevicePool.initialize - Info - Finished DevicePool initialization
+06/03/19 - 18:19:32.250 - ScriptManager.<init> - Info - Initializing ScriptManager
+06/03/19 - 18:19:32.253 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+06/03/19 - 18:19:32.520 - Context.lambda$restart$1 - Info - Executed startup script
+06/03/19 - 18:19:32.640 - DevicePool.addDevice - Info - Adding device: GE_BG_Image
+06/03/19 - 18:19:32.640 - DevicePool.addDevice - Info - Adding device: GE_ROI_Image
+06/03/19 - 18:19:32.640 - DevicePool.addDevice - Info - Adding device: GE_Raw_Image
+06/03/19 - 18:19:33.685 - Context.lambda$restart$1 - Info - Executed local startup script
+06/03/19 - 18:21:08.735 - Context.onCommand - Info - Eval: blade.Sample_Env_Blade_Scan(start=1500, end=2500, steps=50.0, interval=0.5) (ui)
+06/03/19 - 18:22:01.031 - Context.onCommand - Info - Eval: :abort (ui)
+06/03/19 - 18:22:01.032 - Context.onCommand - Info - Abort (ui)
+06/03/19 - 18:22:01.688 - Context.onCommand - Info - Eval:  (ui)
+06/03/19 - 18:22:01.808 - Context.onCommand - Info - Eval:  (ui)
+06/03/19 - 18:22:01.928 - Context.onCommand - Info - Eval:  (ui)
+06/03/19 - 18:22:03.656 - Context.onCommand - Info - Eval: :abort (ui)
+06/03/19 - 18:22:03.656 - Context.onCommand - Info - Abort (ui)
+06/03/19 - 18:22:06.376 - Context.onCommand - Info - Eval: blade.Sample_Env_Blade_Scan(start=1500, end=2500, steps=50.0, interval=0.5) (ui)
+06/03/19 - 18:22:53.913 - Context.onCommand - Info - Eval: blade.Sample_Env_Blade_Scan(start=1500, end=2500, steps=50.0, interval=0.5) (ui)
+06/03/19 - 18:27:03.007 - Context.onCommand - Info - Eval: blade.Sample_Env_Blade_Scan(start=1500, end=2500, steps=50.0, interval=0.5) (ui)
+06/03/19 - 18:28:03.025 - Context.onCommand - Info - Eval: blade.Sample_Env_Blade_Scan(start=1750, end=2200, steps=5.0, interval=0.5) (ui)
+07/03/19 - 11:44:01.432 - Context.onCommand - Info - Restart (ui)
