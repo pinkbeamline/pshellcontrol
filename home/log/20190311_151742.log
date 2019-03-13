@@ -1,0 +1,97 @@
+11/03/19 - 15:17:42.993 - Context.restart - Info - Initializing context
+11/03/19 - 15:17:42.996 - DataManager.initialize - Info - Initializing DataManager
+11/03/19 - 15:17:42.997 - DataManager.initialize - Info - Finished DataManager initialization
+11/03/19 - 15:17:42.998 - Context.restart - Info - Loading Device Pool
+11/03/19 - 15:17:42.998 - DevicePool.initialize - Info - Initializing DevicePool
+11/03/19 - 15:17:43.010 - DevicePool.initializeDevices - Info - Initializing: IZero_Profile
+11/03/19 - 15:17:43.048 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_RBV
+11/03/19 - 15:17:43.064 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Set
+11/03/19 - 15:17:43.077 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Status
+11/03/19 - 15:17:43.101 - DevicePool.initializeDevices - Info - Initializing: IZero
+11/03/19 - 15:17:43.112 - DevicePool.initializeDevices - Info - Initializing: TFY_Profile
+11/03/19 - 15:17:43.151 - DevicePool.initializeDevices - Info - Initializing: TFY
+11/03/19 - 15:17:43.163 - DevicePool.initializeDevices - Info - Initializing: GE_AreaDet
+11/03/19 - 15:17:43.315 - DevicePool.initializeDevices - Info - Initializing: GE_FrameID
+11/03/19 - 15:17:43.315 - DevicePool.initializeDevices - Info - Initializing: GE_Raw_Imaging
+11/03/19 - 15:17:43.316 - DevicePool.initializeDevices - Info - Initializing: GE_Raw_Array
+11/03/19 - 15:17:43.317 - DevicePool.initializeDevices - Info - Initializing: GE_BG_Array
+11/03/19 - 15:17:43.352 - DevicePool.initializeDevices - Info - Initializing: GE_BG_SizeY
+11/03/19 - 15:17:43.353 - DevicePool.initializeDevices - Info - Initializing: GE_BG_SizeX
+11/03/19 - 15:17:43.354 - DevicePool.initializeDevices - Info - Initializing: GE_ROI_Array
+11/03/19 - 15:17:43.389 - DevicePool.initializeDevices - Info - Initializing: GE_ROI_SizeY
+11/03/19 - 15:17:43.401 - DevicePool.initializeDevices - Info - Initializing: GE_ROI_SizeX
+11/03/19 - 15:17:43.413 - DevicePool.initializeDevices - Info - Initializing: GE_ROI_Line
+11/03/19 - 15:17:43.426 - DevicePool.initializeDevices - Info - Initializing: GE_Spectrum
+11/03/19 - 15:17:43.461 - DevicePool.initializeDevices - Info - Initializing: GE_Spectrum_Sum
+11/03/19 - 15:17:43.498 - DevicePool.initializeDevices - Info - Initializing: GE_Spectrum_Conv
+11/03/19 - 15:17:43.510 - DevicePool.initializeDevices - Info - Initializing: GE_Sensor_Temp
+11/03/19 - 15:17:43.522 - DevicePool.initializeDevices - Info - Initializing: Scan_Progress
+11/03/19 - 15:17:43.536 - DevicePool.initializeDevices - Info - Initializing: Press_Diag_PV
+11/03/19 - 15:17:43.548 - DevicePool.initializeDevices - Info - Initializing: Press_Diag_HV
+11/03/19 - 15:17:43.560 - DevicePool.initializeDevices - Info - Initializing: Press_Spec_PV
+11/03/19 - 15:17:43.572 - DevicePool.initializeDevices - Info - Initializing: Press_Spec_HV
+11/03/19 - 15:17:43.583 - DevicePool.initializeDevices - Info - Initializing: Press_Sample_Ch
+11/03/19 - 15:17:43.595 - DevicePool.initializeDevices - Info - Initializing: Diodes_Sum_Intensity
+11/03/19 - 15:17:43.596 - DevicePool.initializeDevices - Info - Initializing: VH_Diode
+11/03/19 - 15:17:43.597 - DevicePool.initializeDevices - Info - Initializing: SEC_el_x
+11/03/19 - 15:17:43.691 - DevicePool.initializeDevices - Info - Initializing: SEC_el_y
+11/03/19 - 15:17:43.783 - DevicePool.initializeDevices - Info - Initializing: SEC_el_y_Enc
+11/03/19 - 15:17:43.784 - DevicePool.initializeDevices - Info - Initializing: SEC_el_x_Enc
+11/03/19 - 15:17:43.785 - DevicePool.initializeDevices - Info - Initializing: Diode_1
+11/03/19 - 15:17:43.797 - DevicePool.initializeDevices - Info - Initializing: Diode_2
+11/03/19 - 15:17:43.809 - DevicePool.initializeDevices - Info - Initializing: Diode_3
+11/03/19 - 15:17:43.822 - DevicePool.initializeDevices - Info - Initializing: Diode_4
+11/03/19 - 15:17:43.834 - DevicePool.initializeDevices - Info - Initializing: Filter1
+11/03/19 - 15:17:43.927 - DevicePool.initializeDevices - Info - Initializing: Filter2
+11/03/19 - 15:17:44.020 - DevicePool.initializeDevices - Info - Initializing: BPM2_Vert_Profile
+11/03/19 - 15:17:44.033 - DevicePool.initializeDevices - Info - Initializing: BPM2_Profile_Size
+11/03/19 - 15:17:44.045 - DevicePool.initializeDevices - Info - Initializing: ring_current
+11/03/19 - 15:17:44.309 - DevicePool.initialize - Info - Finished DevicePool initialization
+11/03/19 - 15:17:44.310 - ScriptManager.<init> - Info - Initializing ScriptManager
+11/03/19 - 15:17:44.313 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+11/03/19 - 15:17:44.743 - Context.lambda$restart$1 - Info - Executed startup script
+11/03/19 - 15:17:44.764 - Context.lambda$restart$1 - Severe - javax.script.ScriptException: SyntaxError: mismatched input ')' expecting COLON in /home/epics/PShell/pshellcontrol/home/script/shared/pink_class.py at line number 252 at column number 39
+Stack trace:
+javax.script.ScriptException: SyntaxError: mismatched input ')' expecting COLON in /home/epics/PShell/pshellcontrol/home/script/shared/pink_class.py at line number 252 at column number 39
+	at org.python.jsr223.PyScriptEngine.scriptException(PyScriptEngine.java:213)
+	at org.python.jsr223.PyScriptEngine.eval(PyScriptEngine.java:59)
+	at org.python.jsr223.PyScriptEngine.eval(PyScriptEngine.java:64)
+	at javax.script.AbstractScriptEngine.eval(AbstractScriptEngine.java:249)
+	at ch.psi.pshell.scripting.Interpreter.evalFile(Interpreter.java:137)
+	at ch.psi.pshell.scripting.ScriptManager.evalFile(ScriptManager.java:191)
+	at ch.psi.pshell.core.Context.lambda$restart$1(Context.java:1049)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: Traceback (most recent call last):
+  File "<script>", line 5, in <module>
+  File "<script>", line 1641, in run
+  File "/home/epics/PShell/pshellcontrol/home/script/shared/pink_class.py", line 252
+    for i in range(Ypoints)):
+                          ^
+SyntaxError: mismatched input ')' expecting COLON
+
+	at org.python.core.PyException.doRaise(PyException.java:233)
+	at org.python.core.Py.makeException(Py.java:1565)
+	at org.python.core.Py.makeException(Py.java:1569)
+	at org.python.core.Py.makeException(Py.java:1573)
+	at org.python.pycode._pyx43.run$134(<script>:1642)
+	at org.python.pycode._pyx43.call_function(<script>)
+	at org.python.core.PyTableCode.call(PyTableCode.java:171)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:308)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:132)
+	at org.python.core.PyFunction.__call__(PyFunction.java:413)
+	at org.python.pycode._pyx44.f$0(<script>:18)
+	at org.python.pycode._pyx44.call_function(<script>)
+	at org.python.core.PyTableCode.call(PyTableCode.java:171)
+	at org.python.core.PyCode.call(PyCode.java:18)
+	at org.python.core.Py.runCode(Py.java:1614)
+	at org.python.core.__builtin__.eval(__builtin__.java:497)
+	at org.python.core.__builtin__.eval(__builtin__.java:501)
+	at org.python.util.PythonInterpreter.eval(PythonInterpreter.java:259)
+	at org.python.jsr223.PyScriptEngine.eval(PyScriptEngine.java:57)
+	... 9 more
+
+11/03/19 - 15:17:57.808 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/pink_class.py (ui)
+11/03/19 - 15:18:00.125 - Context.onCommand - Info - Restart (ui)

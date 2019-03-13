@@ -1,0 +1,119 @@
+11/03/19 - 15:40:50.374 - Context.restart - Info - Initializing context
+11/03/19 - 15:40:50.380 - DataManager.initialize - Info - Initializing DataManager
+11/03/19 - 15:40:50.381 - DataManager.initialize - Info - Finished DataManager initialization
+11/03/19 - 15:40:50.382 - Context.restart - Info - Loading Device Pool
+11/03/19 - 15:40:50.383 - DevicePool.initialize - Info - Initializing DevicePool
+11/03/19 - 15:40:50.400 - DevicePool.initializeDevices - Info - Initializing: IZero_Profile
+11/03/19 - 15:40:50.448 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_RBV
+11/03/19 - 15:40:50.462 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Set
+11/03/19 - 15:40:50.473 - DevicePool.initializeDevices - Info - Initializing: U17_Gap_Status
+11/03/19 - 15:40:50.490 - DevicePool.initializeDevices - Info - Initializing: IZero
+11/03/19 - 15:40:50.501 - DevicePool.initializeDevices - Info - Initializing: TFY_Profile
+11/03/19 - 15:40:50.537 - DevicePool.initializeDevices - Info - Initializing: TFY
+11/03/19 - 15:40:50.549 - DevicePool.initializeDevices - Info - Initializing: GE_AreaDet
+11/03/19 - 15:40:50.718 - DevicePool.initializeDevices - Info - Initializing: GE_FrameID
+11/03/19 - 15:40:50.720 - DevicePool.initializeDevices - Info - Initializing: GE_Raw_Imaging
+11/03/19 - 15:40:50.722 - DevicePool.initializeDevices - Info - Initializing: GE_Raw_Array
+11/03/19 - 15:40:50.730 - DevicePool.initializeDevices - Info - Initializing: GE_BG_Array
+11/03/19 - 15:40:50.772 - DevicePool.initializeDevices - Info - Initializing: GE_BG_SizeY
+11/03/19 - 15:40:50.774 - DevicePool.initializeDevices - Info - Initializing: GE_BG_SizeX
+11/03/19 - 15:40:50.776 - DevicePool.initializeDevices - Info - Initializing: GE_ROI_Array
+11/03/19 - 15:40:50.817 - DevicePool.initializeDevices - Info - Initializing: GE_ROI_SizeY
+11/03/19 - 15:40:50.829 - DevicePool.initializeDevices - Info - Initializing: GE_ROI_SizeX
+11/03/19 - 15:40:50.843 - DevicePool.initializeDevices - Info - Initializing: GE_ROI_Line
+11/03/19 - 15:40:50.857 - DevicePool.initializeDevices - Info - Initializing: GE_Spectrum
+11/03/19 - 15:40:50.899 - DevicePool.initializeDevices - Info - Initializing: GE_Spectrum_Sum
+11/03/19 - 15:40:50.939 - DevicePool.initializeDevices - Info - Initializing: GE_Spectrum_Conv
+11/03/19 - 15:40:50.951 - DevicePool.initializeDevices - Info - Initializing: GE_Sensor_Temp
+11/03/19 - 15:40:50.965 - DevicePool.initializeDevices - Info - Initializing: Scan_Progress
+11/03/19 - 15:40:50.979 - DevicePool.initializeDevices - Info - Initializing: Press_Diag_PV
+11/03/19 - 15:40:50.993 - DevicePool.initializeDevices - Info - Initializing: Press_Diag_HV
+11/03/19 - 15:40:51.008 - DevicePool.initializeDevices - Info - Initializing: Press_Spec_PV
+11/03/19 - 15:40:51.021 - DevicePool.initializeDevices - Info - Initializing: Press_Spec_HV
+11/03/19 - 15:40:51.034 - DevicePool.initializeDevices - Info - Initializing: Press_Sample_Ch
+11/03/19 - 15:40:51.048 - DevicePool.initializeDevices - Info - Initializing: Diodes_Sum_Intensity
+11/03/19 - 15:40:51.050 - DevicePool.initializeDevices - Info - Initializing: VH_Diode
+11/03/19 - 15:40:51.052 - DevicePool.initializeDevices - Info - Initializing: SEC_el_x
+11/03/19 - 15:40:51.144 - DevicePool.initializeDevices - Info - Initializing: SEC_el_y
+11/03/19 - 15:40:51.245 - DevicePool.initializeDevices - Info - Initializing: SEC_el_y_Enc
+11/03/19 - 15:40:51.246 - DevicePool.initializeDevices - Info - Initializing: SEC_el_x_Enc
+11/03/19 - 15:40:51.248 - DevicePool.initializeDevices - Info - Initializing: Diode_1
+11/03/19 - 15:40:51.261 - DevicePool.initializeDevices - Info - Initializing: Diode_2
+11/03/19 - 15:40:51.275 - DevicePool.initializeDevices - Info - Initializing: Diode_3
+11/03/19 - 15:40:51.288 - DevicePool.initializeDevices - Info - Initializing: Diode_4
+11/03/19 - 15:40:51.300 - DevicePool.initializeDevices - Info - Initializing: Filter1
+11/03/19 - 15:40:51.398 - DevicePool.initializeDevices - Info - Initializing: Filter2
+11/03/19 - 15:40:51.493 - DevicePool.initializeDevices - Info - Initializing: BPM2_Vert_Profile
+11/03/19 - 15:40:51.505 - DevicePool.initializeDevices - Info - Initializing: BPM2_Profile_Size
+11/03/19 - 15:40:51.517 - DevicePool.initializeDevices - Info - Initializing: ring_current
+11/03/19 - 15:40:51.806 - DevicePool.initialize - Info - Finished DevicePool initialization
+11/03/19 - 15:40:51.808 - ScriptManager.<init> - Info - Initializing ScriptManager
+11/03/19 - 15:40:51.811 - ScriptManager.<init> - Info - Finished ScriptManager initialization
+11/03/19 - 15:40:52.463 - Context.lambda$restart$1 - Info - Executed startup script
+11/03/19 - 15:40:52.699 - DevicePool.addDevice - Info - Adding device: GE_BG_Image
+11/03/19 - 15:40:52.701 - DevicePool.addDevice - Info - Adding device: GE_ROI_Image
+11/03/19 - 15:40:52.702 - DevicePool.addDevice - Info - Adding device: GE_Raw_Image
+11/03/19 - 15:40:53.755 - Context.lambda$restart$1 - Info - Executed local startup script
+11/03/19 - 15:41:25.233 - Context.onCommand - Info - Eval: pink.ge_SEC_EL_line_vert_scan(1900, -100, exposure=3, images=10) (ui)
+11/03/19 - 15:42:09.059 - Context.onCommand - Info - Set Preference: STATUS, Scan complete (ui)
+12/03/19 - 08:58:44.857 - Context.onCommand - Info - Eval: bpm.BPM3_Vertical_Profile() (ui)
+12/03/19 - 09:07:28.548 - Context.onCommand - Info - Eval: gap.Scan_with_Exponential_Background(10,11, 0.05, wait=1) (ui)
+12/03/19 - 09:08:39.365 - Context.onCommand - Info - Eval: :abort (ui)
+12/03/19 - 09:08:39.369 - Context.onCommand - Info - Abort (ui)
+12/03/19 - 09:08:39.371 - ScanBase.abort - Info - Aborting: LineScan gap-1
+12/03/19 - 09:08:39.373 - ScriptManager.abort - Info - Aborting
+12/03/19 - 09:11:52.170 - Context.onCommand - Info - Eval: bpm.BPM3_Vertical_Profile() (ui)
+12/03/19 - 09:12:14.058 - Context.onCommand - Info - Eval: bpm.BPM3_Horizontal_Profile() (ui)
+12/03/19 - 09:39:49.664 - Context.onCommand - Info - Eval: pink.ge_SEC_EL_spot(exposure=1, images=10) (ui)
+12/03/19 - 09:40:10.365 - Context.onCommand - Info - Set Preference: STATUS, Scan complete (ui)
+12/03/19 - 09:41:19.595 - Context.onCommand - Info - Eval: pink.ge_SEC_EL_spot(exposure=1, images=10) (ui)
+12/03/19 - 09:41:39.953 - Context.onCommand - Info - Set Preference: STATUS, Scan complete (ui)
+12/03/19 - 09:59:22.235 - Context.onCommand - Info - Eval: pink.ge_SEC_EL_spot(exposure=1, images=10) (ui)
+12/03/19 - 09:59:43.182 - Context.onCommand - Info - Set Preference: STATUS, Scan complete (ui)
+12/03/19 - 10:00:21.197 - Context.onCommand - Info - Eval: pink.ge_SEC_EL_spot(exposure=1, images=10) (ui)
+12/03/19 - 10:00:42.106 - Context.onCommand - Info - Set Preference: STATUS, Scan complete (ui)
+12/03/19 - 10:01:42.606 - Context.onCommand - Info - Eval: pink.ge_SEC_EL_spot(exposure=1, images=10) (ui)
+12/03/19 - 10:02:03.417 - Context.onCommand - Info - Set Preference: STATUS, Scan complete (ui)
+12/03/19 - 10:02:33.744 - Context.onCommand - Info - Eval: pink.ge_SEC_EL_spot(exposure=1, images=10) (ui)
+12/03/19 - 10:02:54.634 - Context.onCommand - Info - Set Preference: STATUS, Scan complete (ui)
+12/03/19 - 10:25:08.855 - Context.onCommand - Info - Eval: pink.ge_SEC_EL_spot(exposure=1, images=10) (ui)
+12/03/19 - 10:25:29.683 - Context.onCommand - Info - Set Preference: STATUS, Scan complete (ui)
+12/03/19 - 10:26:18.457 - Context.onCommand - Info - Eval: pink.ge_SEC_EL_spot(exposure=1, images=10) (ui)
+12/03/19 - 10:26:39.589 - Context.onCommand - Info - Set Preference: STATUS, Scan complete (ui)
+12/03/19 - 10:32:32.945 - Context.onCommand - Info - Eval: pink.ge_SEC_EL_spot(exposure=1, images=10) (ui)
+12/03/19 - 10:32:53.966 - Context.onCommand - Info - Set Preference: STATUS, Scan complete (ui)
+12/03/19 - 10:45:44.956 - Context.onCommand - Info - Eval: pink.ge_SEC_EL_spot(exposure=1, images=100) (ui)
+12/03/19 - 10:48:01.444 - Context.onCommand - Info - Set Preference: STATUS, Scan complete (ui)
+12/03/19 - 10:58:53.811 - Context.onCommand - Info - Eval: pink.ge_SEC_EL_spot(exposure=1, images=10) (ui)
+12/03/19 - 10:59:14.431 - Context.onCommand - Info - Set Preference: STATUS, Scan complete (ui)
+12/03/19 - 11:00:24.872 - Context.onCommand - Info - Eval: pink.ge_SEC_EL_spot(exposure=1, images=100) (ui)
+12/03/19 - 11:02:41.174 - Context.onCommand - Info - Set Preference: STATUS, Scan complete (ui)
+12/03/19 - 11:06:30.858 - Context.onCommand - Info - Eval: pink.ge_SEC_EL_zigzag_scan(1, 2400, 800, 4, 7000, -70, 200) (ui)
+12/03/19 - 11:27:44.998 - Context.onCommand - Info - Eval: :abort (ui)
+12/03/19 - 11:27:44.999 - Context.onCommand - Info - Abort (ui)
+12/03/19 - 11:27:44.999 - ScriptManager.abort - Info - Aborting
+12/03/19 - 11:27:47.106 - Context.onCommand - Info - Set Preference: STATUS, Scan complete (ui)
+12/03/19 - 11:46:30.753 - Context.onCommand - Info - Eval: plot(ydata, xdata=xdata) (ui)
+12/03/19 - 11:50:33.207 - Context.onCommand - Info - Eval: GE_AreaDet.start() (ui)
+12/03/19 - 11:50:37.241 - Context.onCommand - Info - Eval: GE_AreaDet.start() (ui)
+12/03/19 - 11:51:27.609 - Context.onCommand - Info - Eval: tt=time() (ui)
+12/03/19 - 11:51:29.479 - Context.onCommand - Info - Eval: tt (ui)
+12/03/19 - 11:51:47.016 - Context.onCommand - Info - Eval: t1=tt.clock() (ui)
+12/03/19 - 11:51:50.560 - Context.onCommand - Info - Eval: t1 (ui)
+12/03/19 - 11:51:54.929 - Context.onCommand - Info - Eval: t1=tt.clock() (ui)
+12/03/19 - 11:51:57.441 - Context.onCommand - Info - Eval: t1 (ui)
+12/03/19 - 11:53:23.059 - Context.onCommand - Info - Run: demo1.py (ui)
+12/03/19 - 11:54:22.789 - Context.onCommand - Info - Eval: GE_AreaDet.waitReady() (ui)
+12/03/19 - 11:54:31.693 - Context.onCommand - Info - Eval: GE_AreaDet.waitReady(2) (ui)
+12/03/19 - 11:54:34.621 - Context.onCommand - Info - Eval:  (ui)
+12/03/19 - 11:54:36.277 - Context.onCommand - Info - Eval: GE_AreaDet.waitReady(2) (ui)
+12/03/19 - 11:54:36.837 - Context.onCommand - Info - Eval:  (ui)
+12/03/19 - 11:54:52.885 - Context.onCommand - Info - Eval: GE_AreaDet.waitReady(10) (ui)
+12/03/19 - 11:54:54.012 - Context.onCommand - Info - Eval:  (ui)
+12/03/19 - 11:55:45.317 - Context.onCommand - Info - Run: demo1.py (ui)
+12/03/19 - 11:56:22.718 - Context.onCommand - Info - Run: demo1.py (ui)
+12/03/19 - 11:56:44.602 - Context.onCommand - Info - Run: demo1.py (ui)
+12/03/19 - 11:59:26.450 - Context.onCommand - Info - Run: demo1.py (ui)
+12/03/19 - 11:59:49.994 - Context.onCommand - Info - Run: demo1.py (ui)
+12/03/19 - 12:16:14.123 - Context.onCommand - Info - Run: /home/epics/Pinkdata/Control/PShell/shared/pink_class.py (ui)
+12/03/19 - 12:16:19.838 - Context.onCommand - Info - Restart (ui)
