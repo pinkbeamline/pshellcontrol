@@ -14,6 +14,6 @@ blade=BLADECLASS()
 gap=GAPCLASS()
 
 print("Pink beamline")
-pink.help_information()
+pink.help()
 print("Type \"pink.help_information()\" to print this information again")
 

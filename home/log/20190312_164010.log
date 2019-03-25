@@ -62,3 +62,4 @@
 12/03/19 - 16:40:24.631 - Context.onCommand - Info - Set Preference: STATUS, Running scan... (ui)
 12/03/19 - 16:40:24.688 - Context.onCommand - Info - Set Preference: STATUS, Running zigzag scan... (ui)
 12/03/19 - 16:42:27.389 - Context.onCommand - Info - Set Preference: STATUS, Scan complete (ui)
+13/03/19 - 15:53:41.000 - Context.onCommand - Info - Restart (ui)
