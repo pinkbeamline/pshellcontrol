@@ -2,11 +2,11 @@
 #  Deployment specific global definitions - executed after startup.py
 ###################################################################################################
 
-run("shared/pink_class.py")
-run("shared/bpm_class.py")
-run("shared/blade_class.py")
-run("shared/pink_extra.py")
-run("shared/gap_class.py")
+run("pink/pink_class.py")
+run("pink/bpm_class.py")
+run("pink/blade_class.py")
+run("pink/pink_extra.py")
+run("pink/gap_class.py")
 
 pink=PINKCLASS()
 bpm=BPMCLASS()
