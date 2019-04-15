@@ -3,11 +3,11 @@
 ###################################################################################################
 from plib.logger_class import MasterLogger
 
-run("pink/pink_class.py")
-run("pink/bpm_class.py")
-run("pink/blade_class.py")
-run("pink/pink_extra.py")
-run("pink/gap_class.py")
+run("plib/pink_extra.py")
+run("plib/pink_class.py")
+run("plib/bpm_class.py")
+run("plib/blade_class.py")
+run("plib/gap_class.py")
 
 pink=PINKCLASS()
 bpm=BPMCLASS()

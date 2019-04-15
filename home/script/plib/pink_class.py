@@ -21,7 +21,7 @@ class PINKCLASS():
     y_mdata =[]
     cont_speed = 0
     data_compression = {
-        "compression":"true",
+        "compression":"True",
         "shuffle":"True"}
 
     ####################################################################################
@@ -120,6 +120,7 @@ class PINKCLASS():
                 self.__publish_status("Script aborted")
                 GE_AreaDet.stop()
             self.__ge_Save_Pos_Scan_Data_v3(passid=passid)
+            self.__save_specfile(passid)
             passid=passid+1
             if passid==passes: scan_done=True
         self.__ge_Save_Pos_Scan_Data_v4()
@@ -764,7 +765,7 @@ class PINKCLASS():
         create_dataset("RAW/GE_Raw_Image", 'd', False, (0, int(GE_BG_SizeY.take()), int(GE_BG_SizeX.take())), features=self.data_compression)
         create_dataset("RAW/IZero_Profile", 'd', False, (self.scan_images, 100))
         create_dataset("RAW/TFY_Profile", 'd', False, (self.scan_images, 100))
-        create_dataset("Processed/GE_ROI_Image", 'd', False, (self.scan_images, int(GE_ROI_SizeY.take()), int(GE_ROI_SizeX.take())), features=self.data_compression)
+        create_dataset("Processed/GE_ROI_Image", 'd', False, (0, int(GE_ROI_SizeY.take()), int(GE_ROI_SizeX.take())), features=self.data_compression)
         create_dataset("Processed/GE_Spectrum", 'd', False, (self.scan_images, int(GE_BG_SizeX.take())))
         create_dataset("Processed/Izero", 'd', False)
         create_dataset("Processed/TFY", 'd', False)
@@ -813,14 +814,10 @@ class PINKCLASS():
 
     def __ge_Save_Scan_Data(self, cont=False):
         if self.DEBUG: print("save scan data ...")
-        T0=time.clock()
         append_dataset("RAW/GE_Raw_Image", GE_Raw_Image.read())
-        append_dataset("Processed/GE_ROI_Image", GE_ROI_Image.read())
-        T1=time.clock()
-        print(str(T1-T0))
         append_dataset("RAW/IZero_Profile", IZero_Profile.take())
         append_dataset("RAW/TFY_Profile", TFY_Profile.take())
-        #append_dataset("Processed/GE_ROI_Image", GE_ROI_Image.read())
+        append_dataset("Processed/GE_ROI_Image", GE_ROI_Image.read())
         append_dataset("Processed/GE_Spectrum", GE_Spectrum.take())
         append_dataset("Processed/Izero", IZero.take())
         append_dataset("Processed/TFY", TFY.take())
@@ -966,3 +963,25 @@ class PINKCLASS():
     def __publish_status(self, message):
         set_status(message)
         AUX_status.write(message)
+
+    def __save_spec(self, passid):
+        datafilepath = get_exec_pars().getPath()
+        fpath = datafilepath.split("/")
+        fpath = datafilepath.split(fpath[-1])
+        fpath = fpath[0]+"spec"
+        if os.path.isdir(fpath) == False:
+            os.mkdir(fpath)
+        specfname = datafilepath.split("/")[-1].split(".h5")[0]+".spec"
+        specfname = fpath+"/"+specfname
+        spectrum = GE_Spectrum_Sum.take()
+        spectext = []
+        spectext.append("#S "+'{:d}'.format(int(passid))+" pass"+'{:03d}'.format(int(passid))+'\n')
+        spectext.append("#N 1\n")
+        spectext.append("#L Counts\n")
+        for ct in spectrum:
+            spectext.append('{:d}'.format(int(ct))+'\n')
+        spectext.append("\n")
+        fspec = open(specfname, 'a+')
+        for lines in spectext:
+            fspec.write(lines)
+        fspec.close()

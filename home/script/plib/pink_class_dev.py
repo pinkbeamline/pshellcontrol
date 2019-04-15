@@ -21,7 +21,7 @@ class PINKCLASS():
     y_mdata =[]
     cont_speed = 0
     data_compression = {
-        "compression":"true",
+        "compression":"max",
         "shuffle":"True"}
 
     ####################################################################################
@@ -478,7 +478,7 @@ class PINKCLASS():
 
     #### HELP INFORMATION   ############################################################
     def help(self):
-        #print("***      DEVELOPMENT VERSION       ***")
+        print("***      DEVELOPMENT VERSION       ***")
         print("*** Pink Beamline list of scripts: ***")
         print("All custom functions can be found by typing:")
         print("pink.")
@@ -813,14 +813,10 @@ class PINKCLASS():
 
     def __ge_Save_Scan_Data(self, cont=False):
         if self.DEBUG: print("save scan data ...")
-        T0=time.clock()
         append_dataset("RAW/GE_Raw_Image", GE_Raw_Image.read())
-        append_dataset("Processed/GE_ROI_Image", GE_ROI_Image.read())
-        T1=time.clock()
-        print(str(T1-T0))
         append_dataset("RAW/IZero_Profile", IZero_Profile.take())
         append_dataset("RAW/TFY_Profile", TFY_Profile.take())
-        #append_dataset("Processed/GE_ROI_Image", GE_ROI_Image.read())
+        append_dataset("Processed/GE_ROI_Image", GE_ROI_Image.read())
         append_dataset("Processed/GE_Spectrum", GE_Spectrum.take())
         append_dataset("Processed/Izero", IZero.take())
         append_dataset("Processed/TFY", TFY.take())
