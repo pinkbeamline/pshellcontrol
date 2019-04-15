@@ -20,9 +20,12 @@ class PINKCLASS():
     x_mdata =[]
     y_mdata =[]
     cont_speed = 0
+#    data_compression = {
+#        "compression":"max",
+#        "shuffle":"true"}
     data_compression = {
-        "compression":"max",
-        "shuffle":"True"}
+        "compression":"false",
+        "shuffle":"false"}
 
     ####################################################################################
     #### Callable Functions ############################################################
@@ -54,14 +57,16 @@ class PINKCLASS():
         try:
             for scan_count in range(images):
                 self.__ge_start_frame_countdown()
-                GE_Raw_Array.waitCacheChange((int(math.ceil(exposure))*1000)+10000)
+                GE_Raw_Array.waitCacheChange((int(math.ceil(exposure))*1000)+1000)
                 #add 10ms delay to make sure all new data have arrived
                 sleep(0.01)
+                #T0=time.clock()
                 self.__ge_Save_Scan_Data()
                 self.__ge_calc_progress()
-        except Exception, ex1:
+                #T1=time.clock()
+                #print(T1-T0)
+        except:
             print("Script Aborted")
-            print(ex1)
             self.__publish_status("Script aborted")
             GE_AreaDet.stop()
         self.__ge_Save_Pos_Scan_Data()
@@ -113,10 +118,9 @@ class PINKCLASS():
                     sleep(0.01)
                     self.__ge_Save_Scan_Data_v2(cont=False, passid=passid)
                     self.__ge_calc_progress()
-            except Exception, ex1:
+            except:
                 scan_done=True
                 print("Script Aborted")
-                print(ex1)
                 self.__publish_status("Script aborted")
                 GE_AreaDet.stop()
             self.__ge_Save_Pos_Scan_Data_v3(passid=passid)
@@ -181,9 +185,8 @@ class PINKCLASS():
                         self.__ge_Save_Scan_Data_v2(cont=False, passid=passid)
                         self.__ge_calc_progress()
                     scan_dir=abs(scan_dir-1)
-            except Exception, ex1:
+            except:
                 print("Script Aborted:")
-                print(ex1)
                 self.__publish_status("Script aborted")
                 GE_AreaDet.stop()
             self.__ge_Save_Pos_Scan_Data_v3(cont=False, passid=passid)
@@ -273,9 +276,8 @@ class PINKCLASS():
                     SEC_el_y.setSpeed(20000)
                     self.__sec_el_y_safemove(ydest)
                     scan_dir=abs(scan_dir-1)
-            except Exception, ex1:
+            except:
                 print("Script Aborted:")
-                print(ex1)
                 self.__publish_status("Script aborted")
                 GE_AreaDet.stop()
                 SEC_el_y.setSpeed(20000)
@@ -368,9 +370,8 @@ class PINKCLASS():
                     SEC_el_y.setSpeed(20000)
                     self.__sec_el_y_safemove(ydest)
                     scan_dir=abs(scan_dir-1)
-            except Exception, ex1:
+            except:
                 print("Script Aborted:")
-                print(ex1)
                 self.__publish_status("Script aborted")
                 GE_AreaDet.stop()
                 SEC_el_y.setSpeed(20000)
@@ -461,9 +462,8 @@ class PINKCLASS():
                     SEC_el_y.setSpeed(20000)
                     self.__sec_el_y_safemove(ydest)
                     scan_dir=abs(scan_dir-1)
-            except Exception, ex1:
+            except:
                 print("Script Aborted:")
-                print(ex1)
                 self.__publish_status("Script aborted")
                 GE_AreaDet.stop()
                 SEC_el_y.setSpeed(20000)
@@ -813,10 +813,14 @@ class PINKCLASS():
 
     def __ge_Save_Scan_Data(self, cont=False):
         if self.DEBUG: print("save scan data ...")
+        T0=time.clock()
         append_dataset("RAW/GE_Raw_Image", GE_Raw_Image.read())
+        append_dataset("Processed/GE_ROI_Image", GE_ROI_Image.read())
+        T1=time.clock()
+        print(str(T1-T0))
         append_dataset("RAW/IZero_Profile", IZero_Profile.take())
         append_dataset("RAW/TFY_Profile", TFY_Profile.take())
-        append_dataset("Processed/GE_ROI_Image", GE_ROI_Image.read())
+        #append_dataset("Processed/GE_ROI_Image", GE_ROI_Image.read())
         append_dataset("Processed/GE_Spectrum", GE_Spectrum.take())
         append_dataset("Processed/Izero", IZero.take())
         append_dataset("Processed/TFY", TFY.take())
