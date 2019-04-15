@@ -24,8 +24,8 @@ class PINKCLASS():
 #        "compression":"max",
 #        "shuffle":"true"}
     data_compression = {
-        "compression":"false",
-        "shuffle":"false"}
+        "compression":"true",
+        "shuffle":"true"}
 
     ####################################################################################
     #### Callable Functions ############################################################
@@ -54,17 +54,18 @@ class PINKCLASS():
         self.__publish_fname()
         self.__publish_status("Running spot scan...")
         GE_AreaDet.start()
+        timelist = []
         try:
             for scan_count in range(images):
                 self.__ge_start_frame_countdown()
                 GE_Raw_Array.waitCacheChange((int(math.ceil(exposure))*1000)+1000)
+                T0=time.clock()
                 #add 10ms delay to make sure all new data have arrived
                 sleep(0.01)
-                #T0=time.clock()
                 self.__ge_Save_Scan_Data()
                 self.__ge_calc_progress()
-                #T1=time.clock()
-                #print(T1-T0)
+                T1=time.clock()
+                timelist.append(T1-T0)
         except:
             print("Script Aborted")
             self.__publish_status("Script aborted")
@@ -73,6 +74,7 @@ class PINKCLASS():
         pink_save_bl_snapshot()
         print("Scan complete")
         self.__publish_status("Scan complete")
+        print(timelist)
 
     #### LINE SCAN          ############################################################
     def ge_SEC_EL_line_vert(self, exposure, Y0, deltaY, Ypoints, passes=1, sample=" "):
@@ -764,7 +766,7 @@ class PINKCLASS():
         create_dataset("RAW/GE_Raw_Image", 'd', False, (0, int(GE_BG_SizeY.take()), int(GE_BG_SizeX.take())), features=self.data_compression)
         create_dataset("RAW/IZero_Profile", 'd', False, (self.scan_images, 100))
         create_dataset("RAW/TFY_Profile", 'd', False, (self.scan_images, 100))
-        create_dataset("Processed/GE_ROI_Image", 'd', False, (self.scan_images, int(GE_ROI_SizeY.take()), int(GE_ROI_SizeX.take())), features=self.data_compression)
+        create_dataset("Processed/GE_ROI_Image", 'd', False, (0, int(GE_ROI_SizeY.take()), int(GE_ROI_SizeX.take())), features=self.data_compression)
         create_dataset("Processed/GE_Spectrum", 'd', False, (self.scan_images, int(GE_BG_SizeX.take())))
         create_dataset("Processed/Izero", 'd', False)
         create_dataset("Processed/TFY", 'd', False)
@@ -813,14 +815,10 @@ class PINKCLASS():
 
     def __ge_Save_Scan_Data(self, cont=False):
         if self.DEBUG: print("save scan data ...")
-        T0=time.clock()
         append_dataset("RAW/GE_Raw_Image", GE_Raw_Image.read())
         append_dataset("Processed/GE_ROI_Image", GE_ROI_Image.read())
-        T1=time.clock()
-        print(str(T1-T0))
         append_dataset("RAW/IZero_Profile", IZero_Profile.take())
         append_dataset("RAW/TFY_Profile", TFY_Profile.take())
-        #append_dataset("Processed/GE_ROI_Image", GE_ROI_Image.read())
         append_dataset("Processed/GE_Spectrum", GE_Spectrum.take())
         append_dataset("Processed/Izero", IZero.take())
         append_dataset("Processed/TFY", TFY.take())
