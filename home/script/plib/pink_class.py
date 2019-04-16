@@ -65,6 +65,7 @@ class PINKCLASS():
             self.__publish_status("Script aborted")
             GE_AreaDet.stop()
         self.__ge_Save_Pos_Scan_Data()
+        self.__save_specfile(0)
         pink_save_bl_snapshot()
         print("Scan complete")
         self.__publish_status("Scan complete")
@@ -188,6 +189,7 @@ class PINKCLASS():
                 self.__publish_status("Script aborted")
                 GE_AreaDet.stop()
             self.__ge_Save_Pos_Scan_Data_v3(cont=False, passid=passid)
+            self.__save_specfile(passid)
             passid=passid+1
             if passid==passes: scan_done=True
         self.__ge_Save_Pos_Scan_Data_v4()
@@ -281,6 +283,7 @@ class PINKCLASS():
                 GE_AreaDet.stop()
                 SEC_el_y.setSpeed(20000)
             self.__ge_Save_Pos_Scan_Data_v3(cont=True, passid=passid)
+            self.__save_specfile(passid)
             passid=passid+1
             if passid==passes: scan_done=True
         self.__ge_Save_Pos_Scan_Data_v4()
@@ -376,6 +379,7 @@ class PINKCLASS():
                 GE_AreaDet.stop()
                 SEC_el_y.setSpeed(20000)
             self.__ge_Save_Pos_Scan_Data_v3(cont=True, passid=passid)
+            self.__save_specfile(passid)
             passid=passid+1
             if passid==passes: scan_done=True
         self.__ge_Save_Pos_Scan_Data_v4()
@@ -469,6 +473,7 @@ class PINKCLASS():
                 GE_AreaDet.stop()
                 SEC_el_y.setSpeed(20000)
             self.__ge_Save_Pos_Scan_Data_v3(cont=True, passid=passid)
+            self.__save_specfile(passid)
             passid=passid+1
             if passid==passes: scan_done=True
         self.__ge_Save_Pos_Scan_Data_v4()
@@ -964,24 +969,27 @@ class PINKCLASS():
         set_status(message)
         AUX_status.write(message)
 
-    def __save_spec(self, passid):
-        datafilepath = get_exec_pars().getPath()
-        fpath = datafilepath.split("/")
-        fpath = datafilepath.split(fpath[-1])
-        fpath = fpath[0]+"spec"
-        if os.path.isdir(fpath) == False:
-            os.mkdir(fpath)
-        specfname = datafilepath.split("/")[-1].split(".h5")[0]+".spec"
-        specfname = fpath+"/"+specfname
-        spectrum = GE_Spectrum_Sum.take()
-        spectext = []
-        spectext.append("#S "+'{:d}'.format(int(passid))+" pass"+'{:03d}'.format(int(passid))+'\n')
-        spectext.append("#N 1\n")
-        spectext.append("#L Counts\n")
-        for ct in spectrum:
-            spectext.append('{:d}'.format(int(ct))+'\n')
-        spectext.append("\n")
-        fspec = open(specfname, 'a+')
-        for lines in spectext:
-            fspec.write(lines)
-        fspec.close()
+    def __save_specfile(self, passid):
+        try:
+            datafilepath = get_exec_pars().getPath()
+            fpath = datafilepath.split("/")
+            fpath = datafilepath.split(fpath[-1])
+            fpath = fpath[0]+"mca"
+            if os.path.isdir(fpath) == False:
+                os.mkdir(fpath)
+            specfname = datafilepath.split("/")[-1].split(".h5")[0]+".mca"
+            specfname = fpath+"/"+specfname
+            spectrum = GE_Spectrum_Sum.take()
+            spectext = []
+            spectext.append("#S "+'{:d}'.format(int(passid))+" pass"+'{:03d}'.format(int(passid))+'\n')
+            spectext.append("#N 1\n")
+            spectext.append("#L Counts\n")
+            for ct in spectrum:
+                spectext.append('{:d}'.format(int(ct))+'\n')
+            spectext.append("\n")
+            fspec = open(specfname, 'a+')
+            for lines in spectext:
+                fspec.write(lines)
+            fspec.close()
+        except:
+            print("[Error]: Failed to create mca file")

@@ -20,7 +20,9 @@ print("Type \"pink.help_information()\" to print this information again")
 
 def on_command_started(info):
     mlogger.onstart(info)
+    #print("onstart")
     
 def on_command_finished(info):
     mlogger.onend(info)
+    #print("onend")
     

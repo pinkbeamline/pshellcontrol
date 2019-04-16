@@ -1,7 +1,9 @@
 ## PINK Master logger class
 import sys
 import time
+import os
 from os import walk
+
 
 class MasterLogger():
     def __init__(self):
@@ -43,13 +45,23 @@ class MasterLogger():
                 self.end_list.extend(filenames)
             self.new_list = list(set(self.end_list)-set(self.start_list))
             if len(self.new_list)>0:
+                self.new_list = self._remove_mca(self.new_list)
                 self.new_list.sort()
-                self._createmasterlog(info)
+                try:
+                    self._createmasterlog(info)
+                except:
+                    print("[Error]: Failed to create master file")
 
     def _makepath(self, dpath):
         tnow = time.localtime()
         fullpath = dpath + '{:d}'.format(int(tnow.tm_year))+ "_"+'{:02d}'.format(int(tnow.tm_mon))
         return fullpath
+
+    def _remove_mca(self, flist):
+        retlist = []
+        for ff in flist:
+            if "mca" not in ff: retlist.append(ff)
+        return retlist
 
     def _createmasterlog(self, info):
         foldername = (
@@ -65,7 +77,10 @@ class MasterLogger():
             '{:02d}'.format(int(self.start_time.tm_sec))+
             '_master.txt'
             )
-        fullpath = self.start_path+"/"+foldername+"/"+fname
+        folderpath = self.start_path+'/'+foldername+"/master"
+        if os.path.isdir(folderpath) == False:
+            os.mkdir(folderpath)
+        fullpath = folderpath+"/"+fname
         self.fullpath = fullpath
         datestr = (
             '{:02d}'.format(int(self.start_time.tm_mday))+"."+
