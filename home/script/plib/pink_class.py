@@ -510,6 +510,34 @@ class PINKCLASS():
             except:
                 print("Error: [SMS]:Could not send SMS")
 
+
+    #### Open hard shutter  ############################################################
+    def shutter_hard_OPEN():
+        for i in range(3):
+            shutter_status = caget("PSHY01U012L:State1", 'd')
+            if shutter_status == 14:
+                return True
+            else:
+                caputq("PSHY01U012L:SetTa", 1)
+                sleep(3)
+        print("Failed to open Shutter Hard")
+        log("Failed to open Shutter Hard")
+        return False
+
+    #### Close hard shutter  ############################################################
+    def shutter_hard_OPEN():
+        for i in range(3):
+            shutter_status = caget("PSHY01U012L:State1", 'd')
+            if shutter_status == 5:
+                return True
+            else:
+                caputq("PSHY01U012L:SetTa", 1)
+                sleep(3)
+        print("Failed to open Shutter Hard")
+        log("Failed to open Shutter Hard")
+        return False
+
+
     ####################################################################################
     #### Internal Functions ############################################################
     ####################################################################################
