@@ -493,13 +493,13 @@ class PINKCLASS():
         print("gap.\n\n")
 
     #### SAVE BL SNAPSHOT   ############################################################
-    def Save_Beamline_Snapshot(self):
+    def save_Beamline_Snapshot(self):
         set_exec_pars(open=False, name="pink_bl", reset=True)
         pink_save_bl_snapshot()
         print("Pink beamline snapshot saved")
 
     #### Send SMS Function   ############################################################
-    def Send_SMS(self, phonenr=None, message=None):
+    def send_SMS(self, phonenr=None, message=None):
         if (phonenr==None) or (message==None):
             print("Invalid. \nExample: pink.Send_SMS(\"+4901231234567\", \"My message with less than 40 characters\")")
         else:
@@ -512,7 +512,7 @@ class PINKCLASS():
 
 
     #### Open hard shutter  ############################################################
-    def shutter_hard_OPEN():
+    def shutter_hard_OPEN(self):
         for i in range(3):
             shutter_status = caget("PSHY01U012L:State1", 'd')
             if shutter_status == 14:
@@ -525,16 +525,16 @@ class PINKCLASS():
         return False
 
     #### Close hard shutter  ############################################################
-    def shutter_hard_OPEN():
+    def shutter_hard_CLOSE(self):
         for i in range(3):
             shutter_status = caget("PSHY01U012L:State1", 'd')
-            if shutter_status == 5:
+            if shutter_status == 5 or shutter_status == 1:
                 return True
             else:
                 caputq("PSHY01U012L:SetTa", 1)
                 sleep(3)
-        print("Failed to open Shutter Hard")
-        log("Failed to open Shutter Hard")
+        print("Failed to close Shutter Hard")
+        log("Failed to close Shutter Hard")
         return False
 
 
