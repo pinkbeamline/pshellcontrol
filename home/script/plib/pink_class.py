@@ -537,6 +537,57 @@ class PINKCLASS():
         log("Failed to close Shutter Hard")
         return False
 
+    #### Setup Pink Beamline  ############################################################
+    def __pvwait(self, pvname, value, deadband=0, timeout=300):
+        cdown=timeout
+        while cdown>=0:
+            val = caget(pvname)
+            if (val>=value-abs(deadband)) and (val<=value+abs(deadband)):
+                return
+            cdown=cdown-1
+            sleep(1)
+        print("Timeout (" + str(timeout) + " seconds) waiting for PV: " + pvname) 
+
+    def setup_pink(self):
+    #Set PV, value, Monitor PV, deadband, timeout(sec)
+        # Remove U17-PGM mirror
+        group1_list = [
+            ["u171pgm1:PH_0_SET", 770.0, "u171pgm1:PH_0_GET", 0.3, 180],
+        ]
+        # AU1 Aperture
+        group2_list = [
+            ["WAUY02U012L:AbsM1", -1.0, "WAUY02U012L:rdPosM1", 0.1, 60],
+            ["WAUY02U012L:AbsM2", -1.6, "WAUY02U012L:rdPosM2", 0.1, 60],
+            ["WAUY02U012L:AbsM3",  0.4, "WAUY02U012L:rdPosM3", 0.1, 60],
+            ["WAUY02U012L:AbsM4", -1.4, "WAUY02U012L:rdPosM4", 0.1, 60],
+        ]
+        # Pink Apertures U17-AU3-Pink
+        group3_list = [
+            ["AUY01U112L:AbsM1", -18.5, "AUY01U112L:rdPosM1", 0.1, 60],
+            ["AUY01U112L:AbsM2", -21.5, "AUY01U112L:rdPosM2", 0.1, 60],
+            ["AUY01U112L:AbsM3",  -1.5, "AUY01U112L:rdPosM3", 0.1, 60],
+            ["AUY01U112L:AbsM4",   2.5, "AUY01U112L:rdPosM4", 0.1, 60],
+        ]
+        # Translate all M2 mirror into the beam
+        group4_list = [
+            ["HEX2OS12L:hexapod:setPoseY", 0.0, "HEX2OS12L:hexapod:getReadPoseY", 1.0, 120],
+        ]
+
+        task_list = [
+           [group1_list, "Moving U17-PGM to home position...", "OK"], 
+           [group2_list, "Moving Apertures U17-AU1-Pink...", "OK"],
+           [group3_list, "Moving Apertures U17-AU3-Pink...", "OK"],
+           [group4_list, "Moving Hexapod Ty...", "OK\nDone!"]
+        ]
+
+        for tsk in task_list:
+            grp = tsk[0]
+            print(tsk[1])
+            for mpv in grp:
+                caputq(mpv[0],mpv[1])
+            for mpv in grp:
+                self.__pvwait(mpv[2], mpv[1], deadband=mpv[3], timeout=mpv[4])
+            print(tsk[2]) 
 
     ####################################################################################
     #### Internal Functions ############################################################
