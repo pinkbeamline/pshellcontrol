@@ -546,7 +546,7 @@ class PINKCLASS():
                 return
             cdown=cdown-1
             sleep(1)
-        print("Timeout (" + str(timeout) + " seconds) waiting for PV: " + pvname) 
+        print("Timeout (" + str(timeout) + " seconds) waiting for PV: " + pvname)
 
     def setup_pink(self):
     #Set PV, value, Monitor PV, deadband, timeout(sec)
@@ -574,7 +574,7 @@ class PINKCLASS():
         ]
 
         task_list = [
-           [group1_list, "Moving U17-PGM to home position...", "OK"], 
+           [group1_list, "Moving U17-PGM to home position...", "OK"],
            [group2_list, "Moving Apertures U17-AU1-Pink...", "OK"],
            [group3_list, "Moving Apertures U17-AU3-Pink...", "OK"],
            [group4_list, "Moving Hexapod Ty...", "OK\nDone!"]
@@ -587,7 +587,35 @@ class PINKCLASS():
                 caputq(mpv[0],mpv[1])
             for mpv in grp:
                 self.__pvwait(mpv[2], mpv[1], deadband=mpv[3], timeout=mpv[4])
-            print(tsk[2]) 
+            print(tsk[2])
+
+
+    #### Move Filters  ############################################################
+    def filter1(self, pos):
+        caput("<filterpv>", float(pos))
+
+    def filter2(self, pos):
+        caput("<filterpv>", float(pos))
+
+    def filter3(self, pos):
+        caput("<filterpv>", float(pos))
+
+    #### Open/Close valves  ############################################################
+    def valveOPEN(self,vnum):
+        if vnum>30:
+            dev="PLCVAC"
+        else:
+            dev="PLCGAS"
+        vpv = "PINK:"+dev+":v"+str(int(vnum))+"open"
+        caput(vpv,1)
+
+    def valveCLOSE(self,vnum):
+        if vnum>30:
+            dev="PLCVAC"
+        else:
+            dev="PLCGAS"
+        vpv = "PINK:"+dev+":v"+str(int(vnum))+"close"
+        caput(vpv,1)
 
     ####################################################################################
     #### Internal Functions ############################################################
