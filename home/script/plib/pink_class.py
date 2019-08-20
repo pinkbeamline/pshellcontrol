@@ -23,6 +23,7 @@ class PINKCLASS():
     data_compression = {
         "compression":"True",
         "shuffle":"True"}
+    ge_bg_spectra = []
 
     ####################################################################################
     #### Callable Functions ############################################################
@@ -546,7 +547,7 @@ class PINKCLASS():
                 return
             cdown=cdown-1
             sleep(1)
-        print("Timeout (" + str(timeout) + " seconds) waiting for PV: " + pvname) 
+        print("Timeout (" + str(timeout) + " seconds) waiting for PV: " + pvname)
 
     def setup_pink(self):
     #Set PV, value, Monitor PV, deadband, timeout(sec)
@@ -574,7 +575,7 @@ class PINKCLASS():
         ]
 
         task_list = [
-           [group1_list, "Moving U17-PGM to home position...", "OK"], 
+           [group1_list, "Moving U17-PGM to home position...", "OK"],
            [group2_list, "Moving Apertures U17-AU1-Pink...", "OK"],
            [group3_list, "Moving Apertures U17-AU3-Pink...", "OK"],
            [group4_list, "Moving Hexapod Ty...", "OK\nDone!"]
@@ -587,7 +588,7 @@ class PINKCLASS():
                 caputq(mpv[0],mpv[1])
             for mpv in grp:
                 self.__pvwait(mpv[2], mpv[1], deadband=mpv[3], timeout=mpv[4])
-            print(tsk[2]) 
+            print(tsk[2])
 
     ####################################################################################
     #### Internal Functions ############################################################
@@ -719,6 +720,8 @@ class PINKCLASS():
         if self.DEBUGLOG: log("BG: *** Acquire done!", data_file=False)
         #gectrl.start()
         sleep(0.5)
+        ## save Background spectra on internal variable for later adding to h5 filename
+        self.ge_bg_spectra = GE_Spectrum.take()
         if self.DEBUGLOG: log("BG: Save Bg image on extra record", data_file=False)
         #Transfer frame to bgimage
         caput("PINK:GEYES:savebg", 1)
@@ -765,6 +768,7 @@ class PINKCLASS():
         save_dataset("Detector/GE_ROI_SizeX", GE_ROI_SizeX.read())
         save_dataset("Detector/GE_ROI_SizeY", GE_ROI_SizeY.read())
         save_dataset("Detector/Exposure_Time", GE_AreaDet.getExposure())
+        save_dataset("Detector/BG_Spectra", self.ge_bg_spectra)
         save_dataset("Detector/GE_Open_Delay", caget("PINK:GEYES:cam1:ShutterOpenDelay"))
         save_dataset("Detector/GE_Close_Delay", caget("PINK:GEYES:cam1:ShutterCloseDelay"))
         #save_dataset("Detector/GE_Num_Images", GE_AreaDet.getNumImages())
