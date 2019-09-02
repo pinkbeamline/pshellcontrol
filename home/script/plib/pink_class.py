@@ -24,6 +24,23 @@ class PINKCLASS():
         "compression":"True",
         "shuffle":"True"}
 
+    pressure_pvlist = [
+        ["GP9","PINK:DGION:Pressure"],
+        ["G01","PINK:MAXB:S6Measure"],
+        ["G02","PINK:MAXA:S3Measure"],
+        ["G03","PINK:MAXA:S2Measure"],
+        ["G04","PINK:MAXB:S3Measure"],
+        ["G06","PINK:MAXA:S5Measure"],
+        ["G07","PINK:MAXA:S1Measure"],
+        ["G08","PINK:MAXB:S5Measure"],
+        ["G11","PINK:MAXB:S2Measure"],
+        ["G12","PINK:MAXB:S1Measure"],
+        ["G13","PINK:MAXC:S1Measure"],
+        ["G16","PINK:MAXC:S3Measure"],
+        ["G19","PINK:MAXB:S4Measure"],
+        ["G20","PINK:MAXA:S4Measure"]
+    ]
+
     ####################################################################################
     #### Callable Functions ############################################################
     ####################################################################################
@@ -38,6 +55,7 @@ class PINKCLASS():
         self.sample=sample
         GE_AreaDet.stop()
         self.__ge_setup_file("ge")
+        self.__create_pressure_devices()
         self.__ge_setup_caenels1(exposure)
         self.__ge_setup_caenels2(exposure)
         self.__publish_fname(fname=" ")
@@ -67,6 +85,7 @@ class PINKCLASS():
         self.__ge_Save_Pos_Scan_Data()
         self.__save_specfile(0)
         pink_save_bl_snapshot()
+        self.__remove_pressure_devices()
         print("Scan complete")
         self.__publish_status("Scan complete")
 
@@ -85,6 +104,7 @@ class PINKCLASS():
         self.__publish_fname(fname=" ")
         GE_AreaDet.stop()
         self.__ge_setup_file("ge")
+        self.__create_pressure_devices()
         self.__ge_setup_caenels1(exposure)
         self.__ge_setup_caenels2(exposure)
         #self.__ge_setup_greateyes_sw_sync(exposure, images)
@@ -126,6 +146,7 @@ class PINKCLASS():
             if passid==passes: scan_done=True
         self.__ge_Save_Pos_Scan_Data_v4()
         pink_save_bl_snapshot()
+        self.__remove_pressure_devices()
         print("Scan complete")
         self.__publish_status("Scan complete")
 
@@ -145,6 +166,7 @@ class PINKCLASS():
         self.__publish_fname(fname=" ")
         GE_AreaDet.stop()
         self.__ge_setup_file("ge")
+        self.__create_pressure_devices()
         self.__ge_setup_caenels1(exposure)
         self.__ge_setup_caenels2(exposure)
         self.__ge_setup_greateyes_sw_sync(exposure, images)
@@ -194,6 +216,7 @@ class PINKCLASS():
             if passid==passes: scan_done=True
         self.__ge_Save_Pos_Scan_Data_v4()
         pink_save_bl_snapshot()
+        self.__remove_pressure_devices()
         print("Scan complete")
         self.__publish_status("Scan complete")
 
@@ -546,7 +569,7 @@ class PINKCLASS():
                 return
             cdown=cdown-1
             sleep(1)
-        print("Timeout (" + str(timeout) + " seconds) waiting for PV: " + pvname) 
+        print("Timeout (" + str(timeout) + " seconds) waiting for PV: " + pvname)
 
     def setup_pink(self):
     #Set PV, value, Monitor PV, deadband, timeout(sec)
@@ -574,7 +597,7 @@ class PINKCLASS():
         ]
 
         task_list = [
-           [group1_list, "Moving U17-PGM to home position...", "OK"], 
+           [group1_list, "Moving U17-PGM to home position...", "OK"],
            [group2_list, "Moving Apertures U17-AU1-Pink...", "OK"],
            [group3_list, "Moving Apertures U17-AU3-Pink...", "OK"],
            [group4_list, "Moving Hexapod Ty...", "OK\nDone!"]
@@ -587,7 +610,7 @@ class PINKCLASS():
                 caputq(mpv[0],mpv[1])
             for mpv in grp:
                 self.__pvwait(mpv[2], mpv[1], deadband=mpv[3], timeout=mpv[4])
-            print(tsk[2]) 
+            print(tsk[2])
 
     ####################################################################################
     #### Internal Functions ############################################################
@@ -1072,3 +1095,45 @@ class PINKCLASS():
             fspec.close()
         except:
             print("[Error]: Failed to create mca file")
+
+    def __create_pressure_devices(self):
+        if self.DEBUGLOG: log("Pressure: Creating pressure devices...", data_file=False)
+        for pvr in self.pressure_pvlist:
+            devicename = "PT"+pvr[0]
+            add_device(ch.psi.pshell.epics.ChannelDouble(devicename, pvr[1]), True)
+            execcmd = devicename+".setMonitored(True)"
+            exec(execcmd)
+            devicename = "PT"+pvr[0]+"Desc"
+            pvnamedesc = pvr[1]+".DESC"
+            add_device(ch.psi.pshell.epics.ChannelString(devicename, pvnamedesc), True)
+            execcmd = devicename+".update()"
+            exec(execcmd)
+        if self.DEBUGLOG: log("Pressure: pressure devices OK", data_file=False)
+
+    def __remove_pressure_devices(self):
+        if self.DEBUGLOG: log("Pressure: Removing pressure devices...", data_file=False)
+        for pvr in self.pressure_pvlist:
+            devicename = "PT"+pvr[0]
+            execcmd = "remove_device("+devicename+")"
+            exec(execcmd)
+            devicename = "PT"+pvr[0]+"Desc"
+            execcmd = "remove_device("+devicename+")"
+            exec(execcmd)
+        if self.DEBUGLOG: log("Pressure: devices removed OK", data_file=False)
+
+    def __create_pressure_dataset(self, passfolder = ""):
+        for pvr in pressure_pvlist:
+            devicenamedesc = "PT"+pvr[0]+"Desc"
+            datasetpath = passfolder+"Pressure/"+pvr[0]
+            execcmd = "pvdesc = "+devicenamedesc+".take()"
+            exec(execcmd)
+            create_dataset(datasetpath, 'd', False)
+            set_attribute(datasetpath, "DESC", pvdesc)
+
+    def __append_pressure_dataset(self, passfolder = ""):
+        for pvr in pressure_pvlist:
+            devicename = "PT"+pvr[0]
+            datasetpath = passfolder+"Pressure/"+pvr[0]
+            execcmd = "pvtempval = "+devicename+".take()"
+            exec(execcmd)
+            append_dataset(datasetpath, pvtempval)
