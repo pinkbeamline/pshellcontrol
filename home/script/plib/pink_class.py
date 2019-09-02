@@ -359,6 +359,36 @@ class PINKCLASS():
                 self.__pvwait(mpv[2], mpv[1], deadband=mpv[3], timeout=mpv[4])
             print(tsk[2])
 
+    #### Move Filters  ############################################################
+    def filter1(self, pos):
+        caput("PINK:SMA01:m0.VAL", float(pos))
+
+    def filter2(self, pos):
+        caput("PINK:SMA01:m1.VAL", float(pos))
+
+    def filter3(self, pos):
+        caput("PINK:SMA01:m2.VAL", float(pos))
+
+    #### Open/Close valves  ############################################################
+    def valveOPEN(self,vnum):
+        if type(vnum) is str:
+            print('Enter valve number. Ex: valveOPEN(29)')
+            return "Invalid input"
+        if vnum>30:
+            dev="PLCVAC"
+        else:
+            dev="PLCGAS"
+        vpv = "PINK:"+dev+":V"+str(int(vnum))+"open"
+        caput(vpv,1)
+
+    def valveCLOSE(self,vnum):
+        if vnum>30:
+            dev="PLCVAC"
+        else:
+            dev="PLCGAS"
+        vpv = "PINK:"+dev+":V"+str(int(vnum))+"close"
+        caput(vpv,1)
+
     ####################################################################################
     #### Internal Functions ############################################################
     ####################################################################################
