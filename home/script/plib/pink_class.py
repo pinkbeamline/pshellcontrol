@@ -102,7 +102,7 @@ class PINKCLASS():
             self.__ge_clean_spec_sum()
             self.__ge_Create_Scan_Dataset_v2(cont=False, passid=passid)
             self.__ge_Save_Pre_Scan_Data_v3(cont=False, passid=passid)
-            self.__publish_status("Running line scan: " + "pass " + '{:d}'.format(passid+1) + "/" +  '{:d}'.format(passes))
+            self.__publish_status("line scan: " + "pass " + '{:d}'.format(passid+1) + "/" + '{:d}'.format(passes) + " (" + sample + ")")
             SEC_el_y.move(start)
             try:
                 for scan_count in range(self.line_images):
@@ -130,7 +130,7 @@ class PINKCLASS():
         self.__publish_status("Scan complete")
 
     #### ZIGZAG SCAN        ############################################################
-    def ge_SEC_EL_zigzag(self, exposure, X0, deltaX, Xpoints, Y0, deltaY, Ypoints, passes=1, sample=" "):
+    def ge_SEC_EL_zigzag(self, exposure, X0, deltaX, Xpoints, Y0, deltaY, Ypoints, passes=1, sample=" ", linedelay=0):
         images=int(Xpoints*Ypoints)
         self.ge_Num_Images=images
         self.ge_Num_Images_total=int(images*passes)
@@ -162,7 +162,7 @@ class PINKCLASS():
             self.__ge_clean_spec_sum()
             self.__ge_Create_Scan_Dataset_v2(cont=False, passid=passid)
             self.__ge_Save_Pre_Scan_Data_v3(cont=False, passid=passid)
-            self.__publish_status("Running zigzag scan: " + "pass " + '{:d}'.format(passid+1) + "/" +  '{:d}'.format(passes))
+            self.__publish_status("zigzag scan: " + "pass " + '{:d}'.format(passid+1) + "/" +  '{:d}'.format(passes) + " (" + sample + ")")
             SEC_el_x.move(X0)
             SEC_el_y.move(Y0)
             scan_dir=1
@@ -183,6 +183,7 @@ class PINKCLASS():
                         self.__ge_Save_Scan_Data_v2(cont=False, passid=passid)
                         self.__ge_calc_progress()
                     scan_dir=abs(scan_dir-1)
+                    sleep(linedelay)
             except Exception, ex1:
                 print("Script Aborted:")
                 print(ex1)
@@ -198,7 +199,7 @@ class PINKCLASS():
         self.__publish_status("Scan complete")
 
    #### CONT SCAN EXPOSURE + SPEED optimized  ###########################################################################
-    def ge_SEC_EL_continous_exposure_speed(self, exposure, X0, deltaX, Xpoints, Y0, Y1, Yspeed, passes=1, sample=" "):
+    def ge_SEC_EL_continous_exposure_speed(self, exposure, X0, deltaX, Xpoints, Y0, Y1, Yspeed, passes=1, sample=" ", linedelay=0):
         readout_time=0.4
         yspeed = abs(round(Yspeed))
         self.cont_speed = yspeed
@@ -236,7 +237,7 @@ class PINKCLASS():
             self.__ge_clean_spec_sum()
             self.__ge_Create_Scan_Dataset_v2(cont=True, passid=passid)
             self.__ge_Save_Pre_Scan_Data_v3(cont=True, passid=passid)
-            self.__publish_status("Running continuous scan: " + "pass " + '{:d}'.format(passid+1) + "/" +  '{:d}'.format(passes))
+            self.__publish_status("continuous scan: " + "pass " + '{:d}'.format(passid+1) + "/" +  '{:d}'.format(passes) + " (" + sample + ")")
             SEC_el_y.setSpeed(20000.0)
             SEC_el_x.move(X0)
             SEC_el_y.move(Y0)
@@ -276,6 +277,7 @@ class PINKCLASS():
                     SEC_el_y.setSpeed(20000)
                     self.__sec_el_y_safemove(ydest)
                     scan_dir=abs(scan_dir-1)
+                    sleep(linedelay)
             except Exception, ex1:
                 print("Script Aborted:")
                 print(ex1)
@@ -293,7 +295,7 @@ class PINKCLASS():
         self.__publish_status("Scan complete")
 
     #### CONT SCAN POINTS + SPEED optimized    ###########################################################################
-    def ge_SEC_EL_continous_points_speed(self, X0, deltaX, Xpoints, Y0, Y1, Ypoints, Yspeed, passes=1, sample=" "):
+    def ge_SEC_EL_continous_points_speed(self, X0, deltaX, Xpoints, Y0, Y1, Ypoints, Yspeed, passes=1, sample=" ", linedelay=0):
         readout_time=0.4
         yspeed = abs(round(Yspeed))
         self.cont_speed = yspeed
@@ -331,7 +333,7 @@ class PINKCLASS():
             self.__ge_clean_spec_sum()
             self.__ge_Create_Scan_Dataset_v2(cont=True, passid=passid)
             self.__ge_Save_Pre_Scan_Data_v3(cont=True, passid=passid)
-            self.__publish_status("Running continuous scan: " + "pass " + '{:d}'.format(passid+1) + "/" +  '{:d}'.format(passes))
+            self.__publish_status("continuous scan: " + "pass " + '{:d}'.format(passid+1) + "/" +  '{:d}'.format(passes) + " (" + sample + ")")
             SEC_el_y.setSpeed(20000.0)
             SEC_el_x.move(X0)
             SEC_el_y.move(Y0)
@@ -372,6 +374,7 @@ class PINKCLASS():
                     SEC_el_y.setSpeed(20000)
                     self.__sec_el_y_safemove(ydest)
                     scan_dir=abs(scan_dir-1)
+                    sleep(linedelay)
             except Exception, ex1:
                 print("Script Aborted:")
                 print(ex1)
@@ -389,7 +392,7 @@ class PINKCLASS():
         self.__publish_status("Scan complete")
 
     #### CONT SCAN EXPOSURE + POINTS optimized    ###########################################################################
-    def ge_SEC_EL_continous_exposure_points(self, exposure, X0, deltaX, Xpoints, Y0, Y1, Ypoints, passes=1, sample=" "):
+    def ge_SEC_EL_continous_exposure_points(self, exposure, X0, deltaX, Xpoints, Y0, Y1, Ypoints, passes=1, sample=" ", linedelay=0):
         readout_time=0.4
         self.line_images=Ypoints
         self.scan_images=Ypoints*Xpoints
@@ -426,7 +429,7 @@ class PINKCLASS():
             self.__ge_clean_spec_sum()
             self.__ge_Create_Scan_Dataset_v2(cont=True, passid=passid)
             self.__ge_Save_Pre_Scan_Data_v3(cont=True, passid=passid)
-            self.__publish_status("Running continuous scan: " + "pass " + '{:d}'.format(passid+1) + "/" +  '{:d}'.format(passes))
+            self.__publish_status("continuous scan: " + "pass " + '{:d}'.format(passid+1) + "/" +  '{:d}'.format(passes) + " (" + sample + ")")
             SEC_el_y.setSpeed(20000.0)
             SEC_el_x.move(X0)
             SEC_el_y.move(Y0)
@@ -466,6 +469,7 @@ class PINKCLASS():
                     SEC_el_y.setSpeed(20000)
                     self.__sec_el_y_safemove(ydest)
                     scan_dir=abs(scan_dir-1)
+                    sleep(linedelay)
             except Exception, ex1:
                 print("Script Aborted:")
                 print(ex1)
