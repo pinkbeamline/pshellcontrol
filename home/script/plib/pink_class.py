@@ -213,84 +213,10 @@ class PINKCLASS():
         self.ge_exptime=exposure
         self.sample=sample
         X0=float(X0)
-        Xstep=float(deltaX)
+        deltaX=float(deltaX)
         Y0=float(Y0)
         Y1=float(Y1)
-        self.__publish_fname(fname=" ")
-        GE_AreaDet.stop()
-        self.__ge_setup_file("ge")
-        self.__ge_setup_caenels1(exposure)
-        self.__ge_setup_caenels2(exposure)
-        #self.__ge_setup_greateyes_sw_sync(exposure, self.line_images)
-        self.__ge_Save_Pre_Scan_Data_v2(scantype="Continuous")
-        self.__ge_Create_Scan_Dataset_v3(cont=True, passes=passes)
-        self.__ge_Arguments([exposure, X0, deltaX, Xpoints, Y0, Y1, Yspeed, passes, sample], ftype=4)
-        self.__publish_fname()
-        scan_done=False
-        passid=0
-        while not(scan_done):
-            if self.DEBUG: print("Scan pass = " + str(passid))
-            self.__ge_save_background(exposure)
-            self.__ge_setup_greateyes(exposure, self.line_images)
-            self.__ge_init_progress()
-            self.__ge_clean_spec_sum()
-            self.__ge_Create_Scan_Dataset_v2(cont=True, passid=passid)
-            self.__ge_Save_Pre_Scan_Data_v3(cont=True, passid=passid)
-            self.__publish_status("Running continuous scan: " + "pass " + '{:d}'.format(passid+1) + "/" +  '{:d}'.format(passes))
-            SEC_el_y.setSpeed(20000.0)
-            SEC_el_x.move(X0)
-            SEC_el_y.move(Y0)
-            scan_dir=1
-            self.x0_mdata = []
-            self.y0_mdata = []
-            self.x1_mdata = []
-            self.y1_mdata = []
-            self.x_mdata = []
-            self.y_mdata = []
-            try:
-                for j in range(Xpoints):
-                    SEC_el_x.move(X0+(j*deltaX))
-                    if(scan_dir):
-                        ydest=Y1
-                    else:
-                        ydest=Y0
-                    SEC_el_y.setSpeed(yspeed)
-                    SEC_el_y.moveAsync(ydest)
-                    GE_AreaDet.start()
-                    for i in range(Ypoints):
-                        self.x0_mdata.append(SEC_el_x.getPosition())
-                        self.y0_mdata.append(SEC_el_y.getPosition())
-                        self.x_mdata.append(SEC_el_x.getPosition())
-                        self.y_mdata.append(SEC_el_y.getPosition())
-                        self.__ge_start_frame_countdown()
-                        GE_Raw_Array.waitCacheChange((exposure*1000)+10000)
-                        self.x1_mdata.append(SEC_el_x.getPosition())
-                        self.y1_mdata.append(SEC_el_y.getPosition())
-                        self.x_mdata.append(SEC_el_x.getPosition())
-                        self.y_mdata.append(SEC_el_y.getPosition())
-    		        	#add 10ms delay to make sure all new data have arrived
-                        sleep(0.01)
-                        self.__ge_Save_Scan_Data_v2(cont=True, passid=passid)
-                        self.__ge_calc_progress()
-                    SEC_el_y.stop()
-                    SEC_el_y.setSpeed(20000)
-                    self.__sec_el_y_safemove(ydest)
-                    scan_dir=abs(scan_dir-1)
-            except Exception, ex1:
-                print("Script Aborted:")
-                print(ex1)
-                self.__publish_status("Script aborted")
-                GE_AreaDet.stop()
-                SEC_el_y.setSpeed(20000)
-            self.__ge_Save_Pos_Scan_Data_v3(cont=True, passid=passid)
-            self.__save_specfile(passid)
-            passid=passid+1
-            if passid==passes: scan_done=True
-        self.__ge_Save_Pos_Scan_Data_v4()
-        self.__ge_Save_Pos_Scan_Data_Continous_v2()
-        pink_save_bl_snapshot()
-        print("Scan complete")
-        self.__publish_status("Scan complete")
+        self.__continous_scan(exposure, passes, X0, deltaX, Xpoints, Y0, Y1, Ypoints, Yspeed, passes, sample)
 
     #### CONT SCAN POINTS + SPEED optimized    ###########################################################################
     def ge_SEC_EL_continous_points_speed(self, X0, deltaX, Xpoints, Y0, Y1, Ypoints, Yspeed, passes=1, sample=" "):
@@ -299,94 +225,16 @@ class PINKCLASS():
         self.cont_speed = yspeed
         exposure = (float(abs(Y1-Y0))/(Ypoints*Yspeed))-readout_time
         print("Greateyes set exposure: " + '{:.3f}'.format(exposure) + " seconds")
-        #images=int(Xpoints*Ypoints)
         self.line_images=Ypoints
         self.scan_images=Ypoints*Xpoints
         self.total_images=Ypoints*Xpoints*passes
-        #self.ge_Num_Images=images
-        #self.ge_Num_Images_total=int(images*passes)
         self.ge_exptime=exposure
         self.sample=sample
         X0=float(X0)
-        Xstep=float(deltaX)
+        deltaX=float(deltaX)
         Y0=float(Y0)
         Y1=float(Y1)
-        self.__publish_fname(fname=" ")
-        GE_AreaDet.stop()
-        self.__ge_setup_file("ge")
-        self.__ge_setup_caenels1(exposure)
-        self.__ge_setup_caenels2(exposure)
-        #self.__ge_setup_greateyes_sw_sync(exposure, images)
-        self.__ge_Save_Pre_Scan_Data_v2(scantype="Continuous")
-        self.__ge_Create_Scan_Dataset_v3(cont=True, passes=passes)
-        self.__ge_Arguments([X0, deltaX, Xpoints, Y0, Y1, Ypoints, Yspeed, passes, sample], ftype=5)
-        self.__publish_fname()
-        scan_done=False
-        passid=0
-        while not(scan_done):
-            if self.DEBUG: print("Scan pass = " + str(passid))
-            self.__ge_save_background(exposure)
-            self.__ge_setup_greateyes(exposure, self.line_images)
-            self.__ge_init_progress()
-            self.__ge_clean_spec_sum()
-            self.__ge_Create_Scan_Dataset_v2(cont=True, passid=passid)
-            self.__ge_Save_Pre_Scan_Data_v3(cont=True, passid=passid)
-            self.__publish_status("Running continuous scan: " + "pass " + '{:d}'.format(passid+1) + "/" +  '{:d}'.format(passes))
-            SEC_el_y.setSpeed(20000.0)
-            SEC_el_x.move(X0)
-            SEC_el_y.move(Y0)
-            scan_dir=1
-            self.x0_mdata = []
-            self.y0_mdata = []
-            self.x1_mdata = []
-            self.y1_mdata = []
-            self.x_mdata = []
-            self.y_mdata = []
-            try:
-                for j in range(Xpoints):
-                    SEC_el_x.move(X0+(j*deltaX))
-                    if(scan_dir):
-                        ydest=Y1
-                    else:
-                        ydest=Y0
-                    SEC_el_y.setSpeed(yspeed)
-                    SEC_el_y.moveAsync(ydest)
-                    GE_AreaDet.start()
-                    for i in range(Ypoints):
-                        self.x0_mdata.append(SEC_el_x.getPosition())
-                        self.y0_mdata.append(SEC_el_y.getPosition())
-                        self.x_mdata.append(SEC_el_x.getPosition())
-                        self.y_mdata.append(SEC_el_y.getPosition())
-                        self.__ge_start_frame_countdown()
-                        #GE_AreaDet.start()
-                        GE_Raw_Array.waitCacheChange((int(math.ceil(exposure))*1000)+10000)
-                        self.x1_mdata.append(SEC_el_x.getPosition())
-                        self.y1_mdata.append(SEC_el_y.getPosition())
-                        self.x_mdata.append(SEC_el_x.getPosition())
-                        self.y_mdata.append(SEC_el_y.getPosition())
-                        #add 10ms delay to make sure all new data have arrived
-                        sleep(0.01)
-                        self.__ge_Save_Scan_Data_v2(cont=True, passid=passid)
-                        self.__ge_calc_progress()
-                    SEC_el_y.stop()
-                    SEC_el_y.setSpeed(20000)
-                    self.__sec_el_y_safemove(ydest)
-                    scan_dir=abs(scan_dir-1)
-            except Exception, ex1:
-                print("Script Aborted:")
-                print(ex1)
-                self.__publish_status("Script aborted")
-                GE_AreaDet.stop()
-                SEC_el_y.setSpeed(20000)
-            self.__ge_Save_Pos_Scan_Data_v3(cont=True, passid=passid)
-            self.__save_specfile(passid)
-            passid=passid+1
-            if passid==passes: scan_done=True
-        self.__ge_Save_Pos_Scan_Data_v4()
-        self.__ge_Save_Pos_Scan_Data_Continous_v2()
-        pink_save_bl_snapshot()
-        print("Scan complete")
-        self.__publish_status("Scan complete")
+        self.__continous_scan(exposure, passes, X0, deltaX, Xpoints, Y0, Y1, Ypoints, Yspeed, passes, sample)
 
     #### CONT SCAN EXPOSURE + POINTS optimized    ###########################################################################
     def ge_SEC_EL_continous_exposure_points(self, exposure, X0, deltaX, Xpoints, Y0, Y1, Ypoints, passes=1, sample=" "):
@@ -394,93 +242,17 @@ class PINKCLASS():
         self.line_images=Ypoints
         self.scan_images=Ypoints*Xpoints
         self.total_images=Ypoints*Xpoints*passes
-        #images=int(Xpoints*Ypoints)
-        #self.ge_Num_Images=images
         self.ge_exptime=exposure
         self.sample=sample
         X0=float(X0)
-        Xstep=float(deltaX)
+        deltaX=float(deltaX)
         Y0=float(Y0)
         Y1=float(Y1)
         totaltime = Ypoints*(exposure+readout_time)
         yspeed = abs(int((Y1-Y0)/totaltime))
         self.cont_speed = yspeed
         print("Sample calculated speed: " + str(yspeed) + " um/sec")
-        self.__publish_fname(fname=" ")
-        GE_AreaDet.stop()
-        self.__ge_setup_file("ge")
-        self.__ge_setup_caenels1(exposure)
-        self.__ge_setup_caenels2(exposure)
-        #self.__ge_setup_greateyes_sw_sync(exposure, images)
-        self.__ge_Save_Pre_Scan_Data_v2(scantype="Continuous")
-        self.__ge_Create_Scan_Dataset_v3(cont=True, passes=passes)
-        self.__ge_Arguments([exposure, X0, deltaX, Xpoints, Y0, Y1, Ypoints, passes, sample], ftype=6)
-        self.__publish_fname()
-        scan_done=False
-        passid=0
-        while not(scan_done):
-            if self.DEBUG: print("Scan pass = " + str(passid))
-            self.__ge_save_background(exposure)
-            self.__ge_setup_greateyes(exposure, self.line_images)
-            self.__ge_init_progress()
-            self.__ge_clean_spec_sum()
-            self.__ge_Create_Scan_Dataset_v2(cont=True, passid=passid)
-            self.__ge_Save_Pre_Scan_Data_v3(cont=True, passid=passid)
-            self.__publish_status("Running continuous scan: " + "pass " + '{:d}'.format(passid+1) + "/" +  '{:d}'.format(passes))
-            SEC_el_y.setSpeed(20000.0)
-            SEC_el_x.move(X0)
-            SEC_el_y.move(Y0)
-            scan_dir=1
-            self.x0_mdata = []
-            self.y0_mdata = []
-            self.x1_mdata = []
-            self.y1_mdata = []
-            self.x_mdata = []
-            self.y_mdata = []
-            try:
-                for j in range(Xpoints):
-                    SEC_el_x.move(X0+(j*deltaX))
-                    if(scan_dir):
-                        ydest=Y1
-                    else:
-                        ydest=Y0
-                    SEC_el_y.setSpeed(yspeed)
-                    SEC_el_y.moveAsync(ydest)
-                    for i in range(Ypoints):
-                        self.x0_mdata.append(SEC_el_x.getPosition())
-                        self.y0_mdata.append(SEC_el_y.getPosition())
-                        self.x_mdata.append(SEC_el_x.getPosition())
-                        self.y_mdata.append(SEC_el_y.getPosition())
-                        self.__ge_start_frame_countdown()
-                        GE_AreaDet.start()
-                        GE_Raw_Array.waitCacheChange((int(math.ceil(exposure))*1000)+10000)
-                        self.x1_mdata.append(SEC_el_x.getPosition())
-                        self.y1_mdata.append(SEC_el_y.getPosition())
-                        self.x_mdata.append(SEC_el_x.getPosition())
-                        self.y_mdata.append(SEC_el_y.getPosition())
-    		        	#add 10ms delay to make sure all new data have arrived
-                        sleep(0.01)
-                        self.__ge_Save_Scan_Data_v2(cont=True, passid=passid)
-                        self.__ge_calc_progress()
-                    SEC_el_y.stop()
-                    SEC_el_y.setSpeed(20000)
-                    self.__sec_el_y_safemove(ydest)
-                    scan_dir=abs(scan_dir-1)
-            except Exception, ex1:
-                print("Script Aborted:")
-                print(ex1)
-                self.__publish_status("Script aborted")
-                GE_AreaDet.stop()
-                SEC_el_y.setSpeed(20000)
-            self.__ge_Save_Pos_Scan_Data_v3(cont=True, passid=passid)
-            self.__save_specfile(passid)
-            passid=passid+1
-            if passid==passes: scan_done=True
-        self.__ge_Save_Pos_Scan_Data_v4()
-        self.__ge_Save_Pos_Scan_Data_Continous_v2()
-        pink_save_bl_snapshot()
-        print("Scan complete")
-        self.__publish_status("Scan complete")
+        self.__continous_scan(exposure, passes, X0, deltaX, Xpoints, Y0, Y1, Ypoints, Yspeed, passes, sample)
 
     #### HELP INFORMATION   ############################################################
     def help(self):
@@ -546,7 +318,7 @@ class PINKCLASS():
                 return
             cdown=cdown-1
             sleep(1)
-        print("Timeout (" + str(timeout) + " seconds) waiting for PV: " + pvname) 
+        print("Timeout (" + str(timeout) + " seconds) waiting for PV: " + pvname)
 
     def setup_pink(self):
     #Set PV, value, Monitor PV, deadband, timeout(sec)
@@ -574,7 +346,7 @@ class PINKCLASS():
         ]
 
         task_list = [
-           [group1_list, "Moving U17-PGM to home position...", "OK"], 
+           [group1_list, "Moving U17-PGM to home position...", "OK"],
            [group2_list, "Moving Apertures U17-AU1-Pink...", "OK"],
            [group3_list, "Moving Apertures U17-AU3-Pink...", "OK"],
            [group4_list, "Moving Hexapod Ty...", "OK\nDone!"]
@@ -587,7 +359,7 @@ class PINKCLASS():
                 caputq(mpv[0],mpv[1])
             for mpv in grp:
                 self.__pvwait(mpv[2], mpv[1], deadband=mpv[3], timeout=mpv[4])
-            print(tsk[2]) 
+            print(tsk[2])
 
     ####################################################################################
     #### Internal Functions ############################################################
@@ -816,20 +588,20 @@ class PINKCLASS():
             save_dataset("Scan/Args/Xpoints", args[3])
             save_dataset("Scan/Args/Y0", args[4])
             save_dataset("Scan/Args/Y1", args[5])
-            save_dataset("Scan/Args/Yspeed", args[6])
-            save_dataset("Scan/Args/passes", args[7])
-            save_dataset("Scan/Args/sample", args[8])
+            save_dataset("Scan/Args/Yspeed", args[7])
+            save_dataset("Scan/Args/passes", args[8])
+            save_dataset("Scan/Args/sample", args[9])
         elif ftype==5:
             save_dataset("Scan/Args/function", "ge_SEC_EL_continous_points_speed")
-            save_dataset("Scan/Args/X0", args[0])
-            save_dataset("Scan/Args/deltaX", args[1])
-            save_dataset("Scan/Args/Xpoints", args[2])
-            save_dataset("Scan/Args/Y0", args[3])
-            save_dataset("Scan/Args/Y1", args[4])
-            save_dataset("Scan/Args/Ypoints", args[5])
-            save_dataset("Scan/Args/Yspeed", args[6])
-            save_dataset("Scan/Args/passes", args[7])
-            save_dataset("Scan/Args/sample", args[8])
+            save_dataset("Scan/Args/X0", args[1])
+            save_dataset("Scan/Args/deltaX", args[2])
+            save_dataset("Scan/Args/Xpoints", args[3])
+            save_dataset("Scan/Args/Y0", args[4])
+            save_dataset("Scan/Args/Y1", args[5])
+            save_dataset("Scan/Args/Ypoints", args[6])
+            save_dataset("Scan/Args/Yspeed", args[7])
+            save_dataset("Scan/Args/passes", args[8])
+            save_dataset("Scan/Args/sample", args[9])
         elif ftype==6:
             save_dataset("Scan/Args/function", "ge_SEC_EL_continous_exposure_points")
             save_dataset("Scan/Args/exposure", args[0])
@@ -839,8 +611,8 @@ class PINKCLASS():
             save_dataset("Scan/Args/Y0", args[4])
             save_dataset("Scan/Args/Y1", args[5])
             save_dataset("Scan/Args/Ypoints", args[6])
-            save_dataset("Scan/Args/passes", args[7])
-            save_dataset("Scan/Args/sample", args[8])
+            save_dataset("Scan/Args/passes", args[8])
+            save_dataset("Scan/Args/sample", args[9])
         else:
             return
 
@@ -1072,3 +844,79 @@ class PINKCLASS():
             fspec.close()
         except:
             print("[Error]: Failed to create mca file")
+
+        def __continous_scan(self, exposure, passes, X0, deltaX, Xpoints, Y0, Y1, Ypoints, Yspeed, passes, sample):
+            self.__publish_fname(fname=" ")
+            GE_AreaDet.stop()
+            self.__ge_setup_file("ge")
+            self.__ge_setup_caenels1(exposure)
+            self.__ge_setup_caenels2(exposure)
+            self.__ge_Save_Pre_Scan_Data_v2(scantype="Continuous")
+            self.__ge_Create_Scan_Dataset_v3(cont=True, passes=passes)
+            self.__ge_Arguments([exposure, X0, deltaX, Xpoints, Y0, Y1, Ypoints, Yspeed, passes, sample], ftype=4)
+            self.__publish_fname()
+            scan_done=False
+            passid=0
+            while not(scan_done):
+                if self.DEBUG: print("Scan pass = " + str(passid))
+                self.__ge_save_background(exposure)
+                self.__ge_setup_greateyes(exposure, self.line_images)
+                self.__ge_init_progress()
+                self.__ge_clean_spec_sum()
+                self.__ge_Create_Scan_Dataset_v2(cont=True, passid=passid)
+                self.__ge_Save_Pre_Scan_Data_v3(cont=True, passid=passid)
+                self.__publish_status("Running continuous scan: " + "pass " + '{:d}'.format(passid+1) + "/" +  '{:d}'.format(passes))
+                SEC_el_y.setSpeed(20000.0)
+                SEC_el_x.move(X0)
+                SEC_el_y.move(Y0)
+                scan_dir=1
+                self.x0_mdata = []
+                self.y0_mdata = []
+                self.x1_mdata = []
+                self.y1_mdata = []
+                self.x_mdata = []
+                self.y_mdata = []
+                try:
+                    for j in range(Xpoints):
+                        SEC_el_x.move(X0+(j*deltaX))
+                        if(scan_dir):
+                            ydest=Y1
+                        else:
+                            ydest=Y0
+                        SEC_el_y.setSpeed(yspeed)
+                        SEC_el_y.moveAsync(ydest)
+                        GE_AreaDet.start()
+                        for i in range(Ypoints):
+                            self.x0_mdata.append(SEC_el_x.getPosition())
+                            self.y0_mdata.append(SEC_el_y.getPosition())
+                            self.x_mdata.append(SEC_el_x.getPosition())
+                            self.y_mdata.append(SEC_el_y.getPosition())
+                            self.__ge_start_frame_countdown()
+                            GE_Raw_Array.waitCacheChange((int(math.ceil(exposure))*1000)+10000)
+                            self.x1_mdata.append(SEC_el_x.getPosition())
+                            self.y1_mdata.append(SEC_el_y.getPosition())
+                            self.x_mdata.append(SEC_el_x.getPosition())
+                            self.y_mdata.append(SEC_el_y.getPosition())
+        		        #add 10ms delay to make sure all new data have arrived
+                            sleep(0.01)
+                            self.__ge_Save_Scan_Data_v2(cont=True, passid=passid)
+                            self.__ge_calc_progress()
+                        SEC_el_y.stop()
+                        SEC_el_y.setSpeed(20000)
+                        self.__sec_el_y_safemove(ydest)
+                        scan_dir=abs(scan_dir-1)
+                except Exception, ex1:
+                    print("Script Aborted:")
+                    print(ex1)
+                    self.__publish_status("Script aborted")
+                    GE_AreaDet.stop()
+                    SEC_el_y.setSpeed(20000)
+                self.__ge_Save_Pos_Scan_Data_v3(cont=True, passid=passid)
+                self.__save_specfile(passid)
+                passid=passid+1
+                if passid==passes: scan_done=True
+            self.__ge_Save_Pos_Scan_Data_v4()
+            self.__ge_Save_Pos_Scan_Data_Continous_v2()
+            #pink_save_bl_snapshot()
+            print("Scan complete")
+            self.__publish_status("Scan complete")
