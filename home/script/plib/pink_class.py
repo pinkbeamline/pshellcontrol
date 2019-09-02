@@ -23,6 +23,7 @@ class PINKCLASS():
     data_compression = {
         "compression":"True",
         "shuffle":"True"}
+    ge_bg_spectra = []
 
     ####################################################################################
     #### Callable Functions ############################################################
@@ -66,7 +67,7 @@ class PINKCLASS():
             GE_AreaDet.stop()
         self.__ge_Save_Pos_Scan_Data()
         self.__save_specfile(0)
-        pink_save_bl_snapshot()
+        #pink_save_bl_snapshot()
         print("Scan complete")
         self.__publish_status("Scan complete")
 
@@ -552,6 +553,7 @@ class PINKCLASS():
         if self.DEBUGLOG: log("BG: Enable BG Processing", data_file=False)
         #Turns ON Background processing on GEyes Process Plugin
         caput("PINK:GEYES:Proc1:EnableBackground",1)
+        self.ge_bg_spectra = GE_Spectrum.read()
         if self.DEBUG: print("Background saved")
         self.__publish_status("Background saved")
 
@@ -566,6 +568,7 @@ class PINKCLASS():
         if self.DEBUG: print("Saving Pre scan dataset ...")
         save_dataset("RAW/GE_BG_Image", GE_BG_Image.read(), features=self.data_compression)
         #save_dataset("Processed/GE_Spectrum_Convertion", GE_Spectrum_Conv.read())
+        save_dataset("Detector/BG_Spectra", self.ge_bg_spectra)
         save_dataset("Detector/GE_ROI_Line", GE_ROI_Line.read())
         save_dataset("Detector/GE_ROI_SizeX", GE_ROI_SizeX.read())
         save_dataset("Detector/GE_ROI_SizeY", GE_ROI_SizeY.read())
@@ -586,6 +589,7 @@ class PINKCLASS():
         save_dataset("Detector/GE_ROI_SizeX", GE_ROI_SizeX.read())
         save_dataset("Detector/GE_ROI_SizeY", GE_ROI_SizeY.read())
         save_dataset("Detector/Exposure_Time", GE_AreaDet.getExposure())
+        save_dataset("Detector/BG_Spectra", self.ge_bg_spectra)
         save_dataset("Detector/GE_Open_Delay", caget("PINK:GEYES:cam1:ShutterOpenDelay"))
         save_dataset("Detector/GE_Close_Delay", caget("PINK:GEYES:cam1:ShutterCloseDelay"))
         #save_dataset("Detector/GE_Num_Images", GE_AreaDet.getNumImages())
