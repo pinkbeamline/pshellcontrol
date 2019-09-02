@@ -214,7 +214,7 @@ class PINKCLASS():
         deltaX=float(deltaX)
         Y0=float(Y0)
         Y1=float(Y1)
-        self.__continous_scan(exposure, passes, X0, deltaX, Xpoints, Y0, Y1, Ypoints, Yspeed, sample)
+        self.__continous_scan(exposure, passes, X0, deltaX, Xpoints, Y0, Y1, Ypoints, Yspeed, sample, 4)
 
     #### CONT SCAN POINTS + SPEED optimized    ###########################################################################
     def ge_SEC_EL_continous_points_speed(self, X0, deltaX, Xpoints, Y0, Y1, Ypoints, Yspeed, passes=1, sample=" ", linedelay=0):
@@ -232,7 +232,7 @@ class PINKCLASS():
         deltaX=float(deltaX)
         Y0=float(Y0)
         Y1=float(Y1)
-        self.__continous_scan(exposure, passes, X0, deltaX, Xpoints, Y0, Y1, Ypoints, Yspeed, sample)
+        self.__continous_scan(exposure, passes, X0, deltaX, Xpoints, Y0, Y1, Ypoints, Yspeed, sample, 5)
 
     #### CONT SCAN EXPOSURE + POINTS optimized    ###########################################################################
     def ge_SEC_EL_continous_exposure_points(self, exposure, X0, deltaX, Xpoints, Y0, Y1, Ypoints, passes=1, sample=" ", linedelay=0):
@@ -250,7 +250,7 @@ class PINKCLASS():
         Yspeed = abs(int((Y1-Y0)/totaltime))
         self.cont_speed = Yspeed
         print("Sample calculated speed: " + str(Yspeed) + " um/sec")
-        self.__continous_scan(exposure, passes, X0, deltaX, Xpoints, Y0, Y1, Ypoints, Yspeed, sample)
+        self.__continous_scan(exposure, passes, X0, deltaX, Xpoints, Y0, Y1, Ypoints, Yspeed, sample, 6)
 
     #### HELP INFORMATION   ############################################################
     def help(self):
@@ -350,14 +350,19 @@ class PINKCLASS():
            [group4_list, "Moving Hexapod Ty...", "OK\nDone!"]
         ]
 
-        for tsk in task_list:
-            grp = tsk[0]
-            print(tsk[1])
-            for mpv in grp:
-                caputq(mpv[0],mpv[1])
-            for mpv in grp:
-                self.__pvwait(mpv[2], mpv[1], deadband=mpv[3], timeout=mpv[4])
-            print(tsk[2])
+        resp = get_option("Setup PINK beamline will move multiples devices. Are you sure?", type='OkCancel')
+
+        if resp == 'Yes':
+            for tsk in task_list:
+                grp = tsk[0]
+                print(tsk[1])
+                for mpv in grp:
+                    caputq(mpv[0],mpv[1])
+                for mpv in grp:
+                    self.__pvwait(mpv[2], mpv[1], deadband=mpv[3], timeout=mpv[4])
+                print(tsk[2])
+        else:
+            print("PINK Setup canceled")
 
     #### Move Filters  ############################################################
     def filter1(self, pos):
@@ -380,14 +385,19 @@ class PINKCLASS():
             dev="PLCGAS"
         vpv = "PINK:"+dev+":V"+str(int(vnum))+"open"
         caput(vpv,1)
+        print("OK")
 
     def valveCLOSE(self,vnum):
+        if type(vnum) is str:
+            print('Enter valve number. Ex: valveOPEN(29)')
+            return "Invalid input"
         if vnum>30:
             dev="PLCVAC"
         else:
             dev="PLCGAS"
         vpv = "PINK:"+dev+":V"+str(int(vnum))+"close"
         caput(vpv,1)
+        print("OK")
 
     ####################################################################################
     #### Internal Functions ############################################################
@@ -873,7 +883,7 @@ class PINKCLASS():
         except:
             print("[Error]: Failed to create mca file")
 
-    def __continous_scan(self, exposure, passes, X0, deltaX, Xpoints, Y0, Y1, Ypoints, Yspeed, sample):
+    def __continous_scan(self, exposure, passes, X0, deltaX, Xpoints, Y0, Y1, Ypoints, Yspeed, sample, ftype):
         self.__publish_fname(fname=" ")
         GE_AreaDet.stop()
         self.__ge_setup_file("ge")
@@ -881,7 +891,7 @@ class PINKCLASS():
         self.__ge_setup_caenels2(exposure)
         self.__ge_Save_Pre_Scan_Data_v2(scantype="Continuous")
         self.__ge_Create_Scan_Dataset_v3(cont=True, passes=passes)
-        self.__ge_Arguments([exposure, X0, deltaX, Xpoints, Y0, Y1, Ypoints, Yspeed, passes, sample], ftype=4)
+        self.__ge_Arguments([exposure, X0, deltaX, Xpoints, Y0, Y1, Ypoints, Yspeed, passes, sample], ftype=ftype)
         self.__publish_fname()
         scan_done=False
         passid=0
