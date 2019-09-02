@@ -25,6 +25,23 @@ class PINKCLASS():
         "shuffle":"True"}
     ge_bg_spectra = []
 
+    pressure_pvlist = [
+        ["GP9","PINK:DGION:Pressure"],
+        ["G01","PINK:MAXB:S6Measure"],
+        ["G02","PINK:MAXA:S3Measure"],
+        ["G03","PINK:MAXA:S2Measure"],
+        ["G04","PINK:MAXB:S3Measure"],
+        ["G06","PINK:MAXA:S5Measure"],
+        ["G07","PINK:MAXA:S1Measure"],
+        ["G08","PINK:MAXB:S5Measure"],
+        ["G11","PINK:MAXB:S2Measure"],
+        ["G12","PINK:MAXB:S1Measure"],
+        ["G13","PINK:MAXC:S1Measure"],
+        ["G16","PINK:MAXC:S3Measure"],
+        ["G19","PINK:MAXB:S4Measure"],
+        ["G20","PINK:MAXA:S4Measure"]
+    ]
+
     ####################################################################################
     #### Callable Functions ############################################################
     ####################################################################################
@@ -39,6 +56,7 @@ class PINKCLASS():
         self.sample=sample
         GE_AreaDet.stop()
         self.__ge_setup_file("ge")
+        self.__create_pressure_devices()
         self.__ge_setup_caenels1(exposure)
         self.__ge_setup_caenels2(exposure)
         self.__publish_fname(fname=" ")
@@ -68,6 +86,7 @@ class PINKCLASS():
         self.__ge_Save_Pos_Scan_Data()
         self.__save_specfile(0)
         #pink_save_bl_snapshot()
+        self.__remove_pressure_devices()
         print("Scan complete")
         self.__publish_status("Scan complete")
 
@@ -86,6 +105,7 @@ class PINKCLASS():
         self.__publish_fname(fname=" ")
         GE_AreaDet.stop()
         self.__ge_setup_file("ge")
+        self.__create_pressure_devices()
         self.__ge_setup_caenels1(exposure)
         self.__ge_setup_caenels2(exposure)
         #self.__ge_setup_greateyes_sw_sync(exposure, images)
@@ -126,7 +146,8 @@ class PINKCLASS():
             passid=passid+1
             if passid==passes: scan_done=True
         self.__ge_Save_Pos_Scan_Data_v4()
-        pink_save_bl_snapshot()
+        #pink_save_bl_snapshot()
+        self.__remove_pressure_devices()
         print("Scan complete")
         self.__publish_status("Scan complete")
 
@@ -146,6 +167,7 @@ class PINKCLASS():
         self.__publish_fname(fname=" ")
         GE_AreaDet.stop()
         self.__ge_setup_file("ge")
+        self.__create_pressure_devices()
         self.__ge_setup_caenels1(exposure)
         self.__ge_setup_caenels2(exposure)
         self.__ge_setup_greateyes_sw_sync(exposure, images)
@@ -195,7 +217,8 @@ class PINKCLASS():
             passid=passid+1
             if passid==passes: scan_done=True
         self.__ge_Save_Pos_Scan_Data_v4()
-        pink_save_bl_snapshot()
+        #pink_save_bl_snapshot()
+        self.__remove_pressure_devices()
         print("Scan complete")
         self.__publish_status("Scan complete")
 
@@ -681,11 +704,12 @@ class PINKCLASS():
         create_dataset("Detector/GE_Sensor_Temp", 'd', False)
         create_dataset("Scan/GE_FrameID", 'i', False)
         create_dataset("Scan/Timestamps", 'l', False)
-        create_dataset("Pressure/Diagnostic_PV", 'd', False)
-        create_dataset("Pressure/Diagnostic_HV", 'd', False)
-        create_dataset("Pressure/Spectrometer_PV", 'd', False)
-        create_dataset("Pressure/Spectrometer_HV", 'd', False)
-        create_dataset("Pressure/Sample_Chamber", 'd', False)
+        self.__create_pressure_dataset(passfolder = "")
+        #create_dataset("Pressure/Diagnostic_PV", 'd', False)
+        #create_dataset("Pressure/Diagnostic_HV", 'd', False)
+        #create_dataset("Pressure/Spectrometer_PV", 'd', False)
+        #create_dataset("Pressure/Spectrometer_HV", 'd', False)
+        #create_dataset("Pressure/Sample_Chamber", 'd', False)
         if cont==False:
             create_dataset("RAW/SEC_el_x", 'd', False)
             create_dataset("RAW/SEC_el_y", 'd', False)
@@ -705,11 +729,12 @@ class PINKCLASS():
         create_dataset(passfolder+"Detector/GE_Sensor_Temp", 'd', False)
         create_dataset(passfolder+"Scan/GE_FrameID", 'i', False)
         create_dataset(passfolder+"Scan/Timestamps", 'l', False)
-        create_dataset(passfolder+"Pressure/Diagnostic_PV", 'd', False)
-        create_dataset(passfolder+"Pressure/Diagnostic_HV", 'd', False)
-        create_dataset(passfolder+"Pressure/Spectrometer_PV", 'd', False)
-        create_dataset(passfolder+"Pressure/Spectrometer_HV", 'd', False)
-        create_dataset(passfolder+"Pressure/Sample_Chamber", 'd', False)
+        self.__create_pressure_dataset(passfolder = passfolder)
+        #create_dataset(passfolder+"Pressure/Diagnostic_PV", 'd', False)
+        #create_dataset(passfolder+"Pressure/Diagnostic_HV", 'd', False)
+        #create_dataset(passfolder+"Pressure/Spectrometer_PV", 'd', False)
+        #create_dataset(passfolder+"Pressure/Spectrometer_HV", 'd', False)
+        #create_dataset(passfolder+"Pressure/Sample_Chamber", 'd', False)
         create_dataset(passfolder+"RAW/ring_current", 'd', False)
         if cont==False:
             create_dataset(passfolder+"RAW/SEC_el_x", 'd', False)
@@ -733,11 +758,12 @@ class PINKCLASS():
         append_dataset("Detector/GE_Sensor_Temp", GE_Sensor_Temp.take())
         append_dataset("Scan/GE_FrameID", GE_FrameID.take())
         append_dataset("Scan/Timestamps", GE_FrameID.getTimestampNanos())
-        append_dataset("Pressure/Diagnostic_PV", Press_Diag_PV.take())
-        append_dataset("Pressure/Diagnostic_HV", Press_Diag_HV.take())
-        append_dataset("Pressure/Spectrometer_PV", Press_Spec_PV.take())
-        append_dataset("Pressure/Spectrometer_HV", Press_Spec_HV.take())
-        append_dataset("Pressure/Sample_Chamber", Press_Sample_Ch.take())
+        self.__append_pressure_dataset(passfolder = "")
+        #append_dataset("Pressure/Diagnostic_PV", Press_Diag_PV.take())
+        #append_dataset("Pressure/Diagnostic_HV", Press_Diag_HV.take())
+        #append_dataset("Pressure/Spectrometer_PV", Press_Spec_PV.take())
+        #append_dataset("Pressure/Spectrometer_HV", Press_Spec_HV.take())
+        #append_dataset("Pressure/Sample_Chamber", Press_Sample_Ch.take())
         if cont==False:
             append_dataset("RAW/SEC_el_x", SEC_el_x_Enc.take())
             append_dataset("RAW/SEC_el_y", SEC_el_y_Enc.take())
@@ -757,11 +783,12 @@ class PINKCLASS():
         append_dataset(passfolder+"Detector/GE_Sensor_Temp", GE_Sensor_Temp.take())
         append_dataset(passfolder+"Scan/GE_FrameID", GE_FrameID.take())
         append_dataset(passfolder+"Scan/Timestamps", GE_FrameID.getTimestampNanos())
-        append_dataset(passfolder+"Pressure/Diagnostic_PV", Press_Diag_PV.take())
-        append_dataset(passfolder+"Pressure/Diagnostic_HV", Press_Diag_HV.take())
-        append_dataset(passfolder+"Pressure/Spectrometer_PV", Press_Spec_PV.take())
-        append_dataset(passfolder+"Pressure/Spectrometer_HV", Press_Spec_HV.take())
-        append_dataset(passfolder+"Pressure/Sample_Chamber", Press_Sample_Ch.take())
+        self.__append_pressure_dataset(passfolder = passfolder)
+        #append_dataset(passfolder+"Pressure/Diagnostic_PV", Press_Diag_PV.take())
+        #append_dataset(passfolder+"Pressure/Diagnostic_HV", Press_Diag_HV.take())
+        #append_dataset(passfolder+"Pressure/Spectrometer_PV", Press_Spec_PV.take())
+        #append_dataset(passfolder+"Pressure/Spectrometer_HV", Press_Spec_HV.take())
+        #append_dataset(passfolder+"Pressure/Sample_Chamber", Press_Sample_Ch.take())
         if cont==False:
             append_dataset(passfolder+"RAW/SEC_el_x", SEC_el_x_Enc.take())
             append_dataset(passfolder+"RAW/SEC_el_y", SEC_el_y_Enc.take())
@@ -902,6 +929,7 @@ class PINKCLASS():
         self.__publish_fname(fname=" ")
         GE_AreaDet.stop()
         self.__ge_setup_file("ge")
+        self.__create_pressure_devices()
         self.__ge_setup_caenels1(exposure)
         self.__ge_setup_caenels2(exposure)
         self.__ge_Save_Pre_Scan_Data_v2(scantype="Continuous")
@@ -950,7 +978,7 @@ class PINKCLASS():
                         self.y1_mdata.append(SEC_el_y.getPosition())
                         self.x_mdata.append(SEC_el_x.getPosition())
                         self.y_mdata.append(SEC_el_y.getPosition())
-                #add 10ms delay to make sure all new data have arrived
+                        #add 10ms delay to make sure all new data have arrived
                         sleep(0.01)
                         self.__ge_Save_Scan_Data_v2(cont=True, passid=passid)
                         self.__ge_calc_progress()
@@ -971,5 +999,48 @@ class PINKCLASS():
         self.__ge_Save_Pos_Scan_Data_v4()
         self.__ge_Save_Pos_Scan_Data_Continous_v2()
         #pink_save_bl_snapshot()
+        self.__remove_pressure_devices()
         print("Scan complete")
         self.__publish_status("Scan complete")
+
+    def __create_pressure_devices(self):
+        if self.DEBUGLOG: log("Pressure: Creating pressure devices...", data_file=False)
+        for pvr in self.pressure_pvlist:
+            devicename = "PT"+pvr[0]
+            add_device(ch.psi.pshell.epics.ChannelDouble(devicename, pvr[1]), True)
+            execcmd = devicename+".setMonitored(True)"
+            exec(execcmd)
+            devicename = "PT"+pvr[0]+"Desc"
+            pvnamedesc = pvr[1]+".DESC"
+            add_device(ch.psi.pshell.epics.ChannelString(devicename, pvnamedesc), True)
+            execcmd = devicename+".update()"
+            exec(execcmd)
+        if self.DEBUGLOG: log("Pressure: pressure devices OK", data_file=False)
+
+    def __remove_pressure_devices(self):
+        if self.DEBUGLOG: log("Pressure: Removing pressure devices...", data_file=False)
+        for pvr in self.pressure_pvlist:
+            devicename = "PT"+pvr[0]
+            execcmd = "remove_device("+devicename+")"
+            exec(execcmd)
+            devicename = "PT"+pvr[0]+"Desc"
+            execcmd = "remove_device("+devicename+")"
+            exec(execcmd)
+        if self.DEBUGLOG: log("Pressure: devices removed OK", data_file=False)
+
+    def __create_pressure_dataset(self, passfolder = ""):
+        for pvr in self.pressure_pvlist:
+            devicenamedesc = "PT"+pvr[0]+"Desc"
+            datasetpath = passfolder+"Pressure/"+pvr[0]
+            execcmd = "pvdesc = "+devicenamedesc+".take()"
+            exec(execcmd)
+            create_dataset(datasetpath, 'd', False)
+            set_attribute(datasetpath, "DESC", pvdesc)
+
+    def __append_pressure_dataset(self, passfolder = ""):
+        for pvr in self.pressure_pvlist:
+            devicename = "PT"+pvr[0]
+            datasetpath = passfolder+"Pressure/"+pvr[0]
+            execcmd = "pvtempval = "+devicename+".take()"
+            exec(execcmd)
+            append_dataset(datasetpath, pvtempval)
