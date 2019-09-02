@@ -399,6 +399,17 @@ class PINKCLASS():
         caput(vpv,1)
         print("OK")
 
+    #### Edit dataset on HDF5 file  ############################################################
+    def rename_sample(self, path, newstring):
+        path = path.split('|')
+        if len(path)!=2:
+            print("Path incomplete")
+            return 1
+
+        argstr = ("/home/epics/PShell/pshellcontrol/home/script/plib/h5edit.py "+path[0]+" "+path[1]+" "+newstring)
+        res=exec_cmd(argstr)
+        return(res)
+
     ####################################################################################
     #### Internal Functions ############################################################
     ####################################################################################
