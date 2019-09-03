@@ -60,6 +60,7 @@ class PINKCLASS():
         self.__ge_setup_caenels1(exposure)
         self.__ge_setup_caenels2(exposure)
         self.__publish_fname(fname=" ")
+        caput("PINK:AUX:ps_sample", " ")
         self.__ge_save_background(exposure)
         self.__ge_setup_greateyes(exposure, self.line_images)
         self.__ge_init_progress()
@@ -69,6 +70,7 @@ class PINKCLASS():
         self.__ge_Arguments([exposure, images, sample], ftype=1)
         self.__publish_fname()
         self.__publish_status("Running spot scan...")
+        caput("PINK:AUX:ps_sample", sample)
         GE_AreaDet.start()
         try:
             for scan_count in range(images):
@@ -103,6 +105,7 @@ class PINKCLASS():
         self.ge_Num_Images=Ypoints
         self.ge_Num_Images_total=Ypoints*passes
         self.__publish_fname(fname=" ")
+        caput("PINK:AUX:ps_sample", " ")
         GE_AreaDet.stop()
         self.__ge_setup_file("ge")
         self.__create_pressure_devices()
@@ -123,7 +126,8 @@ class PINKCLASS():
             self.__ge_clean_spec_sum()
             self.__ge_Create_Scan_Dataset_v2(cont=False, passid=passid)
             self.__ge_Save_Pre_Scan_Data_v3(cont=False, passid=passid)
-            self.__publish_status("line scan: " + "pass " + '{:d}'.format(passid+1) + "/" + '{:d}'.format(passes) + " (" + sample + ")")
+            self.__publish_status("line scan: " + "pass " + '{:d}'.format(passid+1) + "/" + '{:d}'.format(passes))
+            caput("PINK:AUX:ps_sample", sample)
             SEC_el_y.move(start)
             try:
                 for scan_count in range(self.line_images):
@@ -165,6 +169,7 @@ class PINKCLASS():
         Y0=float(Y0)
         Ystep=float(deltaY)
         self.__publish_fname(fname=" ")
+        caput("PINK:AUX:ps_sample", " ")
         GE_AreaDet.stop()
         self.__ge_setup_file("ge")
         self.__create_pressure_devices()
@@ -186,6 +191,7 @@ class PINKCLASS():
             self.__ge_Create_Scan_Dataset_v2(cont=False, passid=passid)
             self.__ge_Save_Pre_Scan_Data_v3(cont=False, passid=passid)
             self.__publish_status("zigzag scan: " + "pass " + '{:d}'.format(passid+1) + "/" +  '{:d}'.format(passes) + " (" + sample + ")")
+            caput("PINK:AUX:ps_sample", sample)
             SEC_el_x.move(X0)
             SEC_el_y.move(Y0)
             scan_dir=1
@@ -927,6 +933,7 @@ class PINKCLASS():
 
     def __continous_scan(self, exposure, passes, X0, deltaX, Xpoints, Y0, Y1, Ypoints, Yspeed, sample, ftype):
         self.__publish_fname(fname=" ")
+        caput("PINK:AUX:ps_sample", " ")
         GE_AreaDet.stop()
         self.__ge_setup_file("ge")
         self.__create_pressure_devices()
@@ -947,6 +954,7 @@ class PINKCLASS():
             self.__ge_Create_Scan_Dataset_v2(cont=True, passid=passid)
             self.__ge_Save_Pre_Scan_Data_v3(cont=True, passid=passid)
             self.__publish_status("Running continuous scan: " + "pass " + '{:d}'.format(passid+1) + "/" +  '{:d}'.format(passes))
+            caput("PINK:AUX:ps_sample", sample)
             SEC_el_y.setSpeed(20000.0)
             SEC_el_x.move(X0)
             SEC_el_y.move(Y0)
