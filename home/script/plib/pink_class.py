@@ -61,6 +61,7 @@ class PINKCLASS():
         self.__ge_setup_caenels2(exposure)
         self.__publish_fname(fname=" ")
         caput("PINK:AUX:ps_sample", " ")
+        self.__eta_calc(exposure, images, 1, 1, 0)
         self.__ge_save_background(exposure)
         self.__ge_setup_greateyes(exposure, self.line_images)
         self.__ge_init_progress()
@@ -98,7 +99,6 @@ class PINKCLASS():
         self.sample=sample
         start=float(Y0)
         step=float(deltaY)
-        #images=int(Ypoints)
         self.line_images=Ypoints
         self.scan_images=Ypoints
         self.total_images=Ypoints*passes
@@ -111,7 +111,6 @@ class PINKCLASS():
         self.__create_pressure_devices()
         self.__ge_setup_caenels1(exposure)
         self.__ge_setup_caenels2(exposure)
-        #self.__ge_setup_greateyes_sw_sync(exposure, images)
         self.__ge_Save_Pre_Scan_Data_v2(scantype="Line")
         self.__ge_Create_Scan_Dataset_v3(cont=False, passes=passes)
         self.__ge_Arguments([exposure, Y0, deltaY, Ypoints, passes, sample], ftype=2)
@@ -120,6 +119,7 @@ class PINKCLASS():
         passid=0
         while not(scan_done):
             if self.DEBUG: print("Scan pass = " + str(passid))
+            self.__eta_calc(exposure, Ypoints, 1, (passes-passid), 0)
             self.__ge_save_background(exposure)
             self.__ge_setup_greateyes_sw_sync(exposure, self.line_images)
             self.__ge_init_progress()
@@ -162,6 +162,7 @@ class PINKCLASS():
         self.ge_Num_Images_total=int(images*passes)
         self.ge_exptime=exposure
         self.sample=sample
+        self.scan_images=Ypoints*Xpoints
         #Test sample manipulator limits
         if self._test_SEC_EL_limits(X0, deltaX, Xpoints, Y0, deltaY, Ypoints): sys.exit()
         X0=float(X0)
@@ -184,6 +185,7 @@ class PINKCLASS():
         passid=0
         while not(scan_done):
             if self.DEBUG: print("Scan pass = " + str(passid))
+            self.__eta_calc(exposure, Ypoints, Xpoints, (passes-passid), linedelay)
             self.__ge_save_background(exposure)
             self.__ge_setup_greateyes_sw_sync(exposure, images)
             self.__ge_init_progress()
@@ -244,7 +246,7 @@ class PINKCLASS():
         deltaX=float(deltaX)
         Y0=float(Y0)
         Y1=float(Y1)
-        self.__continous_scan(exposure, passes, X0, deltaX, Xpoints, Y0, Y1, Ypoints, Yspeed, sample, 4)
+        self.__continous_scan(exposure, passes, X0, deltaX, Xpoints, Y0, Y1, Ypoints, Yspeed, sample, 4, linedelay)
 
     #### CONT SCAN POINTS + SPEED optimized    ###########################################################################
     def ge_SEC_EL_continous_points_speed(self, X0, deltaX, Xpoints, Y0, Y1, Ypoints, Yspeed, passes=1, sample=" ", linedelay=0):
@@ -262,7 +264,7 @@ class PINKCLASS():
         deltaX=float(deltaX)
         Y0=float(Y0)
         Y1=float(Y1)
-        self.__continous_scan(exposure, passes, X0, deltaX, Xpoints, Y0, Y1, Ypoints, Yspeed, sample, 5)
+        self.__continous_scan(exposure, passes, X0, deltaX, Xpoints, Y0, Y1, Ypoints, Yspeed, sample, 5, linedelay)
 
     #### CONT SCAN EXPOSURE + POINTS optimized    ###########################################################################
     def ge_SEC_EL_continous_exposure_points(self, exposure, X0, deltaX, Xpoints, Y0, Y1, Ypoints, passes=1, sample=" ", linedelay=0):
@@ -280,7 +282,7 @@ class PINKCLASS():
         Yspeed = abs(int((Y1-Y0)/totaltime))
         self.cont_speed = Yspeed
         print("Sample calculated speed: " + str(Yspeed) + " um/sec")
-        self.__continous_scan(exposure, passes, X0, deltaX, Xpoints, Y0, Y1, Ypoints, Yspeed, sample, 6)
+        self.__continous_scan(exposure, passes, X0, deltaX, Xpoints, Y0, Y1, Ypoints, Yspeed, sample, 6, linedelay)
 
     #### HELP INFORMATION   ############################################################
     def help(self):
@@ -931,7 +933,7 @@ class PINKCLASS():
         except:
             print("[Error]: Failed to create mca file")
 
-    def __continous_scan(self, exposure, passes, X0, deltaX, Xpoints, Y0, Y1, Ypoints, Yspeed, sample, ftype):
+    def __continous_scan(self, exposure, passes, X0, deltaX, Xpoints, Y0, Y1, Ypoints, Yspeed, sample, ftype, linedelay):
         self.__publish_fname(fname=" ")
         caput("PINK:AUX:ps_sample", " ")
         GE_AreaDet.stop()
@@ -947,6 +949,7 @@ class PINKCLASS():
         passid=0
         while not(scan_done):
             if self.DEBUG: print("Scan pass = " + str(passid))
+            self.__eta_calc(exposure, Ypoints, Xpoints, (passes-passid), linedelay)
             self.__ge_save_background(exposure)
             self.__ge_setup_greateyes(exposure, self.line_images)
             self.__ge_init_progress()
@@ -994,6 +997,7 @@ class PINKCLASS():
                     SEC_el_y.setSpeed(20000)
                     self.__sec_el_y_safemove(ydest)
                     scan_dir=abs(scan_dir-1)
+                    sleep(linedelay)
             except Exception, ex1:
                 print("Script Aborted:")
                 print(ex1)
@@ -1052,3 +1056,14 @@ class PINKCLASS():
             execcmd = "pvtempval = "+devicename+".take()"
             exec(execcmd)
             append_dataset(datasetpath, pvtempval)
+
+    def __eta_calc(self, exposure, Ypoints, Xpoints, passes, linedelay):
+        bgtime = 2.881 + exposure*1.087
+        linetime = (Ypoints*(exposure+0.35))+1.7+linedelay
+        passtime = (Xpoints * linetime) + bgtime
+        scantime = passes*passtime
+        tnow = time.time()
+        passETA = time.ctime(tnow + passtime)
+        scanETA = time.ctime(tnow + scantime)
+        caput("PINK:AUX:pass_eta", passETA)
+        caput("PINK:AUX:scan_eta", scanETA)
