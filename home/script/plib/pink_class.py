@@ -300,6 +300,44 @@ class PINKCLASS():
         pink_save_bl_snapshot()
         print("Pink beamline snapshot saved")
 
+    #### SHOW BL SNAPSHOT   ############################################################
+    def print_Beamline_Snapshot(self):
+        import snapshot_config as pcfg
+        pvl = pcfg.pvlist
+        header = []
+        rows = []
+        temprow = []
+        colmaxwidth = 0
+        for item in pvl:
+            grp = item[0].split('/')
+            sector = grp[0]
+            L = len(sector)
+            if L > colmaxwidth:
+                colmaxwidth = L
+            temprow.append(sector)
+        for i, row in enumerate(temprow):
+            rows.append([row.ljust(colmaxwidth+1)])
+        header.append('Sector'.ljust(colmaxwidth+1))
+        temprow = []
+        colmaxwidth = 0
+        for item in pvl:
+            grp = item[0].split('/')
+            device = grp[1]
+            L = len(device)
+            if L > colmaxwidth:
+                colmaxwidth = L
+            temprow.append(device)
+        for i, row in enumerate(temprow):
+            rows[i].append(row.ljust(colmaxwidth+1))
+        header.append('Device'.ljust(colmaxwidth+1))
+        for i, item in enumerate(pvl):
+            val = caget(item[1])
+            rows[i].append('{:.3f}'.format(val))
+        header.append('Value')
+        print("| "+header[0]+" | "+header[1]+" | "+header[2])
+        for row in rows:
+            print("| "+row[0]+" | "+row[1]+" | "+row[2])        
+
     #### Send SMS Function   ############################################################
     def send_SMS(self, phonenr=None, message=None):
         if (phonenr==None) or (message==None):
