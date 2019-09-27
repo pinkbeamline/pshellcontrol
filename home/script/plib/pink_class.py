@@ -332,7 +332,10 @@ class PINKCLASS():
         header.append('Device'.ljust(colmaxwidth+1))
         for i, item in enumerate(pvl):
             val = caget(item[1])
-            rows[i].append('{:.3f}'.format(val))
+            if isinstance(val, unicode):
+                rows[i].append(val)
+            else:
+                rows[i].append('{:.3f}'.format(val))
         header.append('Value')
         print("| "+header[0]+" | "+header[1]+" | "+header[2])
         for row in rows:
@@ -452,6 +455,10 @@ class PINKCLASS():
         argstr = ("/home/epics/PShell/pshellcontrol/home/script/plib/h5edit.py "+path[0]+" "+path[1]+" "+newstring)
         res=exec_cmd(argstr)
         return(res)
+
+    #### Move mirror M2  ############################################################
+    def M2_mirrorEnergy(self, energy):
+        print("Moving mirror M2 to group X, strip Y -> Energy: "+str(energy))
 
     ####################################################################################
     #### Internal Functions ############################################################

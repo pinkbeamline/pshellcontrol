@@ -20,6 +20,7 @@ pvlist = [
 ["beamline/AU3_Bottom", "AUY01U112L:rdPosM2"],
 ["beamline/AU3_Right", "AUY01U112L:rdPosM4"],
 ["beamline/AU3_Left", "AUY01U112L:rdPosM3"],
+["beamline/M2_OpticID", "HEX2OS12L:hexapod:mbboMirrorChoicerRun"],
 ["beamline/M2_Tx", "HEX2OS12L:hexapod:getReadPoseX"],
 ["beamline/M2_Ty", "HEX2OS12L:hexapod:getReadPoseY"],
 ["beamline/M2_Tz", "HEX2OS12L:hexapod:getReadPoseZ"],
