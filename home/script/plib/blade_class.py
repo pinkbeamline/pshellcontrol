@@ -5,7 +5,6 @@ def blade_upd_scan_data():
     blade._extra_scan_data()
 
 class BLADECLASS():
-
     sig2fwmh=2.355
     diode1=[]
     diode2=[]

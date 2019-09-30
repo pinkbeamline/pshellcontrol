@@ -422,28 +422,36 @@ class PINKCLASS():
 
     #### Open/Close valves  ############################################################
     def valveOPEN(self,vnum):
+        dev = None
         if type(vnum) is str:
             print('Enter valve number. Ex: valveOPEN(29)')
             return "Invalid input"
-        if vnum>30:
+        if (vnum>=10 and vnum<=18) or (vnum>=31 and vnum<=34):
             dev="PLCVAC"
-        else:
+        elif (vnum>=19 and vnum<=29) or (vnum>=40 and vnum<=43):
             dev="PLCGAS"
-        vpv = "PINK:"+dev+":V"+str(int(vnum))+"open"
-        caput(vpv,1)
-        print("OK")
+        if dev != None:
+            vpv = "PINK:"+dev+":V"+str(int(vnum))+"open"
+            caput(vpv,1)
+            print("OK")
+        else:
+            print("Valve number is invalid")
 
     def valveCLOSE(self,vnum):
+        dev = None
         if type(vnum) is str:
             print('Enter valve number. Ex: valveOPEN(29)')
             return "Invalid input"
-        if vnum>30:
+        if (vnum>=10 and vnum<=18) or (vnum>=31 and vnum<=34):
             dev="PLCVAC"
-        else:
+        elif (vnum>=19 and vnum<=29) or (vnum>=40 and vnum<=43):
             dev="PLCGAS"
-        vpv = "PINK:"+dev+":V"+str(int(vnum))+"close"
-        caput(vpv,1)
-        print("OK")
+        if dev != None:    
+            vpv = "PINK:"+dev+":V"+str(int(vnum))+"close"
+            caput(vpv,1)
+            print("OK")
+        else:
+            print("Valve number is invalid")
 
     #### Edit dataset on HDF5 file  ############################################################
     def rename_sample(self, path, newstring):
