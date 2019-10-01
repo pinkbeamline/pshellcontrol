@@ -292,6 +292,7 @@ class PINKCLASS():
         print("pink.")
         print("bpm.")
         print("blade.")
+        print("mirror.")
         print("gap.\n\n")
 
     #### SAVE BL SNAPSHOT   ############################################################
@@ -464,9 +465,6 @@ class PINKCLASS():
         res=exec_cmd(argstr)
         return(res)
 
-    #### Move mirror M2  ############################################################
-    def M2_mirrorEnergy(self, energy):
-        print("Moving mirror M2 to group X, strip Y -> Energy: "+str(energy))
 
     ####################################################################################
     #### Internal Functions ############################################################
