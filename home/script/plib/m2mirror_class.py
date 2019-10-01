@@ -1,6 +1,6 @@
 ## m2mirror_class.py
 
-import m2_mirror_config as m2mcfg
+import config.ml_mirror_config as m2mcfg
 
 class M2Mirror():
 

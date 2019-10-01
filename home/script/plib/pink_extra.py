@@ -47,7 +47,7 @@ def myfit_gaussian_exp_bkg(y, x, start_point = None, weights = None):
     return parameters
 
 def pink_save_bl_snapshot():
-    import snapshot_config as pcfg
+    import config.bl_snapshot_config as pcfg
 
     for dat in pcfg.pvlist:
         try:
