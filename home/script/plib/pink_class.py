@@ -11,7 +11,7 @@ class PINKCLASS():
     ####################################################################################
 
     #### HELP INFORMATION   ############################################################
-    def help(self):
+    def __help(self):
         #print("***      DEVELOPMENT VERSION       ***")
         print("*** Pink Beamline list of scripts: ***")
         print("All custom functions can be found by typing:")
@@ -67,7 +67,7 @@ class PINKCLASS():
             print("| "+row[0]+" | "+row[1]+" | "+row[2])
 
     #### Send SMS Function   ############################################################
-    def send_SMS(self, phonenr=None, message=None):
+    def __send_SMS(self, phonenr=None, message=None):
         if (phonenr==None) or (message==None):
             print("Invalid. \nExample: pink.Send_SMS(\"+4901231234567\", \"My message with less than 40 characters\")")
         else:
@@ -190,11 +190,11 @@ class PINKCLASS():
         return(res)
 
     #### Set undulator gap  ############################################################
-    def gap_set(self, ugap):
+    def gap_set(self, gap):
         prec=0.005
         try:
             #caput("U17IT6R:BaseParGapsel.B", ugap)
-            U17_Gap_Set.write(ugap)
+            U17_Gap_Set.write(gap)
             caput("U17IT6R:BaseCmdCalc.PROC", 1)
             lwait=1
             print("Moving undulator...")
