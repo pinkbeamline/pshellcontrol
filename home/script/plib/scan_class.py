@@ -1130,12 +1130,12 @@ class PSCANS():
     ### Blade Scan functions
     ###########################################################################
 
-    def blade_DiC(self, start, end, steps, time_meas=0.0):
+    def blade_DiC(self, start, end, steps, latency=0.0):
         print("Running ...")
         self.__setup_file(fname="blade_diag")
         self.__reset_extra_data()
         self.__blade_setup_caenels2(Exp_Time=0.5, Enable=True)
-        res = lscan(Filter1, Diode_sum, start, end, steps, time_meas, after_read=blade_upd_scan_data)
+        res = lscan(Filter1, Diode_sum, start, end, steps, latency, after_read=blade_upd_scan_data)
         #res = lscan(Filter2, Filter2_SIG, start, end, steps, interval, after_read=blade_upd_scan_data)
         xdata = res.getPositions(0)
         ydata = res.getReadable(0)
@@ -1151,13 +1151,13 @@ class PSCANS():
         self.__plot_curves(xdata, ydata, dt, gauss, label="Blade Scan Diagnostic Chamber")
         print("OK")
 
-    def blade_SEC_el(self, start, end, steps, time_meas=0.0):
+    def blade_SEC_el(self, start, end, steps, latency=0.0):
         print("Running ...")
         self.__setup_file(fname="blade_sample")
         self.__reset_extra_data()
         self.__blade_setup_caenels1(Exp_Time=0.5, Enable=True)
         #res = lscan(Filter2, Filter2_SIG, start, end, steps, interval, after_read=blade_upd_scan_data)
-        res = lscan(SEC_el_y, TFY, start, end, steps, time_meas, after_read=blade_upd_scan_data)
+        res = lscan(SEC_el_y, TFY, start, end, steps, latency, after_read=blade_upd_scan_data)
         xdata = res.getPositions(0)
         ydata = res.getReadable(0)
         dt = deriv(ydata, xdata=xdata)

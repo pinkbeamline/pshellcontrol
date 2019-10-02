@@ -19,8 +19,7 @@ mlogger = MasterLogger()
 scan = PSCANS()
 #mirror = M2Mirror()
 
-pink.help()
-print("Type \"pink.help()\" to print this information again")
+print("PShell Ready")
 
 def on_command_started(info):
     mlogger.onstart(info)
