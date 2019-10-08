@@ -37,15 +37,17 @@ class PSCANS():
         ["G02","PINK:MAXA:S3Measure"],
         ["G03","PINK:MAXA:S2Measure"],
         ["G04","PINK:MAXB:S3Measure"],
+        ["G05","PINK:MAXB:S4Measure"],
         ["G06","PINK:MAXA:S5Measure"],
         ["G07","PINK:MAXA:S1Measure"],
-        ["G08","PINK:MAXB:S5Measure"],
+        ["G08","PINK:MAXD:S3Measure"],
+        ["G09","PINK:MAXB:S5Measure"],
         ["G11","PINK:MAXB:S2Measure"],
         ["G12","PINK:MAXB:S1Measure"],
         ["G13","PINK:MAXC:S1Measure"],
         ["G16","PINK:MAXC:S3Measure"],
-        ["G19","PINK:MAXB:S4Measure"],
-        ["G20","PINK:MAXA:S4Measure"]
+        ["G19","PINK:MAXD:S2Measure"],
+        ["G20","PINK:MAXA:S4Measure"],
     ]
 
     ### Gap variables
@@ -874,8 +876,10 @@ class PSCANS():
         self.__publish_status("Scan complete")
 
     def __create_pressure_devices(self):
+        import config.pressure_list_config as plist
+        pressure_pvlist = plist.pressure_pvlist
         if self.DEBUGLOG: log("Pressure: Creating pressure devices...", data_file=False)
-        for pvr in self.pressure_pvlist:
+        for pvr in pressure_pvlist:
             devicename = "PT"+pvr[0]
             add_device(ch.psi.pshell.epics.ChannelDouble(devicename, pvr[1]), True)
             execcmd = devicename+".setMonitored(True)"
@@ -888,8 +892,10 @@ class PSCANS():
         if self.DEBUGLOG: log("Pressure: pressure devices OK", data_file=False)
 
     def __remove_pressure_devices(self):
+        import config.pressure_list_config as plist
+        pressure_pvlist = plist.pressure_pvlist
         if self.DEBUGLOG: log("Pressure: Removing pressure devices...", data_file=False)
-        for pvr in self.pressure_pvlist:
+        for pvr in pressure_pvlist:
             devicename = "PT"+pvr[0]
             execcmd = "remove_device("+devicename+")"
             exec(execcmd)

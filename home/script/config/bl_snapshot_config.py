@@ -63,7 +63,7 @@ pvlist = [
 ["station/SEC_cryo_T_sample", "PINK:LKS:KRDG2"],
 ["station/SEC_cryo_T_free", "PINK:LKS:KRDG3"],
 ["station/SEC_cryo_P_int", "PINK:MAXC:S1Measure"],
-["station/SEC_cryo_P_ins", "PINK:MAXB:S5Measure"],
+["station/SEC_cryo_P_ins", "PINK:MAXD:S3Measure"],
 ["station/SEC_el_P_int", "PINK:MAXB:S3Measure"],
 ]
 

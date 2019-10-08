@@ -192,6 +192,11 @@ class PINKCLASS():
     #### Set undulator gap  ############################################################
     def gap_set(self, gap):
         prec=0.005
+        
+        if self.__undulator_locked():
+            print("Undulator U17 is locked!")
+            return
+            
         try:
             #caput("U17IT6R:BaseParGapsel.B", ugap)
             U17_Gap_Set.write(gap)
@@ -208,6 +213,17 @@ class PINKCLASS():
             print("Undulator gap in position. OK")
         except:
             print("Error moving gap")
+
+    def __undulator_locked(self):
+        #Wake up U17 Gap monitor
+        junk = U17_Gap_RBV.read()
+        stat=caget("U17IT6R:BaseCmdHmLock")
+        if stat==0:
+            ## not locked
+            return 0
+        else:
+            ## locked
+            return 1
 
     #### Multi player mirror positioning  ############################################################
     def ml_2300ev(self):
