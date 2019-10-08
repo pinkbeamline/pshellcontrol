@@ -105,7 +105,7 @@ class PSCANS():
             GE_AreaDet.stop()
         self.__ge_Save_Pos_Scan_Data()
         self.__save_specfile(0)
-        #pink_save_bl_snapshot()
+        pink_save_bl_snapshot()
         self.__remove_pressure_devices()
         print("Scan complete")
         self.__publish_status("Scan complete")
@@ -167,7 +167,7 @@ class PSCANS():
             passid=passid+1
             if passid==passes: scan_done=True
         self.__ge_Save_Pos_Scan_Data_v4()
-        #pink_save_bl_snapshot()
+        pink_save_bl_snapshot()
         self.__remove_pressure_devices()
         print("Scan complete")
         self.__publish_status("Scan complete")
@@ -242,7 +242,7 @@ class PSCANS():
             passid=passid+1
             if passid==passes: scan_done=True
         self.__ge_Save_Pos_Scan_Data_v4()
-        #pink_save_bl_snapshot()
+        pink_save_bl_snapshot()
         self.__remove_pressure_devices()
         print("Scan complete")
         self.__publish_status("Scan complete")
@@ -870,7 +870,7 @@ class PSCANS():
             if passid==passes: scan_done=True
         self.__ge_Save_Pos_Scan_Data_v4()
         self.__ge_Save_Pos_Scan_Data_Continous_v2()
-        #pink_save_bl_snapshot()
+        pink_save_bl_snapshot()
         self.__remove_pressure_devices()
         print("Scan complete")
         self.__publish_status("Scan complete")
