@@ -248,7 +248,7 @@ class PSCANS():
         self.__publish_status("Scan complete")
 
    #### CONT SCAN EXPOSURE + SPEED optimized  ###########################################################################
-    def ge_SEC_EL_continous_exposure_speed(self, exposure, X0, deltaX, Xpoints, Y0, Y1, Yspeed, passes=1, sample=" ", linedelay=0):
+    def ge_SEC_EL_continuous_exposure_speed(self, exposure, X0, deltaX, Xpoints, Y0, Y1, Yspeed, passes=1, sample=" ", linedelay=0):
         readout_time=0.4
         Yspeed = abs(round(Yspeed))
         self.cont_speed = Yspeed
@@ -266,7 +266,7 @@ class PSCANS():
         self.__continous_scan(exposure, passes, X0, deltaX, Xpoints, Y0, Y1, Ypoints, Yspeed, sample, 4, linedelay)
 
     #### CONT SCAN POINTS + SPEED optimized    ###########################################################################
-    def ge_SEC_EL_continous_points_speed(self, X0, deltaX, Xpoints, Y0, Y1, Ypoints, Yspeed, passes=1, sample=" ", linedelay=0):
+    def ge_SEC_EL_continuous_points_speed(self, X0, deltaX, Xpoints, Y0, Y1, Ypoints, Yspeed, passes=1, sample=" ", linedelay=0):
         readout_time=0.4
         Yspeed = abs(round(Yspeed))
         self.cont_speed = Yspeed
@@ -284,7 +284,7 @@ class PSCANS():
         self.__continous_scan(exposure, passes, X0, deltaX, Xpoints, Y0, Y1, Ypoints, Yspeed, sample, 5, linedelay)
 
     #### CONT SCAN EXPOSURE + POINTS optimized    ###########################################################################
-    def ge_SEC_EL_continous_exposure_points(self, exposure, X0, deltaX, Xpoints, Y0, Y1, Ypoints, passes=1, sample=" ", linedelay=0):
+    def ge_SEC_EL_continuous_exposure_points(self, exposure, X0, deltaX, Xpoints, Y0, Y1, Ypoints, passes=1, sample=" ", linedelay=0):
         readout_time=0.4
         self.line_images=Ypoints
         self.scan_images=Ypoints*Xpoints
