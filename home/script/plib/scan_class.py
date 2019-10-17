@@ -326,6 +326,7 @@ class PSCANS():
 
     def __reinit_hzb_pvs(self):
         U17_Gap_RBV.initialize()
+        U17_Gap_Status.initialize()
         ring_current.initialize()
 
     def __ge_init_progress(self):
@@ -941,24 +942,31 @@ class PSCANS():
         def BeforeReadout():
             prec=0.005
             lwait=1
-            #caput("PINK:AUX1:U17_exec.PROC",1)
             caput("U17IT6R:BaseCmdCalc.PROC", 1)
+            WDog = 0
+            err_old=abs(U17_Gap_RBV.take()- U17_Gap_Set.take())
             while(lwait):
-                #err=abs(U17_GAP_SIM.take()-U17_SET_SIM.take())
                 err=abs(U17_Gap_RBV.take()- U17_Gap_Set.take())
                 if (err<=prec) & (U17_Gap_Status.take()==1):
                     lwait=0
                 sleep(0.25)
+                WDog = WDog+1
+                if (WDog%8==0):
+                    if err_old-err == 0:
+                        print("Undulator seems to be not moving after 2 seconds")
+                    err_old = err
+                set_status("Gap: " + str(U17_Gap_RBV.take()))
             sleep(wait)
 
         if self.__undulator_locked():
             print("Undulator U17 is locked!")
             return
 
-        print("Running undulator gap scan with linear background analysis...")
+        self.__reinit_hzb_pvs()
+
+        print("Running undulator gap scan ...")
         self.__setup_file(fname="gap")
         self.__reset_extra_data()
-        #res = lscan(U17_SET_SIM, [DSUM_SIM, U17_GAP_SIM], start, end, step, enabled_plots=[DSUM_SIM], before_read=BeforeReadout, after_read=gap_upd_scan_data)
         res = lscan(U17_Gap_Set, [Diode_sum, U17_Gap_RBV], start, end, step, enabled_plots=[Diode_sum], before_read=BeforeReadout, after_read=gap_upd_scan_data)
         pink_save_bl_snapshot()
         print("OK")
@@ -967,94 +975,104 @@ class PSCANS():
         def BeforeReadout():
             prec=0.005
             lwait=1
-            #caput("PINK:AUX1:U17_exec.PROC",1)
             caput("U17IT6R:BaseCmdCalc.PROC", 1)
-            while(lwait):
-                #err=abs(U17_GAP_SIM.take()-U17_SET_SIM.take())
-                err=abs(U17_Gap_RBV.take()- U17_Gap_Set.take())
-                if (err<=prec) & (U17_Gap_Status.take()==1):
-                    lwait=0
-                sleep(0.25)
-            sleep(wait)
-        if self.__undulator_locked():
-            print("Undulator U17 is locked!")
-            return
-
-        print("Running undulator gap scan with linear background analysis...")
-        self.__setup_file(fname="gap")
-        self.__reset_extra_data()
-        #res = lscan(U17_SET_SIM, [DSUM_SIM, U17_GAP_SIM], start, end, step, enabled_plots=[DSUM_SIM], before_read=BeforeReadout, after_read=gap_upd_scan_data)
-        res = lscan(U17_Gap_Set, [Diode_sum, U17_Gap_RBV], start, end, step, enabled_plots=[Diode_sum], before_read=BeforeReadout, after_read=gap_upd_scan_data)
-        #xdata = res.getPositions(0)
-        xdata = res.getReadable(1)
-        ydata = res.getReadable(0)
-        #xdat = [i/1000 for i in xdata]
-        print("Analysing...")
-        (incl, off, amp, com, sigma, gauss, fwhm) = self.__gauss_lin_fit(ydata, xdata)
-        self.__print_lin_info(incl, off, amp, com, sigma, fwhm)
-        self.__plot_curves(xdata, ydata, gauss, title="Gap Scan with linear background")
-        self.__save_data_lin(incl, off, amp, com, sigma, fwhm, gauss)
-        pink_save_bl_snapshot()
-        print("OK")
-
-
-    def gap_with_Exponential_Background(self, start, end, step, wait=0):
-        def BeforeReadout():
-            prec=0.005
-            lwait=1
-            #caput("PINK:AUX1:U17_exec.PROC",1)
-            caput("U17IT6R:BaseCmdCalc.PROC", 1)
-            g0 = abs(U17_Gap_RBV.take())
             WDog = 0
+            err_old=abs(U17_Gap_RBV.take()- U17_Gap_Set.take())
             while(lwait):
-                #err=abs(U17_GAP_SIM.take()-U17_SET_SIM.take())
                 err=abs(U17_Gap_RBV.take()- U17_Gap_Set.take())
-                #dgap =
                 if (err<=prec) & (U17_Gap_Status.take()==1):
                     lwait=0
                 sleep(0.25)
                 WDog = WDog+1
                 if (WDog%8==0):
-                    print("Undulator seems to be not moving after 2 seconds")
+                    if err_old-err == 0:
+                        print("Undulator seems to be not moving after 2 seconds")
+                    err_old = err
+                set_status("Gap: " + str(U17_Gap_RBV.take()))
             sleep(wait)
         if self.__undulator_locked():
             print("Undulator U17 is locked!")
             return
 
+        self.__reinit_hzb_pvs()
+
+        print("Running undulator gap scan with linear background analysis...")
+        self.__setup_file(fname="gap")
+        self.__reset_extra_data()
+        res = lscan(U17_Gap_Set, [Diode_sum, U17_Gap_RBV], start, end, step, enabled_plots=[Diode_sum], before_read=BeforeReadout, after_read=gap_upd_scan_data)
+        #xdata = res.getPositions(0)
+        #xdata = res.getReadable(1)
+        #ydata = res.getReadable(0)
+        xdata = self.gappos
+        ydata = self.self.diode_sum
+        self.xdata = xdata
+        self.ydata = ydata
+        print("Analysing...")
+        (incl, off, amp, com, sigma, gauss, fwhm, xgauss) = self.__gauss_lin_fit(ydata, xdata)
+        self.__print_lin_info(incl, off, amp, com, sigma, fwhm)
+        self.__plot_curves(xdata, ydata, gauss, xgauss, title="Gap Scan with linear background")
+        self.__save_data_lin(incl, off, amp, com, sigma, fwhm, gauss, xgauss)
+        pink_save_bl_snapshot()
+        print("OK")
+
+    def gap_with_Exponential_Background(self, start, end, step, wait=0):
+        def BeforeReadout():
+            prec=0.005
+            lwait=1
+            caput("U17IT6R:BaseCmdCalc.PROC", 1)
+            WDog = 0
+            err_old=abs(U17_Gap_RBV.take()- U17_Gap_Set.take())
+            while(lwait):
+                err=abs(U17_Gap_RBV.take()- U17_Gap_Set.take())
+                if (err<=prec) & (U17_Gap_Status.take()==1):
+                    lwait=0
+                sleep(0.25)
+                WDog = WDog+1
+                if (WDog%8==0):
+                    if err_old-err == 0:
+                        print("Undulator seems to be not moving after 2 seconds")
+                    err_old = err
+                set_status("Gap: " + str(U17_Gap_RBV.take()))
+            sleep(wait)
+        if self.__undulator_locked():
+            print("Undulator U17 is locked!")
+            return
+
+        self.__reinit_hzb_pvs()
+
         print("Running undulator gap scan with exponential background analysis...")
         self.__setup_file(fname="gap")
         self.__reset_extra_data()
-        #res = lscan(U17_SET_SIM, [DSUM_SIM, U17_GAP_SIM], start, end, step, enabled_plots=[DSUM_SIM],before_read=BeforeReadout, after_read=gap_upd_scan_data)
         res = lscan(U17_Gap_Set, [Diode_sum, U17_Gap_RBV], start, end, step, enabled_plots=[Diode_sum], before_read=BeforeReadout, after_read=gap_upd_scan_data)
-        #xdata = res.getPositions(0)
-        xdata = res.getReadable(1)
-        ydata = res.getReadable(0)
+        xdata = self.gappos
+        ydata = self.self.diode_sum
         self.xdata = xdata
         self.ydata = ydata
-        #xdat = [i/1000 for i in xdata]
         print("Analysing...")
-        (eamp, decay, amp, com, sigma, gauss, fwhm) = self.__gauss_exp_fit(ydata, xdata)
+        (eamp, decay, amp, com, sigma, gauss, fwhm, xgauss) = self.__gauss_exp_fit(ydata, xdata)
         self.__print_exp_info(eamp, decay, amp, com, sigma, fwhm)
-        self.__plot_curves(xdata, ydata, gauss, title="Gap scan with exponential background")
-        self.__save_data_exp(eamp, decay, amp, com, sigma, fwhm, gauss)
+        self.__plot_curves(xdata, ydata, gauss, xgauss, title="Gap scan with exponential background")
+        self.__save_data_exp(eamp, decay, amp, com, sigma, fwhm, gauss, xgauss)
         pink_save_bl_snapshot()
         print("OK")
 
     def __gauss_lin_fit(self, ydata, xdata):
         (incl, off, amp, com, sigma) = fit_gaussian_linear(ydata, xdata)
         f = Gaussian(amp, com, sigma)
-        gauss = [f.value(i) + incl*i+off for i in xdata]
+        xgauss = frange(min(xdata),max(xdata),math.fabs((max(xdata)-min(xdata))/100))
+        gauss = [f.value(i) + incl*i+off for i in xgauss]
         fwhm = self.sig2fwmh*sigma
-        return (incl, off, amp, com, sigma, gauss, fwhm)
+        return (incl, off, amp, com, sigma, gauss, fwhm, xgauss)
 
     def __gauss_exp_fit(self, ydata, xdata):
         (incl, off, amp, com, sigma) = fit_gaussian_linear(ydata, xdata)
         start_point=[1, 1, amp, com, sigma]
         (eamp, decay, amp, com, sigma) = fit_gaussian_exp_bkg(ydata, xdata, start_point=start_point)
         f = Gaussian(amp, com, sigma)
-        gauss = [f.value(i) + eamp*math.exp(-i/decay) for i in xdata]
+        xgauss = frange(min(xdata),max(xdata),math.fabs((max(xdata)-min(xdata))/100))
+        gauss = [f.value(i) + eamp*math.exp(-i/decay) for i in xgauss]
         fwhm = self.sig2fwmh*sigma
-        return (eamp, decay, amp, com, sigma, gauss, fwhm)
+        return (eamp, decay, amp, com, sigma, gauss, fwhm, xgauss)
 
     def __print_lin_info(self, incl, off, amp, com, sigma, fwhm):
         print("*** Gaussian fit with linear background ***")
@@ -1068,13 +1086,13 @@ class PSCANS():
         print("   Amplitude: " + '{:.3e}'.format(amp)  + "\t Mean: " + '{:.3f}'.format(com))
         print("       Sigma: " + '{:.3f}'.format(sigma)+ "\t FWHM: " + '{:.3f}'.format(fwhm))
 
-    def __plot_curves(self, xdata, ydata, gauss, title="myplot"):
+    def __plot_curves(self, xdata, ydata, gauss, xgauss, title="myplot"):
         p1=plot(None, "Diodes", title="Gap Scan")[0]
         p1.setLegendVisible(True)
         p1.setTitle(title)
         p1.addSeries(LinePlotSeries("Fit"))
         p1.getSeries(0).setData(xdata, ydata)
-        p1.getSeries(1).setData(xdata, gauss)
+        p1.getSeries(1).setData(xgauss, gauss)
 
     def __setup_file(self, fname="gap_scan"):
         set_exec_pars(open=False, name=fname, reset=True)
@@ -1085,6 +1103,7 @@ class PSCANS():
         self.diode3 = []
         self.diode4 = []
         self.diode_sum = []
+        self.gappos = []
 
     def _extra_scan_data(self):
         self.diode1.append(Diode_1.take())
@@ -1093,9 +1112,9 @@ class PSCANS():
         self.diode4.append(Diode_4.take())
         self.diode_sum.append(Diode_sum.take())
         self.tfy.append(TFY.take())
-        #self.diode_sum.append(Diode4Sum.take())
+        self.gappos.append(U17_Gap_RBV.take())
 
-    def __save_data_lin(self, incl, off, amp, com, sigma, fwhm, gauss):
+    def __save_data_lin(self, incl, off, amp, com, sigma, fwhm, gauss, xgauss):
         save_dataset("gaussian/inclination", incl)
         save_dataset("gaussian/offset", off)
         save_dataset("gaussian/amplitude", amp)
@@ -1103,6 +1122,7 @@ class PSCANS():
         save_dataset("gaussian/sigma", sigma)
         save_dataset("gaussian/FWHM", fwhm)
         save_dataset("gaussian/gauss_fit", gauss)
+        save_dataset("gaussian/gauss_fit_xaxis", xgauss)
         save_dataset("diodes/diode1", self.diode1)
         save_dataset("diodes/diode2", self.diode2)
         save_dataset("diodes/diode3", self.diode3)
