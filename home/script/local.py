@@ -7,16 +7,19 @@ run("plib/pink_extra.py")
 run("plib/pink_class.py")
 run("plib/bpm_class.py")
 run("plib/blade_class.py")
-run("plib/gap_class.py")
+run("plib/scan_class.py")
+#run("plib/gap_class.py")
+#run("plib/m2mirror_class")
 
 pink=PINKCLASS()
 bpm=BPMCLASS()
 blade=BLADECLASS()
-gap=GAPCLASS()
+#gap=GAPCLASS()
 mlogger = MasterLogger()
+scan = PSCANS()
+#mirror = M2Mirror()
 
-pink.help()
-print("Type \"pink.help_information()\" to print this information again")
+print("PShell Ready")
 
 def on_command_started(info):
     mlogger.onstart(info)

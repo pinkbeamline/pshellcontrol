@@ -5,7 +5,6 @@ def blade_upd_scan_data():
     blade._extra_scan_data()
 
 class BLADECLASS():
-
     sig2fwmh=2.355
     diode1=[]
     diode2=[]
@@ -26,7 +25,7 @@ class BLADECLASS():
         print("Running ...")
         self.__setup_file(fname="blade_diag")
         self.__reset_extra_data()
-        self.__setup_caenels2(Exp_Time=0.5, Enable=True)
+        self.__blade_setup_caenels2(Exp_Time=0.5, Enable=True)
         res = lscan(Filter1, Diode_sum, start, end, steps, time_meas, after_read=blade_upd_scan_data)
         #res = lscan(Filter2, Filter2_SIG, start, end, steps, interval, after_read=blade_upd_scan_data)
         xdata = res.getPositions(0)
@@ -47,7 +46,7 @@ class BLADECLASS():
         print("Running ...")
         self.__setup_file(fname="blade_sample")
         self.__reset_extra_data()
-        self.__setup_caenels1(Exp_Time=0.5, Enable=True)
+        self.__blade_setup_caenels1(Exp_Time=0.5, Enable=True)
         #res = lscan(Filter2, Filter2_SIG, start, end, steps, interval, after_read=blade_upd_scan_data)
         res = lscan(SEC_el_y, TFY, start, end, steps, time_meas, after_read=blade_upd_scan_data)
         xdata = res.getPositions(0)
@@ -110,7 +109,7 @@ class BLADECLASS():
         set_exec_pars(open=False, name=fname, reset=True)
 
 
-    def __setup_caenels1(self, Exp_Time=0.5, Enable=True):
+    def __blade_setup_caenels1(self, Exp_Time=0.5, Enable=True):
         cae_exp_time=float(Exp_Time)
         caputq("PINK:CAE1:Acquire", 0)
         caput("PINK:CAE1:ValuesPerRead", int(1000*cae_exp_time))
@@ -121,7 +120,7 @@ class BLADECLASS():
         else:
             caputq("PINK:CAE1:Acquire", 0)
 
-    def __setup_caenels2(self, Exp_Time=0.5, Enable=True):
+    def __blade_setup_caenels2(self, Exp_Time=0.5, Enable=True):
         cae_exp_time=float(Exp_Time)
         caputq("PINK:CAE2:Acquire", 0)
         caput("PINK:CAE2:ValuesPerRead", int(1000*cae_exp_time))

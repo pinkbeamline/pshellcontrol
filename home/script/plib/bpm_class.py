@@ -1,5 +1,5 @@
 from mathutils import *
-from plotutils import * 
+from plotutils import *
 
 class BPMCLASS():
 
@@ -7,8 +7,10 @@ class BPMCLASS():
     bpm1_hor_CF=49*0.793
     bpm2_vert_CF=13
     bpm2_hor_CF=13*0.707
-    bpm3_vert_CF=9
-    bpm3_hor_CF=9*1
+    bpm3_vert_CF=8.6
+    bpm3_hor_CF=8.6*0.707
+    bpm4_vert_CF=9
+    bpm4_hor_CF=9*1
     roiposx=0
     roiposy=0
     roisizex=0
@@ -21,7 +23,7 @@ class BPMCLASS():
         print("*** " + label + " Gaussian Fit ***:")
         print("Inclination: " + '{:.3e}'.format(a)               + "\tBackground: " + '{:.3f}'.format(b)                   + "\tAmplitude: " + '{:.3f}'.format(amp))
         print("      Sigma: " + '{:.3f}'.format(sigma)           + "\t      FWHM: " + '{:.3f}'.format(self.sig2fwmh*sigma) + "\t     Mean: " + '{:.3f}'.format(comabs))
-        print("  Sigma(um): " + '{:.3f}'.format(sigma*conv_fact) + "\t  FWHM(um): " + '{:.3f}'.format(sigma*conv_fact*self.sig2fwmh))  
+        print("  Sigma(um): " + '{:.3f}'.format(sigma*conv_fact) + "\t  FWHM(um): " + '{:.3f}'.format(sigma*conv_fact*self.sig2fwmh))
 
     def BPM1_Vertical_Profile(self):
         label = "BPM1 Vertical Profile"
@@ -75,7 +77,7 @@ class BPMCLASS():
         label = "BPM3 Vertical Profile"
         print("Analysing...")
         self.__grabdata_bpm3()
-        vec = caget("PINK:PG02:Stats2:ProfileAverageY_RBV")
+        vec = caget("PINK:PG03:Stats2:ProfileAverageY_RBV")
         N = int(self.roisizey)
         pos0 = self.roiposy
         pos1 = self.roiposy+self.roisizey
@@ -87,12 +89,36 @@ class BPMCLASS():
         label = "BPM3 Horizontal Profile"
         print("Analysing...")
         self.__grabdata_bpm3()
-        vec = caget("PINK:PG02:Stats2:ProfileAverageX_RBV")
+        vec = caget("PINK:PG03:Stats2:ProfileAverageX_RBV")
         N = int(self.roisizex)
         pos0 = self.roiposx
         pos1 = self.roiposx+self.roisizex
         myCF = self.bpm3_hor_CF
         filename="bpm3_hor"
+        self.__bpmanalysis(vec, pos0, pos1, N, label, filename, myCF)
+
+    def BPM4_Vertical_Profile(self):
+        label = "BPM4 Vertical Profile"
+        print("Analysing...")
+        self.__grabdata_bpm4()
+        vec = caget("PINK:PG02:Stats2:ProfileAverageY_RBV")
+        N = int(self.roisizey)
+        pos0 = self.roiposy
+        pos1 = self.roiposy+self.roisizey
+        myCF = self.bpm4_vert_CF
+        filename="bpm4_ver"
+        self.__bpmanalysis(vec, pos0, pos1, N, label, filename, myCF)
+
+    def BPM4_Horizontal_Profile(self):
+        label = "BPM4 Horizontal Profile"
+        print("Analysing...")
+        self.__grabdata_bpm4()
+        vec = caget("PINK:PG02:Stats2:ProfileAverageX_RBV")
+        N = int(self.roisizex)
+        pos0 = self.roiposx
+        pos1 = self.roiposx+self.roisizex
+        myCF = self.bpm4_hor_CF
+        filename="bpm4_hor"
         self.__bpmanalysis(vec, pos0, pos1, N, label, filename, myCF)
 
     def __grabdata_bpm1(self):
@@ -112,6 +138,14 @@ class BPMCLASS():
         self.cam_gain = caget("PINK:PG04:Gain_RBV")
 
     def __grabdata_bpm3(self):
+        self.roiposx = caget("PINK:PG03:ROI1:MinX_RBV")
+        self.roiposy = caget("PINK:PG03:ROI1:MinY_RBV")
+        self.roisizex = caget("PINK:PG03:ROI1:SizeX_RBV")
+        self.roisizey = caget("PINK:PG03:ROI1:SizeY_RBV")
+        self.cam_exposure = caget("PINK:PG03:AcquireTime_RBV")
+        self.cam_gain = caget("PINK:PG03:Gain_RBV")
+
+    def __grabdata_bpm4(self):
         self.roiposx = caget("PINK:PG02:ROI1:MinX_RBV")
         self.roiposy = caget("PINK:PG02:ROI1:MinY_RBV")
         self.roisizex = caget("PINK:PG02:ROI1:SizeX_RBV")
@@ -120,7 +154,7 @@ class BPMCLASS():
         self.cam_gain = caget("PINK:PG02:Gain_RBV")
 
     def __bpmanalysis(self, vec, pos0, pos1, N, label, filename, myCF):
-        
+
         vecb = vec[0:N]
         xvecabs = range(pos0,pos1)
         xvec = range(0,N)
@@ -132,7 +166,7 @@ class BPMCLASS():
         self.__print_info(label, a, b, amp, com, sigma, myCF, com+pos0)
         ff = Gaussian(amp, com, sigma)
         gauss = [ff.value(i) + a*i + b for i in xvec]
-        ss = LinePlotSeries("Gaussian Fit")    
+        ss = LinePlotSeries("Gaussian Fit")
         pl.addSeries(ss)
         #ss.setData(xvec, gauss)
         ss.setData(xvecabs, gauss)
@@ -164,4 +198,3 @@ class BPMCLASS():
         save_dataset("plot/xdata", xdata)
         save_dataset("plot/profile", yprofile)
         save_dataset("plot/gauss_fit", ygauss)
-        
