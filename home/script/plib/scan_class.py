@@ -554,7 +554,7 @@ class PSCANS():
 
     #### CONT SCAN POINTS + SPEED optimized    ###########################################################################
     def mythen_SEC_EL_continuous_points_speed(self, X0, deltaX, Xpoints, Y0, Y1, Ypoints, Yspeed, passes=1, sample=" ", linedelay=0):
-        readout_time=0.4
+        readout_time=0.002
         Yspeed = abs(round(Yspeed))
         self.cont_speed = Yspeed
         exposure = (float(abs(Y1-Y0))/(Ypoints*Yspeed))-readout_time
@@ -572,7 +572,7 @@ class PSCANS():
 
     #### CONT SCAN EXPOSURE + POINTS optimized    ###########################################################################
     def mythen_SEC_EL_continuous_exposure_points(self, exposure, X0, deltaX, Xpoints, Y0, Y1, Ypoints, passes=1, sample=" ", linedelay=0):
-        readout_time=0.4
+        readout_time=0.002
         self.line_images=Ypoints
         self.scan_images=Ypoints*Xpoints
         self.total_images=Ypoints*Xpoints*passes
