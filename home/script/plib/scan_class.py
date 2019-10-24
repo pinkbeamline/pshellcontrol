@@ -310,8 +310,8 @@ class PSCANS():
     #### Mythen functions   ############################################################
     ####################################################################################
 
-    #### SPOT SCAN          ############################################################
-    def mythen_SEC_EL_spot(self, exposure, images, sample=" "):
+    #### SPOT SCAN Discrete exposures  ############################################################
+    def __mythen_SEC_EL_spot_slow(self, exposure, images, sample=" "):
         dev.mythen_create()
         #self.ge_Num_Images=images
         self.line_images=images
@@ -328,7 +328,7 @@ class PSCANS():
         self.__ge_setup_caenels1(exposure)
         self.__ge_setup_caenels2(exposure)
         ## turn off delaygen
-        self.__ge_setup_delaygen(5, [0, exposure], [0, 0.001], [0, 0.001], [0, 0])
+        self.__ge_setup_delaygen(1, [0, exposure], [0, 0.001], [0, 0.001], [0, 0])
         self.__publish_fname(fname=" ")
         caput("PINK:AUX:ps_sample", " ")
         ##self.__eta_calc(exposure, images, 1, 1, 0)
@@ -371,6 +371,75 @@ class PSCANS():
         self.__mythen_Save_Pos_Scan_Data()
         ## close shutter
         caput("PINK:PLCGAS:ei_B01", 0)
+        ##self.__save_specfile(0)
+        self.__mythen_save_specfile(0)
+        pink_save_bl_snapshot()
+        self.__remove_pressure_devices()
+        dev.mythen_remove()
+        print("Scan complete")
+        self.__publish_status("Scan complete")
+
+#### SPOT SCAN Continuous exposures  ############################################################
+    def mythen_SEC_EL_spot(self, exposure, images, sample=" "):
+        dev.mythen_create()
+        self.ge_Num_Images=images
+        self.line_images=images
+        self.scan_images=images
+        self.total_images=images
+        self.ge_exptime=exposure
+        self.sample=sample
+        ##GE_AreaDet.stop()
+        while(MythenAcq.read()>0):
+            MythenAcq.write(0)
+            MythenAcq.waitValue(0.0, 60000)
+        self.__ge_setup_file("mythen")
+        self.__create_pressure_devices()
+        self.__ge_setup_caenels1(exposure)
+        self.__ge_setup_caenels2(exposure)
+        ## turn off delaygen
+        self.__ge_setup_delaygen(1, [0, (exposure+0.002)*images], [0, 0.001], [0, 0.001], [0, 0])
+        self.__publish_fname(fname=" ")
+        caput("PINK:AUX:ps_sample", " ")
+        ##self.__eta_calc(exposure, images, 1, 1, 0)
+        self.__mythen_eta_calc(exposure, images, 1, 1, 0)
+        ##self.__ge_save_background(exposure)
+        ##self.__ge_setup_greateyes(exposure, self.line_images)
+        self.__mythen_setup(exposure, self.line_images, 1, 0)
+        ##self.__ge_init_progress()
+        self.__mythen_init_progress()
+        ##self.__ge_clean_spec_sum()
+        self.__mythen_clean_spec_sum()
+        self.__mythen_Create_Scan_Dataset()
+        ##self.__ge_Save_Pre_Scan_Data(scantype="Spot")
+        self.__mythen_Save_Pre_Scan_Data(scantype="Spot")
+        self.__mythen_Arguments([exposure, images, sample], ftype=1)
+        self.__publish_fname()
+        self.__publish_status("Running spot scan...")
+        caput("PINK:AUX:ps_sample", sample)
+        ##GE_AreaDet.start()
+        ## open shutter
+        #caput("PINK:PLCGAS:ei_B01", 1)
+        sleep(0.5)
+        MythenAcq.write(1)
+        try:
+            for scan_count in range(images):
+                self.__ge_start_frame_countdown()
+                #MythenAcq.write(1)
+                MythenSpecSum.waitCacheChange((int(math.ceil(exposure))*1000)+10000)
+                #add 100ms delay to make sure all new data have arrived
+                sleep(0.1)
+                ##self.__ge_Save_Scan_Data()
+                self.__mythen_Save_Scan_Data()
+                self.__mythen_calc_progress()
+        except Exception, ex1:
+            print("Script Aborted")
+            print(ex1)
+            self.__publish_status("Script aborted")
+            ##GE_AreaDet.stop()
+            MythenAcq.write(0)
+        self.__mythen_Save_Pos_Scan_Data()
+        ## close shutter
+        #caput("PINK:PLCGAS:ei_B01", 0)
         ##self.__save_specfile(0)
         self.__mythen_save_specfile(0)
         pink_save_bl_snapshot()
