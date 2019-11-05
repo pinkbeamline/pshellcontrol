@@ -9,8 +9,8 @@ class BPMCLASS():
     bpm2_hor_CF=13*0.707
     bpm3_vert_CF=8.6
     bpm3_hor_CF=8.6*0.707
-    bpm4_vert_CF=9
-    bpm4_hor_CF=9*1
+    bpm4_vert_CF=9.5
+    bpm4_hor_CF=9.5*0.707
     roiposx=0
     roiposy=0
     roisizex=0
