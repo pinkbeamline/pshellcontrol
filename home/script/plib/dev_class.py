@@ -48,6 +48,15 @@ class DEV():
         pvlist = devlist.DELAYGEN
         self.__remove_devices(pvlist)
 
+    ### Eiger2 Detector
+    def Eiger_create(self):
+        pvlist = devlist.EIGER
+        self.__create_devices(pvlist)
+
+    def Eiger_remove(self):
+        pvlist = devlist.EIGER
+        self.__remove_devices(pvlist)
+        
 ### Internal functions ##########################################################
 
     def __create_devices(self, pvlist):
@@ -59,6 +68,10 @@ class DEV():
                 add_device(ch.psi.pshell.epics.Positioner(pvr[1], pvr[2], pvr[3]), True)
             elif pvr[0] == "Array":
                 add_device(ch.psi.pshell.epics.GenericArray(pvr[1], pvr[2], pvr[3]), True)
+            elif pvr[0] == "Matrix":
+                devwidth = caget(pvr[3])
+                devheight = caget(pvr[4])
+                add_device(ch.psi.pshell.epics.ChannelDoubleMatrix(pvr[1], pvr[2], devwidth, devheight), True)
             elif pvr[0] == "String":
                 add_device(ch.psi.pshell.epics.ChannelString(pvr[1], pvr[2]), True)
             else:

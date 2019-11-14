@@ -32,3 +32,17 @@ MYTHEN = [
 DELAYGEN = [
     ["Double", "DGTrigger", "PINK:DG01:TriggerDelayBO"],
 ]
+
+EIGER = [
+    ["Double", "EIG_Acquire", "PINK:EIGER:cam1:Acquire"],
+    ["Array", "EIG_ROI_RAW", "PINK:EIGER:image3:ArrayData", 264710],
+    ["Array", "EIG_SPEC", "PINK:EIGER:spectrum_RBV", 514],
+    ["Array", "EIG_SPECSUM", "PINK:EIGER:specsum_RBV", 514],
+    ["Double", "EIG_ID", "PINK:EIGER:image3:UniqueId_RBV"],
+    ["Double", "EIG_Threshold", "PINK:EIGER:cam1:ThresholdEnergy_RBV"],
+    ["Double", "EIG_Energy", "PINK:EIGER:cam1:PhotonEnergy_RBV"],
+    ["Double", "EIG_Exposure", "PINK:EIGER:cam1:AcquireTime"],
+    ["Double", "EIG_Period", "PINK:EIGER:cam1:AcquirePeriod"],
+    ["Double", "EIG_Images", "PINK:EIGER:cam1:NumImages"],
+    ["Matrix", "EIG_RAWROI", "PINK:EIGER:image3:ArrayData", "PINK:EIGER:image3:ArraySize0_RBV", "PINK:EIGER:image3:ArraySize1_RBV"]
+]
