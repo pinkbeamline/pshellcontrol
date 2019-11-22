@@ -35,6 +35,7 @@ DELAYGEN = [
 
 EIGER = [
     ["Double", "EIG_Acquire", "PINK:EIGER:cam1:Acquire"],
+    ["Double", "EIG_Acquire_RBV", "PINK:EIGER:cam1:Acquire_RBV"],
     ["Array", "EIG_ROI_RAW", "PINK:EIGER:image3:ArrayData", 264710],
     ["Array", "EIG_SPEC", "PINK:EIGER:spectrum_RBV", 514],
     ["Array", "EIG_SPECSUM", "PINK:EIGER:specsum_RBV", 514],

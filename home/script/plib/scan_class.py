@@ -68,6 +68,30 @@ class PSCANS():
     ####################################################################################
     #### EIGER FUNCTIONS   #############################################################
     ####################################################################################
+    
+    def eiger_set_background(self):
+        print("Saving background")
+        dev.Eiger_create()
+        EIG_Exposure.write(0.001)
+        EIG_Period.write(0.001)
+        EIG_Images.write(1)
+        caput("PINK:EIGER:Proc1:EnableBackground", 0)
+        sleep(0.2)
+        EIG_Acquire.write(1)
+        EIG_ID.waitCacheChange(10000)
+        EIG_Acquire_RBV.waitValue(0.0, 10000)
+        caput("PINK:EIGER:Proc1:SaveBackground", 1)
+        caput("PINK:EIGER:Proc1:EnableBackground", 1)
+        EIG_Exposure.write(1.0)
+        EIG_Period.write(1.0)
+        sleep(0.2)
+        EIG_Acquire.write(1)
+        EIG_ID.waitCacheChange(10000)
+        EIG_Acquire_RBV.waitValue(0.0, 10000)
+        caput("PINK:EIGER:specsum_reset", 0)
+        caput("PINK:EIGER:specsum_reset", 1)
+        dev.Eiger_remove()
+        print("Done")
 
     #### EIGER SPOT SCAN  ############################################################
     def eiger_SEC_EL_spot(self, exposure, images, sample=" "):
