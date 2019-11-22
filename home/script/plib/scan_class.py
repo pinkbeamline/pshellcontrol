@@ -59,6 +59,8 @@ class PSCANS():
     diode_sum=[]
     gappos=[]
     tfy=[]
+    secy = []
+    filter1pos = []
 
     ####################################################################################
     #### Callable Functions ############################################################
@@ -1732,6 +1734,9 @@ class PSCANS():
         self.diode4 = []
         self.diode_sum = []
         self.gappos = []
+        self.tfy = []
+        self.secy = []
+        self.filter1pos = []
 
     def _extra_scan_data(self):
         self.diode1.append(Diode_1.take())
@@ -1743,6 +1748,8 @@ class PSCANS():
         self.tfy.append(TFY.take())
         self.gappos.append(U17_Gap_RBV.take())
         ##self.gappos.append(U17_Gap_RBV_SIM.take())
+        self.secy.append(SEC_el_y_Enc.take())
+        self.filter1pos = Filter1.take()
 
     def __save_data_lin(self, incl, off, amp, com, sigma, fwhm, gauss, xgauss):
         save_dataset("gaussian/inclination", incl)
@@ -1793,8 +1800,10 @@ class PSCANS():
         self.__blade_setup_caenels2(Exp_Time=0.5, Enable=True)
         res = lscan(Filter1, Diode_sum, start, end, steps, latency, after_read=blade_upd_scan_data)
         #res = lscan(Filter2, Filter2_SIG, start, end, steps, interval, after_read=blade_upd_scan_data)
-        xdata = res.getPositions(0)
-        ydata = res.getReadable(0)
+        #xdata = res.getPositions(0)
+        #ydata = res.getReadable(0)
+        xdata = self.filter1pos
+        ydata = self.diode_sum
         dt = deriv(ydata, xdata=xdata)
         #flips orientation of derivative if necessary to be compatible with pshell gauss fit function
         if mean(dt)<0:
@@ -1814,8 +1823,10 @@ class PSCANS():
         self.__blade_setup_caenels1(Exp_Time=0.5, Enable=True)
         #res = lscan(Filter2, Filter2_SIG, start, end, steps, interval, after_read=blade_upd_scan_data)
         res = lscan(SEC_el_y, TFY, start, end, steps, latency, after_read=blade_upd_scan_data)
-        xdata = res.getPositions(0)
-        ydata = res.getReadable(0)
+        #xdata = res.getPositions(0)
+        #ydata = res.getReadable(0)
+        xdata = self.secy
+        ydata = self.tfy
         dt = deriv(ydata, xdata=xdata)
         #flips orientation of derivative if necessary to be compatible with pshell gauss fit function
         if mean(dt)<0:
