@@ -15,7 +15,7 @@ class PSCANS():
     scan_images = 1
     total_images = 1
     DEBUG=0
-    DEBUGLOG=1
+    DEBUGLOG=0
     ge_exptime=0
     ge_init_time=0
     sample=" "
@@ -111,7 +111,7 @@ class PSCANS():
         self.__ge_setup_caenels1(exposure)
         self.__ge_setup_caenels2(exposure)
         ## turn off delaygen
-        self.__ge_setup_delaygen(1, [0, 0], [0, 0.001], [0, 0.001], [0, 0.001])
+        self.__setup_delaygen(1, [0, 0], [0, 0.001], [0, 0.001], [0, 0.001])
         self.__publish_fname(fname=" ")
         caput("PINK:AUX:ps_sample", " ")
         self.__mythen_eta_calc(exposure, images, 1, 1, 0)
@@ -138,7 +138,9 @@ class PSCANS():
                 self.__ge_start_frame_countdown()
                 ##MythenAcq.write(1)
                 ##MythenSpecSum.waitCacheChange((int(math.ceil(exposure))*1000)+10000)
-                EIG_SPECSUM.waitCacheChange((int(math.ceil(exposure))*1000)+10000)
+                EIG_SPEC.waitCacheChange((int(math.ceil(exposure))*1000)+10000)
+                mylogstr = "Eiger ID: " + str(EIG_ID.read())
+                log(mylogstr , data_file=False)
                 #add 100ms delay to make sure all new data have arrived
                 sleep(0.1)
                 ##self.__ge_Save_Scan_Data()
@@ -193,7 +195,7 @@ class PSCANS():
         self.__create_pressure_devices()
         self.__ge_setup_caenels1(exposure)
         self.__ge_setup_caenels2(exposure)
-        self.__ge_setup_delaygen(1, [0, 0], [0, 0.001], [0, 0.001], [0, 0.001])
+        self.__setup_delaygen(1, [0, 0], [0, 0.001], [0, 0.001], [0, 0.001])
         self.__ge_Save_Pre_Scan_Data_v2(scantype="Continuous")
         self.__ge_Create_Scan_Dataset_v3(cont=True, passes=passes)
         self.__fun_Arguments([exposure, X0, deltaX, Xpoints, Y0, Y1, Ypoints, Yspeed, passes, sample], ftype=ftype, flabel=flabel)
@@ -205,7 +207,7 @@ class PSCANS():
             self.__eta_calc(exposure, Ypoints, Xpoints, (passes-passid), linedelay)
             #self.__ge_save_background(exposure)
             #self.__ge_setup_greateyes(exposure, self.line_images)
-            self.__eiger_setup(self.exp_time, self.line_images)
+            self.__eiger_setup(exposure, self.line_images+1)
             self.__ge_init_progress()
             self.__eiger_clean_spec_sum()
             self.__ge_Create_Scan_Dataset_v2(cont=True, passid=passid)
@@ -223,6 +225,7 @@ class PSCANS():
             self.y1_mdata = []
             self.x_mdata = []
             self.y_mdata = []
+            EIG_ManualTrig.write(1)
             try:
                 for j in range(Xpoints):
                     SEC_el_x.move(X0+(j*deltaX))
@@ -231,17 +234,31 @@ class PSCANS():
                     else:
                         ydest=Y0
                     SEC_el_y.setSpeed(Yspeed)
+                    EIG_Acquire_RBV.waitValue(0.0, 10000)
+                    sleep(1)
+                    EIG_Acquire.write(1)
+                    sleep(2)
                     caput("PINK:PLCGAS:ei_B01", 1)
                     SEC_el_y.moveAsync(ydest)
+                    EIG_Trig.write(1)
                     #GE_AreaDet.start()
-                    EIG_Acquire.write(1)
+                    ##EIG_Acquire.write(0)
+                    #EIG_Acquire_RBV.waitValue(0.0, 10000)
+                    ##EIG_ManualTrig.write(1)
+                    #sleep(1)
+                    #EIG_Acquire.write(1)
+                    #sleep(2)
+                    #EIG_Trig.write(1)
                     for i in range(Ypoints):
                         self.x0_mdata.append(SEC_el_x.getPosition())
                         self.y0_mdata.append(SEC_el_y.getPosition())
                         self.x_mdata.append(SEC_el_x.getPosition())
                         self.y_mdata.append(SEC_el_y.getPosition())
                         self.__ge_start_frame_countdown()
-                        GE_Raw_Array.waitCacheChange((int(math.ceil(exposure))*1000)+10000)
+                        ##GE_Raw_Array.waitCacheChange((int(math.ceil(exposure))*1000)+10000)
+                        EIG_SPEC.waitCacheChange((int(math.ceil(exposure))*1000)+10000)
+                        ##mylogstr = "Eiger ID: " + str(EIG_ID.read()) + "i: " + str(i)
+                        ##log(mylogstr , data_file=False)
                         self.x1_mdata.append(SEC_el_x.getPosition())
                         self.y1_mdata.append(SEC_el_y.getPosition())
                         self.x_mdata.append(SEC_el_x.getPosition())
@@ -265,6 +282,7 @@ class PSCANS():
                 EIG_Acquire.write(0)
                 SEC_el_y.setSpeed(20000)
             caput("PINK:PLCGAS:ei_B01", 0)
+            EIG_ManualTrig.write(0)
             self.__ge_Save_Pos_Scan_Data_v3(cont=True, passid=passid)
             self.__save_specfile(passid)
             passid=passid+1
@@ -371,6 +389,27 @@ class PSCANS():
         caput("PINK:DG01:ADelayAO", ch1[0])
         ## shutter exposure
         caput("PINK:DG01:BDelayAO", ch1[1]-0.02)
+        ## mythen delay
+        caput("PINK:DG01:CDelayAO", ch2[0])
+        ## mythen exposure
+        caput("PINK:DG01:DDelayAO", ch2[1])
+        ## greateyes delay
+        caput("PINK:DG01:EDelayAO", ch3[0])
+        ## greateyes exposure
+        caput("PINK:DG01:FDelayAO", ch3[1])
+        ## extra channel delay
+        caput("PINK:DG01:GDelayAO", ch4[0])
+        ## extra channel exposure
+        caput("PINK:DG01:HDelayAO", ch4[1])
+
+    ## (trigger mode, shutter, Mythen, Greateyes, Caenels)
+    def __setup_delaygen(self, mode, ch1, ch2, ch3, ch4):
+        ## Trigger mode
+        caput("PINK:DG01:TriggerSourceMO", mode)
+        ## shutter delay
+        caput("PINK:DG01:ADelayAO", ch1[0])
+        ## shutter exposure
+        caput("PINK:DG01:BDelayAO", ch1[1])
         ## mythen delay
         caput("PINK:DG01:CDelayAO", ch2[0])
         ## mythen exposure
@@ -591,8 +630,8 @@ class PSCANS():
     def __ge_Save_Pre_Scan_Data_v3(self, cont=False, passid=0):
         if self.DEBUG: print("Saving Pre scan dataset v3 ...")
         passfolder = "pass_"+'{:03d}'.format(passid)+"/"
-        save_dataset(passfolder+"RAW/GE_BG_Image", GE_BG_Image.read(), features=self.data_compression)
-        save_dataset(passfolder+"Detector/BG_Spectra", self.ge_bg_spectra)
+        ##save_dataset(passfolder+"RAW/GE_BG_Image", GE_BG_Image.read(), features=self.data_compression)
+        #save_dataset(passfolder+"Detector/BG_Spectra", self.ge_bg_spectra)
         save_dataset(passfolder+"Scan/Scan_Start_Time", time.ctime())
         save_dataset(passfolder+"Scan/Pass", passid)
         if self.DEBUG: print("Saving Pre scan dataset OK")
@@ -1023,13 +1062,13 @@ class PSCANS():
         ##append_dataset("RAW/Mythen_Raw_Array", MythenRaw.read())
         append_dataset("RAW/IZero_Profile", IZero_Profile.take())
         append_dataset("RAW/TFY_Profile", TFY_Profile.take())
-        append_dataset("Processed/Eiger_ROI_Image", EIG_RAWROI.take())
+        append_dataset("Processed/Eiger_ROI_Image", EIG_RAWROI.read())
         append_dataset("Processed/Eiger_Spectrum", EIG_SPEC.take())
         append_dataset("Processed/Izero", IZero.take())
         append_dataset("Processed/TFY", TFY.take())
         ##append_dataset("Detector/GE_Sensor_Temp", GE_Sensor_Temp.take())
         append_dataset("Scan/Eiger_FrameID", EIG_ID.take())
-        append_dataset("Scan/Timestamps", MythenID.getTimestampNanos())
+        append_dataset("Scan/Timestamps", EIG_ID.getTimestampNanos())
         self.__append_pressure_dataset(passfolder = "")
         #append_dataset("Pressure/Diagnostic_PV", Press_Diag_PV.take())
         #append_dataset("Pressure/Diagnostic_HV", Press_Diag_HV.take())

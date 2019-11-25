@@ -45,5 +45,7 @@ EIGER = [
     ["Double", "EIG_Exposure", "PINK:EIGER:cam1:AcquireTime"],
     ["Double", "EIG_Period", "PINK:EIGER:cam1:AcquirePeriod"],
     ["Double", "EIG_Images", "PINK:EIGER:cam1:NumImages"],
-    ["Matrix", "EIG_RAWROI", "PINK:EIGER:image3:ArrayData", "PINK:EIGER:image3:ArraySize0_RBV", "PINK:EIGER:image3:ArraySize1_RBV"]
+    ["Matrix", "EIG_RAWROI", "PINK:EIGER:image3:ArrayData", "PINK:EIGER:image3:ArraySize0_RBV", "PINK:EIGER:image3:ArraySize1_RBV"],
+    ["Double", "EIG_ManualTrig", "PINK:EIGER:cam1:ManualTrigger"],
+    ["Double", "EIG_Trig", "PINK:EIGER:cam1:Trigger"],
 ]
