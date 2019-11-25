@@ -70,7 +70,7 @@ class PSCANS():
     ####################################################################################
     #### EIGER FUNCTIONS   #############################################################
     ####################################################################################
-    
+
     def eiger_set_background(self):
         print("Saving background")
         dev.Eiger_create()
@@ -182,7 +182,47 @@ class PSCANS():
         deltaX=float(deltaX)
         Y0=float(Y0)
         Y1=float(Y1)
-        self.__eiger_continous_scan(exposure, passes, X0, deltaX, Xpoints, Y0, Y1, Ypoints, Yspeed, sample, 4, linedelay, "ge_SEC_EL_continuous_exposure_speed")
+        self.__eiger_continous_scan(exposure, passes, X0, deltaX, Xpoints, Y0, Y1, Ypoints, Yspeed, sample, 4, linedelay, "eiger_SEC_EL_continuous_exposure_speed")
+        dev.Eiger_remove()
+
+#### CONT SCAN POINTS + SPEED optimized    ###########################################################################
+    def eiger_SEC_EL_continuous_points_speed(self, X0, deltaX, Xpoints, Y0, Y1, Ypoints, Yspeed, passes=1, sample=" ", linedelay=0):
+        dev.Eiger_create()
+        readout_time=0.001
+        Yspeed = abs(round(Yspeed))
+        self.cont_speed = Yspeed
+        exposure = (float(abs(Y1-Y0))/(Ypoints*Yspeed))-readout_time
+        print("Greateyes set exposure: " + '{:.3f}'.format(exposure) + " seconds")
+        self.line_images=Ypoints
+        self.scan_images=Ypoints*Xpoints
+        self.total_images=Ypoints*Xpoints*passes
+        self.ge_exptime=exposure
+        self.sample=sample
+        X0=float(X0)
+        deltaX=float(deltaX)
+        Y0=float(Y0)
+        Y1=float(Y1)
+        self.__eiger_continous_scan(exposure, passes, X0, deltaX, Xpoints, Y0, Y1, Ypoints, Yspeed, sample, 5, linedelay, "eiger_SEC_EL_continuous_points_speed")
+        dev.Eiger_remove()
+
+    #### CONT SCAN EXPOSURE + POINTS optimized    ###########################################################################
+    def eiger_SEC_EL_continuous_exposure_points(self, exposure, X0, deltaX, Xpoints, Y0, Y1, Ypoints, passes=1, sample=" ", linedelay=0):
+        dev.Eiger_create()
+        readout_time=0.001
+        self.line_images=Ypoints
+        self.scan_images=Ypoints*Xpoints
+        self.total_images=Ypoints*Xpoints*passes
+        self.ge_exptime=exposure
+        self.sample=sample
+        X0=float(X0)
+        deltaX=float(deltaX)
+        Y0=float(Y0)
+        Y1=float(Y1)
+        totaltime = Ypoints*(exposure+readout_time)
+        Yspeed = abs(int((Y1-Y0)/totaltime))
+        self.cont_speed = Yspeed
+        print("Sample calculated speed: " + str(Yspeed) + " um/sec")
+        self.__continous_scan(exposure, passes, X0, deltaX, Xpoints, Y0, Y1, Ypoints, Yspeed, sample, 6, linedelay, "eiger_SEC_EL_continuous_exposure_points")
         dev.Eiger_remove()
 
     def __eiger_continous_scan(self, exposure, passes, X0, deltaX, Xpoints, Y0, Y1, Ypoints, Yspeed, sample, ftype, linedelay, flabel):
@@ -267,7 +307,7 @@ class PSCANS():
                         sleep(0.01)
                         self.__ge_Save_Scan_Data_v2(cont=True, passid=passid)
                         self.__ge_calc_progress()
-                    caput("PINK:PLCGAS:ei_B01", 0)    
+                    caput("PINK:PLCGAS:ei_B01", 0)
                     SEC_el_y.stop()
                     SEC_el_y.setSpeed(20000)
                     self.__sec_el_y_safemove(ydest)
@@ -293,7 +333,78 @@ class PSCANS():
         self.__remove_pressure_devices()
         print("Scan complete")
         self.__publish_status("Scan complete")
-       
+
+####################################################################################
+#### Mythen functions   ############################################################
+####################################################################################
+#### SPOT SCAN Continuous exposures  ############################################################
+    def mythen_SEC_EL_spot(self, exposure, images, sample=" "):
+        dev.mythen_create()
+        self.ge_Num_Images=images
+        self.line_images=images
+        self.scan_images=images
+        self.total_images=images
+        self.ge_exptime=exposure
+        self.sample=sample
+        ##GE_AreaDet.stop()
+        while(MythenAcq.read()>0):
+            MythenAcq.write(0)
+            MythenAcq.waitValue(0.0, 60000)
+        self.__ge_setup_file("mythen")
+        self.__create_pressure_devices()
+        self.__ge_setup_caenels1(exposure)
+        self.__ge_setup_caenels2(exposure)
+        ## turn off delaygen
+        self.__ge_setup_delaygen(1, [0, (exposure+0.002)*images], [0, 0.001], [0, 0.001], [0, 0.001])
+        self.__publish_fname(fname=" ")
+        caput("PINK:AUX:ps_sample", " ")
+        ##self.__eta_calc(exposure, images, 1, 1, 0)
+        self.__mythen_eta_calc(exposure, images, 1, 1, 0)
+        ##self.__ge_save_background(exposure)
+        ##self.__ge_setup_greateyes(exposure, self.line_images)
+        self.__mythen_setup(exposure, self.line_images, 1, 0)
+        ##self.__ge_init_progress()
+        self.__mythen_init_progress()
+        ##self.__ge_clean_spec_sum()
+        self.__mythen_clean_spec_sum()
+        self.__mythen_Create_Scan_Dataset()
+        ##self.__ge_Save_Pre_Scan_Data(scantype="Spot")
+        self.__mythen_Save_Pre_Scan_Data(scantype="Spot")
+        self.__fun_Arguments([exposure, images, sample], ftype=1, flabel="mythen_SEC_EL_spot")
+        self.__publish_fname()
+        self.__publish_status("Running spot scan...")
+        caput("PINK:AUX:ps_sample", sample)
+        ##GE_AreaDet.start()
+        ## open shutter
+        #caput("PINK:PLCGAS:ei_B01", 1)
+        sleep(0.5)
+        MythenAcq.write(1)
+        try:
+            for scan_count in range(images):
+                self.__ge_start_frame_countdown()
+                #MythenAcq.write(1)
+                MythenSpecSum.waitCacheChange((int(math.ceil(exposure))*1000)+10000)
+                #add 100ms delay to make sure all new data have arrived
+                sleep(0.1)
+                ##self.__ge_Save_Scan_Data()
+                self.__mythen_Save_Scan_Data()
+                self.__mythen_calc_progress()
+        except Exception, ex1:
+            print("Script Aborted")
+            print(ex1)
+            self.__publish_status("Script aborted")
+            ##GE_AreaDet.stop()
+            MythenAcq.write(0)
+        self.__mythen_Save_Pos_Scan_Data()
+        ## close shutter
+        #caput("PINK:PLCGAS:ei_B01", 0)
+        ##self.__save_specfile(0)
+        self.__mythen_save_specfile(0)
+        pink_save_bl_snapshot()
+        self.__remove_pressure_devices()
+        dev.mythen_remove()
+        print("Scan complete")
+        self.__publish_status("Scan complete")
 
     ####################################################################################
     #### Internal Functions ############################################################
@@ -357,7 +468,7 @@ class PSCANS():
     def __eiger_calc_progress(self):
         Scan_Progress.write(100*(EIG_ID.take()-self.GE_start_frame)/(self.scan_images))
         if self.DEBUG: print("ID0: " + str(self.GE_start_frame) + " ID: " + str(EIG_ID.take()) + " Total: " + str(self.scan_images) + " Progress: " + str(Scan_Progress.take()))
-        #self.__ge_start_frame_countdown()    
+        #self.__ge_start_frame_countdown()
 
     def __ge_setup_caenels1(self, Exp_Time=1, Enable=True):
         cae_exp_time=float(Exp_Time)
@@ -591,7 +702,7 @@ class PSCANS():
         save_dataset("Scan/Sample", self.sample)
         save_dataset("Scan/Scan_Type", scantype)
         save_dataset("Scan/Pass", passid)
-        if self.DEBUG: print("Saving Pre scan dataset OK")        
+        if self.DEBUG: print("Saving Pre scan dataset OK")
 
     def __ge_Save_Pre_Scan_Data_v2(self, scantype=" "):
         if self.DEBUG: print("Saving Pre scan dataset v2 ...")
@@ -1287,7 +1398,7 @@ class PSCANS():
     def _ge_energy_calibration(self, X0, Y0):
         print ("X0: \t" + str(X0))
         print ("Y0: \t" + str(Y0))
-        
+
     def __publish_fname(self, fname=None):
         if fname==None:
             execinfo=get_exec_pars()
